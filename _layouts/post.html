@@ -1,0 +1,49 @@
+---
+layout: default
+post_title_label: " [jasonrudolph.com]"
+---
+<div id="post">
+  <h1><a href="{{ page.url }}" title="{{ page.title | xml_escape }}{{ page.post_title_label }}">{{page.title}}</a></h1>
+
+  {% if page.date != null %}
+    <span class="published_on">
+      Published on {{ page.date | date: "%A, %B %d, %Y" }}
+
+      {% if page.tags != null %}
+        in
+        {% for tag in page.tags %}
+          {% if forloop.last and forloop.length > 1 %} and {% endif %}
+          <a href="#" class="tag">{{tag | downcase}}</a>{% if forloop.last == false and forloop.length > 2 %}, {% endif %}
+        {% endfor %}
+      {% endif %}
+     </span>
+   {% endif %}
+
+  {{ content }}
+</div>
+
+<hr />
+
+<div id="related-posts">
+  <h2>
+    <a class="icon-feed-2" href="http://feeds.feedburner.com/jasonrudolph" title="Jason Rudolph - Atom/RSS Feed"></a>
+    Other Posts You Might Enjoy
+  </h2>
+  <ul class="posts">
+    {% for post in site.posts %}
+      {% if post.url == "/blog/2011/08/09/programming-achievements-how-to-level-up-as-a-developer/" or post.url == "/blog/2009/05/27/git-up-10-reasons-to-upgrade-your-old-git-installation/" or post.url == "/blog/2008/06/17/testing-anti-patterns-incidental-coverage/" or post.url == "/blog/2011/06/06/helpful-resources-for-upgrading-to-rails-3-1/" %}
+        {% if page.url != post.url %} {% comment %} Do not suggest the post that the person is currently viewing {% endcomment %}
+          <!-- random comment to work around Jekyll issue -->
+          {% include post-li.html %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+
+<hr />
+
+<div id="disqus">
+  <a name="comments"></a>
+  <div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/jasonrudolph/embed.js"></script><noscript>Blog comments powered by Disqus. <a href="http://jasonrudolph.disqus.com/?url=ref">View the discussion thread.</a></noscript>
+</div>

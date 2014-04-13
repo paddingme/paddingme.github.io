@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'icomoon-ultimate';
+  src:url('../fonts/icomoon-ultimate.eot');
+  src:url('../fonts/icomoon-ultimate.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon-ultimate.svg#icomoon-ultimate') format('svg'),
+    url('../fonts/icomoon-ultimate.woff') format('woff'),
+    url('../fonts/icomoon-ultimate.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: 'icomoon-ultimate';
+  font-style: normal;
+  speak: none;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.icon-info:before {
+  content: "\e000";
+}
+.icon-info-2:before {
+  content: "\e001";
+}
+.icon-quill:before {
+  content: "\e002";
+}
+.icon-quill-2:before {
+  content: "\e003";
+}
+.icon-pen:before {
+  content: "\e004";
+}
+.icon-feed:before {
+  content: "\e005";
+}
+.icon-feed-2:before {
+  content: "\e006";
+}
+.icon-feed-3:before {
+  content: "\e007";
+}
+.icon-twitter:before {
+  content: "\e008";
+}
+.icon-github:before {
+  content: "\e009";
+}
+.icon-cc:before {
+  content: "\e00a";
+}
+.icon-search:before {
+	content: "\e00b";
+}
