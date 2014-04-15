@@ -1,6 +1,6 @@
 ---
 layout: default
-post_title_label: " [jasonrudolph.com]"
+post_title_label: " [padding.me]"
 ---
 <div id="post">
   <h1><a href="{{ page.url }}" title="{{ page.title | xml_escape }}{{ page.post_title_label }}">{{page.title}}</a></h1>
@@ -27,7 +27,7 @@ post_title_label: " [jasonrudolph.com]"
 <div id="related-posts">
   <h2>
     <a class="icon-feed-2" href="http://feeds.feedburner.com/jasonrudolph" title="Jason Rudolph - Atom/RSS Feed"></a>
-    Other Posts You Might Enjoy
+    Other Posts You Might Enjoy(待修改)
   </h2>
   <ul class="posts">
     {% for post in site.posts %}
@@ -43,7 +43,25 @@ post_title_label: " [jasonrudolph.com]"
 
 <hr />
 
-<div id="disqus">
+<!-- <div id="disqus">
   <a name="comments"></a>
-  <div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/jasonrudolph/embed.js"></script><noscript>Blog comments powered by Disqus. <a href="http://jasonrudolph.disqus.com/?url=ref">View the discussion thread.</a></noscript>
+  <div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/paddingme/embed.js"></script><noscript>Blog comments powered by Disqus. <a href="http://paddingme.disqus.com/?url=ref">View the discussion thread.</a></noscript>
 </div>
+ -->
+
+ <!-- Duoshao Comment start -->
+ <!--  <div class="ds-thread" data-thread-key="请将此处替换成文章在你的站点中的ID" data-title="{{page.title}}" data-url="{{ page.url }}"></div> -->
+   <div class="ds-thread"  data-title="{{page.title}}" data-url="{{ page.url }}"></div>
+
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"paddingme"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.unstable.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- Duoshuo Comments End -->
