@@ -1,0 +1,31 @@
+--- 
+wordpress_id: 38
+title: ExpandoMetaClass Teaches an Old Dog New Tricks
+wordpress_url: http://jasonrudolph.com/blog/2007/02/02/expandometaclass-teaches-an-old-dog-new-tricks/
+layout: post
+tags:
+- grails
+- groovy	
+---
+<p>Another cool new feature of the <a href="http://jasonrudolph.com/blog/2007/01/31/grails-04-hits-the-street/">recent Grails 0.4 release</a> is the easy-to-use <a href="http://grails.org/ExpandoMetaClass">ExpandoMetaClass</a>.&nbsp; Groovy meta-programming is darn powerful stuff, and ExpandoMetaClass makes it <em>super-simple</em> to dynamically alter a class at runtime.&nbsp; You can add instance methods, static methods, constructors, or properties, all in just a few short lines of code.&nbsp; In fact, it&#39;s so cool that it&#39;s <a href="http://docs.codehaus.org/display/GroovyJSR/GDC+3+report#GDC3report-ExpandoMetaClass">slated to become a standard part of Groovy</a> in the Groovy 1.1 release slated for later this year. &nbsp;</p> <p>Enough chatter.&nbsp; Let&#39;s see it in action.&nbsp;</p> Here&#39;s some rather simple Groovy code that shows just how easy it is put the ExpandoMetaClass to work. &nbsp;We simply define a class, instantiate it, add a new method to that class, and then the method is automatically available on the instance. 
+
+<br/><br/>
+<pre>
+// A boring old class
+class Canine {
+}
+
+// A boring old dog with no cool tricks
+def oldDog = new Canine()
+
+// If only a dog could speak
+def canineMetaClass = new org.codehaus.groovy.grails.commons.metaclass.ExpandoMetaClass(Canine.class, true)
+canineMetaClass.newTricks << { "Woof!" }
+canineMetaClass.initialize()
+
+// Who say's you can't teach an old dog new tricks?!
+oldDog.newTricks()  
+</pre>
+<br/>
+
+And with a little help from the Grails console, we see that we can indeed teach an old dog new tricks (though teaching him to bark probably wouldn&#39;t be my first choice).</p> <p><img src="/resources/20070202GrailsConsole.png" alt="Grails Console output" title="Grails Console output" width="500" /><br /> </p> <p>While I&#39;d known about the ExpandoMetaClass since <a href="http://graemerocher.blogspot.com/">Graeme Rocher</a>  committed it a few weeks back, it was <a href="http://devijvers.exblogs.com/">Steven Devijver&#39;s</a> <a href="http://www.nabble.com/Expando-methods%3A-how-to-get-hold-of-the-object-a-method-is-called-on-tf3162961.html">post on the Grails mailing list</a> today that inspired me to try it out.&nbsp; (And though I wish I could take credit for the witty example, in fact, that credit goes to a co-worker of mine, Bill Dupre.&nbsp; I showed Steven&#39;s post to Bill, and he quickly put this clever spin on it.)</p> <p>What new tricks can your code libraries benefit from?&nbsp;</p>
