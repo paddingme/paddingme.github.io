@@ -1,5 +1,5 @@
 ---
-title: "JavaScript语言精粹第四章 函数（中）"
+title: "JavaScript语言精粹之第四章 函数（中）"
 layout: post
 tags:
 - JavaScript
