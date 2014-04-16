@@ -31,13 +31,10 @@ post_title_label: " [padding.me]"
     订阅我的博客
   </h2>
 
-/* 修改增添热门连接
-其实很简单
-首先这几篇文章存不存在
-然后随机给出文章 */
+
   <ul class="posts">
     {% for post in site.posts %}
-      {% if post.url == "/blog/2014/04/05/JavaScript-language-of-the-essence-study-notes-thrid-chapter-grammar/" or post.url == "/blog/2014-04-05-JavaScript-language-of-the-essence-study-notes-thrid-chapter-grammar/" or post.url == "/blog/2006/09/17/screencast-getting-started-with-grails-in-less-than-4-minutes/" or post.url == "/blog/2006/08/14/grails-podcast-discusses-legacy-db-support/" %}
+      {% if post.url == "/blog/2014/04/15/give-a-shit/" or post.url == "/blog/2014/04/13/say-goodbye-to-2013/" or post.url == "/blog/2014/04/03/JavaScript-language-of-the-essence-study-notes-second-chapter-grammar/" or post.url == "/blog/2014/04/04/JavaScript-language-of-the-essence-study-notes-thrid-chapter-grammar/" %}
         {% if page.url != post.url %} 
         {% comment %} Do not suggest the post that the person is currently viewing {% endcomment %}
           <!-- random comment to work around Jekyll issue -->

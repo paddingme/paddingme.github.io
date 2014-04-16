@@ -23,10 +23,11 @@ title: About - PaddingMe
 #About blog
 想建个人博客由来已久，不管是技术总结还是心情流水，都是一种记录情结。padding，英文[填充之意][paddingen]。在[CSS盒子模型][boxmodel]中，padding表示[内边距][padding]。所以[padding.me][padding.me]取意自我充实，用信念、希望、努力、乐观填充所有的空洞与乏味，也取“修身，齐家，平天下”之修身之意，希望自己可以沉心经营，潜心修行。
 
-ps:博客正式feed地址为：http://feeds.feedburner.com/paddingme（需翻墙）
-   备用feed地址为：http://padding.me/blog/atom.xml
+ps:博客正式feed地址为：[http://feeds.feedburner.com/paddingme][feed]（需翻墙）
 
-最后更新：2014/04/15 18：54
+   博客备用feed地址为：[http://padding.me/blog/atom.xml][feed2]
+
+最后更新：2014/04/16 13:22
 <br>
 <br>
 
@@ -36,3 +37,5 @@ ps:博客正式feed地址为：http://feeds.feedburner.com/paddingme（需翻墙
 [padding]: http://www.w3school.com.cn/cssref/pr_padding.asp
 [hit]:http://www.hit.edu.cn/
 [padding.me]:http://padding.me
+[feed]: http://feeds.feedburner.com/paddingme
+[feed2]:http://padding.me/blog/atom.xml
