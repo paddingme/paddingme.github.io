@@ -15,6 +15,7 @@ tags:
  * （闭包，闭包是指在 JavaScript 中，**内部函数总是可以访问其所在的外部函数中声明的参数和变量，即使在其外部bb函数被返回（寿命终结）了之后。**）
 
 如上所述 闭包是**函数的“局部变量”集合**，只是这个局部变量时可以在函数返回后备访问。
+
 ```javascript
 function greeting(name){
     var text='Hello'+name; //local variable
@@ -25,7 +26,7 @@ sayHello();//通过闭包访问到了局部变量text
 ```
 执行结果为：Hello Closure,因为sayHello()函数在greeting函数执行完毕后，仍然可以访问到定义在其之内的局部变量text。
 
-[看下函数和对象之间的逻辑关系！！]（http:www.woshishabi.com）
+[看下函数和对象之间的逻辑关系！！](http:www.woshishabi.com)
  
 
 
@@ -34,7 +35,8 @@ sayHello();//通过闭包访问到了局部变量text
 
 
 参考的文章如下：
-1. [闭包]（https://developer.mozilla.org/zh-CN/docs/JavaScript/Guide/Closures）(感觉这个写的通俗易懂，没有什么花花肠子)
-2. http://coolshell.cn/articles/6731.html
-3. http://www.ruanyifeng.com/blog/2009/08/learning_javascript_closures.html
-4. http://www.zhihu.com/question/19554716
+
+1. [闭包](https://developer.mozilla.org/zh-CN/docs/JavaScript/Guide/Closures)(感觉这个写的通俗易懂，没有什么花花肠子)
+2. [http://coolshell.cn/articles/6731.html](http://coolshell.cn/articles/6731.html)
+3. [http://www.ruanyifeng.com/blog/2009/08/learning_javascript_closures.html](http://www.ruanyifeng.com/blog/2009/08/learning_javascript_closures.html)
+4. [http://www.zhihu.com/question/19554716](http://www.zhihu.com/question/19554716)
