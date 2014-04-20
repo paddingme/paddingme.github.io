@@ -1,0 +1,141 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<style>
+		body{
+			font-family: Helvetica, Arial, sans-serif;
+            font-size: 12px;
+		}
+		
+		</style>
+	</head>
+	<body>
+
+
+
+		<!-- <a  href="#" id="size12">12</a>
+		<a  href="#" id="size14">14</a>
+		<a  href="#" id="size16">16</a> -->
+		<p id="help">Helpful notes will apper here</p>
+		<p>E-mail:<input type="text" id="email" name="email"></p>
+		<p>Name:<input type="text" id="name" name="name"></p>
+		<p>Age:<input type="text" id="age" name="age"></p>
+
+<script>
+
+
+	function showHelp(help){
+		document.getElementById("help").innerHTML=help;
+	}
+
+	function setupHelp(){
+		var helpText=[
+		{'id':'email','help':'Your email address'},
+		{'id':'name','help':'your full name'},
+		{'id':'age','help':'your age'}
+		];
+
+
+		for (var i = 0; i < helpText.length; i++) {
+			var item=helpText[i];
+			document.getElementById(item.id).onfocus=function() {
+				showHelp(item.help);
+			}
+		}
+	}
+
+
+setupHelp();
+  //        var counter=(function(){
+  //        	var privateNumber=0;
+  //        	function valueBy(val){
+  //        		 privateNumber+=val;
+  //        	}
+  //        	return {
+  //        		increment:function(){
+  //        			valueBy(1);
+  //        		},
+  //        		decrement:function(){
+  //        			valueBy(-1);
+  //        		},
+  //        		value:function(){
+  //        			return privateNumber;
+  //        		}
+  //        	}
+  //        })();
+
+
+  //        alert(counter.value());
+  //        counter.increment();
+  //        counter.increment();
+
+  //        alert(counter.value());
+
+		// function makeSizer(size){
+		// 	return function(){
+		// 		document.body.style.fontSize=size+'px';
+		// 	}
+		// }
+
+		// var size12=makeSizer(12);
+		// var size14=makeSizer(14);
+		// var size16=makeSizer(16);
+
+		// document.getElementById("size12").onclick=size12;
+		// document.getElementById("size14").onclick=size14;
+		// document.getElementById("size16").onclick=size16;
+	
+
+
+
+
+
+
+		// function greeting(name){
+		// 	var text='Hello'+name;
+		// 	return function() {
+		// 	alert(text);
+		// 	}
+		// }
+
+		// var sayHello=greeting("Closure");
+		// sayHello();
+
+		// function init(){
+		// 	var name="Mozilla";
+		// 	function displayName(){
+		// 		alert(name);
+		// 	}
+		// 	displayName();
+		// }
+		// init();
+		//你懂了吗 我懂了 谢谢你
+
+		// function makeFunc(){
+		// 	var name='Mozilla';
+		// 	function displayName(){
+		// 		alert(name);
+		// 	}
+		// 	return displayName;//displayName()内部函数在执行前被其外围函数中返回了。
+		// }
+
+		// var myFunc=makeFunc();
+		// myFunc();
+
+		// function makeAdder(x){
+		// 	return function(y){
+		// 		return x+y;
+		// 	};
+		// }
+
+		// var add5=makeAdder(5);
+		// var add10=makeAdder(10);
+
+		// alert(add5(2));
+		// alert(add10(2));
+
+
+
+		</script>
+	</body>
+</html>
