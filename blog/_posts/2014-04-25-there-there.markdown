@@ -16,13 +16,13 @@ NPL第一节课，我没去，我睡着了，心情不好。J没替我点名，1
 
 恩，不墨迹，也不矫情，有输有赢，用心态过生活。come on， silly man。整理下最近要做的事情吧：（优先级从上到下）
 
-1.[ ] 看完《JavaScript权威指南》认真做笔记，思考，做demo,总结写博客。
-2.[ ] 看完《CSS权威指南》认真做笔记，思考，做demo,总结写博客。
-3.[ ] 熟悉sublime快捷键，提高编程效率，再熟悉熟悉github,markdown,jekyll
-3.[ ] 写网络高级程序实验以及报告
-4.[ ] lucadema.cn 上线
-5.[ ] 重装系统[win8]
-6.[ ] 写IR实验以及报告
-7.[ ] supertable.me nodejs?mvc?angular.js? oh shit
-8.[ ] h.us 恩 总是计划很长，所以它存在的意义就是见证一段时光，当然我会让它上线，让它作为我做的最好的网站之一。maybe it's a surprise.maybe it's silly and foolish. but to me it is meaningful.当然这个站一定要在6月23日走之前做完，设计，性能，兼容性全部要做到最好。把它留下来，give a gift。
-9.[ ] 思考？思考？基础+面试题
+1. 看完《JavaScript权威指南》认真做笔记，思考，做demo,总结写博客。
+2. 看完《CSS权威指南》认真做笔记，思考，做demo,总结写博客。
+3. 熟悉sublime快捷键，提高编程效率，再熟悉熟悉github,markdown,jekyll
+3. 写网络高级程序实验以及报告
+4. lucadema.cn 上线
+5. 重装系统[win8]
+6. 写IR实验以及报告
+7. supertable.me nodejs?mvc?angular.js? oh shit
+8. h.us 恩 总是计划很长，所以它存在的意义就是见证一段时光，当然我会让它上线，让它作为我做的最好的网站之一。maybe it's a surprise.maybe it's silly and foolish. but to me it is meaningful.当然这个站一定要在6月23日走之前做完，设计，性能，兼容性全部要做到最好。把它留下来，give a gift。
+9. 思考？思考？基础+面试题
