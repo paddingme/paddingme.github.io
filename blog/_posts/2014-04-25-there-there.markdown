@@ -27,6 +27,6 @@ NLP第一节课，我没去，我睡着了，心情不好。J没替我点名，1
 8. h.us 恩 总是计划很长，所以它存在的意义就是见证一段时光，当然我会让它上线，让它作为我做的最好的网站之一。maybe it's a surprise.maybe it's silly and foolish. but to me it is meaningful.当然这个站一定要在6月23日走之前做完，设计，性能，兼容性全部要做到最好。把它留下来，give a gift。
 9. 思考？思考？基础+面试题
 
-<hr>
-<hr>
-<hr>
+<br>
+<br>
+<br>
