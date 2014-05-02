@@ -27,6 +27,13 @@ ps:博客正式feed地址为：[http://feeds.feedburner.com/paddingme][feed]（�
 
    博客备用feed地址为：[http://padding.me/blog/atom.xml][feed2]
 
+#About project
+
+ * [a logistics website homepage](http://padding.me/logistics.html)
+ 
+ * [a brand clothing website ](http://www.lucadema.cn)
+  
+<br><br>
 最后更新：2014/04/16 13:22
 <br>
 <br>
