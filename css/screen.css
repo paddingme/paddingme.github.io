@@ -131,7 +131,7 @@ a.core-nav:hover {
 #content {
   border-top: 1px solid #999;
   padding-top: 1em;
-  font-size: 0.85em;
+  font-size: small;
 }
 
 #content h2, #content h3 {
