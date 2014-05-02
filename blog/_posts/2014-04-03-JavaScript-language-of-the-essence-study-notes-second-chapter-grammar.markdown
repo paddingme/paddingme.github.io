@@ -30,7 +30,7 @@ JS对象的比较是引用的比较非值的比较，对象和其本身相等，
 <img src="http://htmljs.b0.upaiyun.com/uploads/1396461120383-2.png" alt="关于===的相等表格">
 
 
-<img src="http://htmljs.b0.upaiyun.com/uploads/1396464279990-1.png" alt="关于==的相等表格">
+<img src="http://htmljs.b0.upaiyun.com/uploads/1396464279990-1.png" alt="关于==的相等表格" style="width:625px;">
 
 引用下<a src="http://weibo.com/p/1005051196343093/weibofrom=page_100505&mod=TAB#1396461297438">计子</a>的总结就是只要记住null只和undefined相等，有number都转number，有boolean也转number，有string都转string，对象互相不等，NaN互相不等就可以了.
 `
