@@ -1,5 +1,5 @@
 ---
-title: CSS中的值和单位、字体以及文本属性(px,em,font)
+title: CSS中的值和单位、字体以及文本属性
 layout: post
 tags: CSS
 ---
@@ -16,7 +16,7 @@ CSS里的值和单位，主要分为绝对长度单位：`in`(英寸)、`cm`(厘
 
 至于要用`px`还是`em`，老版本的IE浏览器不支持像素的缩放，所以用`px`取代`em`，另使用em可以省去很多冗余的工作，例如设置了body里的字体大小，后面的元素内的字体大小全部设置为em大小，这样改动的话只需要改动body里的字体大小，而不用每个元素改动px大小，再次提醒**em依赖于最近的字体大小**。将行距(line-height)，和纵向高度的单位都用em。保证缩放时候的整体性。px常使用在图片大小上。
 
-这篇参考（http://blog.alphatr.com/em-and-px-in-css.html）也有一定参考意义，可以一看。
+[这篇文章](http://blog.alphatr.com/em-and-px-in-css.html)也有一定参考意义，可以一看。
 
 ##2. 颜色##
 CSS中颜色取值主要由以下几种方法：
@@ -67,6 +67,7 @@ p {
 
 
 参考文章：
+
 + [http://www.zhangxinxu.com/wordpress/?p=874](http://www.zhangxinxu.com/wordpress/?p=874) 这篇文章很有趣
 + [http://www.1z1b.com/one-blog-a-week/px-em-pt/#comment-17058](http://www.1z1b.com/one-blog-a-week/px-em-pt/#comment-17058)
 + [http://www.dreamdu.com/css/css_colors/](http://www.dreamdu.com/css/css_colors/)
