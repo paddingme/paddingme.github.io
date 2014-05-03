@@ -53,7 +53,7 @@ CSS通常使用`font-family`定义使用什么字体，`font-size`定义字体�
 
 
 ####font-family####
-   font-family取值: [[ <family-name> | <generic-family> ] [, <family-name>| <generic-family>]* ] | inherit
+   font-family取值: `[[ <family-name> | <generic-family> ] [, <family-name>| <generic-family>]* ] | inherit`
 
  family-name:指一系列字体名称
  而generic-family是指一般性字体名称即以下五种通用字体系列。
@@ -67,15 +67,19 @@ CSS定义了五种通用字体系列（font-family）：
 
 说明：
 
-1） 想要显示的字体一定要是你计算机中有的,否则不会按照你期望的显示.上面的第三个示例说明如果有宋体就显示宋体否则显示Arial字体
-2） [字体名1 , 字体名2 , *],其中的星号*,表示可以继续增加字体名.如果用户计算机没有安装,你定义的字体名1,系统会自动使用字体名2,如果没有字体名2,系统就再查找字体名3,如果都没有,将使用系统的默认字体
-3） family-name代表系列性字体的名称,比如可以使用逗号分开,的方式取一系列的值("Times","Arial","Courier"等)
-4） generic-family代表一般性字体名称,每个名称都可以代表一系列的字体,比如"serif", "sans-serif", "cursive", "fantasy", "monospace"
-5） 用逗号来分隔每一个值,最好在最后有一个基本字体(generic-family)
-6）使用中文字体或者英文名称超过一个单词的字体时要使用"(冒号)扩起来,比如"Times News Roman","宋体"
-7)现代浏览器字体默认的设置为“宋体/simsun字体 16像素”
+* 想要显示的字体一定要是你计算机中有的,否则不会按照你期望的显示.上面的第三个示例说明如果有宋体就显示宋体否则显示Arial字体
+* [字体名1 , 字体名2 , *],其中的星号*,表示可以继续增加字体名.如果用户计算机没有安装,你定义的字体名1,系统会自动使用字体名2,如果没有字体名2,系统就再查找字体名3,如果都没有,将使用系统的默认字体
+* family-name代表系列性字体的名称,比如可以使用逗号分开,的方式取一系列的值("Times","Arial","Courier"等)
+* generic-family代表一般性字体名称,每个名称都可以代表一系列的字体,比如"serif", "sans-serif", "cursive", "fantasy", "monospace"
+* 用逗号来分隔每一个值,最好在最后有一个基本字体(generic-family)
+* 使用中文字体或者英文名称超过一个单词的字体时要使用"(冒号)扩起来,比如"Times News Roman","宋体"
+* 现代浏览器字体默认的设置为“宋体/simsun字体 16像素”
 
-
+(留坑：[paddingme](http://padding.me)博客字体默认设置为small,而[http://www.zaibc.com/](http://www.zaibc.com/)的字体设置为
+`body {
+font: 13px Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+}`) 很奇怪在我的电脑上(windows7,chrome33.0.1750.146 )显示正常，而在我同学的电脑上(mac，chrome版本未知）我博客的字体竟然比zaibc的字体小)
+理论上，small为13px，为什么不一样大呢？难道是浏览器渲染的问题？等我入手大MAC再做详细对比研究。当然HTML的big,small标签已经被w3c抛弃,)
 
 
 ##4. 文本属性##
