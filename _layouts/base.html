@@ -1,6 +1,7 @@
 <!DOCTYPE>
 <html lang="zh-CN">
-  <head>
+
+<head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="PaddingMe" />
@@ -9,6 +10,9 @@
     <meta name="robots" content="index,follow">
     <meta name="description" content="PaddingMe - a front-end developer" />
     <meta name="application-name" content="padding.me">
+    
+    <link rel="author" href="https://plus.google.com/u/1/105241873904238310190/posts" />
+
 
     <title>{{ page.title }}{{ page.post_title_label }}</title>
     <link rel="stylesheet" href="/css/syntax.css" type="text/css" media="screen, projection, print" />
@@ -18,32 +22,35 @@
     <!--[if lte IE 7]><script src="/javascripts/icomoon-lte-ie7.js"></script><![endif]-->
 
     <script src="http://upcdn.b0.upaiyun.com/libs/jquery/jquery-1.8.3.min.js"></script>
-    <script type="text/javascript"> 
-     if (!window.jQuery) {
-      var script = document.createElement('script');
-      script.src = "/javascripts/jquery-1.8.3.min.js";
-      document.body.appendChild(script);
-      }
-    </script> 
+    <script type="text/javascript">
+    if (!window.jQuery) {
+        var script = document.createElement('script');
+        script.src = "/javascripts/jquery-1.8.3.min.js";
+        document.body.appendChild(script);
+    }
     </script>
-    <script src="/javascripts/header.js" ></script> 
-    <script src="/javascripts/post.js" ></script>
-    <script src="/javascripts/google_analytics.js" ></script>
+    </script>
+    <script src="/javascripts/header.js"></script>
+    <script src="/javascripts/post.js"></script>
+    <script src="/javascripts/google_analytics.js"></script>
 
-  </head>
-  <body id="{{page.body_id}}">
+</head>
+
+<body id="{{page.body_id}}">
     <!--[if lt IE 9]><div style='clear: both; height: 59px; width=820px; position: relative;'> <a href="http://www.google.com/chrome"><img src="http://www.ie6countdown.com/images/upgrade.jpg" border="0" height="42" width="820" alt="您的浏览器版还处在远古时代，强烈建议您更新换代，使用chrome访问我的网站。" /></a></div><![endif]-->
     <div id="content-wrapper">
 
-      {{ content }}
+        {{ content }}
 
-      <div id="push"></div>
+        <div id="push"></div>
     </div>
     <div id="footer">
-      <p id="contact-info"><a class="core-nav" href="mailto:padding4me@gmail.com">padding4me@gmail.com</a></p>
-      <p id="copyright">
-        <a class="core-nav icon-cc" rel="license" title="Some Rights Reserved — Creative Commons License" href="https://github.com/paddingme/paddingme.github.io/blob/master/README.markdown#license"></a>
-      </p>
+        <p id="contact-info"><a class="core-nav" href="mailto:padding4me@gmail.com">padding4me@gmail.com</a>
+        </p>
+        <p id="copyright">
+            <a class="core-nav icon-cc" rel="license" title="Some Rights Reserved — Creative Commons License" href="https://github.com/paddingme/paddingme.github.io/blob/master/README.markdown#license"></a>
+        </p>
     </div>
-  </body>
+</body>
+
 </html>

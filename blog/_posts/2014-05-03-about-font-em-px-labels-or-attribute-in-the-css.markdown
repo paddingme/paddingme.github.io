@@ -48,6 +48,34 @@ p {
 
 
 ##3. 字体##
+CSS通常使用`font-family`定义使用什么字体，`font-size`定义字体大小，`font-style`定义斜体字，
+`font-variant`定义小型的大写字体，`font-weight`定义字体的粗细，`font`统一定义字体的所有属性。
+
+
+####font-family####
+   font-family取值: [[ <family-name> | <generic-family> ] [, <family-name>| <generic-family>]* ] | inherit
+
+ family-name:指一系列字体名称
+ 而generic-family是指一般性字体名称即以下五种通用字体系列。
+CSS定义了五种通用字体系列（font-family）：
+
+ + Serif字体——这些字体成比例，而且有上下短线,Sefit字体包括Times、Georigia和New Century Schoolbook等。
+ + Sans-serif字体——字体成比例，但是没有上下短线。Sans-sefit字体包括Geneva,Verdana,Arial和Univers等。
+ + Monospace字体——不成比例（模拟打印设备打出的文本），每个字符的**宽度**完全相同,上下短线可能有可能无。monospace字体包括Courier、Courier New、Andale Mono 等。
+ + Cusrive字体——模仿人的手写体。包括Zapf Chancery、Anthou、Comic Sana等。
+ + Fantasy字体——在上述四种字体之外的，不能用任何特征来定义的字体包括：Wesrern、Woodblock和Kinggong等。
+
+说明：
+
+1） 想要显示的字体一定要是你计算机中有的,否则不会按照你期望的显示.上面的第三个示例说明如果有宋体就显示宋体否则显示Arial字体
+2） [字体名1 , 字体名2 , *],其中的星号*,表示可以继续增加字体名.如果用户计算机没有安装,你定义的字体名1,系统会自动使用字体名2,如果没有字体名2,系统就再查找字体名3,如果都没有,将使用系统的默认字体
+3） family-name代表系列性字体的名称,比如可以使用逗号分开,的方式取一系列的值("Times","Arial","Courier"等)
+4） generic-family代表一般性字体名称,每个名称都可以代表一系列的字体,比如"serif", "sans-serif", "cursive", "fantasy", "monospace"
+5） 用逗号来分隔每一个值,最好在最后有一个基本字体(generic-family)
+6）使用中文字体或者英文名称超过一个单词的字体时要使用"(冒号)扩起来,比如"Times News Roman","宋体"
+7)现代浏览器字体默认的设置为“宋体/simsun字体 16像素”
+
+
 
 
 ##4. 文本属性##
