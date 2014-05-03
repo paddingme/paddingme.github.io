@@ -94,7 +94,7 @@ font: 13px Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
 
 参考文章：
 
-+ [http://www.zhangxinxu.com/wordpress/?p=874](http://www.zhangxinxu.com/wordpress/?p=874) 这篇文章很有趣
+
 + [http://www.1z1b.com/one-blog-a-week/px-em-pt/#comment-17058](http://www.1z1b.com/one-blog-a-week/px-em-pt/#comment-17058)
 + [http://www.dreamdu.com/css/css_colors/](http://www.dreamdu.com/css/css_colors/)
 + [http://www.w3school.com.cn/cssref/css_colors_legal.asp](http://www.w3school.com.cn/cssref/css_colors_legal.asp)
