@@ -68,7 +68,7 @@ CSS定义了五种通用字体系列（font-family）：
 说明：
 
 * 想要显示的字体一定要是你计算机中有的,否则不会按照你期望的显示.上面的第三个示例说明如果有宋体就显示宋体否则显示Arial字体
-* [字体名1 , 字体名2 , *],其中的星号*,表示可以继续增加字体名.如果用户计算机没有安装,你定义的字体名1,系统会自动使用字体名2,如果没有字体名2,系统就再查找字体名3,如果都没有,将使用系统的默认字体
+* [字体名1 , 字体名2 , \*],其中的星号\*,表示可以继续增加字体名.如果用户计算机没有安装,你定义的字体名1,系统会自动使用字体名2,如果没有字体名2,系统就再查找字体名3,如果都没有,将使用系统的默认字体
 * family-name代表系列性字体的名称,比如可以使用逗号分开,的方式取一系列的值("Times","Arial","Courier"等)
 * generic-family代表一般性字体名称,每个名称都可以代表一系列的字体,比如"serif", "sans-serif", "cursive", "fantasy", "monospace"
 * 用逗号来分隔每一个值,最好在最后有一个基本字体(generic-family)
@@ -78,11 +78,13 @@ CSS定义了五种通用字体系列（font-family）：
 (留坑：[paddingme](http://padding.me)博客字体默认设置为small,而[http://www.zaibc.com/](http://www.zaibc.com/)的字体设置为
 `body {
 font: 13px Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
-}`) 很奇怪在我的电脑上(windows7,chrome33.0.1750.146 )显示正常，而在我同学的电脑上(mac，chrome版本未知）我博客的字体竟然比zaibc的字体小)
-理论上，small为13px，为什么不一样大呢？难道是浏览器渲染的问题？等我入手大MAC再做详细对比研究。当然HTML的big,small标签已经被w3c抛弃,)
+}`) 很奇怪在我电脑上(windows7,chrome33.0.1750.146 )显示正常，而在同学的电脑上(mac，chrome版本未知）我博客的字体竟然比zaibc的字体小)理论上，small为13px，为什么不一样大呢？难道是浏览器渲染的问题？等我入手大MAC再做详细对比研究。当然HTML的big,small标签已经被w3c抛弃)
+
+另关于默认字体可以查阅[女施主的博文中](http://saibeixuer.blog.163.com/blog/static/74770377201075111628356/)详细解析了淘宝的字体，可以围观，做深入了解。还有这位[男施主的博文](http://www.iyunlu.com/view/css-xhtml/default-web-font-style-1.html)和[这一篇博文](http://iyunlu.com/view/css-xhtml/default-web-font-style-2html.html),玉伯的文章找不到了很遗憾。张鑫旭的[这篇博客](http://www.zhangxinxu.com/wordpress/?p=874)也相当有趣，建议观看，提供一个新的视角关于字体设置。
 
 
 ##4. 文本属性##
+
 
 
 
