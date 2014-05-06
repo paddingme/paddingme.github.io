@@ -27,7 +27,7 @@ ps:博客正式feed地址为：[http://feeds.feedburner.com/paddingme][feed]（�
 
    博客备用feed地址为：[http://padding.me/blog/atom.xml][feed2]
 
-<div style="dispaly:none">About project(没改好不能见人)
+<div style="display:none">About project(没改好不能见人)
 
  * [a logistics website homepage](http://padding.me/logistics.html)
  
