@@ -41,7 +41,7 @@ JavaScript 标准文档中定义: [[Class]] 的值只可能是下面字符串中
 
 JavaScript 标准文档只给出了一种获取 [[Class]] 值的方法，那就是使用 Object.prototype.toString。
 
-
+```
 function is(type, obj) {
     var clas = Object.prototype.toString.call(obj).slice(8, -1);
     return obj !== undefined && obj !== null && clas === type;

@@ -161,7 +161,8 @@ a.core-nav:hover {
 #content code {
   background-color:#EEEEFF;
   border:1px solid #DDDDDD;
-  font-size:95%;
+  /*font-size:95%;*/
+  font-size:100%;
   padding:0 0.2em;
 }
 

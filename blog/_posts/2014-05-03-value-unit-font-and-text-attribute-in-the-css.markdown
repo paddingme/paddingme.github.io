@@ -80,7 +80,7 @@ CSS定义了五种通用字体系列（font-family）：
 font: 13px Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
 }`) 很奇怪在我电脑上(windows7,chrome33.0.1750.146 )显示正常，而在同学的电脑上(mac，chrome版本未知）我博客的字体竟然比zaibc的字体小)理论上，small为13px，为什么不一样大呢？难道是浏览器渲染的问题？等我入手大MAC再做详细对比研究。当然HTML的big,small标签已经被w3c抛弃)
 
-另关于默认字体可以查阅[女施主的博文中](http://saibeixuer.blog.163.com/blog/static/74770377201075111628356/)详细解析了淘宝的字体，可以围观，做深入了解。还有这位[男施主的博文](http://www.iyunlu.com/view/css-xhtml/default-web-font-style-1.html)和[这一篇博文](http://iyunlu.com/view/css-xhtml/default-web-font-style-2html.html),玉伯的文章找不到了很遗憾。张鑫旭的[这篇博客](http://www.zhangxinxu.com/wordpress/?p=874)也相当有趣，建议观看，提供一个新的视角关于字体设置。
+另关于默认字体可以查阅[女施主的博文中](http://saibeixuer.blog.163.com/blog/static/74770377201075111628356/)详细解析了淘宝的字体，可以围观，做深入了解。还有这位[男施主的博文](http://www.iyunlu.com/view/css-xhtml/default-web-font-style-1.html)和[这一篇博文](http://iyunlu.com/view/css-xhtml/default-web-font-style-2html.html),玉伯的文章找不到了很遗憾。张鑫旭的[这篇博客](http://www.zhangxinxu.com/wordpress/?p=874)也相当有趣，建议观看，提供一个新的视角关于字体设置。还强烈推荐[这篇博客](http://lepture.com/zh/2014/chinese-fonts-and-yue-css)，博主对中文字体确有研究，所以他的网站[阅乎](http://yuehu.io)阅读体验非常好。**字体真是一门大学问!**
 
 
 ##4. 文本属性##
@@ -88,6 +88,7 @@ font: 13px Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
 
 
 
+<br>
 
 
 
@@ -98,5 +99,6 @@ font: 13px Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
 + [http://www.1z1b.com/one-blog-a-week/px-em-pt/#comment-17058](http://www.1z1b.com/one-blog-a-week/px-em-pt/#comment-17058)
 + [http://www.dreamdu.com/css/css_colors/](http://www.dreamdu.com/css/css_colors/)
 + [http://www.w3school.com.cn/cssref/css_colors_legal.asp](http://www.w3school.com.cn/cssref/css_colors_legal.asp)
+
 
    
