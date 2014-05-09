@@ -46,13 +46,14 @@ JS依赖于全局变量进行连接，所有编译单元的所有级别对象都
 for循环有两种形式，for(var i=0; i < arr.length,i++){}和for(i in arr){},后者枚举一个对象的所有属性名（或键名），在每次循环中，对象的另一个属性名字付串被复制给for和in之间的变量。
 object.hasOwnProperty(variable)来检测是否为该对象的成员，还是从原型链里找到的。
 
-```javascript
+<pre><code>
 for(myvar in obj){
      if(object.hasOwnProperty(myvar)){
          ...
      }
 }
-```
+</code>
+</pre>
 
 try catch throw(?)
 

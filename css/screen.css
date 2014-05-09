@@ -23,7 +23,9 @@ body {
   width: 40em;
   margin-left: auto;
   margin-right: auto;
-  font-family: "Trebuchet MS", Helvetica, Arial sans-serif;
+
+  /*font-family: "Trebuchet MS", Helvetica, Arial sans-serif;*/
+  font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "WenQuanYi Micro Hei", "SimSun", sans-serif;
   font-size-adjust: none;
   font-style: normal;
   font-variant: normal;
@@ -131,7 +133,7 @@ a.core-nav:hover {
 #content {
   border-top: 1px solid #999;
   padding-top: 1em;
-  font-size: small;
+  font-size: normal;
 }
 
 #content h2, #content h3 {
