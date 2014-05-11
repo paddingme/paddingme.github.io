@@ -2,6 +2,7 @@
 layout: default
 post_title_label: "   [padding.me]"
 ---
+
 <div id="post">
   <h1><a href="{{ page.url }}" title="{{ page.title | xml_escape }}{{ page.post_title_label }}">{{page.title}}</a></h1>
 
@@ -29,9 +30,9 @@ post_title_label: "   [padding.me]"
 <hr />
 
 <div id="related-posts">
-  <h2>
+  <h3>
     <a class="icon-feed-2" href="http://feeds.feedburner.com/paddingme" title="PaddingMe - Atom/RSS Feed"></a>其他文章你可能感兴趣
-  </h2>
+  </h3>
   <ul class="posts">
     {% for post in site.posts %}
       {% if post.url == "/blog/2014/04/15/he-gives-a-shit/" or post.url == "/blog/2014/05/03-about-font-em-px-labels-or-attribute-in-the-css" or post.url == "/blog/2014/04/20/learn-css-layout/" or post.url == "/blog/2014/04/19/float-label-in-css/" %}
@@ -47,11 +48,6 @@ post_title_label: "   [padding.me]"
 
 <hr />
 
-<!-- <div id="disqus">
-  <a name="comments"></a>
-  <div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/paddingme/embed.js"></script><noscript>Blog comments powered by Disqus. <a href="http://paddingme.disqus.com/?url=ref">View the discussion thread.</a></noscript>
-</div>
- -->
 
  <!-- Duoshao Comment start -->
  <!--  <div class="ds-thread" data-thread-key="请将此处替换成文章在你的站点中的ID" data-title="{{page.title}}" data-url="{{ page.url }}"></div> -->

@@ -1,3 +1,5 @@
+
+/*scroll to top*/
 window.onload=function() {
 	var obtn=document.getElementById("btn");
 	var clientHeight=document.documentElement.clientHeight;
@@ -30,3 +32,11 @@ window.onload=function() {
 
 	}
 }
+
+
+/* 判断用户代理是否为IE来改变字体大小*/
+if(/windows/i.test(navigator.userAgent)){
+  document.getElementsByTagName('html')[0].className += ' windows'
+}
+
+

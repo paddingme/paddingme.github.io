@@ -59,7 +59,7 @@ CSS中允许浮动任何元素，浮动是指元素浮动在左边或者右边�
  例如在`<q>这只是一个普通的标签，这里有一个<cite>cite</cite>标签</q>`中有四种boxes
  containing box->line boxes->inline boxes(包括匿名的，不会成块显示，而是排成一行)->content area
 如图所示：
- <img  title="line boxes示意" src="http://image.zhangxinxu.com/image/blog/201001/2010-01-20_230801.png" style="margin:0 30px">
+ <img  title="line boxes示意" src="http://image.zhangxinxu.com/image/blog/201001/2010-01-20_230801.png" >
 
 
 CSS中关于高度,[文中](http://www.zhangxinxu.com/wordpress/?p=583)也给出了很好的介意：

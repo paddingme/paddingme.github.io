@@ -2,7 +2,7 @@
 title: 如何实现“回到顶部”的按钮效果
 layout: post
 tags:
-- javacript
+- javascript
 - css
 ---
 
