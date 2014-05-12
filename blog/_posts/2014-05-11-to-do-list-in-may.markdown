@@ -6,14 +6,15 @@ tags:
 ---
 
 ## 1. [http://padding.me](http://padding.me) 网站优化
-- <del>修改博客代码高亮，使得别人看自己博客更好看；</del>
+
 - <del>修改字体，文字行间距等等，有一个好的阅读体验；</del>
 - <del>增加“返回顶部”的按钮；</del>
+- 修改博客代码高亮</del>
 - 考虑是否要更改多说评论为Disque；
 - 考虑是否更改google analytics 为baidu analytics；
 - 增加每篇文章分享到新浪微博和推特的按钮；
 - 修改为响应式，考虑em与px，在手机上有很好的表现；
-- 增加side bar导航，可以添加更多的页面例如说我看的书，我常去的网站，以及目录，tag查询等（看jekyll文档等），添加更多的tag,工具，问题解决，网站建设等等。性能优化；
+- 增加side bar导航，可以添加更多的页面例如说我看的书，我常去的网站，以及目录，tag查询等（看jekyll文档等），添加更多的tag,工具，问题解决，网站建设等等;
 - html 语义化；
 - 重写css  js 使之符合规范（[编码规范](http://codeguide.bootcss.com/)）；
 - padding.me 性能优化，以及利用google analytics 提升网站访问速度。
