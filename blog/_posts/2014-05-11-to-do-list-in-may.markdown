@@ -13,7 +13,7 @@ tags:
 - 考虑是否更改google analytics 为baidu analytics；
 - 增加每篇文章分享到新浪微博和推特的按钮；
 - 修改为响应式，考虑em与px，在手机上有很好的表现；
-- 修改增加slide 导航，可以添加更多的页面例如说我看的书，我常去的网站，以及目录，tag查询等（看jekyll文档等），添加更多的tag,工具，问题解决，网站建设等等。性能优化；
+- 修改增加side bar导航，可以添加更多的页面例如说我看的书，我常去的网站，以及目录，tag查询等（看jekyll文档等），添加更多的tag,工具，问题解决，网站建设等等。性能优化；
 - html 语义化；
 - 重写css  js 使之符合规范（[编码规范](http://codeguide.bootcss.com/)）；
 - padding.me 性能优化，以及利用google analytics 提升网站访问速度。
@@ -53,7 +53,9 @@ tags:
 ## 6. 还要完成的事
 - [http://h.us](http://h.us) 设计实现，deadline：2014年6月23日；
 - [http://supertable.me](http://supertable.me) 数据库设计，以及网站原型等等。
+- 看[慕课网](http://imooc.com)视频，学习新技能。
+
+详情请见[https://github.com/paddingme/paddingme.github.io/issues/1](https://github.com/paddingme/paddingme.github.io/issues/1)
 
 
----
 > 但行好事，莫问前程。
