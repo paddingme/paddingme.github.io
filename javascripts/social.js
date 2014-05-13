@@ -1,3 +1,12 @@
+/**
+ * Social Button
+ *
+ * Copyright (c) 2014 by Hsiaoming Yang.
+ */
+
+
+
+
 (function() {
     var t = {};
     var e = {
