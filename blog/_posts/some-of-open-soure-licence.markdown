@@ -51,3 +51,8 @@ The licensor cannot revoke these freedoms as long as you follow the license term
 
 Under the following terms:
 Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+
+
+
+
+先打好前端基础吧，写博客是写给自己看的，记录自己的思考、心情。暂时不做分享（我也没啥好分享的=。=）了，多说评论将就用，也许有一天该把评论关闭了。

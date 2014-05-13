@@ -17,7 +17,7 @@
     url('../fonts/iconfont.svg#uxiconfont') format('svg'); /* iOS 4.1- */
 }
 
-[class^="icon-"]:before, [class*=" icon-"]:before {
+.icon-quill:before, .icon-twitter:before, .icon-github:before, .icon-info:before ,.icon-search:before ,.icon-cc:before{
   font-family: 'icomoon-ultimate';
   font-style: normal;
   speak: none;
@@ -25,7 +25,8 @@
   line-height: 1;
   -webkit-font-smoothing: antialiased;
 }
-.weibo-font{
+
+.icon-weibo{
     font-family:"iconfont" !important;
     font-style:normal;
     -webkit-font-smoothing: antialiased;
@@ -33,29 +34,12 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+
 .icon-info:before {
-  content: "\e000";
-}
-.icon-info-2:before {
   content: "\e001";
 }
 .icon-quill:before {
-  content: "\e002";
-}
-.icon-quill-2:before {
   content: "\e003";
-}
-.icon-pen:before {
-  content: "\e004";
-}
-.icon-feed:before {
-  content: "\e005";
-}
-.icon-feed-2:before {
-  content: "\e006";
-}
-.icon-feed-3:before {
-  content: "\e007";
 }
 .icon-twitter:before {
   content: "\e008";

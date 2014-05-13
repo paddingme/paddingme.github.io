@@ -52,7 +52,10 @@
                 t.preventDefault && t.preventDefault();
                 window.open(c, "_blank", "width=615,height=505")
             };
+            if(o=="weibo") {i.innerHTML="&#x3433;";i.style.fontSize="29px";}
             n.appendChild(i);
+
+
             var v = h[o];
             if (v && p) {
                 var b = document.createElement("span");
