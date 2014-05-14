@@ -13,6 +13,8 @@ The "scrollup" picture is from [bootstrap](http://www.bootcss.com/).
 
 The **structure, design, and layout** of the site are licensed under the [MIT License](http://opensource.org/licenses/MIT).
 
+
+
 # Dependencies
 
 * [Jekyll](http://wiki.github.com/mojombo/jekyll/install)
