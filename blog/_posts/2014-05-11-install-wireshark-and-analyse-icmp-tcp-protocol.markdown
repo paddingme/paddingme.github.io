@@ -87,4 +87,4 @@ TCP协议重要的是理解“TCP三次握手”和“TCP四次握手”，我�
 + [传输控制协议](http://zh.wikipedia.org/wiki/%E4%BC%A0%E8%BE%93%E6%8E%A7%E5%88%B6%E5%8D%8F%E8%AE%AE)
 + [详解“TCP三次握手”建立TCP连接的全过程](http://www.ctowhy.com/201.html)
 + [ICMP数据包解码](http://www.ctowhy.com/363.html)
-+ [TCP协议中的三次握手和四次挥手(图解)](http://blog.csdn.net/whuslei/article/details/6667471)
++ [TCP协议中的三次握手和四次挥手](http://blog.csdn.net/whuslei/article/details/6667471)
