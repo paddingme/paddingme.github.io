@@ -21,7 +21,7 @@ title: About - PaddingMe
 一入前端深似海，绝知此事要躬行。有人对前端嗤之以鼻，有人觉得高端大气，对我而言，只是一件有趣的事儿。<strong>和有趣的人，一起做有趣的事，这是我憧憬的美好人生。</strong>
 
 #About blog
-想建个人博客由来已久，不管是技术总结还是心情流水，都是一种记录情结。padding，英文[填充之意][paddingen]。在[CSS盒子模型][boxmodel]中，padding表示[内边距][padding]。所以[padding.me][padding.me]取意自我充实，用信念、希望、努力、乐观填充所有的空洞与乏味，也取“修身，齐家，平天下”之修身之意，希望自己可以沉心经营，潜心修行。
+想建个人博客由来已久，不管是技术总结还是自言自语，都是一种记录情结。padding，英文[填充之意][paddingen]。在[CSS盒子模型][boxmodel]中，padding表示[内边距][padding]。所以[padding.me][padding.me]取意自我充实，用信念、希望、努力、乐观填充所有的空洞与乏味，也取“修身，齐家，平天下”之修身之意，希望自己可以沉心经营，潜心修行。
 
 ps:博客正式feed地址为：[http://feeds.feedburner.com/paddingme][feed]（需翻墙）
 
