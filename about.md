@@ -29,7 +29,7 @@ ps:博客正式feed地址为：[http://feeds.feedburner.com/paddingme][feed]（�
 
 <div style="display:none">About project(没改好不能见人)
 
- * [a logistics website homepage](http://padding.me/logistics.html)
+ * [a logistics website homepage](http://padding.me/demo/logistics/index.html)
  
  * [a brand clothing website ](http://www.lucadema.cn)</div>
   
