@@ -96,6 +96,6 @@ h今天生日，生日快乐。
 >27岁的许小姐真不知道，
 >还会有多少个自己，死在这一生的路上。
 
->东东枪《不知道多少个自己，死在这一生的路上》
+>by 东东枪《不知道多少个自己，死在这一生的路上》
 
 <figure><img src="/images/gift_by_begemott.jpg"><figcaption>gift by begemott</figcaption></figure>
