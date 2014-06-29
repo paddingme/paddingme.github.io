@@ -4,7 +4,7 @@ title: 在北京
 tags: 自言自语
 ---
 
-<figure><img src="/images/gift_by_begemott.jpg"><figcaption>gift by begemott</figcaption></figure>
+
 
 2014年6月22日晚拖着行李箱上了T18，公寓门口，和J告别，J很难过，他回头看我一眼，说明年再见。
 
@@ -95,3 +95,4 @@ h今天生日，生日快乐。
 
 by 东东枪《不知道多少个自己，死在这一生的路上》
 ```
+<figure><img src="/images/gift_by_begemott.jpg"><figcaption>gift by begemott</figcaption></figure>
