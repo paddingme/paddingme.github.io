@@ -92,6 +92,8 @@ a.core-nav:hover {
 #content img.inline-left {
   float: left;
   margin: .3em 1em 0 0;
+  width:180px;
+  height: 180px;
 }
 
 #footer {
