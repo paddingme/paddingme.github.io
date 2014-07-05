@@ -1,41 +1,41 @@
 ﻿/* 网站作者 */
 胡海波
-微博： @臭臭手抽抽
+微博：@臭臭手抽抽
 推特：@paddingme
-邮箱:huhaibo2012[at]gmail.com
-现居:北京
+邮箱: huhaibo2012[at]gmail.com
+现居: 北京
 
 /* 感谢 */
 
 jasonrudolph
-Email:jason[at]jasonrudolph.com
-twitter:@jasonrudolph
-From:Raleigh, NC
+Email: jason[at]jasonrudolph.com
+twitter: @jasonrudolph
+From: Raleigh, NC
 
 
 王俊杰
-邮箱:wangjunjie2013[at]gmail.com
+邮箱: wangjunjie2013[at]gmail.com
 微博：@王俊杰2013
 现居：哈尔滨
 
 leeon
-Email:atleeon@gmail.com
-twitter:@atleeon
-From:Harbin
+Email: atleeon[at]gmail.com
+twitter: @atleeon
+From: Harbin
 
 猪小排
 微博：@猪小排很欠拍
-现居:淮北
+现居: 淮北
 
 Hsiaoming Yang
-Email:me[at]lepture.com
-twitter:@lepture
+Email: me[at]lepture.com
+twitter: @lepture
 
 
 /* 网站 */
-最后更新:2014年07月05日
+最后更新: 2014年07月05日
 语言：中文
-Doctype:HTML5
+Doctype: HTML5
 IDE: Sublime Text, Notepad++
 
 
