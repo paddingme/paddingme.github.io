@@ -72,6 +72,7 @@ HTML5 (向后兼容，推荐使用):
 ```
 
 HTML 4.01 Strict
+
 This DTD contains all HTML elements and attributes, but does NOT INCLUDE presentational or deprecated elements (like font). Framesets are not allowed.
 
 ```
