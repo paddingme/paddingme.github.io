@@ -46,3 +46,5 @@ ps:博客正式feed地址为：[http://feeds.feedburner.com/paddingme][feed]（�
 [padding.me]:http://padding.me
 [feed]: http://feeds.feedburner.com/paddingme
 [feed2]:http://padding.me/blog/atom.xml
+
+---
