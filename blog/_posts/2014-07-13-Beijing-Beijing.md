@@ -1,5 +1,5 @@
 ---
-title:北京，北京
+title: 北京，北京
 layout: post
 tags:
 - 自说自话
