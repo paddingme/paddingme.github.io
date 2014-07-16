@@ -17,6 +17,14 @@
     url('../fonts/iconfont.svg#uxiconfont') format('svg'); /* iOS 4.1- */
 }
 
+
+ @font-face {
+      font-family: 'NotoSansHans-Regular';
+      src:url('../fonts/NotoSansHans-Regular.otf');
+      font-weight: normal;
+  font-style: normal;
+    }
+
 .icon-quill:before, .icon-twitter:before, .icon-github:before, .icon-info:before ,.icon-search:before ,.icon-cc:before{
   font-family: 'icomoon-ultimate';
   font-style: normal;
