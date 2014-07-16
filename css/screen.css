@@ -220,12 +220,12 @@ blockquote p.attribution {
  */
 
 .yue {
-  font: 400 18px/1.62 "NotoSansHans-Regular","Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
+  font: 400 18px/1.62 "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
   color: #444443;
 }
 .windows .yue {
   font-size: 16px;
-  font-family: "NotoSansHans-Regular","Georgia", "SimSun", sans-serif;
+  font-family: "Georgia", "SimSun", sans-serif;
 }
 .yue ::-moz-selection {
   background-color: rgba(0,0,0,0.2);
@@ -239,7 +239,7 @@ blockquote p.attribution {
 .yue h4,
 .yue h5,
 .yue h6 {
-  font-family: "NotoSansHans-Regular","Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
+  font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
   color: #222223;
 }
 .yue h1 {
