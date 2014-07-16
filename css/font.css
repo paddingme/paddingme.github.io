@@ -20,9 +20,8 @@
 
  @font-face {
       font-family: 'NotoSansHans-Regular';
-      src:url('../fonts/NotoSansHans-Regular.otf');
-      font-weight: normal;
-  font-style: normal;
+      src:url('../fonts/NotoSansHans-Medium.otf');
+    
     }
 
 .icon-quill:before, .icon-twitter:before, .icon-github:before, .icon-info:before ,.icon-search:before ,.icon-cc:before{
