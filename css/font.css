@@ -18,11 +18,11 @@
 }
 
 
-/* @font-face {
-      font-family: 'NotoSansHans-Regular';
-      src:url('../fonts/NotoSansHans-Medium.otf');
+@font-face {
+      font-family: 'MFQingShu_Noncommercial-Regular';
+      src:url('../fonts/unoncommercialregular.ttf') format('truetype');
     
-    }*/
+    }
 
 .icon-quill:before, .icon-twitter:before, .icon-github:before, .icon-info:before ,.icon-search:before ,.icon-cc:before{
   font-family: 'icomoon-ultimate';
