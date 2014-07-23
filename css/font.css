@@ -20,6 +20,7 @@
 
 @font-face {
       font-family: 'MFQingShu_Noncommercial-Regular';
+      src:url('../fonts/MFQingShu_Noncommercial-Regular.eot');
       src:url('../fonts/unoncommercialregular.ttf') format('truetype');
     }
 
