@@ -1,5 +1,5 @@
 window.onload = function() {
-    var url = "duan.json";
+    var url = "main.json";
     //url是数据接口；json数据格式注意要用双引号
     var request = new XMLHttpRequest();
     request.open("GET", url);
