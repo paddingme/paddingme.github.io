@@ -27,10 +27,10 @@ JS对象的比较是引用的比较非值的比较，对象和其本身相等，
 ===首先计算其操作数的值，然后比较，比较过程无任何类型转换。
 ==如果两个操作数不是同一类型的，则相等运算符进行一些类型转换进行比较。
 ==这里截取<a href="http://dorey.github.io/JavaScript-Equality-Table/">JS相等表格</a>上的的两张图片让大家更为直观的感受下。
-<img src="http://htmljs.b0.upaiyun.com/uploads/1396461120383-2.png" alt="关于===的相等表格">
 
+<img src="http://paddingme.qiniudn.com/1396461120383-2.png" alt="关于===的相等表格">
 
-<img src="http://htmljs.b0.upaiyun.com/uploads/1396464279990-1.png" alt="关于==的相等表格" style="width:625px;">
+<img src="http://paddingme.qiniudn.com/1396464279990-1.png" alt="关于==的相等表格" style="width:625px;">
 
 引用下<a src="http://weibo.com/p/1005051196343093/weibofrom=page_100505&mod=TAB#1396461297438">计子</a>的总结就是只要记住null只和undefined相等，有number都转number，有boolean也转number，有string都转string，对象互相不等，NaN互相不等就可以了.
 `

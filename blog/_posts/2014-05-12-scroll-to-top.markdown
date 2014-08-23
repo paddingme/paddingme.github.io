@@ -43,7 +43,7 @@ tags:
   position: fixed;
   left:50%;
   bottom:30px;/*固定定位，相对于屏幕的可见范围位置*/
-  background:url(/images/top.png) no-repeat;margin-left: 25%;
+  background:url(http://paddingme.qiniudn.com/top.png) no-repeat;margin-left: 25%;
   /*按钮背景图片，这里我用的是bootstrap官网的scrolltop图片*/
 }
 ```

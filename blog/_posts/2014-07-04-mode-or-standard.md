@@ -7,7 +7,7 @@ tags:
 ---
 
 
-<figure><img src="/images/taskbar.jpg" ><figcaption>高(菜)端(鸟)front-end程序员的电脑桌面任务栏</figcaption></figure>
+<figure><img src="http://paddingme.qiniudn.com/taskbar.jpg" alt="电脑桌面任务栏"><figcaption>高(菜)端(鸟)front-end程序员的电脑桌面任务栏</figcaption></figure>
 
 
 最近在工作中经常遇到浏览器兼容性的问题，让我焦头烂额，这里总结下浏览器的严格模式和怪异模式以及IE浏览下的文档模式和浏览器模式等内容。
@@ -45,11 +45,11 @@ IE从IE8引入了文档兼容性开始有了浏览器模式和文档模式(按F1
 
 >“浏览器模式”:用于切换IE针对该网页的默认文档模式、对不同版本浏览器的条件备注解析、发送给网站服务器的用户代理（User-Agent）字符串的值。网站可以根据浏览器返回的不同用户代理字符串判断浏览器的版本和安装的功能，这样就可以向不同的浏览器返回不同的页面内容。
 
-<figure><img src="/images/ie9-2ge-moshi.png" alt="IE8的浏览器模式"><figcaption>IE8的浏览器模式</figcaption></figure>
+<figure><img src="http://paddingme.qiniudn.com/ie9-2ge-moshi.png" alt="IE8的浏览器模式"><figcaption>IE8的浏览器模式</figcaption></figure>
 
 >“文档模式”用于指定IE的页面排版引擎（Trident）以哪个版本的方式来解析并渲染网页代码。切换文档模式会导致网页被刷新，但不会更改用户代理字符串中的版本号，也不会从服务器重新下载网页。切换浏览器模式的同时，浏览器也会自动切换到相应的文档模式。
 
-<figure><img src="/images/ie9-2ge-moshi.png" alt="IE下的文档模式"><figcaption>IE9下的文档模式</figcaption></figure>
+<figure><img src="http://paddingme.qiniudn.com/ie9-2ge-moshi.png" alt="IE下的文档模式"><figcaption>IE9下的文档模式</figcaption></figure>
 
 我的理解就是浏览器模式是指IE浏览器 向服务器发送请求时，告诉服务器自己是哪个浏览器哪个版本，这里是指告诉服务器我是IE7还是IE8或者9,然后浏览器根据收到的用户代理字段返回IE7或者IE8或者IE9的页面内容。
 

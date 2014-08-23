@@ -203,7 +203,7 @@ blockquote p.attribution {
   position: fixed;
   left:50%;
   bottom:30px;
-  background:url(/images/top.png) no-repeat;margin-left: 30%;
+  background:url(http://paddingme.qiniudn.com/top.png) no-repeat;margin-left: 30%;
 }
 
 .ds-thread{

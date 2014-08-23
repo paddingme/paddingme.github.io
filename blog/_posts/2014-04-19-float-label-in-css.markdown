@@ -55,11 +55,11 @@ CSS中允许浮动任何元素，浮动是指元素浮动在左边或者右边�
 2. 浮动的本质：”包裹和破坏“。
     *  ”包裹“——浮动就是个**带有方位的`display；inline-block`属性**。`display:inline-block` 具有包裹的作用，元素被包裹之后其宽度自适应元素本身大小;`float:left`或者`float:right`某种程度上等价于`display:inline-block`，其唯一区别在于：`float`具有方向性,`display:inline-block`仅仅有一个水平方向排列，而`float`可以从左到右排列，还可以从右到左排列（很少用到，没有多大意义）。
     * ”破坏性“，如上所述，浮动的意义是**让文字环绕图片**，而这时由于`float`**破坏了正常的line boxes**。
- 
+
  例如在`<q>这只是一个普通的标签，这里有一个<cite>cite</cite>标签</q>`中有四种boxes
  containing box->line boxes->inline boxes(包括匿名的，不会成块显示，而是排成一行)->content area
 如图所示：
- <img  title="line boxes示意" src="http://image.zhangxinxu.com/image/blog/201001/2010-01-20_230801.png" >
+ <img  alt="line boxes示意" src="http://paddingme.qiniudn.com/float.png" >
 
 
 CSS中关于高度,[文中](http://www.zhangxinxu.com/wordpress/?p=583)也给出了很好的介意：
