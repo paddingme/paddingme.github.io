@@ -57,11 +57,7 @@ a.core-nav:hover {
 #header li {
   float: left;
   font-size: 50px;
-<<<<<<< HEAD
-  margin-left: 84px;
-=======
   margin-left: 116px;
->>>>>>> gitcafe-pages
 }
 
 #header li:first-child {
@@ -91,10 +87,7 @@ a.core-nav:hover {
 #content {
   border-top: 1px solid #999;
   padding-top: 1em;
-<<<<<<< HEAD
-=======
   margin-top: 1em;
->>>>>>> gitcafe-pages
   font-size: normal;
 }
 #content img.inline-left {
