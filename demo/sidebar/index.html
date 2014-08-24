@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>sidebar demo</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body> 
+<!--这里有ctrl +p : #body直接跳转到body接下来直接ctrl+enter建立新行-->
+
+	<div id="sidebar">
+		<ul>
+			<li id="prof" class="item">
+				<span class="glyphicon glyphicon-user"></span>
+				<div>我</div>
+			</li>
+			<li id="asset" class="item">
+				<span class="glyphicon glyphicon-usd"></span>
+				<div>资产</div>
+			</li>
+			<li id="brand" class="item">
+				<span class="glyphicon glyphicon-heart"></span>
+				<div>品牌</div>
+			</li>
+			<li id="broadcast" class="item">
+				<span class="glyphicon glyphicon-bell"></span>
+				<div>直播</div>
+			</li>
+			<li id="foot" class="item">
+				<span class="glyphicon glyphicon-eye-open"></span>
+				<div>看过</div>
+			</li>
+			<li id="calendar" class="item">
+				<span class="glyphicon glyphicon-time"></span>
+				<div>日历</div>
+			</li>
+		</ul>
+		<div id="closeBar">
+			<span class="glyphicon glyphicon-remove"></span>
+		</div>
+	</div>
+
+	<!--首先实现好sidebar-content 隐藏起来-->
+	<div class="nav-content" id="prof-content">
+		<div class="nav-con-close">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+		</div>
+		<div>
+			我
+		</div>
+	</div>
+
+	<div class="nav-content" id="asset-content">
+		<div class="nav-con-close">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+		</div>
+		<div>
+			资产
+		</div>
+	</div>
+
+	<div class="nav-content" id="brand-content">
+		<div class="nav-con-close">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+		</div>
+		<div>
+			品牌
+		</div>
+	</div>
+
+	<div class="nav-content" id="broadcast-content">
+		<div class="nav-con-close">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+		</div>
+		<div>
+			直播
+		</div>
+	</div>
+
+	<div class="nav-content" id="foot-content">
+		<div class="nav-con-close">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+		</div>
+		<div>
+			看过
+		</div>
+	</div>
+
+	<div class="nav-content" id="calendar-content">
+		<div class="nav-con-close">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+		</div>
+		<div>
+			日历
+		</div>
+	</div>
+
+	
+	<script src="sidebar.js"></script>
+</body>
+</html>

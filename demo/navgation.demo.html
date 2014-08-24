@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>非常小巧的JS下拉菜单代码</title>
+    <style>
+    ul{
+    	background: red;
+    	margin: 0 auto;
+    	width:500px;
+    	
+    }
+    ul li{
+    	list-style: none;
+    	display: inline-block;
+    	padding: 0;
+    	margin: 0 ;
+    	width:100px;
+    	height: 20px;
+    	float: left;
+    	background: yellow;
+    	border: 1px solid black;
+    	text-align: center;
+
+    }
+
+    ul li a{
+    	text-decoration: none;
+    }
+
+    /*li div{visibility: hidden;}*/
+    li div a{
+    	display: block;
+    	text-align: left;
+    	width:auto;
+    	margin-top: 3px;
+
+    	
+    }
+
+    li div{
+    	text-align: left;
+    	background: yellow;
+    	margin-top: 3px;
+
+    }
+
+    li div a:hover{
+    	background: red;
+    }
+
+    </style>
+</head>
+
+<body style="text-algin:center;">
+    <ul>
+        <li>
+            <a href="">按钮11</a>
+            <div>
+                <a href="">我是按钮</a>
+                <a href="">我是按钮2</a>
+                <a href="">我是按</a>
+                <a href="">我是按钮2</a>
+            </div>
+        </li>
+        <li>
+            <a href="">按钮22</a>
+            <div>
+                <a href="">我是按钮</a>
+                <a href="">我是按钮2</a>
+                <a href="">我是按</a>
+                <a href="">我是按钮2</a>
+            </div>
+        </li>
+        <li>
+            <a href="">按钮33</a>
+            <div>
+                <a href="">我是按钮</a>
+                <a href="">我是按钮2</a>
+            </div>
+        </li>
+        <li>
+            <a href="">按钮44</a>
+            <div>
+                <a href="">我是按钮</a>
+            </div>
+        </li>
+    </ul>
+
+</body>
+
+</html>

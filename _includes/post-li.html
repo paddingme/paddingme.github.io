@@ -1,0 +1,4 @@
+<li>
+  <span class="title"><a href="{{ post.url }}" title="{{ post.title | xml_escape }}">{{ post.title | xml_escape }}</a></span>
+  <span class="published_on">Published on {{ post.date | date: "%A, %B %d, %Y" }}</span>
+</li>

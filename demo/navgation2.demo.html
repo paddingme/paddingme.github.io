@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>...</title>
+	<style>
+	#sddm{
+		margin: 0 auto;
+		padding: 0;
+		z-index: 30;
+		background: #F4F4F4;
+		width: 655px;
+		height: 23px;
+	}
+
+	#sddm li{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		float:left;
+		font:bold 20px arial;
+	}
+
+	#sddm li a{
+		display: block;
+		margin:0 1px 0 0;
+		width: 130px;
+		background: #5970B2;
+		color:#FFF;
+		text-align: center;
+		text-decoration: none;
+	}
+
+	#sddm li a:hover{
+		background: #49A3FF;
+	}
+
+	#sddm div{
+		position: absolute;
+		visibility: hidden;
+		margin: 0;
+		padding: 0;
+		background: #EAEBD8;
+
+		border: 1px solid #5970B2;
+	}
+
+
+	#sddm div a{
+		position: relative;
+		display: block;
+		margin: 0;
+		padding: 5px 10px;
+		width: auto;
+		white-space: nowrap;
+		text-align: left;
+		text-decoration: none;
+		background: #EAEBD8;
+		color: #2875DE;
+		font: 20px arial;
+	}
+	
+
+	#sddm div a:hover{
+		background: #49A3FF;
+		color: #FFF;
+	}
+
+
+
+	</style>
+
+	<script>
+	var timeout = 50000;
+	var closetimer = 0;
+	var ddmenuitem = 0;
+
+
+	function mopen(id){
+		mcancelclosetime();
+		if(ddmenuitem) ddmenuitem.style.visibility="hidden";
+		ddmenuitem =document.getElementById(id);
+		ddmenuitem.style.visibility="visible";
+	}
+
+	function mclose(){
+		if(ddmenuitem) ddmenuitem.style.visibility="hidden";
+	}
+
+	function mclosetime(){
+		closetimer=window.setTimeout(mclose,timeout);
+	}
+
+	function mcancelclosetime(){
+		if(closetimer){
+			window.clearTimeout(closetimer);
+			closetimer=null;
+		}
+	}
+
+	document.onclick=mclose;
+	</script>
+</head>
+<body style="text-align:center">
+
+<ul id="sddm">
+	<li>
+		<a href="#" onmouseover="mopen('m1')" onmuoseout="mclosetime()">Home</a>
+		<div id="m1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+			<a href="#">HTML DropDown</a>
+			<a href="#">DHTML DropDown menu</a>
+			<a href="#">Javascript DropDown</a>
+			<a href="#">DropDown Menu</a>
+			<a href="#">Css DropDown</a>
+		</div>
+	</li>
+	<li>
+		<a href="#" onmouseover="mopen('m2')" onmuoseout="mclosetime()">Download</a>
+		<div id="m2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+			<a href="#">ASP DropDown</a>
+			<a href="#">PullDown menu</a>
+			<a href="#">AJAX dropdown</a>
+			<a href="#">DIV dropdown</a>
+		</div>
+	</li>
+	<li>
+		<a href="#" onmouseover="mopen('m3')" onmuoseout="mclosetime()">Order</a>
+		<div id="m3" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+			<a href="#">12</a>
+			<a href="#">1212edsd</a>
+		</div>
+	</li>
+	<li>
+		<a href="#" onmouseover="mopen('m4')" onmuoseout="mclosetime()">神1111</a>
+		<div id="m4" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+			<a href="#">2332</a>
+			<a href="#">1231dsa</a>
+			<a href="#">dsad</a>
+		</div>
+	</li>
+	<li>
+		<a href="#" onmouseover="mopen('m5')" onmuoseout="mclosetime()">渭1111</a>
+		<div id="m5" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+			<a href="#">1231dwadad</a>
+		</div>
+	</li>
+</ul>
+</body>
+</html>
