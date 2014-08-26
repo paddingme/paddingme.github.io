@@ -20,7 +20,7 @@ html, body {
 }
 
 body {
-  background-color: transparent;
+  background-color: rgb(250, 248, 248);
   width: 45em;
   margin-left: auto;
   margin-right: auto;
@@ -57,7 +57,7 @@ a.core-nav:hover {
 #header li {
   float: left;
   font-size: 50px;
-  margin-left: 116px;
+  margin-left: 84px;
 }
 
 #header li:first-child {
@@ -87,7 +87,6 @@ a.core-nav:hover {
 #content {
   border-top: 1px solid #999;
   padding-top: 1em;
-  margin-top: 1em;
   font-size: normal;
 }
 #content img.inline-left {
