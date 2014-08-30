@@ -12,7 +12,7 @@ post_title_label: "   [padding.me]"
        Published on {{ page.date | date: "%A, %B %d, %Y" }}
 
       {% if page.tags != null %}
-        in 
+        in
         {% for tag in page.tags %}
           {% if forloop.last and forloop.length > 1 %} and {% endif %}
           <a href="#" class="tag">{{tag | downcase}}</a>{% if forloop.last == false and forloop.length > 2 %}, {% endif %}
@@ -35,7 +35,7 @@ post_title_label: "   [padding.me]"
 
 <hr style="clear:both;"/>
 
-<div id="related-posts">
+<!--<div id="related-posts">
   <h3>
     你可能对以下文章也感兴趣
   </h3>
@@ -44,13 +44,13 @@ post_title_label: "   [padding.me]"
       {% if   post.url == "/blog/2014/05/03/value-unit-font-and-text-attribute-in-the-css/" or post.url == "/blog/2014/04/05/JavaScript-language-of-the-essence-study-notes-JavaScript-language-essence-function-on-the-fourth-chapter/" or post.url == "/blog/2014/05/12/scroll-to-top/" or post.url == "/blog/2014/05/11/to-do-list-in-may/" %}
         {% if page.url != post.url %}
         {% comment %} Do not suggest the post that the person is currently viewing {% endcomment %}
-          <!-- random comment to work around Jekyll issue -->
           {% include post-li.html %}
         {% endif %}
       {% endif %}
     {% endfor %}
   </ul>
 </div>
+-->
 
 <hr />
 

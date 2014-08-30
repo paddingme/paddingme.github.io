@@ -34,12 +34,11 @@ title: "padding.me/blog"
 <div id="archive">
   <h1><a name="archive" href="#archive" title="Blog Archive">文章归档</a></h1>
 
-  <!--<p>Now that you've whetted your appetite with the <a href="{{ latest_post.url }}" title="{{ latest_post.post_title_label }}{{ latest_post_title_with_proper_escaping }}">most recent post</a>, perhaps you'd care to dig into the archive.</p>-->
+
 
   <ul class="posts">
     {% for post in site.posts %}
       {% if post != latest_post %}
-        <!-- random comment to work around Jekyll issue -->
         {% include post-li.html %}
       {% endif %}
     {% endfor %}
