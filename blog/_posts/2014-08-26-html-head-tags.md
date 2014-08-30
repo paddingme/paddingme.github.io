@@ -6,7 +6,7 @@ tags:
 - html
 ---
 
-HTML head标签有很多，涉及到浏览器对网页的渲染，搜索引擎SEO等等，了解每个标签的意义，写出满足自己需求的head标签，十分重要。下面介绍下常用的head头部结构，以及对各个标签的意义以及使用场景一一介绍（本篇以[一丝大神的文章](https://github.com/yisibl/blog/issues/1)为基础，进行扩展总结）。
+HTML head头部分的标签、元素有很多，涉及到浏览器对网页的渲染，搜索引擎SEO等等，而各个浏览器内核以及各个国内浏览器厂商都有些自己的标签元素。了解每个标签的意义，写出满足自己需求的head标签，十分重要。下面介绍下常用的head头部结构，以及对各个标签、元素的意义以及使用场景一一介绍（本篇以[一丝大神的文章](https://github.com/yisibl/blog/issues/1)为基础，进行扩展总结）。
 
 ###[padding.me](http://padding.me)的head头结构
     <!DOCTYPE>
@@ -14,7 +14,7 @@ HTML head标签有很多，涉及到浏览器对网页的渲染，搜索引擎SE
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, user-scalable=yes">
-        <meta name="keywords" content="PaddingMe,JavaScript,front-end,HTML,CSS,HTML5,CSS3,前端工程师,web开发工程师,前端" >
+        <meta name="keywords" content="PaddingMe,front-end,前端,前端工程师,web开发工程师,HTML,CSS,JavaScript,HTML5,CSS3,git,Github">
         <meta name="description" content="PaddingMe - he is a front-end developer.">
         <meta name="robots" content="index,follow">
         <meta name="author" content="PaddingMe,padding4me@gmail.com">
@@ -23,7 +23,7 @@ HTML head标签有很多，涉及到浏览器对网页的渲染，搜索引擎SE
         <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
         <meta>
 
-        <meta http-equiv="Cache-Control" content="no-siteapp" />
+        <meta http-equiv="Cache-Control" content="no-siteapp">
 
         <title>PaddingMe</title>
 
@@ -39,7 +39,7 @@ HTML head标签有很多，涉及到浏览器对网页的渲染，搜索引擎SE
 
 ###DOCTYPE
 
-DOCTYPE(Document Type的简写)，该声明位于文档中最前面的位置，处于html标签之前，此标签告知浏览器文档使用哪种HTML或者XHTML规范。
+DOCTYPE(Document Type)，该声明位于文档中最前面的位置，处于`html`标签之前，此标签告知浏览器文档使用哪种HTML或者XHTML规范。
 
 DTD(Document Type Definition)声明以`<!DOCTYPE>`开始，不区分大小写，前面没有任何内容，如果有其他内容(空格除外)会使浏览器在IE下开启怪异模式(quirks mode)渲染网页。公共DTD，名称格式为“注册//组织//类型 标签//语言”,“注册”指示组织是否由国际标准化组织(ISO)注册，+表示是，-表示不是。“组织”即组织名称，如：W3C；“类型”一般是DTD，“标签”是指定公开文本描述，即对所引用的公开文本的唯一描述性名称，后面可附带版本号。最后“语言”是DTD语言的ISO 639语言标识符，如：EN表示英文，ZH表示中文。XHTML 1.0可声明三种DTD类型。分别表示严格版本，过渡版本，以及基于框架的HTML文档。
 
@@ -60,16 +60,16 @@ DTD(Document Type Definition)声明以`<!DOCTYPE>`开始，不区分大小写，
         <!doctype html>
 
 
-HTML里的```doctype```有两个主要目的。
+HTML里的`doctype`有两个主要目的。
 
 - 对文档进行有效性验证。
-   它告诉用户代理和校验器这个文档是按照什么DTD(document type definition)写的。这个动作是被动的，每次页面加载时，浏览器并不会下载DTD并检查合法性，只有当手动校验页面时才启用。
+   它告诉用户代理和校验器这个文档是按照什么DTD写的。这个动作是被动的，每次页面加载时，浏览器并不会下载DTD并检查合法性，只有当手动校验页面时才启用。
 - 决定浏览器的呈现模式
     对于实际操作，通知浏览器读取文档时用哪种解析算法。如果没有写，则浏览器则根据自身的规则对代码进行解析，可能会严重影响html排版布局。浏览器有三种方式解析HTML文档。
-     1. 非怪异（标准）模式
-     2. 怪异模式
-     3. 部分怪异（近乎标准）模式
-关于IE浏览器的文档模式，浏览器模式，严格模式，怪异模式，DOCTYPE标签，可详细阅读[模式？标准！](http://padding.me/blog/2014/07/04/mode-or-standard/)，以及[盒子模型](http://paddingme_todo)。
+     * 非怪异（标准）模式
+     * 怪异模式
+     * 部分怪异（近乎标准）模式
+关于IE浏览器的文档模式，浏览器模式，严格模式，怪异模式，DOCTYPE标签，可详细阅读[模式？标准！](http://padding.me/blog/2014/07/04/mode-or-standard/)，以及[盒子模型](http://paddingme/blog/todo)。
 
 ###charset
 声明文档使用的字符编码，
@@ -81,17 +81,17 @@ html5之前网页中会这样写：
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-这两个是等效的（具体可移步阅读：<http://stackoverflow.com/questions/4696499/meta-charset-utf-8-vs-meta-http-equiv-content-type>，所以建议使用较短的，易于记忆。
+这两个是等效的，具体可移步阅读：<http://stackoverflow.com/questions/4696499/meta-charset-utf-8-vs-meta-http-equiv-content-type>，所以建议使用较短的，易于记忆。
 
 ###lang属性
 
 简体中文
 
-    <html lang="zh-cmn-Hans"> <!-- 更加标准的 lang 属性写法 http://zhi.hu/XyIa -->
+    <html lang="zh-cmn-Hans"> <!-- 更加标准的 lang 属性写法 <http://zhi.hu/XyIa> -->
 
 繁体中文
 
-    <html lang="zh-cmn-Hant"> <!-- 更加标准的 lang 属性写法 http://zhi.hu/XyIa -->
+    <html lang="zh-cmn-Hant"> <!-- 更加标准的 lang 属性写法 <http://zhi.hu/XyIa> -->
 
 很少情况才需要加地区代码，通常是为了强调不同地区汉语使用差异，例如：
 
@@ -119,11 +119,11 @@ html5之前网页中会这样写：
 
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 
-这样写可以达到的效果是如果安装了Google chrome frame，则使用GCF来渲染页面，如果没有安装GCF，则使用最高版本的IE内核进行渲染。
+这样写可以达到的效果是如果安装了Google Chrome Frame，则使用GCF来渲染页面，如果没有安装GCF，则使用最高版本的IE内核进行渲染。
 相关链接：[浏览器内核控制Meta标签说明文档](http://se.360.cn/v6/help/meta.html)
 
 ###百度禁止转码
-通过百度手机打开网页时，百度可能会对你的网页进行转码，脱下你的衣服，往你的身上贴狗皮膏药的广告，为此
+通过百度手机打开网页时，百度可能会对你的网页进行转码，脱下你的衣服，往你的身上贴狗皮膏药的广告，为此可在head内添加
 
     <meta http-equiv="Cache-Control" content="no-siteapp" />
 
