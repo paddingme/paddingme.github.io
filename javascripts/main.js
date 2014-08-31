@@ -6,6 +6,10 @@
 
      window.onscroll = function() {
          var osTop = document.documentElement.scrollTop || document.body.scrollTop;
+         console.log("document.documentElement.scrollTop"+document.documentElement.scrollTop);
+         console.log("document.body.scrollTop"+document.body.scrollTop);
+         console.log("osTop"+osTop)
+         console.log("clientHeight"+clientHeight)
          if (osTop >= clientHeight) {
              obtn.style.display = "block";
          } else {
