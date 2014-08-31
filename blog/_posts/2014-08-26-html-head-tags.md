@@ -26,6 +26,7 @@ HTML head头部分的标签、元素有很多，涉及到浏览器对网页的�
         <meta http-equiv="Cache-Control" content="no-siteapp">
 
         <title>PaddingMe</title>
+        <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
 
         <link rel="author" href="https://plus.google.com/u/1/105241873904238310190/?rel=author">
         <link type="text/plain" rel="author" href="http://padding.me/humans.txt" />
