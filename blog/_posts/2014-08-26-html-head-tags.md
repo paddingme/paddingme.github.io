@@ -9,7 +9,7 @@ tags:
 HTML head头部分的标签、元素有很多，涉及到浏览器对网页的渲染，搜索引擎SEO等等，而各个浏览器内核以及各个国内浏览器厂商都有些自己的标签元素。了解每个标签的意义，写出满足自己需求的head标签，十分重要。下面介绍下常用的head头部结构，以及对各个标签、元素的意义以及使用场景一一介绍（本篇以[一丝大神的文章](https://github.com/yisibl/blog/issues/1)为基础，进行扩展总结）。
 
 ###[padding.me](http://padding.me)的head头结构
-    <!DOCTYPE>
+    <!DOCTYPE HTML>
     <html lang="zh-cmn-Hans">
     <head>
         <meta charset="utf-8">
