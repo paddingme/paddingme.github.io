@@ -1,56 +1,28 @@
-html {
-  color：#333;
-  background: #fff;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  text-rendering: optimizelegibility;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+* {
   margin: 0;
   padding: 0;
 }
 
-article, aside, details, figcaption, figure, footer, header, footer, menu, menu, nav, section {
-  display: block;
+html, body {
+  height: 100%;
 }
 
-audio, canvas, video {
-  display: inline-block;
-  *display: inline;
-  *zoom: 1;
+#content-wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -7em;
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-th {
-  text-indent: inherit;
-}
-
-fieldset, img {
-  border: 0;
-}
-
-img {
-  -ms-interpolation-mode: bicubic;
-}
-
-del {
-  text-decoration: line-through;
-}
-
-ul, ol {
-  list-style: none;
+#footer, #push {
+  height: 4em; /* .push must be the same height as .footer */
 }
 
 body {
-  background-color: #fff;
+  background-color: transparent;
   width: 45em;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   font-size-adjust: none;
   font-style: normal;
   font-variant: normal;
@@ -58,17 +30,8 @@ body {
   color: #333;
 }
 
-
-
-#content-wrapper {
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  margin: 0 auto -6em;
-}
-
-#footer, #push {
-  height: 4em;
+a:hover {
+  text-decoration: underline;
 }
 
 a.core-nav {
@@ -100,7 +63,25 @@ a.core-nav:hover {
   margin-left: 0;
 }
 
+#search {
+  width: 100%;
+  display: table;
+  margin-bottom: 12px;
+}
 
+#search form {
+  margin-top: 12px;
+}
+
+#search input[type=text] {
+  float: left;
+  width: 78%;
+}
+
+#search input[type=submit] {
+  float: right;
+  width: 20%;
+}
 
 #content {
   border-top: 1px solid #999;
@@ -117,7 +98,7 @@ a.core-nav:hover {
 
 #footer {
   text-align: center;
-  margin-top: 1em;
+  margin: 2em 0 1em;
 }
 
 
