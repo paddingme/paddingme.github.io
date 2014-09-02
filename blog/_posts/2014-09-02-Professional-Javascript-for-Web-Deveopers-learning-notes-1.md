@@ -1,8 +1,8 @@
 ---
-title:JavaScript高级程序设计学习笔记1
-layout:post
+title: JavaScript高级程序设计学习笔记1
+layout: post
 tags:
--javascript
+- javascript
 ---
 
 ### JavaScript 简介
