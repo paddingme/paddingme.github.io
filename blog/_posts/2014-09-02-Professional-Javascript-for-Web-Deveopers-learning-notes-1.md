@@ -26,7 +26,7 @@ HTML4.01为`<script>`定义了6个属性(废弃的这里不再给出)：
 使用`<javascript>`元素有两种方式:
 
 * 直接在页面嵌入 JavaScript 代码；
-*  包含外部 JavaScript 文件。
+* 包含外部 JavaScript 文件。
 
 包含在`<script>`元素内部的JavaScript 代码将从上至下依次解释。在解释器 `<script>` 元素内部的所有的代码求值完毕以前，页面中的其余内容将不会被浏览器加载或显示。
 
