@@ -1,5 +1,5 @@
 ---
-title: JavaScript高级程序设计学习笔记（2）
+title: JavaScript高级程序设计学习笔记(2)
 layout: post
 tags:
 - javascript
