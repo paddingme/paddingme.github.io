@@ -16,6 +16,7 @@ tags:
 2. 变量的作用域是指一个变量在程序中的哪些地方可以访问。JavaScript 中的变量作用域为函数作用域。这是指变量的值在定义该变量的函数内是可见的，并且定义在该函数内的嵌套函数也可以访问该变量。JavaScript 拥有的是函数作用域，即 JavaScript 没有块级作用域。
 3. JavaScript 允许在定义变量时不使用关键字 var， 但这样做的后果是 定义的变量自动拥有了全局作用域，即使你是在一个函数内定义该变量，它也是全局变量。
 4. 对象和面向对象编程
+
 ```javascript
     function Checking(amount) {
         this.balance = amount;
