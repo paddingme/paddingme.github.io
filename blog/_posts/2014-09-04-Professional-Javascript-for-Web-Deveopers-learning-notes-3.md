@@ -11,7 +11,7 @@ ECMAScript 中的对象其实就是一组数据和功能的集合。对象可以
 
 和Java中的java.lang.object对象一样，Object 类型是所有它的实例的基础。亦即 Object类型所具有的任何属性和方法也同样存在于更具体的对象中。
 
-Object的每个实例都具有下列属性和放啊：
+Object的每个实例都具有下列属性：
 
 - constructor: 保存这用于创建当前对象的函数；
 - hasOwnProperty(propertyName)： 用于检查给定的属性在当前对象实例中（而不是在实例的原型中）是否存在，propertyName必须以字符串形式指定充当参数；
