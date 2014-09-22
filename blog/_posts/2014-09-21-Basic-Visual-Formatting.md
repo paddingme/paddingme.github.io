@@ -48,3 +48,24 @@ margin-left,border-left,padding-left,width,padding-right,border-right,margin-rig
 - 如果只设置了`margin-left:auto`和`width:auto` 或`margin-right:auto`和`width:auto` 则设置为auto 的外边距变为0。
 - 如果只设置`margin-left:auto`和`margin-right:auto`，width　为一确定值，则元素在其父元素中居中，比较常用，另`text-align:center` 只应用于块级元素的内联内容。
 - 如果三个属性都设置为auto，则两个外边距都设置为0，而width会尽可能宽。与默认情况相同，即没有设置margin，width 没有显式设置，则外边距默认为0，width 为auto。
+
+
+### 负外边距
+要记住7个水平方向的属性的和一定等于父容器的width。
+
+## 替换元素
+如果width 为auto 则元素的宽度则是内容的固有宽度。
+
+
+##垂直格式化
+如果正常流中一个块元素的margin-top 或margin-bottom 设置为auto，它会自动计算为0。
+
+如果没有显示声明包含块的height，百分数高度会重置为auto。
+
+
+## auto 高度
+如果块级正常流元素设置为height:auto，显示时其高度将恰好足以包含其内联内容（包含文本）的行盒。
+
+如果块级正常硫元素的高度设置为auto，而且只有块级子元素，其默认高度将是从最高块级元素的外边框边界到最低块级子元素外边框边界之间的距离。故子元素的外边距会超出包含这些子元素的元素。
+
+若块级元素有上内边距或下内边距，或者有上边框或者下边框，其高度则是从其最高子元素的上外边距边界到其最低子元素的下外边距边界之间的距离。
