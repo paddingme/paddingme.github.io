@@ -10,7 +10,7 @@ title: About - PaddingMe
 
 # About me
 <img src="/images/paddingme.jpg" class="inline-left" title="Padding Me" alt="Padding Me" />
-网名，[臭臭手抽抽][weibo]，也叫<a href="" alt="大梦谁先觉，平生我自知。" title="大梦谁先觉，平生我自知。">大梦一场的胡二千先生</a>，一只前端菜鸟，和html谈情说爱，与css不清不楚，却又和JavaScript沆瀣一气，一路打怪升级,披荆斩棘，火花带闪电。[HIT][hit] 烟酒僧一枚，即将奔赴皇城脚下搬砖十月。
+网名，[臭臭手抽抽][weibo]，也叫<a href="" alt="大梦谁先觉，平生我自知。" title="大梦谁先觉，平生我自知。">大梦一场的胡二千先生</a>，一只前端菜鸟，和html谈情说爱，与css不清不楚，却又和JavaScript沆瀣一气，一路打怪升级，披荆斩棘，火花带闪电。[HIT][hit] 烟酒僧一枚，即将奔赴皇城脚下搬砖十月。
 
 微博控，爱民谣，曾经的文学青年。喜欢一切美好的事物，和一切有趣的人——`“这世界，渭有梦想与好姑娘不可辜负”。`理性主义(<del>理想主义者</del>)，自由主义，有时偏执，有时愚钝。支持转基因，赞成废医验药，更主张自由市场。
 
@@ -30,9 +30,8 @@ ps:博客正式feed地址为：[http://feeds.feedburner.com/paddingme][feed]（�
 <div style="display:none">About project(没改好不能见人)
 
  * [a logistics website homepage](http://padding.me/demo/logistics/index.html)
- 
+
  * [a brand clothing website ](http://www.lucadema.cn)</div>
-  
 <br><br>
 最后更新：2014/04/16 13:22
 <br>

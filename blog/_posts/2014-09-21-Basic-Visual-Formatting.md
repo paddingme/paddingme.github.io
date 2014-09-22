@@ -38,3 +38,13 @@ tags: css
 正常流中的块级元素框的水平部分综合就等于父元素的width。
 
 margin-left,border-left,padding-left,width,padding-right,border-right,margin-right 这些属性与块级框的水平布局有关，这7个值加起来必须是元素包含块的宽度。这往往是块级框的width 值。这7个属性中，只有width,margin-left,margin-right 可设置为auto，其余都必须设置为特定的值或者默认为0。
+
+
+
+###使用 auto
+- 如果在margin-left、margin-right、width中设置某一个为auto，另外两个设置为特定的元素，则设置为auto 的属性会确定所需要的长度，从而使元素框的宽度等于父元素的width。
+
+  如果三个属性都设定特定的值，无法撑满父元素的width，则根据从左向右的文档流会自动将margin-right 设置为auto，来填补所有的距离。
+- 如果只设置了`margin-left:auto`和`width:auto` 或`margin-right:auto`和`width:auto` 则设置为auto 的外边距变为0。
+- 如果只设置`margin-left:auto`和`margin-right:auto`，width　为一确定值，则元素在其父元素中居中，比较常用，另`text-align:center` 只应用于块级元素的内联内容。
+- 如果三个属性都设置为auto，则两个外边距都设置为0，而width会尽可能宽。与默认情况相同，即没有设置margin，width 没有显式设置，则外边距默认为0，width 为auto。
