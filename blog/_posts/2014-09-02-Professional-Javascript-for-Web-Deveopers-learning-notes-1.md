@@ -21,7 +21,7 @@ HTML4.01为`<script>`定义了6个属性(废弃的这里不再给出)：
 - async: 可选，表示应该立即下载脚本，但不应妨碍页面中得去他操作；
 - defer: 可选，表示脚本可以延迟到文档完全被解析和显示之后再执行，只对外部脚本有效；
 - src: 可选，外部脚本文件；
--  type: 可选，表示编写代码使用的及哦啊本语言的内容类型（MIME），通常为 text/javascript ,默认也为 text/javascript。
+-  type: 可选，表示编写代码使用的脚本语言的内容类型（MIME），通常为 text/javascript ,默认也为 text/javascript。
 
 使用`<javascript>`元素有两种方式:
 
