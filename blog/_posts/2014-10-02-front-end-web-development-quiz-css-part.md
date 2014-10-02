@@ -6,7 +6,7 @@ tags:
 - css
 ---
 
-### 这是<http://davidshariff.com/quiz/>给出的web前端开发测试题。
+Tip：这是<http://davidshariff.com/quiz/>给出的web前端开发测试题,的CSS部分,我根据自己的理解给出的答案，欢迎拍砖，一起刷题。
 
 1. Q: CSS 属性是否区分大小写？
 
