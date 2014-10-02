@@ -1,10 +1,12 @@
 ---
-title: 前端web开发测验之css部分
+title: web前端开发测验之css部分
 layout: post
 tags:
 - 前端笔试题
 - css
 ---
+
+### 这是<http://davidshariff.com/quiz/>给出的web前端开发测试题。
 
 1. Q: CSS 属性是否区分大小写？
 
