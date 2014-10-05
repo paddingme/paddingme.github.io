@@ -1,10 +1,11 @@
 ---
-title: web前端开发测验之html部分
+title: web前端开发测验之HTML部分
 layout: post
 tags:
 - 前端笔试题
 - html
 ---
+Tip：这是<http://davidshariff.com/quiz/>给出的web前端开发测试题,的HTML部分,我根据自己的理解给出的答案，欢迎拍砖，一起刷题。github 仓库地址请猛戳<https://github.com/paddingme/Front-end-Web-Development-Interview-Question>,欢迎一起玩耍，么么哒。
 
 1. Q: `<keygen>` 是正确的HTML5标签吗？
 

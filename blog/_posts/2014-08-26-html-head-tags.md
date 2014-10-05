@@ -8,41 +8,12 @@ tags:
 
 HTML head头部分的标签、元素有很多，涉及到浏览器对网页的渲染，搜索引擎SEO等等，而各个浏览器内核以及各个国内浏览器厂商都有些自己的标签元素。了解每个标签的意义，写出满足自己需求的head标签，十分重要。下面介绍下常用的head头部结构，以及对各个标签、元素的意义以及使用场景一一介绍（本篇以[一丝大神的文章](https://github.com/yisibl/blog/issues/1)为基础，进行扩展总结）。
 
-###[padding.me](http://padding.me)的head头结构
-    <!DOCTYPE HTML>
-    <html lang="zh-cmn-Hans">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, user-scalable=yes">
-        <meta name="keywords" content="PaddingMe,front-end,前端,前端工程师,web开发工程师,HTML,CSS,JavaScript,HTML5,CSS3,git,Github">
-        <meta name="description" content="PaddingMe - he is a front-end developer.">
-        <meta name="robots" content="index,follow">
-        <meta name="author" content="PaddingMe,padding4me@gmail.com">
-
-        <meta name="renderer" content="webkit">
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-        <meta>
-
-        <meta http-equiv="Cache-Control" content="no-siteapp">
-
-        <title>PaddingMe</title>
-        <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
-
-        <link rel="author" href="https://plus.google.com/u/1/105241873904238310190/?rel=author">
-        <link type="text/plain" rel="author" href="http://padding.me/humans.txt" />
-
-        <link rel="stylesheet" href="/css/screen.css">
-        <link rel="stylesheet" href="/css/font.css">
-        <link rel="stylesheet" href="/css/social.css">
-        <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="http://feeds.feedburner.com/paddingme" />
-    </head>
-
 
 ###DOCTYPE
 
 DOCTYPE(Document Type)，该声明位于文档中最前面的位置，处于`html`标签之前，此标签告知浏览器文档使用哪种HTML或者XHTML规范。
 
-DTD(Document Type Definition)声明以`<!DOCTYPE>`开始，不区分大小写，前面没有任何内容，如果有其他内容(空格除外)会使浏览器在IE下开启怪异模式(quirks mode)渲染网页。公共DTD，名称格式为“注册//组织//类型 标签//语言”,“注册”指示组织是否由国际标准化组织(ISO)注册，+表示是，-表示不是。“组织”即组织名称，如：W3C；“类型”一般是DTD，“标签”是指定公开文本描述，即对所引用的公开文本的唯一描述性名称，后面可附带版本号。最后“语言”是DTD语言的ISO 639语言标识符，如：EN表示英文，ZH表示中文。XHTML 1.0可声明三种DTD类型。分别表示严格版本，过渡版本，以及基于框架的HTML文档。
+DTD(Document Type Definition)声明以`<!DOCTYPE>`开始，不区分大小写，前面没有任何内容，如果有其他内容(空格除外)会使浏览器在IE下开启怪异模式(quirks mode)渲染网页。公共DTD，名称格式为`注册//组织//类型 标签//语言`,`注册`指组织是否由国际标准化组织(ISO)注册，`+`表示是，`-`表示不是。`组织`即组织名称，如：W3C。`类型`一般是DTD。`标签`是指定公开文本描述，即对所引用的公开文本的唯一描述性名称，后面可附带版本号。最后`语言`是DTD语言的ISO 639语言标识符，如：EN 表示英文，ZH 表示中文。XHTML 1.0可声明三种DTD类型。分别表示严格版本，过渡版本，以及基于框架的HTML文档。
 
 - HTML 4.01 strict
 
@@ -61,7 +32,7 @@ DTD(Document Type Definition)声明以`<!DOCTYPE>`开始，不区分大小写，
         <!doctype html>
 
 
-HTML里的`doctype`有两个主要目的。
+`doctype`有两个主要目的。
 
 - 对文档进行有效性验证。
    它告诉用户代理和校验器这个文档是按照什么DTD写的。这个动作是被动的，每次页面加载时，浏览器并不会下载DTD并检查合法性，只有当手动校验页面时才启用。
