@@ -120,6 +120,10 @@ margin-bottom: 25px;
 	background-image:url(image/meme.jpg);
 }
 
+.backImage p{
+	line-height:1.6;
+}
+
 .blockSection{
 	width: 960px;
 	margin-top: 100px;
@@ -128,3 +132,52 @@ margin-bottom: 25px;
 .blockSection p{
 	text-align: justify;
 }
+
+
+#brandConcept div div div:first-child{
+	margin-top: 50px;
+}
+
+#brandConcept strong:first-child{
+	font-size:20px;
+
+}
+#brandConcept em{
+	font-size:18px;
+}
+
+
+.dropButton{
+	margin-top: 20px;
+}
+.arrow{
+	font-size: 20px;
+	margin-left: 130px;
+}
+
+#contactUs  h2{
+		color:#428bca;
+}
+#contactUs label{
+	font-size: 16px;
+}
+
+.form-group {
+margin-bottom: 25px;
+}
+
+
+.backImage{
+	background-color: #fff;
+	margin-left: -19px; 
+	background-image:url(image/meme.jpg);
+}
+
+.backImage p{
+	line-height:1.6;
+}
+
+.footer{
+	margin-top: -30px;
+}
+
