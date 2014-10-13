@@ -1,5 +1,6 @@
-.body{
-	max-width: 970px;
+body{
+ overflow: hidden;
+
 }
 
 .dropbig{
@@ -8,12 +9,9 @@
 	margin-left: 100px;
 	margin-bottom:10px;
 }
-.carousel-inner{
-	height: 642px;
-}
 
 .navbar {
-height: 50px;
+height: 60px;
 }
 
 /*.body{ padding-top: 70px; }*/
@@ -178,6 +176,24 @@ margin-bottom: 25px;
 }
 
 .footer{
-	margin-top: -30px;
+	position: fixed;
+  bottom: 10px;
 }
 
+.carousel-control.left span {
+	position: fixed;
+
+}
+
+
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right {
+ 	position: fixed;
+ }
+ .carousel-control .glyphicon-chevron-left {
+ 	left: 5%
+ }
+
+ .carousel-control .glyphicon-chevron-right {
+ 	right:5%;
+ }
