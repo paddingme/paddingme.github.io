@@ -1,0 +1,778 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SuperTable是一个在线登记、统计的类Excel网站。">
+    <meta name="keywords" content="在线，在线登记，在线统计，类excle,online Excel">
+    <meta name="author" content="Hebert Hu">
+    <meta name="robots" content="index,follow">
+    <meta name="application-name" content="supertable.com">
+    <!-- 网址待修改-->
+
+    <title>超级表格</title>
+
+    <!-- Site CSS -->
+
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dist/css/bootstrap-editable.css">
+    <!--<link rel="stylesheet" href="dist/css/flat-ui.css">-->
+    <link rel="stylesheet" href="dist/css/cikonss.css">
+
+    
+
+    <!-- Extras CSS -->
+    <link rel="stylesheet" href="index.css">
+    
+
+    <!-- HTML5 shim and Respond.js IE8 supprot of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!--考虑是否对ie6的支持！-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" size="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="ico/favicon.png">
+    <!-- 网页图标待修改 -->
+</head>
+
+<body class="body">
+
+    <!-- header  start======== 需要调整颜色 以及添加文字“这是一个在线登记、统计的网站，快来生成你的表格分享给你的朋友！” -->
+    <!-- 登陆跳转，注册直接弹出-->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">SuperTable</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <form class="navbar-form navbar-right" role="form">
+                    <div class="form-group">
+                        <input id="register"  type="text" placeholder="邮箱" class="form-control">            
+                    </div>
+                    <div class="form-group fff">
+                        <input type="password" placeholder="密码" class="form-control">
+                    </div>
+                    <button type="sumbit" class="btn btn-default">登陆</button>
+                    <button type="sumbit" class="btn btn-default" data-toggle="modal" data-target="#registerModa">注册</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- header end  ========  -->
+
+
+
+
+
+
+    <!-- body excel start========  -->
+    
+    <!--选择可以使用 Bootstrap 开关（switch）控件 http://www.bootcss.com/p/bootstrap-switch/ -->
+    <!--iCheck插件就像是复选框和单选按钮的构造器。http://www.bootcss.com/p/icheck/-->
+    <!--统计出来的 可以使用Chart.js图表绘制工具库 http://www.bootcss.com/p/chart.js/ -->
+    <!-- 如果表格更新 会出现提示??? flat-ui-->
+    <!-- 小图标的使用font-awesome or Simple Icons or http://www.bootcss.com/p/cikonss/-->
+    <!--主页填写excel表格时候可以自动跳转到下一行-->
+    <!-- 表格左面可以使用footable的自动隐藏1,2,3,4,5-->
+
+
+    <hr>
+    <hr>
+
+    <div class="col-md-12">
+        <!--两边为灰色 中间为透明！--> 
+        <div class="container">
+            <h2>
+                超级表格
+                <small>--在线创建您的调查统计表格</small>
+            </h2>
+        </div>
+        <hr>    
+        <br>    
+        <div class="container">
+            <!--待修改 表格-->   
+            <form method="post" id="frm" class="form-inline" action="">
+                <div class="table-responsive">
+                    <table class="table  table-bordered">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <a href="#" id="item11" data-type="TwoLayer" data-pk="1" data-title="编辑新标题1" >标题1</a>
+                                </th>
+                                <th>
+                                    <a href="#" id="item2" data-type="text" data-pk="de_item2" data-title="编辑标题">姓名</a>
+                                </th>
+                                <th>
+                                    <a href="#" id="item3" data-type="text" data-pk="de_item3" data-title="编辑标题">手机号码</a>
+                                </th>
+                                <th>
+                                    <a href="#" id="item4" data-type="text" data-pk="de_item4" data-title="编辑标题">E-mail</a>
+                                </th>
+                                <th>
+                                    <a href="#" id="status">离校时间</a>
+                                </th>
+                                <!--此为测试 么么哒--> 
+                                <th>
+                                    <a href="#" id="add"><span class="glyphicon glyphicon-plus"></span></a>&nbsp;
+                                    <a href="#" id="setting" data-toggle="modal" data-target="#setModal"><span class="glyphicon glyphicon-wrench moveRight"></span></a>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody >
+                            <tr>
+                                <td >
+                                    <input  type="text"  id="db_item1" class="form-control tableborder" placeholder="13S137017"></td>
+                                <td>
+                                    <input  type="text"  id="db_item2" class="form-control tableborder" placeholder="胡海波"></td>
+                                <td>
+                                    <input  type="text"  id="db_item3" class="form-control tableborder" placeholder="15846335620"></td>
+                                <td>
+                                    <input  type="text"  id="db_item4" class="form-control tableborder" placeholder="huhaibo2012@gmail.com"></td>
+                                <td>
+                                    <input  type="text"  id="db_item5" class="form-control tableborder" placeholder="2014-02-10"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input  type="text"  id="db_item1" class="form-control tableborder" placeholder="&nbsp;"></td>
+                                <td>
+                                    <input  type="text"  id="db_item2" class="form-control tableborder" placeholder="&nbsp;"></td>
+                                <td>
+                                    <input  type="text"  id="db_item3" class="form-control tableborder" placeholder="&nbsp;"></td>
+                                <td>
+                                    <input  type="text"  id="db_item4" class="form-control tableborder" placeholder="&nbsp;"></td>
+                                <td>
+                                    <input  type="text"  id="db_item5" class="form-control tableborder" placeholder="&nbsp;"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input  type="text"  id="db_item1" class="form-control tableborder" placeholder="&nbsp;"></td>
+                                <td>
+                                    <input  type="text"  id="db_item2" class="form-control tableborder" placeholder="&nbsp;"></td>
+                                <td>
+                                    <input  type="text"  id="db_item3" class="form-control tableborder" placeholder="&nbsp;"></td>
+                                <td>
+                                    <input  type="text"  id="db_item4" class="form-control tableborder" placeholder="&nbsp;"></td>
+                                <td>
+                                    <input  type="text"  id="db_item5" class="form-control tableborder" placeholder="&nbsp;"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input  type="text"  id="db_item1" class="form-control tableborder" placeholder="&nbsp;"></td>
+                                <td>
+                                    <input  type="text"  id="db_item2" class="form-control tableborder" placeholder="&nbsp;"></td>
+                                <td>
+                                    <input  type="text"  id="db_item3" class="form-control tableborder" placeholder="&nbsp;"></td>
+                                <td>
+                                    <input  type="text"  id="db_item4" class="form-control tableborder" placeholder="&nbsp;"></td>
+                                <td>
+                                    <input  type="text"  id="db_item5" class="form-control tableborder" placeholder="&nbsp;"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input  type="text"  id="db_item1" class="form-control tableborder" placeholder="&nbsp;"></td>
+                                <td>
+                                    <input  type="text"  id="db_item2" class="form-control tableborder" placeholder="&nbsp;"></td>
+                                <td>
+                                    <input  type="text"  id="db_item3" class="form-control tableborder" placeholder="&nbsp;"></td>
+                                <td>
+                                    <input  type="text"  id="db_item4" class="form-control tableborder" placeholder="&nbsp;"></td>
+                                <td>
+                                    <input  type="text"  id="db_item5" class="form-control tableborder" placeholder="&nbsp;"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input  type="text"  id="db_item1" class="form-control tableborder" placeholder="&nbsp;"></td>
+                                <td>
+                                    <input  type="text"  id="db_item2" class="form-control tableborder" placeholder="&nbsp;"></td>
+                                <td>
+                                    <input  type="text"  id="db_item3" class="form-control tableborder" placeholder="&nbsp;"></td>
+                                <td>
+                                    <input  type="text"  id="db_item4" class="form-control tableborder" placeholder="&nbsp;"></td>
+                                <td>
+                                    <input  type="text"  id="db_item5" class="form-control tableborder" placeholder="&nbsp;"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input  type="text"  id="db_item1" class="form-control tableborder" placeholder="&nbsp;"></td>
+                                <td>
+                                    <input  type="text"  id="db_item2" class="form-control tableborder" placeholder="&nbsp;"></td>
+                                <td>
+                                    <input  type="text"  id="db_item3" class="form-control tableborder" placeholder="&nbsp;"></td>
+                                <td>
+                                    <input  type="text"  id="db_item4" class="form-control tableborder" placeholder="&nbsp;"></td>
+                                <td>
+                                    <input  type="text"  id="db_item5" class="form-control tableborder" placeholder="&nbsp;"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input  type="text"  id="db_item1" class="form-control tableborder" placeholder="&nbsp;"></td>
+                                <td>
+                                    <input  type="text"  id="db_item2" class="form-control tableborder" placeholder="&nbsp;"></td>
+                                <td>
+                                    <input  type="text"  id="db_item3" class="form-control tableborder" placeholder="&nbsp;"></td>
+                                <td>
+                                    <input  type="text"  id="db_item4" class="form-control tableborder" placeholder="&nbsp;"></td>
+                                <td>
+                                    <input  type="text"  id="db_item5" class="form-control tableborder" placeholder="&nbsp;"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="col-md-12">
+                        <div class="col-md-4  tooltip-demo moveLeft">
+                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#inModa">导入Excel</button>
+                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#saveModa">保存</button>
+
+                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#pushModa">
+
+                                <span data-toggle="tooltip" data-placement="bottom" title="" data-original-title="发布超级表格给小伙伴们填写">发布</span>
+
+                            </button>
+
+                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#shareModa">
+
+                                <span  data-toggle="tooltip" data-placement="bottom" title="" data-original-title="共享超级表格给小伙伴们查看">共享</span>
+                            </button>
+                            <!--        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#outModa">导出</button>
+                        导出功能也不需要！-->
+                        <!--<input type="button" class="btn btn-default" onclick="a()" value="打印" > 
+                        主界面不需要打印功能 下面的模态框也取消-->
+                        <!--<button type="button" onClick="setReload()"class="btn btn-default" >刷新</button>
+                    -->
+                </div>
+            </div>
+        </div>
+    </form>
+    <br>    
+    <br>    
+    <br>    
+    <br></div>
+    </div>
+
+
+    <!--registerModal ============-->   
+    <div class="modal" id="registerModa" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" arid-hidden="true">
+        <div class="modal-dialog reModalCss">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">注册</h4>
+                </div>
+                <div class="modal-body">
+                    <form classs="form-horizontal" role="form">
+                        <div class="container">
+                            <div class="form-group col-md-12">
+                                <div class="col-md-3 reMove">
+                                    <input type="email" class="form-control" id="" placeholder="常用邮箱地址"></div>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <div class="col-md-3 reMove">
+                                    <input type="password" class="form-control" id="" placeholder="设置密码"></div>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <div class="col-md-3 reMove">
+                                    <button class="btn btn-lg btn-primary btn-block" type="submit">注册</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--inModal ============--> 
+    <div class="modal" id="inModa" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" arid-hidden="true">
+        <div class="modal-dialog inModalCss">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">导入Excel文件</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <form role="form ">
+                            <div class="form-group container">
+                                <input type="file" id="exampleInputFile">
+                            </div>
+                            <div class="col-md-2 col-md-offset-3"><button type="submit" class="btn btn-primary inModalbtn">确认上传</button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--saveModal ============-->   
+    <div class="modal fade" id="saveModa" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" arid-hidden="true">
+        <div class="modal-dialog saveModalCss">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">保存超级表格</h4>
+                </div>
+                <form classs="form-horizontal" role="form">
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="form-group col-md-12">
+                                <label for="inputEmail3" class="col-md-2 control-label saveFont1">编辑表格名称</label>
+                                <!--saveFont调整字体--> 
+                                <div class="col-md-5 saveBorder">
+                                    <!--aveBorder调整边框到字体的距离-->  
+                                    <input type="text" class="form-control" id="" placeholder="我的在线统计超级表格"></div>
+                                <div class="col-md-1 saveBtn">
+                                    <!--调整按钮的距离-->  
+                                    <button type="button" class="btn btn-primary">保存</button>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="inputEmail4" class="col-md-2 control-label saveFont2">超级表格URL</label>
+                                <div class="col-md-10 saveBorder">
+                                    <h3>http://supertable/save/link?saveid=3843&amp;uk=36123"</h3>
+                                </div>
+                            </div>
+                            <div class=" form-group col-md-8 alert alert-info">
+
+                                <p>
+                                    此url为您管理该超级表格的唯一地址，请牢记。若想永久管理创建的所有表格请
+                                    <a href="#register" data-dismiss="modal"> <strong>注册</strong>
+                                    </a>
+                                    <!--此处待修改 如何让他转到标签register呢！-->！</p>
+                                <p>
+                                    可以继续将该超级表格 <strong>发布</strong>
+                                    给您的小伙伴们完成您的统计，或者
+                                    <strong>共享</strong>
+                                    给您的小伙伴们查看或编辑！
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--pushModal ============-->   
+    <div class="modal fade" id="pushModa" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" arid-hidden="true">
+        <div class="modal-dialog  pushModalCss">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">发布超级表格</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="container pushUrlColor">
+                        <h3>
+                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="复制该链接发送给您的小伙伴填写统计数据!">http://supertable/save/link?pushid=3843&amp;uk=36123
+                            </a>
+                        </h3>
+                        <hr class="col-md-6 col-md-offset-3 hrleft">
+                        <span class="col-md-5 col-md-offset-4 bdsharebuttonbox">
+                            <a href="#"  class="bds_copy" data-cmd="copy" title="复制网址"></a>
+                            <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                            <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                            <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                            <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+                            <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                            <a href="#" class="bds_more" data-cmd="more"></a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!--shareModal ============-->  
+    <div class="modal fade" id="shareModa" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" arid-hidden="true">
+        <div class="modal-dialog shareModalCss">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">共享超级表格</h4>
+                </div>
+                <form classs="form-horizontal" role="form">
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="form-group col-md-12">
+                                <label for="inputEmail3" class="col-md-2 control-label saveFont1">共享表格属性</label>
+                                <!--saveFont调整字体--> 
+                                <div class="col-md-10 ">
+                                    <!--aveBorder调整边框到字体的距离-->  
+
+                                    <label class="radio-inline">
+                                        <input type="radio" id="Radio1" value="option1"  checked><strong>只读</strong></label>
+                                    <label class="radio-inline ">
+                                        <input type="radio" id="Radio2" value="option2" ><strong>编辑</strong></label>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-12 superUrl">
+                                <label for="inputEmail4" class="col-md-2 control-label saveFont2 ">超级表格URL</label>
+                                <div class="col-md-10 saveBorder1">
+                                    <h3>http://supertable/save/link?saveid=3843&amp;uk=36123"</h3>
+                                </div>
+                            </div>
+
+                            <hr class="col-md-8 col-md-offset-3 hrleft1">
+
+                            <span class="col-md-5 col-md-offset-6 bdsharebuttonbox bdshare-button-style0-16" data-bd-bind="1392736827651">
+                                <a href="#" class="bds_copy" data-cmd="copy" title="复制网址"></a>
+                                <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                                <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                                <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                                <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+                                <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                                <a href="#" class="bds_more" data-cmd="more"></a>
+                            </span>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!--setModal ============-->    
+    <div class="modal" id="setModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" arid-hidden="true">
+        <div class="modal-dialog setModalCss">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">全局设置</h4>
+                </div>
+
+                <div class="modal-body">
+                    <form classs="form-horizontal" role="form">
+                        <div class="container">
+                            <div class="col-md-12">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <div class="col-md-2 fontSize">列标题重命名</div>
+                                        <div class="col-md-2 fontSize">列属性</div>
+                                        <div class="col-md-2 fontSize">选项附加值</div>
+                                        <div class="col-md-3 fontSize">列编辑权限</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <hr class="col-md-9"></div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <div class="col-md-2">
+                                            <input type="text" class="form-control" id="" placeholder="标题1"></div>
+                                        <div class="col-md-2">
+                                            <select class="form-control">
+                                                <option>单行文本</option>
+                                                <option>数字文本</option>
+                                                <option>多行文本</option>
+                                                <option>单选框</option>
+                                                <option>下拉列表</option>
+                                                <option>日期</option>
+                                                <option>日期时间</option>
+                                                <option>上传文件</option>
+                                                <option>上传图片</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-2" >
+                                            <input type="text" class="form-control" id="" placeholder="附加值" disabled></div>
+                                        <div class="col-md-2">
+                                            <div class="btn-group" data-toggle="buttons">
+                                                <label class="btn btn-default">
+                                                    <input type="radio" name="options" id="option1">编辑</label>
+                                                <label class="btn btn-default">
+                                                    <input type="radio" name="options" id="option2">只读</label>
+                                            </div>
+                                        </div>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                        </a>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-minus"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <hr class="col-md-9"></div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <div class="col-md-2">
+                                            <input type="text" class="form-control" id="" placeholder="标题2"></div>
+                                        <div class="col-md-2">
+                                            <select class="form-control">
+                                                <option>单行文本</option>
+                                                <option>数字文本</option>
+                                                <option>多行文本</option>
+                                                <option>单选框</option>
+                                                <option>下拉列表</option>
+                                                <option>日期</option>
+                                                <option>日期时间</option>
+                                                <option>上传文件</option>
+                                                <option>上传图片</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-2" >
+                                            <input type="text" class="form-control" id="" placeholder="附加值" disabled></div>
+                                        <div class="col-md-2">
+                                            <div class="btn-group" data-toggle="buttons">
+                                                <label class="btn btn-default">
+                                                    <input type="radio" name="options" id="option1">编辑</label>
+                                                <label class="btn btn-default">
+                                                    <input type="radio" name="options" id="option2">只读</label>
+                                            </div>
+                                        </div>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                        </a>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-minus"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <hr class="col-md-9"></div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <div class="col-md-2">
+                                            <input type="text" class="form-control" id="" placeholder="标题3"></div>
+                                        <div class="col-md-2">
+                                            <select class="form-control">
+                                                <option>单行文本</option>
+                                                <option>数字文本</option>
+                                                <option>多行文本</option>
+                                                <option>单选框</option>
+                                                <option>下拉列表</option>
+                                                <option>日期</option>
+                                                <option>日期时间</option>
+                                                <option>上传文件</option>
+                                                <option>上传图片</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-2" >
+                                            <input type="text" class="form-control" id="" placeholder="附加值" disabled></div>
+                                        <div class="col-md-2">
+                                            <div class="btn-group" data-toggle="buttons">
+                                                <label class="btn btn-default">
+                                                    <input type="radio" name="options" id="option1">编辑</label>
+                                                <label class="btn btn-default">
+                                                    <input type="radio" name="options" id="option2">只读</label>
+                                            </div>
+                                        </div>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                        </a>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-minus"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <hr class="col-md-9"></div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <div class="col-md-2">
+                                            <input type="text" class="form-control" id="" placeholder="标题4"></div>
+                                        <div class="col-md-2">
+                                            <select class="form-control">
+                                                <option>单行文本</option>
+                                                <option>数字文本</option>
+                                                <option>多行文本</option>
+                                                <option>单选框</option>
+                                                <option>下拉列表</option>
+                                                <option>日期</option>
+                                                <option>日期时间</option>
+                                                <option>上传文件</option>
+                                                <option>上传图片</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-2" >
+                                            <input type="text" class="form-control" id="" placeholder="附加值" disabled></div>
+                                        <div class="col-md-2">
+                                            <div class="btn-group" data-toggle="buttons">
+                                                <label class="btn btn-default">
+                                                    <input type="radio" name="options" id="option1">编辑</label>
+                                                <label class="btn btn-default">
+                                                    <input type="radio" name="options" id="option2">只读</label>
+                                            </div>
+                                        </div>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                        </a>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-minus"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <hr class="col-md-9"></div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <div class="col-md-2">
+                                            <input type="text" class="form-control" id="" placeholder="标题5"></div>
+                                        <div class="col-md-2">
+                                            <select class="form-control">
+                                                <option>单行文本</option>
+                                                <option>数字文本</option>
+                                                <option>多行文本</option>
+                                                <option>单选框</option>
+                                                <option>下拉列表</option>
+                                                <option>日期</option>
+                                                <option>日期时间</option>
+                                                <option>上传文件</option>
+                                                <option>上传图片</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-2" >
+                                            <input type="text" class="form-control" id="" placeholder="附加值" disabled></div>
+                                        <div class="col-md-2">
+                                            <div class="btn-group" data-toggle="buttons">
+                                                <label class="btn btn-default">
+                                                    <input type="radio" name="options" id="option1">编辑</label>
+                                                <label class="btn btn-default">
+                                                    <input type="radio" name="options" id="option2">只读</label>
+                                            </div>
+                                        </div>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                        </a>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-minus"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <hr class="col-md-9"></div>
+                                <div class="col-md-12">
+                                    <div class="col-md-1 col-md-offset-8">
+                                        <button class="btn btn-primary btn-lg">确认修改</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--outModal 
+    <div class="modal fade" id="outModa" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" arid-hidden="true"> 
+    <div class="modal-dialog outModalCss">
+        <div class="modal-content">
+            <div class="modal-body ">
+                <div class="container">
+                    <form role="form">
+                        <div class="col-md-12">
+                            <div class="col-md-1">
+                                <span class="icon icon-mid">
+                                    <span class="icon-download"></span>
+                                </span>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <a  href="https://github.com/designmodo/Flat-UI/archive/master.zip"data-loading-text="正在下载..." class="btn btn-primary btn-lg btn-block" >导出PDF文件&nbsp;</a>
+                            </div>
+                            为什么不行了 妈妈的！！！
+                        </div>
+                        <div class="col-md-12">
+                            <div class="col-md-1"></div>
+                            <div class="form-group col-md-4">
+                                <a href="https://github.com/designmodo/Flat-UI/archive/master.zip" data-loading-text="正在下载..." class="btn btn-primary btn-lg btn-block" >导出Excel文件</a>
+                                如何处理下载之后退出模态框，如何加载下载的链接？？？
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    -->
+    
+
+    <!--printModal 
+    <div class="modal fade" id="printModa" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" arid-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">打印</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="file" id="exampleInputFile"></div>
+                                请链接打印机号码 好的么么哒 
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">确认上传</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    -->
+
+
+    <!-- body excel  end========  -->   
+
+
+    <!-- footer satrt========  -->
+
+    <footer  id="footer" class="col-md-12 footer">
+        <div class="container">
+            <p>
+                Copyright  &copy; 2014 SuperTable. 
+                Powered by
+                <a href="http://www.bootcss.com">Bootstrap</a>,
+                <a href="http://vitalets.github.io/x-editable/n">X-editable</a>,
+                <a href="http://www.fooplugins.com">FooTable</a>.
+                Designed by <a href="http://www.google.com">Wang Junjie</a> &amp; <a href="http://www.google.com">Hu Haibo</a>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+                <a href="#">帮助 </a>&nbsp;&nbsp;&nbsp;
+                <a href="#">反馈 </a>&nbsp;&nbsp;&nbsp;
+                <a href="#">关于 </a>&nbsp;&nbsp;&nbsp;
+            </p>
+        </div>
+    </footer>
+    <!-- footer  end========  -->
+
+    
+    <!--JavaScript================ -->
+
+    <script  src="dist/js/jquery-2.0.3.min.js"></script>  
+    <script  src="dist/js/bootstrap.min.js"></script>
+    <script  src="dist/js/bootstrap-editable.min.js"></script>
+    <script  src="dist/js/jquery.jqprint-0.3.js"></script>
+    
+
+    <!--main.js-->
+    <script type="text/javascript" src="dist/js/main.js"></script>
+
+    <!--bdshare-->
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script language="javascript">  
+function  a(){  
+$("#memeda").jqprint();  
+}  
+  
+</script>
+
+</body>
+</html>

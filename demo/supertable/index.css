@@ -1,0 +1,167 @@
+.tableborder{
+	border: 0
+}
+
+.table tbody tr td {
+padding:0px;
+}
+
+#footer{
+	background-color: #e7e7e7;
+	height:45px;
+	margin-top: -8px;
+	
+}
+
+#footer div p{
+	text-align:center;
+	margin-top:15px;	
+
+}
+
+.inModalCss{
+	display: block;
+	left: 0px;
+	top: 174px;
+	visibility: visible;
+	width: 430px;
+}
+.inModalbtn{
+ 	margin-bottom: -7px;
+ }
+
+
+ .saveModalCss{
+	display: block;
+	left: 0px;
+	top: 140px;
+	visibility: visible;
+	width: 850px;
+}
+.saveBtn{
+	margin-left: 0px;
+}
+
+.saveFont1{
+	margin-top: 8px;
+}
+
+.saveFont2{
+	margin-top: 22px;
+}
+
+.saveBorder{
+	margin-left: -50px;
+}
+
+.saveBorder h3{
+	color:#3498DB;
+}
+
+.pushModalCss{
+	display: block;
+	left: 0px;
+	top: 140px;
+	visibility: visible;
+	width: 620px;
+}
+
+.pushUrlColor h3{
+	color:#3498DB;
+}
+
+.hrleft{
+	margin-left: -25px;
+	margin-bottom: 5px;
+}
+
+
+.shareModalCss{
+	display: block;
+	left: 0px;
+	top: 140px;
+	visibility: visible;
+	width: 820px;
+}
+
+
+
+.saveBorder1{
+	margin-left: -60px;
+}
+
+.saveBorder1 h3{
+	color:#3498DB;
+}
+
+
+
+.radio-inline{
+color: #3498DB;
+
+font-size: 20px;
+margin-left: -60px;
+margin-bottom: -15px;
+}
+
+.hrleft1{
+	margin-left: -25px;
+	margin-bottom: 5px;
+}
+
+.superUrl{
+	margin-bottom: -10px;
+}
+.outModalCss{
+	display: block;
+	left: 0px;
+	top: 150px;
+	visibility: visible;	
+	margin-top:60px;
+}
+.moveLeft{
+	margin-left: 76%;
+}
+
+.fff{
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
+.reModalCss{
+	display: block;
+	left: 0px;
+	top: 150px;
+	visibility: visible;
+	width: 430px;
+
+}
+
+.reMove{
+	margin-left:20px;
+}
+
+.moveRight{
+	margin-right: -10px;
+}
+
+.setModalCss{
+	display: block;
+	left: 0px;
+	top:0px;
+	visibility: visible;
+	width: 970px;
+
+}
+
+
+
+.editable-TwoLayer {
+    display: block;
+    margin-bottom: 5px;  
+}
+
+.editable-TwoLayer span {
+    width: 70px;  
+    display: inline-block;
+}
