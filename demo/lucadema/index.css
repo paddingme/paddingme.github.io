@@ -1,0 +1,130 @@
+.body{
+	max-width: 970px;
+}
+
+.dropbig{
+	font-size: 26px;
+	/*margin-top: 16px;*/
+	margin-left: 100px;
+	margin-bottom:10px;
+}
+.carousel-inner{
+	height: 642px;
+}
+
+.navbar {
+height: 50px;
+}
+
+/*.body{ padding-top: 70px; }*/
+.myCarousel{
+	margin-top: -1px;
+}
+.navbar-inverse {
+	background-color: transparent;
+	border-color: #EFF2F5;
+}
+
+.footer{
+	margin-top: -30px;
+}
+
+.nav-tabs{
+	border-bottom: 0px;
+}
+
+.nav-tabs li a{
+	border:0px;
+}
+
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+ color: #fff; 
+ background-color: transparent; 
+}
+
+
+
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+
+ /*background-color: transparent; */
+ border: 0px; 
+
+}
+
+
+.navbar-inverse .navbar-nav>li>a {
+color: #428bca;
+}
+
+
+
+.navbar-brand p:first-child{
+	font-family: glyphicons-halflings-regular;
+	font-size: 30px;
+	margin-top: -10px; 
+	color:#428bca;
+}
+.navbar-brand p:nth-child(2){
+	font-size:20px;
+	margin-top:-6px;
+	color:#428bca;
+}
+
+
+.
+
+#brandConcept p{
+	font-family: glyphicons-halflings-regular;
+}
+#brandConcept div div div:first-child{
+	margin-top: 50px;
+}
+
+#brandConcept strong:first-child{
+	font-family: glyphicons-halflings-regular;
+	font-size:20px;
+
+}
+#brandConcept em{
+	font-size:18px;
+}
+
+
+.dropButton{
+	margin-top: 20px;
+}
+.arrow{
+	font-size: 20px;
+	margin-left: 130px;
+}
+
+#contactUs  h2{
+	color:#428bca;
+	font-family:glyphicons-halflings-regular;
+}
+#contactUs label{
+	font-size: 16px;
+	font-family:glyphicons-halflings-regular;
+}
+
+.form-group {
+margin-bottom: 25px;
+}
+
+
+.backImage{
+	background-color: #fff;
+	margin-left: -19px; 
+	background-image:url(image/meme.jpg);
+}
+
+.blockSection{
+	width: 960px;
+	margin-top: 100px;
+}
+
+.blockSection p{
+	text-align: justify;
+}
