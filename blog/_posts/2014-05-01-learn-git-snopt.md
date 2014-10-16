@@ -32,4 +32,22 @@ tags:
 
 ### Q1 如何克隆一个github上自己建立的私有仓库到本地
 
-命令行输入` git clone https://github.com/username/repo `之会出现 `Cloning into "yourrepo"...`之后会提示输入你的Username 和PassWord 输入正确之后就会把私有仓库复制到本地 注意这里输入的是`https://github.com/username/repo`不是`git clone git@github.com:username/repo.git` 也不是`git clone git://github.com/myusername/reponame.git`
+命令行输入　`git clone https://github.com/username/repo `　之会出现 `Cloning into "yourrepo"...`　　
+之后会提示输入你的Username 和PassWord 输入正确之后就会把私有仓库复制到本地 注意这里输入的是
+`https://github.com/username/repo`　不是`git clone git@github.com:username/repo.git` 也不是`git clone git://github.com/myusername/reponame.git`
+
+
+### Q2 如何强制把远程仓库覆盖到本地仓库
+
+```
+git fetch --all
+git reset --hard origin/master
+```
+
+
+### Q3 github Contributions Calendar不记录
+
+查看本地git邮箱：
+`git config user.email`
+然后在github里的accout settings》email里看看你的primary github email  是不是你本地那个邮箱。更改为一样的邮箱： 
+`git config --global user.email "xx@oo.com"``
