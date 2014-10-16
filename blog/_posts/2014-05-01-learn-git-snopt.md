@@ -49,5 +49,5 @@ git reset --hard origin/master
 
 查看本地git邮箱：
 `git config user.email`
-然后在github里的accout settings》email里看看你的primary github email  是不是你本地那个邮箱。更改为一样的邮箱： 
-`git config --global user.email "xx@oo.com"``
+然后在github里的accout settings》email里看看你的primary github email  是不是你本地那个邮箱。更改为一样的邮箱：
+`git config --global user.email "xx@oo.com"`
