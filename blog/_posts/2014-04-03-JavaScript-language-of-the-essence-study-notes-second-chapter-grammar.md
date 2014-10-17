@@ -23,7 +23,7 @@ tags:
 字符串字面量可以被包围在双引号或单引号之中，包含 0 个或多个字符。**JavaScript 中的所有字符都为 16 位**。\ 为转移字符，\u 约定允许指定用数字表示的字符码位。如`"A"==="\u0041"`
 
 (这里说下===和==的区别)
- `==`（相等运算法），`===`（严格相等运算符） JavaScript 对象的比较是引用的比较，非值的比较，对象和其本身相等，和其他任何对象不相等。 `===` 首先计算其操作数的值，然后比较，比较过程无任何类型转换。 `==` 如果两个操作数不是同一类型的，则相等运算符进行一些类型转换进行比较。 `==` 这里截取 [JavaScript 相等](http://dorey.github.io/JavaScript-Equality-Table)表格上的的两张图片让大家更为直观的感受下。
+ `==`（相等运算法），`===`（严格相等运算符） JavaScript 对象的比较是引用的比较，非值的比较，对象和其本身相等，和其他任何对象不相等。 `===` 首先计算其操作数的值，然后比较，比较过程无任何类型转换。 `==` 如果两个操作数不是同一类型的，则相等运算符进行一些类型转换进行比较。 `==` 这里截取 [JavaScript 相等表格](http://dorey.github.io/JavaScript-Equality-Table)上的的两张图片让大家更为直观的感受下。
 
 <img src="http://paddingme.qiniudn.com/1396461120383-2.png" alt="关于===的相等表格">
 
@@ -38,8 +38,8 @@ tags:
 
 Javascript 依赖于全局变量进行连接，所有编译单元的所有级别对象都被抛入全局对象的公共命名空间中。当 `var` 语句被用在函数的内部时，他定义了这个函数的私有变量。
 `switch`、`while`、`for`、和 `do` ss语句允许一个可选的前置 `label` 配合 `break` 一起使用。
-语句的执行顺序：从上到下。Javascript 可用过条件语句（`if`,`switch`），循环语句（`for`,`while`,`do`），**强制跳转语句（`return`,`break`,`throw`）** 和函数调用来改变执行顺序。
-**`false`,`null`,`undefined`,空字符串`''`,数字`0`,数字`NaN`都为假，其余皆为真。**
+语句的执行顺序：从上到下。Javascript 可用过条件语句（`if`, `switch`），循环语句（`for`, `while`, `do`），**强制跳转语句（`return`, `break`, `throw`）** 和函数调用来改变执行顺序。
+**`false`, `null`, `undefined`,空字符串 `''`,数字 `0`,数字 `NaN`都为假，其余皆为真。**
 `for` 循环有两种形式，`for(var i=0; i < arr.length,i++){}` 和 `for(i in arr){}`,后者枚举一个对象的所有属性名（或键名），在每次循环中，对象的另一个属性名字付串被复制给 `for` 和 `in` 之间的变量。
 `object.hasOwnProperty(variable)`来检测是否为该对象的成员，还是从原型链里找到的。
 
@@ -89,7 +89,7 @@ Javascript 不允许在 `return` 关键字和表示式之间换行,同样不允�
 ,	|多重求值
 
 
-`type of `运算符产生的值有 'number'、'string'、'boolean'、'undefined'、'function' 和 'object'（注意都是小写）**如果运算数是一个数组或n ull,那么结果是‘object’,这是不对的额**这里作何解？
+`type of ` 运算符产生的值有 'number'、'string'、'boolean'、'undefined'、'function' 和 'object'（注意都是小写）**如果运算数是一个数组或者  `null`，那么结果是 `object`,这是不对的额**这里作何解？
 
 ### 7. 字面量
 
