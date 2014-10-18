@@ -13,7 +13,7 @@ title: About - PaddingMe
 
 微博控，爱民谣，曾经的文学青年。喜欢一切美好的事物，和一切有趣的人——`『这世间，唯有梦想与好姑娘不可辜负』`。理性主义(<del>理想主义者</del>)，自由主义，有时偏执，有时愚钝。支持转基因，赞成废医验药，更主张自由市场。
 
-座右铭：`『Only the paranoid survive(只有偏执狂才能生存)』。`
+座右铭：`『Only the paranoid survive(只有偏执狂才能生存)』`。
 
 有一万种欲望，总是处在自我挣扎的边缘。一个人的战争，自己的战争，孤独的战争。星星之火从未燎原，但也未从熄灭。
 
@@ -22,9 +22,8 @@ title: About - PaddingMe
 #About blog
 想建个人博客由来已久，不管是技术总结还是自言自语，都是一种记录情结。padding，英文[填充之意][paddingen]。在[CSS盒子模型][boxmodel]中，padding表示[内边距][padding]。所以[padding.me][padding.me]取意自我充实，用信念、希望、努力、乐观填充所有的空洞与乏味，也取『修身，齐家，平天下』修身之意，希望自己可以沉心经营，潜心修行。
 
-
 <br>
-最后更新：2014/10/18 17:38
+最后更新：2014/10/18 20:22
 
 [weibo]: http://weibo.com/yahoo2651
 [boxmodel]: http://www.w3school.com.cn/css/css_boxmodel.asp
