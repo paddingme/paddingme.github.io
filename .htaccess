@@ -6,5 +6,5 @@ ErrorDocument 404 /404.html
 Redirect /blog/feed/ http://feeds.feedburner.com/paddingme
 Redirect /blog/feed  http://feeds.feedburner.com/paddingme
 
-# Handle bad incoming link from http://blog.jayfields.com/2007/11/ruby-testing-private-methods.html 
+# Handle bad incoming link from http://blog.jayfields.com/2007/11/ruby-testing-private-methods.html
 Redirect /blog/2007/11/03/evan-phoenix-on-testing-private-methods-in-ruby/ http://padding.me/blog/2007/11/02/evan-phoenix-on-testing-private-methods-in-ruby
