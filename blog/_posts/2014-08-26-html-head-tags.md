@@ -341,7 +341,7 @@ Windows 8 磁贴图标
 
 ### 移动端的meta
 
-```html
+```
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
