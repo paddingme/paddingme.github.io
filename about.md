@@ -9,7 +9,7 @@ title: About - PaddingMe
 # About me
 
 <img src="/images/paddingme.jpg" class="inline-left" alt="Padding Me" />
-网名——[臭臭手抽抽][weibo]，<a href="http://yuehu.io/padding-me" target="_blank">一只茁壮成长的前端菜鸟</a>。和 html 谈情说爱，与 css 不清不楚，却又和 JavaScript 沆瀣一气，一路打怪升级，披荆斩棘，火花带闪电。
+网名——[臭臭手抽抽][weibo]，<a href="http://yuehu.io/padding-me" target="_blank">一只茁壮成长的前端菜鸟</a>。和 HTML 谈情说爱，与 CSS 不清不楚，却又和 JavaScript 沆瀣一气，一路打怪升级，披荆斩棘，火花带闪电。
 
 微博控，爱民谣，曾经的文学青年。喜欢一切美好的事物，和一切有趣的人——`『这世间，唯有梦想与好姑娘不可辜负』`。理性主义(<del>理想主义者</del>)，自由主义，有时偏执，有时愚钝。支持转基因，赞成废医验药，更主张自由市场。
 
