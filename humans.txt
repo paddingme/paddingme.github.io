@@ -31,9 +31,8 @@ Hsiaoming Yang
 Email: me[at]lepture.com
 twitter: @lepture
 
-
 /* 网站 */
-最后更新: 2014年07月05日
+最后更新: 2014年10月29日
 语言：中文
 Doctype: HTML5
 IDE: Sublime Text, Notepad++
