@@ -91,7 +91,7 @@ git remote set-url --push [name/origin] [https://github.com/your-name/your-new-r
   之后会让你输入密码，再次输入密码确认，ok，完成上述步骤就生成了公钥和私钥了。
   截图如下：
 
-  ![http://paddingme.qiniudn.com/ssh1.png]
+  ![](http://paddingme.qiniudn.com/ssh1.png)
 
  2. 再根据上述步骤生成另一个 SSH keys（根据你自己在两个远程仓库的邮箱命输入邮箱地址），我们将其命名为 id_rsa_gitcafe
 
@@ -117,7 +117,7 @@ git remote set-url --push [name/origin] [https://github.com/your-name/your-new-r
   $ ssh-add ~/.ssh/id_rsa_gitcafe
   ```
 
-  ![http://paddingme.qiniudn.com/ssh2.PNG]
+  ![](http://paddingme.qiniudn.com/ssh2.PNG)
 
  4. Ok,私钥添加上了，咱们把公钥放到 github/gitcafe。打开你的 github 账号，找到设置，找到 SSH keys 点击 ADD SSH key。随便取个 Title，什么你不知道如何添加公钥?!
 
@@ -133,7 +133,7 @@ git remote set-url --push [name/origin] [https://github.com/your-name/your-new-r
 
  然后出现了奇怪的东东，布拉布拉，yes/no，不管它 输入yes。接着会看见您的大名，OK，连接成功，gitcafe 同理请将 `$ ssh -T git@gitcafe.com`。 来上图，感受下:
 
- ![http://paddingme.qiniudn.com/ssh3.PNG]
+ ![](http://paddingme.qiniudn.com/ssh3.PNG)
 
 
 ## 2. 学习git 参考资料
