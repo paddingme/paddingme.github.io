@@ -135,6 +135,50 @@ git remote set-url --push [name/origin] [https://github.com/your-name/your-new-r
 
  ![](http://paddingme.qiniudn.com/ssh3.PNG)
 
+### Q6 如何将 blog 同时托管到 gitcafe 和 github 上？
+
+这个网上教程很多，待我有时间了，我再手把手教同学们，晒下配置文件，感受下：
+
+```
+[remote "github"]
+    url = https://github.com/yourname/yourname
+    fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+    remote = gitcafe
+    merge = refs/heads/gitcafe-pages
+[remote "gitcafe"]
+    url = https://gitcafe.com/yourname/yourname
+    fetch = +refs/heads/*:refs/remotes/orig/*
+[alias]
+publish=!sh -c \"git push github master && git push gitcafe master:gitcafe-pages\"
+```
+
+### Q7 为什么配置了 SSH，每次 push 还是需要输入用户名和密码呢？
+
+参考这里<http://segmentfault.com/q/1010000000599327>
+
+因为你用的是 https 而不是 ssh。
+可以更新一下 origin:
+
+```
+git remote remove origin
+git remote add origin git@github.com:Username/Your_Repo_Name.git
+```
+
+之后你还需要重新设置track branch，比如：
+
+```
+git pull
+git branch --set-upstream-to=origin/master master
+```
+
+对于HTTPS方式，你可以在~/.netrc文件里设定用户名密码，不过这样的风险在于密码是明文存放在这个文件里的，比较容易泄露
+
+```
+machine github.com
+login Username
+password Password
+```
 
 ## 2. 学习git 参考资料
 
