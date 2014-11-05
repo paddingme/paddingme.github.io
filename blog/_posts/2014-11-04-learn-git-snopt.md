@@ -28,7 +28,8 @@ https://github.com/username/repo
 
 不是
 
-```git clone git@github.com:username/repo.git
+```
+git clone git@github.com:username/repo.git
 ```
 
 也不是
