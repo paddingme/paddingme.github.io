@@ -82,58 +82,58 @@ git remote set-url --push [name/origin] [https://github.com/your-name/your-new-r
 
  1. 首先生成一个 SSH keys 供 github 使用：
 
-  ```
-  $ cd ~/.ssh
-  $ ssh-keygen -t rsa -C "your_email@example.com"
-  ```
+   ```
+   $ cd ~/.ssh
+   $ ssh-keygen -t rsa -C "your_email@example.com"
+   ```
 
-  执行会让你重命名 key 咱们将其命名为 id_rsa_github
+   执行会让你重命名 key 咱们将其命名为 id_rsa_github
   之后会让你输入密码，再次输入密码确认，ok，完成上述步骤就生成了公钥和私钥了。
   截图如下：
 
-  ![](http://paddingme.qiniudn.com/ssh1.png)
+   ![](http://paddingme.qiniudn.com/ssh1.png)
 
  2. 再根据上述步骤生成另一个 SSH keys（根据你自己在两个远程仓库的邮箱命输入邮箱地址），我们将其命名为 id_rsa_gitcafe
 
  3. 接着 咱们添加生成的私钥，再这之前执行
 
-  ```
+   ```
     $ ssh-agent -s
     $ ssh-add ~/.ssh/id_rsa_github
-  ```
+   ```
 
-  这时候会出现错误"Could not open a connection to your authentication agent",参考[Could not open a connection to your authentication agent](http://stackoverflow.com/questions/17846529/could-not-open-a-connection-to-your-authentication-agent)
+   这时候会出现错误"Could not open a connection to your authentication agent",参考[Could not open a connection to your authentication agent](http://stackoverflow.com/questions/17846529/could-not-open-a-connection-to-your-authentication-agent)
 
-  我们执行:
+   我们执行:
 
-  ```
-  $ eval `ssh-agent -s`
-  ```
+   ```
+   $ eval `ssh-agent -s`
+   ```
 
-  继续添加 key:
+   继续添加 key:
 
-  ```
-  $ ssh-add ~/.ssh/id_rsa_github
-  $ ssh-add ~/.ssh/id_rsa_gitcafe
-  ```
+   ```
+   $ ssh-add ~/.ssh/id_rsa_github
+   $ ssh-add ~/.ssh/id_rsa_gitcafe
+   ```
 
-  ![](http://paddingme.qiniudn.com/ssh2.PNG)
+   ![](http://paddingme.qiniudn.com/ssh2.PNG)
 
  4. Ok,私钥添加上了，咱们把公钥放到 github/gitcafe。打开你的 github 账号，找到设置，找到 SSH keys 点击 ADD SSH key。随便取个 Title，什么你不知道如何添加公钥?!
 
- 在你的.ssh 目录下 用 Notepad 或 sublime 打开 id_rsa_github.pub，然后复制粘贴保存。
+  在你的.ssh 目录下 用 Notepad 或 sublime 打开 id_rsa_github.pub，然后复制粘贴保存。
 
- gitcafe 添加 ssh 公钥同理。
+  gitcafe 添加 ssh 公钥同理。
 
-5. 胜利尽在眼前，我们 try try 下。
+ 5. 胜利尽在眼前，我们 try try 下。
 
- ```
- $ ssh -T git@github.com
- ```
+  ```
+  $ ssh -T git@github.com
+  ```
 
- 然后出现了奇怪的东东，布拉布拉，yes/no，不管它 输入yes。接着会看见您的大名，OK，连接成功，gitcafe 同理请将 `$ ssh -T git@gitcafe.com`。 来上图，感受下:
+  然后出现了奇怪的东东，布拉布拉，yes/no，不管它 输入yes。接着会看见您的大名，OK，连接成功，gitcafe 同理请将 `$ ssh -T git@gitcafe.com`。 来上图，感受下:
 
- ![](http://paddingme.qiniudn.com/ssh3.PNG)
+  ![](http://paddingme.qiniudn.com/ssh3.PNG)
 
 ### Q6 如何将 blog 同时托管到 gitcafe 和 github 上？
 
