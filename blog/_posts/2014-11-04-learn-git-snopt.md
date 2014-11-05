@@ -83,16 +83,16 @@ git remote set-url --push [name/origin] [https://github.com/your-name/your-new-r
 
   1. 首先生成一个 SSH keys 供 github 使用：
 
-   ```
-   $ cd ~/.ssh
-   $ ssh-keygen -t rsa -C "your_email@example.com"
-   ```
+    ```
+    $ cd ~/.ssh
+    $ ssh-keygen -t rsa -C "your_email@example.com"
+    ```
 
     执行会让你重命名 key 咱们将其命名为 id_rsa_github
   之后会让你输入密码，再次输入密码确认，ok，完成上述步骤就生成了公钥和私钥了。
   截图如下：
 
-   ![](http://paddingme.qiniudn.com/ssh1.png)
+    ![](http://paddingme.qiniudn.com/ssh1.png)
 
   2. 再根据上述步骤生成另一个 SSH keys（根据你自己在两个远程仓库的邮箱命输入邮箱地址），我们将其命名为 id_rsa_gitcafe
 
