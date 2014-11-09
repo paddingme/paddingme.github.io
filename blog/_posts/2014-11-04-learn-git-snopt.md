@@ -183,10 +183,7 @@ login Username
 password Password
 ```
 
-注意：如果你的仓库没有add ssh 只是在.ssh上添加了，在你的仓库里还要添加一次这样才会生效。添加步骤同上。可能要等一分钟左右才会生效。
-
-
-### Q7 恢复仓库到上一次的提交状态：$ git reset --hard
+### Q8 恢复仓库到上一次的提交状态：$ git reset --hard
 
 ## 2. 学习git 参考资料
 
