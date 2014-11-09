@@ -183,7 +183,7 @@ login Username
 password Password
 ```
 
-### Q8 恢复仓库到上一次的提交状态：$ git reset --hard
+### Q8 恢复仓库到上一次的提交状态：`$ git reset --hard`
 
 ## 2. 学习git 参考资料
 
