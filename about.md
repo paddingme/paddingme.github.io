@@ -4,8 +4,6 @@ layout: about
 title: About - PaddingMe
 ---
 
-
-
 # About me
 
 <img src="/images/paddingme.jpg" class="inline-left" alt="Padding Me" />

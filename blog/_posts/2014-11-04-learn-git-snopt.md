@@ -185,6 +185,8 @@ password Password
 
 ### Q8 恢复仓库到上一次的提交状态：`$ git reset --hard`
 
+### Q9 修改最后的提交日志：`$ git commit --amend`
+
 ## 2. 学习git 参考资料
 
 + [git - 简易指南](http://www.bootcss.com/p/git-guide/)
