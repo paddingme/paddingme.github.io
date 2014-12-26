@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body style="height:1000px">
+
+script
+<script>
+     $(document).ready(function(){
+
+      var offset = $(window).scrollTop();
+
+      if (offset > 600) {
+        $('.back-to-top').addClass('show');
+      } else {
+        $('.back-to-top').removeClass('show');
+      }
+      $('.back-to-top').on('click', function(){
+      $('body').scrollTo(0, {duration: 600});
+      });
+ });
+</script>
+</body>
+</html>
