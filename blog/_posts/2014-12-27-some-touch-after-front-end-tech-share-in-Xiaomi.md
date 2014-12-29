@@ -5,7 +5,7 @@ tags:
 - 酱油心得
 ---
 
-为了不被 [w3ctech](http://www.w3ctech.com/)拉黑，特意撰此流水账一篇，毫无干货(fuck things)，看官权当一笑。^.^
+为了不被 [w3ctech](http://www.w3ctech.com/)拉黑，特意撰此流水账一篇，毫无干货(fuck things)，看官权当一笑。
 
 
 ## 废话开篇
