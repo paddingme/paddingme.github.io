@@ -443,8 +443,9 @@ Markdown 会转成：
 
 <h2 id="gfm">GitHub 风格的 Markdown 语法</h2>
 
-- https://github.com/cssmagic/blog/issues/13
-- https://help.github.com/articles/github-flavored-markdown/
+- <https://github.com/cssmagic/blog/issues/13>
+- <https://help.github.com/articles/github-flavored-markdown/>
+- <https://guides.github.com/features/mastering-markdown/>
 
 <h2 id="use">各平台的 Markdown 支持情况</h2>
 
@@ -473,6 +474,7 @@ Markdown 会转成：
 - <http://wowubuntu.com/markdown/>
 - <https://github.com/cssmagic/blog/issues/13>
 - <https://help.github.com/articles/github-flavored-markdown/>
+- <https://guides.github.com/features/mastering-markdown/>
 
 
 
