@@ -68,6 +68,8 @@ tags:
       | |底色固定 |   可降级| 兼容|
     - 还提到了造轮子的问题——有适合自己使用的好轮子直接使用，不适合的轮子才再造一个，这个观点非常同意，现在很多公司都是为了造轮子而造轮子，感觉没什么必要。
 
+    w3ctech 的小伙伴向我推荐了 [360前端技术专场](http://www.w3ctech.com/event/31) 中 [黄薇](http://weibo.com/u/2103102591) 的『Web高性能动画』,PPT [在这里](http://melonhuang.github.io/sharing/slides.html?file=high_performance_animation)，视频 [在这里](http://v.youku.com/v_show/id_XNzQ4MDE3ODQw.html)。
+
     再一次，更多的内容请详细看网页ppt，需下载 [源文件](http://feppt.qiniudn.com/MIFE-2014-PPT.7z)。
 
 这次分享获益最多的当然要属 HTML5&CSS 的分享，这是和我目前所接触的联系最密切的东西，的确 get 到了不少新技能，长了很多见识，受益颇多，希望明年可以继续参加更多这样的分享，get 到更多干货。=.=
