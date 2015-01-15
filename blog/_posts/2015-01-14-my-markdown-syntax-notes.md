@@ -485,7 +485,7 @@ Markdown 会转成：
     - [ ] 这是一个未完成项目
 
 
-![](https://camo.githubusercontent.com/09cbc14d7458e0e2c52f1a66fb8890152da978c9/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f3138322f35343631302f66326530656131382d356139612d313165322d383236642d6635663562663033663032652e676966 "")
+![](http://paddingme.qiniudn.com/markdown.gif "")
 
 这个特性会在 Issue 和 Pull Request 的描述和评论中启用。任务清单同样可用于 Gist 的评论和 Markdown 格式的 Gist。在这些场合，任务清单将渲染出复选框，供勾选或清除。
 
@@ -498,7 +498,7 @@ Markdown 会转成：
 <h3 id="emoji">Emoji</h3>
 按下 : 将会弹出一个表情符号的建议列表。这个列表会随着你的输入不断匹配筛选，因此一旦你在列表中发现了你要找的表情符号，你就可以按回车或 tab 键来补全当前高亮的那一项。
 
-更多的 emoji 表情 可以猛击 [EMOJI CHEAT SHEET](http://www.emoji-cheat-sheet.com/)
+更多的 emoji 表情 可以猛击 [EMOJI CHEAT SHEET](http://www.emoji-cheat-sheet.com/)。
 
 <h3 id="table">table</h3>
 
