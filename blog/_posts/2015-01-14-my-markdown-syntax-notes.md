@@ -19,7 +19,7 @@ tags:
     +  [段落和换行](#p)
     +  [区块引用 Blockquotes](#blockquote)
     +  [列表](#list)
-    +  [代码区块](#代码区块)
+    +  [代码区块](#pre)
     +  [分隔线](#hr)
     +  [链接](#link)
     +  [强调](#em)
@@ -27,13 +27,20 @@ tags:
     +  [图片](#img)
     +  [自动链接](#autolink)
 - [GitHub 风格的 Markdown 语法](#gfm)
-- [各平台的 Markdown 支持情况](#use)
+  + [链接自动识别](#autolink-gfm)
+  + [围栏式代码块](#fenced)
+  + [任务清单](#task-lists)
+  + [任务清单](#task-lists)
+  + [@](#at)
+  + [Emoji](#emoji)
+  + [table](#table)
+  + [强调](#del)
 - [一些和排版有关的资源](#layout)
 - [参考文章](#acknowledgement)
 
 <h2 id="syntax">Markdown 语法</h2>
 
-想要从头到尾一步步学习 Markdown 语法 请点击 <http://wowubuntu.com/markdown/> 阅读, 这里只记录下对我来说比较容易弄混的语法。
+想要从头到尾一步步学习 Markdown 语法，请点击 <http://wowubuntu.com/markdown/> 阅读, 这里只记录下对我来说比较容易弄混的语法。
 
 <h3 id="html">兼容 HTML</h3>
 
@@ -236,7 +243,7 @@ tags:
 
 1986\. What a great season.
 
-<h3 id="代码区块">代码区块</h3>
+<h3 id="pre">代码区块</h3>
 
 要在 Markdown 中建立代码区块很简单，只要简单地缩进 4 个空格或是 1 个制表符就可以，一个代码区块会一直持续到没有缩进的那一行（或是文件结尾）。例如，下面的输入：
 
@@ -256,11 +263,11 @@ tags:
 
 <h3 id="link">链接</h3>
 
-Markdown 支持两种形式的链接语法： *行内式*和*参考式*两种形式。
+Markdown 支持两种形式的链接语法： *行内式* 和 *参考式* 两种形式。
 
 不管是哪一种，链接文字都是用 [方括号] 来标记。
 
-要建立一个*行内式*的链接，只要在方块括号后面紧接着圆括号并插入网址链接即可，如果你还想要加上链接的 title 文字，只要在网址后面，用双引号把 title 文字包起来即可，例如：
+要建立一个 *行内式* 的链接，只要在方块括号后面紧接着圆括号并插入网址链接即可，如果你还想要加上链接的 title 文字，只要在网址后面，用双引号把 title 文字包起来即可，例如：
 
     This is [an example](http://example.com/ "Title") inline link.
 
@@ -278,7 +285,7 @@ Markdown 支持两种形式的链接语法： *行内式*和*参考式*两种形
 
     See my [About](/about/) page for details.
 
-*参考式*的链接是在链接文字的括号后面再接上另一个方括号，而在第二个方括号里面要填入用以辨识链接的标记：
+*参考式* 的链接是在链接文字的括号后面再接上另一个方括号，而在第二个方括号里面要填入用以辨识链接的标记：
 
     This is [an example][id] reference-style link.
 
@@ -310,19 +317,19 @@ Markdown 支持两种形式的链接语法： *行内式*和*参考式*两种形
 
     [id]: <http://example.com/>  "Optional Title Here"
 
-你也可以把 title 属性放到下一行，也可以加一些缩进，若网址太长的话，这样会比较好看：
+你也可以把 title 属性放到下一行，也可以加些缩进，若网址太长的话，这样会比较好看：
 
     [id]: http://example.com/longish/path/to/resource/here
             "Optional Title Here"
 
 网址定义只有在产生链接的时候用到，并不会直接出现在文件之中。
 
-链接辨别标签可以有字母、数字、空白和标点符号，但是并*不*区分大小写，因此下面两个链接是一样的：
+链接辨别标签可以有字母、数字、空白和标点符号，但是并 *不* 区分大小写，因此下面两个链接是一样的：
 
     [link text][a]
     [link text][A]
 
-*隐式链接标记*功能让你可以省略指定链接标记，这种情形下，链接标记会视为等同于链接文字，要用隐式链接标记只要在链接文字后面加上一个空的方括号，如果你要让 "Google" 链接到 google.com，你可以简化成：
+*隐式链接标记* 功能让你可以省略指定链接标记，这种情形下，链接标记会视为等同于链接文字，要用隐式链接标记只要在链接文字后面加上一个空的方括号，如果你要让 "Google" 链接到 google.com，你可以简化成：
 
     [Google][]
 
@@ -386,11 +393,16 @@ Markdown 使用星号（`*`）和底线（`_`）作为标记强调字词的符�
 
 如果要在代码区段内插入反引号，你可以用多个反引号来开启和结束代码区段：
 
-    ``There is a literal backtick (`) here.``
+    ``There is a literal backtick (`) here.``、
+
+效果：
+
+``There is a literal backtick (`) here.``、
+
 
 <h3 id="img">图片</h3>
 
-Markdown 使用一种和链接很相似的语法来标记图片，同样也允许两种样式： *行内式*和*参考式*。
+Markdown 标记图片允许两种样式： *行内式* 和 *参考式*。
 
 行内式的图片语法看起来像是：
 
@@ -423,6 +435,8 @@ Markdown 会转为：
 
     <a href="http://example.com/">http://example.com/</a>
 
+电子邮件地址：
+
     <address@example.com>
 
 Markdown 会转成：
@@ -432,18 +446,112 @@ Markdown 会转成：
     &#109;">&#x61;&#x64;&#x64;&#x72;&#x65;&#115;&#115;&#64;&#101;&#120;&#x61;
     &#109;&#x70;&#x6C;e&#x2E;&#99;&#111;&#109;</a>
 
-在浏览器里面，这段字串（其实是 `<a href="mailto:address@example.com">address@example.com</a>`）会变成一个可以点击的「address@example.com」链接。
+在浏览器里面，这段字串（其实是   `<a href="mailto:address@example.com"> address@example.com </a>`）会变成一个可以点击的「address@example.com」链接。
 
 
 
 
 <h2 id="gfm">GitHub 风格的 Markdown 语法</h2>
 
-- <https://github.com/cssmagic/blog/issues/13>
-- <https://help.github.com/articles/github-flavored-markdown/>
-- <https://guides.github.com/features/mastering-markdown/>
 
-<h2 id="use">各平台的 Markdown 支持情况</h2>
+
+<h3 id="autolink-gfm">链接自动识别</h3>
+
+传统 Markdown 自动识别链接需要在链接上用一对尖括号闭合，而 GFM 只需要输入链接即自动识别。Email 地址亦是。
+
+<h3 id="fenced">围栏式代码块</h3>
+
+传统 Markdown 使用 4 个空格缩进将文本转换为代码块，GFM 支持在代码块前后加三个反引号 `\``，而且还可以在代码块前加上语言类型标识，Github 会自动识别语言，给语法着色、代码加亮。
+
+例如：
+
+    ```js
+    alet("Hello world!");
+    ```
+
+<h3 id="task-lists">任务清单</h3>
+
+列表可被转换为任务清单，只需要为列表项的开头加上 `[ ]` 或 `[x]` 即可（分别表示未完成和已完成）。
+
+    - [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
+    - [x] list syntax required (any unordered or ordered list supported)
+    - [x] this is a complete item
+    - [ ] this is an incomplete item
+
+
+    - [x] 支持 @提到某人、#引用、[链接]()、**格式化** 和 <del>标签</del> 等语法
+    - [x] 需要使用列表语法来激活（无序或有序列表均可）
+    - [x] 这是一个已完成项目
+    - [ ] 这是一个未完成项目
+
+
+![](https://camo.githubusercontent.com/09cbc14d7458e0e2c52f1a66fb8890152da978c9/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f3138322f35343631302f66326530656131382d356139612d313165322d383236642d6635663562663033663032652e676966 "")
+
+这个特性会在 Issue 和 Pull Request 的描述和评论中启用。任务清单同样可用于 Gist 的评论和 Markdown 格式的 Gist。在这些场合，任务清单将渲染出复选框，供勾选或清除。
+
+<h3 id="at">@</h3>
+
+按下 @ 符号将弹出一个列表，列出这个项目相关的人或团队,即 @ 提到人名或团队名时的自动补全。这个列表会随着你的输入不断匹配筛选，因此一旦你在列表中发现了你要找的人名或团队名，你就可以用方向键来选中它，然后按回车或 tab 键来补全。对于团队来说，只需要输入 @组织名/团队名，那么团队内的所有成员都将收到提醒。
+
+列表的匹配范围仅限制在当前仓库的贡献者以及当前讨论的参与者，因此它并不是一个全局性的搜索。它和文件查找器使用相同的模糊筛选算法，并且同时适用于用户名和全名。
+
+<h3 id="emoji">Emoji</h3>
+按下 : 将会弹出一个表情符号的建议列表。这个列表会随着你的输入不断匹配筛选，因此一旦你在列表中发现了你要找的表情符号，你就可以按回车或 tab 键来补全当前高亮的那一项。
+
+更多的 emoji 表情 可以猛击 [EMOJI CHEAT SHEET](http://www.emoji-cheat-sheet.com/)
+
+<h3 id="table">table</h3>
+
+你可以使用若干列文字并于第一行下面用转折号-分开它们，然后用管道符|隔开每一列：
+
+    First Header  | Second Header
+    ------------- | -------------
+    Content Cell  | Content Cell
+    Content Cell  | Content Cell
+
+为了看上去美观，你也可以在两端加上额外的管道符：
+
+    | First Header  | Second Header |
+    | ------------- | ------------- |
+    | Content Cell  | Content Cell  |
+    | Content Cell  | Content Cell  |
+
+注意顶部的虚线不需要准确匹配表头文本的长度：
+
+    | Name | Description          |
+    | ------------- | ----------- |
+    | Help      | Display the help window.|
+    | Close     | Closes a window     |
+
+你也可以在其中包括内联 Markdown 元素，比如链接，加粗，斜体或删除
+
+    | Name | Description          |
+    | ------------- | ----------- |
+    | Help      | ~~Display the~~ help window.|
+    | Close     | _Closes_ a window     |
+
+最后，通过在表头行加入冒号:，你可以决定文本是左对齐，右对齐，还是居中：
+
+    | Left-Aligned  | Center Aligned  | Right Aligned |
+    | :------------ |:---------------:| -----:|
+    | col 3 is      | some wordy text | $1600 |
+    | col 2 is      | centered        |   $12 |
+    | zebra stripes | are neat        |    $1 |
+
+一个在最左边的冒号表示一个左对齐的列；一个在最右边的冒号表示一个右对齐的列；两边都有的冒号表示一个居中的列。
+
+
+<h3 id="del">强调</h3>
+
+用在字母中间放一条线来强调文字 可使用
+
+    ~~this~~
+
+效果为
+
+<del>this</del>
+
+
 
 <h2 id="layout">一些和排版有关的资源</h2>
 
@@ -471,12 +579,11 @@ Markdown 会转成：
 - <https://github.com/cssmagic/blog/issues/13>
 - <https://help.github.com/articles/github-flavored-markdown/>
 - <https://guides.github.com/features/mastering-markdown/>
-
-
+- <https://guides.github.com/features/mastering-markdown/>
 
 <!--
-1. 大 V 都在 学 Markdown 你还在干什么呢？
-2. markdown 之 普通语法
+1. 大 V 都在 学 Markdown 你还在干嘛？
+2. markdown 之 传统语法
  - http://wowubuntu.com/markdown/
 3. github markdown 语法
 4. 各平台为啥 markdown 不一样呢（github，sf.gg，html-js，以及 W3CTech（不支持表格嵌套））
