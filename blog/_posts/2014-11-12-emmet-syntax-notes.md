@@ -1,12 +1,12 @@
 ---
-title: emmet 语法笔记
+title: Emmet 语法笔记
 layout: post
 tags:
  - tools
  - emmet
 ---
 
-Emmet 是高效、快速编写 HTML 和 CSS 代码的一种插件，如果还不了解，请戳[Emmet — the essential toolkit for web-developers](http://docs.emmet.io/),再根据你使用的编辑器（sublime 或 vim 等）下载对应的 Emmet 插件，让你的代码快步如飞吧。下面我记录下常用的 Emmet 语法和快捷键。代码区里的均指在编辑器里输入的字符，然后按 “Tab” 键便会生成代码。
+Emmet 是高效、快速编写 HTML 和 CSS 代码的一种插件，如果还不了解，请戳 [Emmet — the essential toolkit for web-developers](http://docs.emmet.io/), 再根据你使用的编辑器（sublime 或 vim 等）下载对应的 Emmet 插件，让你的代码快步如飞吧。下面我记录下常用的 Emmet 语法和快捷键。代码区里的均指在编辑器里输入的字符，然后按 “Tab” 键便会生成代码。
 例如 输入`!` 然后按 “tab” 会得到如下所示的HTML文档初始机构，再也不用一个字母一个字母敲了，是不是很简单呢？
 
 <img src="http://paddingme.qiniudn.com/emmet.gif" title="图片来自http://www.smashingmagazine.com/2013/03/26/goodbye-zen-coding-hello-emmet/"/>
@@ -14,6 +14,7 @@ Emmet 是高效、快速编写 HTML 和 CSS 代码的一种插件，如果还不
 ## HTML 编写
 1. 生成HTML文档初始机构
 - `html:5` 或者 `!` 生成 HTML5 结构
+
   ```
     <!DOCTYPE html>
     <html lang="zh-CN">
@@ -27,6 +28,7 @@ Emmet 是高效、快速编写 HTML 和 CSS 代码的一种插件，如果还不
     </html>
   ```
 - `html:xt` 生成 HTML4 过渡型
+
   ```
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
     <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cmn-Hans">
@@ -40,6 +42,7 @@ Emmet 是高效、快速编写 HTML 和 CSS 代码的一种插件，如果还不
     </html>
   ```
 - `html:4s` 生成 HTML4 严格型
+
   ```
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
     <html lang="zh-cmn-Hans">
@@ -67,6 +70,7 @@ Emmet 是高效、快速编写 HTML 和 CSS 代码的一种插件，如果还不
 
 6. 生成上级标签： `^`
   例如输入`ul>li>a^div` 则生成
+
   ```
   <ul>
     <li><a href=""></a></li>
@@ -75,6 +79,7 @@ Emmet 是高效、快速编写 HTML 和 CSS 代码的一种插件，如果还不
   ```
   也可以使用多个 `^`,  
   例如输入`ul>li>a^^div` 则生成
+
   ```
   <ul>
       <li><a href=""></a></li>
@@ -84,6 +89,7 @@ Emmet 是高效、快速编写 HTML 和 CSS 代码的一种插件，如果还不
 
 7. 重复生成多个标签 `*`
   例如输入`ul>li*5` 则生成
+
   ```
     <ul>
         <li></li>
@@ -96,6 +102,7 @@ Emmet 是高效、快速编写 HTML 和 CSS 代码的一种插件，如果还不
 
 8. 生成分组的标签: `()`
   例如输入`ul>(li>a)*5` 则生成
+
     ```
     <ul>
         <li><a href=""></a></li>
@@ -120,12 +127,14 @@ Emmet 是高效、快速编写 HTML 和 CSS 代码的一种插件，如果还不
     ```
 9. 生成自定义属性：`[]`
   例如输入`img[https://octodex.github.com/images/codercat.jpg][alt=octcat]` 则生成
+
     ```
     <img src="https://octodex.github.com/images/codercat.jpg" alt="octcat" />
     ```
 
 10. 生成递增的属性标签等: `$`
   例如输入`ul>li.item$*5` 则生成
+
     ```
     <ul>
         <li class="item1"></li>
@@ -138,6 +147,7 @@ Emmet 是高效、快速编写 HTML 和 CSS 代码的一种插件，如果还不
 
 11. 生成多位递增的呢：`$$$`
   例如输入`ul>li.item$$$*5` 则生成
+
     ```
     <ul>
         <li class="item001"></li>
@@ -165,6 +175,7 @@ Emmet 是高效、快速编写 HTML 和 CSS 代码的一种插件，如果还不
 
 12. 想要从某个特定的顺序开始呢：`@N`
   例如输入`ul>li.item$@10*5` 则生成
+
   ```
    <ul>
        <li class="item10"></li>
@@ -189,6 +200,7 @@ Emmet 是高效、快速编写 HTML 和 CSS 代码的一种插件，如果还不
 
 14. 生成文本内容：`{}`
   例如输入`p{我是paddingme}` 则生成
+
   ```
     <p>我是paddingme</p>
   ```
@@ -196,12 +208,14 @@ Emmet 是高效、快速编写 HTML 和 CSS 代码的一种插件，如果还不
 15. 缺省元素:
  - 声明一个带class的div 可以不用输入div；
    `.header+.footer` 则生成:
+
    ```
    <div class="header"></div>
    <div class="footer"></div>
    ```
  - Emmet 还会根据父标签进行判定
    例如输入`ul>.item*3` 则生成：
+
    ```
    <ul>
        <li class="item"></li>
@@ -222,14 +236,17 @@ Emmet 是高效、快速编写 HTML 和 CSS 代码的一种插件，如果还不
 
 1. 简写属性和属性值
  比如要定义元素的宽度，只需输入w100，即可生成：
+
  ```
   width: 100px;
  ```
  Emmet 的默认设置 w 是 width 的缩写，后面紧跟的数字就是属性值。默认的属性值单位是 px ，你可以在值的后面紧跟字符生成单位，可以是任意字符。例如，`w100foo` 会生成：
+
  ```
  width:100foo;
  ```
  同样也可以简写属性单位，如果你紧跟属性值后面的字符是`p`，那么将会生成：
+
  ```
  width:100%;
  ```
@@ -239,22 +256,27 @@ Emmet 是高效、快速编写 HTML 和 CSS 代码的一种插件，如果还不
  - x 表示 ex
  
  像 margin 这样的属性，可能并不是一个属性值，生成多个属性值需要用横杠（-）连接两个属性值，因为 Emmet 的指令中是不允许空格的。例如使用 `m10-20` 可以生成：
+
  ```
  margin: 10px 20px;
  ```
  如果你想生成负值，多加一条横杠即可。例如：`m10--20` 可以生成：
+
  ```
  margin: 10px -20px;
  ```
  需要注意的是，如果你对每个属性都指定了单位，那么不需要使用横杠分割。例如使用  m10e20e 可以生成：
+
  ```
  margin: 10em 20em;
  ```
  如果使用了横杠分割，那么属性值就变成负值了。例如使用 `m10e-20e` 就生成：
+
  ```
  margin: 10em -20em;
  ```
  如果你想一次生成多条语句，可以使用 “+” 连接两条语句，例如使用 h10p+m5e  可以生成：
+
  ```
  height: 10%;
  margin: 5em;
@@ -269,6 +291,7 @@ Emmet 是高效、快速编写 HTML 和 CSS 代码的一种插件，如果还不
 
 2. 附加属性
  使用 `@f` 即可生成 CSS3 中的 font-face 的代码结构：
+
  ```
  @font-face {
      font-family:;
@@ -276,6 +299,7 @@ Emmet 是高效、快速编写 HTML 和 CSS 代码的一种插件，如果还不
  }
  ```
  但是这个结构太简单，不包含一些其他的 font-face 的属性，诸如 background-image、border-radius、font、@font-face、 text-outline、 text-shadow 等属性，我们可以在生成的时候输入 “+” 生成增强的结构，例如我们可以输入 `@f+`  命令，即可输出选项增强版的 font-face 结构：
+
  ```
  @font-face {
      font-family: 'FontName';
