@@ -123,7 +123,9 @@ div {
 - `pre-wrap`: 连续的空格不会被合并, 遇到盒子边界或者 `<br>` 就会换行。
 - `pre-line`: 连续的空格不会被合并,保持文本的换行,遇到盒子边界或者 `<br>` 就会换行。
 
+![](http://paddingme.qiniudn.com/whitespace.png)
 
+注：IE7及更早浏览器不支持 CSS2.1 新增的 pre-wrap | pre-line。
 ## word-wrap & word-break
 
 CSS 自动换行
@@ -136,14 +138,15 @@ div {
 ```
 
 
-强制英文单词断行
+word-wrap：normal | break-word
 
-```css
-div {
-    word-break:break-all;
-}
-```
+- normal： 允许内容顶开或溢出指定的容器边界。
+- break-word： 内容将在边界内换行。如果需要，单词内部允许断行。
 
+设置或检索当内容超过指定容器的边界时是否断行。
+作为 IE 的私有属性之一，IE5.5 率先实现了 `word-wrap` ，后期被w3c采纳成标准属性；
+CSS3 中将 `word-wrap` 改名为 `overflow-wrap`；
+对应的脚本特性为 `wordWrap`。
 
 `word-break` 是用来在单词内断行。
 
@@ -153,25 +156,15 @@ word-break：normal | keep-all | break-all
 - keep-all： 与所有非亚洲语言的 normal 相同。对于中文，韩文，日文，不允许字断开。适合包含少量亚洲文本的非亚洲文本。
 - break-all： 该行为与亚洲语言的 normal 相同。也允许非亚洲语言文本行的任意字内断开。该值适合包含一些非亚洲文本的亚洲文本，比如使连续的英文字母间断行。
 
-设置或检索对象内文本的字内换行行为。
+设置或检索对象内文本的字内换行行为。注意 FireFox 早起版本不识别 word-break,需要 hack。
 对于解决防止页面中出现连续无意义的长字符打破布局，应该使用 `break-all`；
 作为 IE 的私有属性之一，IE5.5 率先实现了 `word-break` ，后期被w3c采纳成标准属性；
 对应的脚本特性为 `wordBreak`。
 
 
 
-word-wrap：normal | break-word
-
-normal： 允许内容顶开或溢出指定的容器边界。
-break-word： 内容将在边界内换行。如果需要，单词内部允许断行。
-
-设置或检索当内容超过指定容器的边界时是否断行。
-作为 IE 的私有属性之一，IE5.5 率先实现了 `word-wrap` ，后期被w3c采纳成标准属性；
-CSS3 中将 `word-wra`p 改名为 `overflow-wrap`；
-对应的脚本特性为 `wordWrap`。
-
-
 参考：
+
 - <http://www.hicss.net/solve-change-line-in-css/>
 - <https://developer.mozilla.org/zh-CN/docs/Web/CSS/white-space>
 - <https://developer.mozilla.org/zh-CN/docs/Web/CSS/word-break>
@@ -204,6 +197,7 @@ p:after {
 ```
 
 参考：
+
 - [关于文字内容溢出用点点点(…)省略号表示](http://www.zhangxinxu.com/wordpress/2009/09/%E5%85%B3%E4%BA%8E%E6%96%87%E5%AD%97%E5%86%85%E5%AE%B9%E6%BA%A2%E5%87%BA%E7%94%A8%E7%82%B9%E7%82%B9%E7%82%B9-%E7%9C%81%E7%95%A5%E5%8F%B7%E8%A1%A8%E7%A4%BA/)
 - [CSS 单行溢出文本显示省略号...的方法（兼容IE FF）
 ](http://www.cnblogs.com/hlz789456123/archive/2009/02/18/1392972.html)
