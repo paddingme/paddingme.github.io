@@ -188,6 +188,7 @@ Emmet 是高效、快速编写 HTML 和 CSS 代码的一种插件，如果还不
 
 13. 逆序生成到某个数：`@-`
     例如输入`ul>li.item$@-10*5` 则生成
+
     ```
       <ul>
           <li class="item14"></li>
@@ -394,6 +395,6 @@ Emmet 是高效、快速编写 HTML 和 CSS 代码的一种插件，如果还不
 Emmet 的官方 API 列表在[这里](http://docs.emmet.io/cheat-sheet/)，有一个图片版本可以[点此下载](http://bubkoo.qiniudn.com/emmet-api.jpg)
 
 
-CSS 部分转自[HTML/CSS 速写神器：Emmet](http://bubkoo.com/2014/01/04/emmet-a-toolkit-for-improving-html-css-workflow/),因为写着写着发现 bubkoo 差不多给我要写的写完了。所以就摘抄下（不要打我），
+CSS 部分转自 [HTML/CSS 速写神器：Emmet](http://bubkoo.com/2014/01/04/emmet-a-toolkit-for-improving-html-css-workflow/),因为写着写着发现 bubkoo 差不多给我要写的写完了。所以就摘抄下（不要打我），
 
 其余参考：[Emmet官方文档](http://docs.emmet.io/cheat-sheet/)。
