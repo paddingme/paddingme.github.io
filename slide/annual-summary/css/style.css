@@ -593,8 +593,8 @@ hr {
 .tl {
     text-align: left;
 }
-.me {
-    margin-left: 6%;
-    margin-top: 5%;
-}
 
+.compromise {
+    width: 1000px;
+    margin: 0 auto!important;
+}
