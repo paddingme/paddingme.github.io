@@ -1,7 +1,7 @@
 /*
  * Title: Annual Summary PPT
  * Author: PaddingMe
- * Date: 2015-01-20
+ * Date: 2015-01-21
  */
 
 @font-face {
@@ -475,7 +475,7 @@ hr {
     margin: 50px auto
 }
 .reveal .box-small {
-    width: 420px;
+    width: 470px;
     margin: 50px auto
 }
 .reveal .avatar {
@@ -593,3 +593,8 @@ hr {
 .tl {
     text-align: left;
 }
+.me {
+    margin-left: 6%;
+    margin-top: 5%;
+}
+
