@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/zenburn.css">
 <link rel="shortcut icon" href="http://padding.me/favicon.ico" type="image/x-icon">
-<link rel="icon" href="http://padding.me/favicon.ico" type="image/x-icon">
+
 <script>
     if( window.location.search.match( /print-pdf/gi ) ) {
         var link = document.createElement( 'link' );
@@ -59,12 +59,12 @@
             <section>
                 <h3>前端『攻城狮』<h3>
                 <h4>Front-end Enginner</h4>
-                <img src="images/csssuperhero2.png" alt="">
+                <img class="fragment"  src="images/csssuperhero2.png" alt="">
             </section>
 
             <section>
                 <h2><small>可能还是一只</small>    『前端汪』</h2>
-                <blockquote class="dogge">作为『前端汪』， <br>每一次敲下键盘的时候，<br>心里都在想着这个页面全世界的人们都可以看到，<br>也许那里没有公路，也许那里没有办法烤茄子，撸串子，<br>但是却可以看到我的代码，<br>想到这里，抬头 45 度仰望天空，眼角不禁湿润了。</blockquote>
+                <blockquote class="dogge fragment">作为『前端汪』， <br>每一次敲下键盘的时候，<br>心里都在想着这个页面全世界的人们都可以看到，<br>也许那里没有公路，也许那里没有办法烤茄子，撸串子，<br>但是却可以看到我的代码，<br>想到这里，抬头 45 度仰望天空，眼角不禁湿润了。</blockquote>
             </section>
 
             <section>
@@ -411,14 +411,9 @@
         history: true,
         width: 1240,
         transition: 'linear',
-        theme: 'default',
-        dependencies: [
-            { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-        ]
+        theme: 'default'
     });
 </script>
 <script src="../../javascripts/google_analytics.js"></script>
-<script src="lib/js/apng.min.js"></script>
-<script src="js/script.min.js"></script>
 </body>
 </html>
