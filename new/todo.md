@@ -29,4 +29,6 @@ aboutme
 imooc
 
 
+然后 可以把 jshint 代码插入 网页中 yu
+
 
