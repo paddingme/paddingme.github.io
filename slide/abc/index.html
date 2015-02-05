@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8">
+<title>The ABC of Front-end Web Development by PaddingMe </title>
+<meta name="keywords" content="The ABC of Front-end Web Development by PaddingMe">
+<meta name="description" content="The ABC of Front-end Web Development by PaddingMe ">
+
+<meta name="robots" content="index,follow">
+<meta name="author" content="PaddingMe,padding4me@gmail.com">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+
+<link rel="stylesheet" href="css/reveal.min.css">
+
+<!-- todo 更换主题 -->
+<!-- <link rel="stylesheet" href="css/theme/black.css" id="theme"> -->
+<!-- <link rel="stylesheet" href="css/theme/sky.css" id="theme"> -->
+<!-- <link rel="stylesheet" href="css/theme/moon.css" id="theme"> -->
+
+<link rel="stylesheet" href="css/style.css">
+    <!-- Code syntax highlighting -->
+<link rel="stylesheet" href="css/zenburn.css">
+   <!-- todo 正确的 favicon应该怎么样的 -->
+<link rel="shortcut icon" type="image/x-icon" href="http://padding.me/favicon.ico" >
+
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+
+<!--[if lt IE 9]>
+<script src="lib/js/html5shiv.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+<a href="http://www.lezhixing.com.cn" target="_blank" class="logo ir">乐知行</a>
+<div class="reveal">
+    <div class="slides">
+
+        <section class="aloha">
+            <h1 class="title">The ABC of Front-end Web Development</h1>
+            <h3><a href="http://twitter.com/paddingme">@PaddingMe</a></h3>
+            <h3>2015-02-04</h3>
+
+            <!-- <img src="images/kongfu.gif" alt="" class="fragment"> -->
+        </section>
+
+
+        <section>
+            <section><h2>Some Tips</h2></section>
+            <section>
+                <p class="fragment">由于个人资历，能力，知识面，以及 <small style="color:gray">身高</small>  有限，<br>说得不对、未说明白、有疑问的地方，请随时打断我。</p>
+                <p class="fragment">但是，请不要扔臭鸡蛋，和烂茄子。</p>
+                <p class="fragment">因为，我比较喜欢吃菠菜和香蕉。 =.= </p>
+                <img class="fragment" src="images/static.smartisanos.cn__status-error.png" alt="">
+            </section>
+        </section>
+        <!-- 主题1 前端相关的部分 begin -->
+            <!-- 1. 磁带 -->
+            <!-- 2. 打地鼠 -->
+            <!-- 3. nodejs 聊天应用 -->
+            <!-- 4. html5 游戏 -->
+            <!-- 5. 无后端开发 （尼奥）-->
+            <!-- 6. 全世界都在招前端-->
+            <!-- 测试 / 云 / CDN云 -->
+        <section>
+            <section><h2>Awesome Front-end Works</h2></section>
+            <section><iframe src="http://www.html5tricks.com/demo/css3-cassette-tape/index.html" frameborder="0" width="800" height="500" style="overflow:hidden"></iframe></section>
+            <section><img src="images/kongfu.gif" alt="" width="800"></section>
+        </section>
+        <!-- 主题1 前端相关的部分 end -->
+
+
+        <!-- 输入网址之后 begin -->
+
+        <section>
+            <section>
+                <h2>What Happens When You Type in a Url in Browser ?</h2>
+                <!-- <h3>当你在浏览器输入一个网址时发生了什么？</h3> -->
+                <h4 style="text-align:right"> ——From Front-end perspetive</h4>
+                <!-- 1. 查询 IP (DNS 缓存？) -->
+                <!-- 2. TCP 三次握手 -->
+                <!-- 3. 发送报文 -->
+                <!-- 4.网页渲染 -->
+                <!-- 5. 盒子摆放 -->
+                <!-- 6. z-index & position & inline & inline-block & block & float & position  的使用 -->
+
+                <!-- 一张图片就是一个请求 -->
+<!-- 工具的使用 chrome dev tools / ps / -->
+                <!-- 盒子模型，position，float,结构行为表现分离 -->
+
+                <!-- 各种标签的意义，请自己查www.w3cshool.com.cn 或者 mdn  -->
+            </section>
+
+
+
+            <section>
+               <h3>1. 在浏览器里输入要网址</h3>
+               <img class="fragment" src="images/url.png" alt="">
+            </section>
+
+            <section>
+                <h3>2. 查找域名 IP 地址</h3>
+                <!-- 访问互联网的网页资源 其实就是从你的计算机上通过网络去访问另一台计算机。
+                我们从浏览器里能看见的网页存在另一台计算机上。-->
+
+                <!-- 我现在访问的是域名，但是我真是想知道的是 IP 地址 -->
+               <img  src="images/image13.png" alt="">
+            </section>
+
+            <section>
+                <h4></h4>
+                <ul>
+                    <li>浏览器缓存</li>
+<!--                      – 浏览器会缓存DNS记录一段时间。 有趣的是，操作系统没有告诉浏览器储存DNS记录的时间，这样不同浏览器会储存个自固定的一个时间（2分钟到30分钟不等）。 -->
+                    <li>系统缓存</li>
+<!-- 系统缓存 – 如果在浏览器缓存里没有找到需要的记录，浏览器会做一个系统调用（windows里是gethostbyname）。这样便可获得系统缓存中的记录。 -->
+                    <li>路由器缓存</li>
+<!-- 路由器缓存 – 接着，前面的查询请求发向路由器，它一般会有自己的DNS缓存。 -->
+                    <li>ISP DNS 缓存</li>
+<!-- ISP DNS 缓存 – 接下来要check的就是ISP缓存DNS的服务器。在这一般都能找到相应的缓存记录。 -->
+                    <li>进行递归搜索</li>
+<!-- 递归搜索 – 你的ISP的DNS服务器从跟域名服务器开始进行递归搜索，从.com顶级域名服务器到Facebook的域名服务器。一般DNS服务器的缓存中会有.com域名服务器中的域名，所以到顶级服务器的匹配过程不是那么必要了。 -->
+                </ul>
+            </section>
+
+            <section>
+                <img src="images/tcp.png" alt="" class="fragemet">
+            </section>
+
+            <section>
+                <h3>TCP 三次握手</h3>
+                <p class="fragment">---> 「你瞅啥？」</p>
+                <p class="fragment">「瞅你咋地？」 <----</p>
+                <p class="fragment">-->「来咱俩唠唠。」</p>
+                <p class="fragment">然后就唠上了。</p>
+            </section>
+
+
+            <section>
+                <!-- 总结： 我们到底发生了什么？(画图) -->
+            </section>
+
+            <section>
+                <h4>Reference</h4>
+                <ul class="reference">
+                    <li><a href="http://div.io/topic/457">从输入 URL 到页面加载完成的过程中都发生了什么事情？</a>
+                    </li>
+
+                    <li>
+                        <a href="http://developer.51cto.com/art/201007/209634_all.htm" target="_blank">从输入网址到显示页面：浏览器工作原理拆解分析</a>
+                    </li>
+                    <li>
+                        <a href="http://www.html5rocks.com/en/tutorials/internals/howbrowserswork/" target="_blank">How Browsers Work: Behind the scenes of modern web browsers</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/alex/what-happens-when" target="_blank">What happens when...</a>
+                    </li>
+                    <li>
+                        <a href="http://stackoverflow.com/questions/2092527/what-happens-when-you-type-in-a-url-in-browser" target="_blank">what happens when you type in a URL in browser</a>
+                    </li>
+                    <li>
+                        <a href="http://edusagar.com/articles/view/70/What-happens-when-you-type-a-URL-in-browser)" target="_blank">What happens when you type a URL in browser</a>
+                    </li>
+                    <li>
+                        <a href="http://web.stanford.edu/class/msande91si/www-spr04/readings/week1/InternetWhitepaper.htm" target="_blank">How Does the Internet Work?</a>
+                    </li>
+
+                    <li>
+                        <a href="http://blog.jobbole.com/33951/" target="_blank">当你输入一个网址，实际会发生什么?</a>
+                    </li>
+                    <li>
+                        <a href="http://coolshell.cn/articles/9666.html" target="_blank">浏览器的渲染原理简介</a>
+                    </li>
+                    <li>
+                        <a href="http://developer.51cto.com/art/201311/418133.htm" target="_blank">专题：浏览器:渲染重绘、重排两三事</a>
+                    </li>
+                    <li>
+                        <a href="http://www.nowamagic.net/academy/detail/48110160" target="_blank">浏览器加载和渲染HTML的顺序以及Gzip的问题</a>
+                    </li>
+                    <li>
+                        <a href="http://div.io/topic/591">http://div.io/topic/591</a>
+                    </li>
+                    <li>
+                        <a href="http://div.io/topic/736">http://div.io/topic/736</a>
+                    </li>
+                    <li>
+                        <a href="http://div.io/topic/811">http://div.io/topic/811</a>
+                    </li>
+                </ul>
+
+            </section>
+        </section>
+
+        <!-- 输入网址之后 end -->
+
+
+
+
+
+
+        <section>
+            <section><h2>Fuck Things, Take away!</h2></section>
+            <section>
+                <ol>
+                    <li><a href="https://www.zybuluo.com/paddingme/note/41682">前端资源推荐</a></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ol>
+            </section>
+        </section>
+
+
+        <section>
+            <section><h3>Happy（Hey）New (Cutter) Years(Boy)!</h3></section>
+            <section>
+                <h3 class="fragment">前端人生</h3>
+                <h3 class="fragment">为需求而生，为用户而死，为浏览器奋斗一辈子</h3>
+                <h4 class="fragment">吃 CSS 亏， 上 JS 的当，最后死在兼容上。</h4>
+<!-- todo 调整顺序 -->
+            </section>
+        </section>
+
+        <section class="fin">
+            <h1>Q & A</h1>
+            <h2 class="title">&lt;thank-you&gt;</h2>
+            <div class="box-small group">
+                <img class="avatar" src="images/avatar.jpg" width="64" height="64" alt="avatar">
+                <a href="http://twitter.com/paddingme" target="_blank">@PaddingMe</a>
+            </div>
+
+            <div class="box-small group">
+                <img class="avatar" src="images/favicon11.ico" width="64" height="64" alt="avatar">
+                <a href="http://padding.me" target="_blank">http://padding.me</a>
+                <br>
+
+            </div>
+
+            <p>Powered By <a href="https://github.com/hakimel/reveal.js/">reveal.js</a></p>
+<!--             <p>Thank <a href="http://weibo.com/lilyxue" targe="_blank">@LilyXue</a> & <a href="http://weibo.com/sivan" targe="_blank">@Sivan</a></p> -->
+        </section>
+    </div>
+</div>
+
+
+
+
+<script src="js/libs/jquery.min.js"></script>
+<script src="lib/js/head.min.js"></script>
+<script src="js/libs/reveal.min.js"></script>
+<script>
+    Reveal.initialize({
+        history: true,
+        width: 1240,
+        transition: 'linear',
+        theme: 'default'
+    });
+</script>
+<!-- <script src="../../javascripts/google_analytics.js"></script> -->
+</body>
+</html>
