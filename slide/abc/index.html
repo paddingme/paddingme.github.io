@@ -52,7 +52,7 @@
         <section class="aloha">
             <h1 class="title">The ABC of Front-end Web Development</h1>
             <h3><a href="http://twitter.com/paddingme">@PaddingMe</a></h3>
-            <h3>2015-02-04</h3>
+            <h3>2015-02-10</h3>
 
             <!-- <img src="images/kongfu.gif" alt="" class="fragment"> -->
         </section>
@@ -102,6 +102,7 @@
                 <!-- 盒子模型，position，float,结构行为表现分离 -->
 
                 <!-- 各种标签的意义，请自己查www.w3cshool.com.cn 或者 mdn  -->
+                <!-- 块状盒子和行桩盒子的区别呢 -->
             </section>
 
 
@@ -109,6 +110,13 @@
             <section>
                <h3>1. 在浏览器里输入要网址</h3>
                <img class="fragment" src="images/url.png" alt="">
+               <!-- 我们忽略键盘中断、操作系统调度等等 直接涉及到和我们没有关系的 -->
+               <ul>
+                   <li>协议： http/https/ftp</li>
+                   <li>端口： 80</li>
+                   <li>网络地址：www.lezhixing.com.cn</li>
+                   <!-- <li>资源路径：/cms/lzx/</li> -->
+               </ul>
             </section>
 
             <section>
@@ -121,6 +129,7 @@
             </section>
 
             <section>
+                <h3>2. 查找域名 IP 地址</h3>
                 <h4></h4>
                 <ul>
                     <li>浏览器缓存</li>
@@ -136,6 +145,12 @@
                 </ul>
             </section>
 
+
+            <section>
+                <h3>2. 查找域名 IP 地址</h3>
+                <img src="images/dns.png" alt="" width="1000">
+            </section>
+
             <section>
                 <img src="images/tcp.png" alt="" class="fragemet">
             </section>
@@ -148,10 +163,70 @@
                 <p class="fragment">然后就唠上了。</p>
             </section>
 
+<!-- 用 wireshark 截图分析 -->
+
+            <section>
+                head 头部分 协议啊什么的
+            </section>
+
+            <section>
+                现在我们请求到 html 文件了 如何加载渲染呢？
+            </section>
+
+
+            <section>
+                先看没有 css 文件 没有js 文件 如何渲染的
+
+                盒子模型 可以好好说一说
+            </section>
+
+            <section>
+
+            </section>
+
+            <section>
+                html -->css--->js
+
+                (css 还包括用户自定义，还包括浏览器自定义，还包括内敛样式，还包括head 里的样式， 还包括css 文件的样式。)
+
+                这里可以说下 css　优先级问题了
+            </section>
+
+
+            <section>
+
+                css 样式如何渲染 比较级什么的
+
+                重绘，重画
+            </section>
+
+
+
+
+            <section>
+
+                再来回顾下 我们建立 tcp 请求之后 拿到了 css 文件，拿到了js 文件  html 文件 这三者的关系
+
+                <!-- 行为、表现、分离 为什么要这么做呢 -->
+            </section>
+
+
+
+            <section>
+
+                再来回顾下 我们刚才分析了这么多，对我们有什么启示呢？？？
+
+
+            </section>
+
 
             <section>
                 <!-- 总结： 我们到底发生了什么？(画图) -->
             </section>
+
+
+
+
 
             <section>
                 <h4>Reference</h4>
@@ -172,7 +247,7 @@
                         <a href="http://stackoverflow.com/questions/2092527/what-happens-when-you-type-in-a-url-in-browser" target="_blank">what happens when you type in a URL in browser</a>
                     </li>
                     <li>
-                        <a href="http://edusagar.com/articles/view/70/What-happens-when-you-type-a-URL-in-browser)" target="_blank">What happens when you type a URL in browser</a>
+                        <a href="http://edusagar.com/articles/view/70/What-happens-when-you-type-a-URL-in-browser" target="_blank">What happens when you type a URL in browser</a>
                     </li>
                     <li>
                         <a href="http://web.stanford.edu/class/msande91si/www-spr04/readings/week1/InternetWhitepaper.htm" target="_blank">How Does the Internet Work?</a>
@@ -226,10 +301,11 @@
 
         <section>
             <section><h3>Happy（Hey）New (Cutter) Years(Boy)!</h3></section>
-            <section>
-                <h3 class="fragment">前端人生</h3>
-                <h3 class="fragment">为需求而生，为用户而死，为浏览器奋斗一辈子</h3>
-                <h4 class="fragment">吃 CSS 亏， 上 JS 的当，最后死在兼容上。</h4>
+            <section class="couplet">
+                <h5 class="fragment" data-fragment-index="2">前端人生</h5>
+                <h5 class="fragment"  data-fragment-index="0">为需求而生，为用户而死，为浏览器奋斗一辈子！</h5>
+                <h5 class="fragment"  data-fragment-index="1">吃 CSS 亏， 上 JS 的当，最后死在兼容上。</h5>
+                <img class="fragment" data-fragment-index="3" src="images/kill-ie.jpg" alt="">
 <!-- todo 调整顺序 -->
             </section>
         </section>

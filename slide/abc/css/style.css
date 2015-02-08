@@ -609,3 +609,10 @@ hr {
 .reference li {
 line-height: 34px;
 }
+
+
+/*couplet */
+.couplet h5 {
+    font-family: 隶书;
+}
+
