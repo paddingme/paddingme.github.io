@@ -1,87 +1,79 @@
 <!doctype html>
 <html lang="zh-cmn-Hans">
+
 <head>
-<meta charset="utf-8">
-<title>The ABC of Front-end Web Development by PaddingMe </title>
-<meta name="keywords" content="The ABC of Front-end Web Development by PaddingMe">
-<meta name="description" content="The ABC of Front-end Web Development by PaddingMe ">
+    <meta charset="utf-8">
+    <title>The ABC of Front-end Web Development by PaddingMe </title>
+    <meta name="keywords" content="The ABC of Front-end Web Development by PaddingMe">
+    <meta name="description" content="The ABC of Front-end Web Development by PaddingMe ">
 
-<meta name="robots" content="index,follow">
-<meta name="author" content="PaddingMe,padding4me@gmail.com">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="PaddingMe,padding4me@gmail.com">
 
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<meta name="renderer" content="webkit">
-<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 
-<link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/zenburn.css">
+    <link rel="shortcut icon" type="image/x-icon" href="http://padding.me/favicon.ico">
 
-<!-- todo 更换主题 -->
-<!-- <link rel="stylesheet" href="css/theme/black.css" id="theme"> -->
-<!-- <link rel="stylesheet" href="css/theme/sky.css" id="theme"> -->
-<!-- <link rel="stylesheet" href="css/theme/moon.css" id="theme"> -->
-
-<link rel="stylesheet" href="css/style.css">
-    <!-- Code syntax highlighting -->
-<link rel="stylesheet" href="css/zenburn.css">
-   <!-- todo 正确的 favicon应该怎么样的 -->
-<link rel="shortcut icon" type="image/x-icon" href="http://padding.me/favicon.ico" >
-
-<script>
-    if( window.location.search.match( /print-pdf/gi ) ) {
-        var link = document.createElement( 'link' );
+    <script>
+    if (window.location.search.match(/print-pdf/gi)) {
+        var link = document.createElement('link');
         link.rel = 'stylesheet';
         link.type = 'text/css';
         link.href = 'css/print/pdf.css';
-        document.getElementsByTagName( 'head' )[0].appendChild( link );
+        document.getElementsByTagName('head')[0].appendChild(link);
     }
-</script>
+    </script>
 
-<!--[if lt IE 9]>
+    <!--[if lt IE 9]>
 <script src="lib/js/html5shiv.js"></script>
 <![endif]-->
 
 </head>
 
 <body>
-<a href="http://www.lezhixing.com.cn" target="_blank" class="logo ir">乐知行</a>
-<div class="reveal">
-    <div class="slides">
-        <section class="aloha">
-            <h1 class="title">The ABC of Front-end Web Development</h1>
-            <h3><a href="http://twitter.com/paddingme">PaddingMe</a></h3>
-            <h3>2015-02-11</h3>
-        </section>
-<!-- 我将分以下几个部分来
-观影指南
-这是我一直非常想阐述的一个问题，这个问题基本在前端面试的
--->
-    <section>
-            <section><h2>Some Tips</h2></section>
-            <section>
-                <p class="fragment">由于个人经验，能力，知识面，以及 <small style="color:gray">身高</small>  有限，<br>说得不对、未说明白、有疑问的地方，请随时打断我。</p>
-                <p class="fragment">但是，请不要扔臭鸡蛋，和烂茄子。</p>
-                <p class="fragment">因为，我比较喜欢吃菠菜和香蕉。 =.= </p>
-                <img class="fragment" src="images/static.smartisanos.cn__status-error.png" alt="">
+    <a href="http://www.lezhixing.com.cn" target="_blank" class="logo ir">乐知行</a>
+    <div class="reveal">
+        <div class="slides">
+            <section class="aloha">
+                <h1 class="title">The ABC of Front-end Web Development</h1>
+                <h3><a href="http://twitter.com/paddingme">PaddingMe</a></h3>
+                <h3>2015-02-11</h3>
             </section>
-       <!--     哈哈哈 请原谅我废话比较多，我先说五分钟废话，然后咱们尽快哈。这里的提示是指如果我要说错了或者说的不快没说清楚，请及时打断我。我会try my best 再来一次 哈哈哈 -->
-
-        </section>
-
-        <section>
-            <section><h2>Awesome Front-end Works</h2></section>
-<!-- 好首先我们来点轻松的 看看一些牛X 闪闪的前端-->
             <section>
-                <h3>CSS3 Cassette Tape</h3>
-            <iframe src="http://www.html5tricks.com/demo/css3-cassette-tape/index.html" frameborder="0" width="800" height="470" style="overflow:hidden"></iframe></section>
+                <section>
+                    <h2>Some Tips</h2>
+                </section>
+                <section>
+                    <p class="fragment">由于个人经验，能力，知识面，以及 <small style="color:gray">身高</small> 有限，
+                        <br>说得不对、未说明白、有疑问的地方，请随时打断我。</p>
+                    <p class="fragment">但是，请不要扔臭鸡蛋，和烂茄子。</p>
+                    <p class="fragment">因为，我比较喜欢吃菠菜和香蕉。 =.= </p>
+                    <img class="fragment" src="images/static.smartisanos.cn__status-error.png" alt="">
+                </section>
+            </section>
 
             <section>
-                <h3>NodeJS(ioJS)</h3>
-                <img style="border:0" width="300" height="208"src="images/logo.svg" alt="">
-                <span style="font-size:48px;margin:0 20px;position:relative;top:-100px;">VS<span>
+                <section>
+                    <h2>Awesome Front-end Works</h2>
+                </section>
+                <section>
+                    <h3>CSS3 Cassette Tape</h3>
+                    <iframe src="http://padding.me/slide/abc/css3-cassette-tape.html" frameborder="0" width="800" height="470" style="overflow:hidden"></iframe>
+                </section>
+
+                <section>
+                    <h3>NodeJS(ioJS)</h3>
+                    <img style="border:0" width="300" height="208" src="images/logo.svg" alt="">
+                    <span style="font-size:48px;margin:0 20px;position:relative;top:-100px;">VS<span>
                 <img height="208"src="images/io.png" alt="" style="position:relative;top:100px;;border:0">
-                <div style="position:relative;top:100px;text-align:left;">Node.js 是一个在浏览器外部创建互联网应用程序的框架，基于 Google 开发的 V8 JavaScript 引擎，轻量，高效，事件驱动，非阻塞I/O，特别适合运行于跨分布式设备的实时数据处理程序。</div>
+                <div style="position:relative;top:100px;text-align:left;">Node.js 是一个在浏览器外部创建互联网应用程序的框架，基于 Google 开发的 V8 JavaScript 引擎，轻量，高效，事件驱动，非阻塞 I/O，特别适合运行于跨分布式设备的实时数据处理程序。</div>
             </section>
 
             <section>
@@ -105,11 +97,11 @@
                 </ul>
             </section>
             <section>
-                <h3>后端同学你怕不怕？</h3>
+                <h3>后端同学你们怕不怕？</h3>
                 <img class="fragment"src="images/kongfu.gif" alt="" width="800">
                 <br>
                 <br>
-                <h3 class="fragment">没学的前端同学，还在想什么？</h3>
+                <h3 class="fragment">没学前端的同学，还在想什么？</h3>
             </section>
         </section>
         <!-- 主题1 前端相关的部分 end -->
@@ -120,27 +112,7 @@
         <section>
             <section>
                 <h2>What Happens When You Type in a Url in Browser ?</h2>
-                <!-- <h3>当你在浏览器输入一个网址时发生了什么？</h3> -->
-                <!-- <h4 style="text-align:right"> ——From Front-end perspetive</h4> -->
-                <!-- 1. 查询 IP (DNS 缓存？) -->
-                <!-- 2. TCP 三次握手 -->
-                <!-- 3. 发送报文 -->
-                <!-- 4.网页渲染 -->
-                <!-- 5. 盒子摆放 -->
-                <!-- 6. z-index & position & inline & inline-block & block & float & position  的使用 -->
-
-                <!-- 一张图片就是一个请求 -->
-<!-- 工具的使用 chrome dev tools / ps / -->
-                <!-- 盒子模型，position，float,结构行为表现分离 -->
-
-                <!-- 各种标签的意义，请自己查www.w3cshool.com.cn 或者 mdn  -->
-                <!-- 块状盒子和行桩盒子的区别呢 -->
             </section>
-
-<!-- 我们输入一个网址 想要什么？ 无非是从我的计算机上 通过网线 访问你的计算机，把你的计算机上的资源下载我的机子上，在我的机子上显示。这之间我的计算机是客户端，你的计算机是服务器端 -->
-
-<!-- 我们忽略键盘中断、操作系统调度等等 因为这些巨复杂，巨难，巨。。。哦好吧，主要是我差不多忘完了，只记得很多调度算法，各种算地址，排队，中断。好的我们只涉及到和我们没有关系的 -->
-
             <section>
                <h3>1. 在浏览器里输入要网址</h3>
                <img class="fragment" src="images/url.png" alt="">
@@ -163,9 +135,11 @@
             <section>
                 <h3><a href="http://www.padding.me" target="_blank">http://www.padding.me</a></h3>
                 <ul>
-                    <li class="fragment">根域名(ROOT) : <span style="font-weight:bold;color:red">.</span></li>
+                    <li class="fragment">根域名(ROOT) : <span style="font-weight:bold;color:red">.</span>
+                    </li>
                     <!-- 根域服务器只是具有13个IP地址 镜像分布 -->
-                    <li class="fragment">顶级域名：padding.me (<del>www.padding.me</del>)</li>
+                    <li class="fragment">顶级域名：padding.me (
+                        <del>www.padding.me</del>)</li>
                     <!-- 而 www.padding.me却不是顶级域名，他是在lezhixing.com.cn这个域里的一叫做 www的主机。 -->
                     <li class="fragment">二级域名： test.www.padding.me</li>
                     <!-- 域名服务器: 能提供域名解析的服务器 -->
@@ -177,492 +151,445 @@
                     <li class="fragment">CNAME</li>
                     <!-- 别名 -->
                     <!-- http://blog.csdn.net/crazw/article/details/8986581 -->
-                </ul>
+                    </ul>
 
-            </section>
+                </section>
 
-            <section>
-            <!-- http://blog.csdn.net/crazw/article/details/8986504 -->
-                <h3>2. DNS 查询</h3>
-                <!-- 访问互联网的网页资源 其实就是从你的计算机上通过网络去访问另一台计算机。
+                <section>
+                    <!-- http://blog.csdn.net/crazw/article/details/8986504 -->
+                    <h3>2. DNS 查询</h3>
+                    <!-- 访问互联网的网页资源 其实就是从你的计算机上通过网络去访问另一台计算机。
                 我们从浏览器里能看见的网页存在另一台计算机上。-->
+                    <!-- 我现在访问的是域名，但是我真是想知道的是 IP 地址 -->
+                    <img src="images/image13.png" width="400" alt="">
+                </section>
 
-                <!-- 我现在访问的是域名，但是我真是想知道的是 IP 地址 -->
-               <img  src="images/image13.png" width="400" alt="">
+                <section>
+                    <h3>DNS 查询过程</h3>
+                    <ol>
+                        <li>浏览器缓存</li>
+                        <li>系统缓存</li>
+                        <li>路由器缓存</li>
+                        <li>ISP DNS 缓存</li>
+                        <li style="white-space:nowrap">进行递归搜索</li>
+                    </ol>
+                </section>
+
+                <section>
+                    <h4>DNS 递归查询</h4>
+                    <img src="images/11.png" alt="">
+                </section>
+
+                <section>
+                    <h4>DNS 递归查询</h4>
+                    <img src="images/12.png" alt="">
+                </section>
+
+                <section>
+                    <h3>DNS 递归查询</h3>
+                    <img src="images/dnsss1.png" alt="">
+                </section>
+
+                <section>
+                    <h3>3. 建立 TCP 链接</h3>
+                    <img class="fragment" src="images/tcp.png" alt="" class="fragemet">
+                </section>
+
+
+                <section>
+                    <img src="images/tcp1.jpg" alt="">
+                </section>
+
+                <section>
+                    <img src="images/3111.png" alt="">
+                </section>
+
+                <section>
+                    <h3>TCP 三次握手</h3>
+                    <p class="fragment">---> 「你瞅啥？」</p>
+                    <p class="fragment">「瞅你咋地？」
+                        <----</p>
+                            <p class="fragment">-->「来咱俩唠唠。」</p>
+                            <p class="fragment">然后就唠上了。</p>
+                </section>
+                <!-- 还有四次挥手我不想说了、 -->
+
+                <section>
+                    <h3>4. 发起 HTTP 请求</h3>
+                    <img src="images/3111.png" alt="">
+                </section>
+
+                <section>
+                    <img src="images/3222.png" alt="">
+                </section>
+
+                <section>
+                    <img src="images/3333.png" alt="">
+                </section>
+
+
+                <section>
+                    <img src="images/fiddler1.png" alt="">
+                </section>
+
+
+                <section>
+                    <img src="images/req.png" alt="">
+                    <ul>
+                        <li>request line：GET /index.html HTTP/1.1</li>
+                        <li>header：User-Agent:XXX/Accept：XXX/Host：XXX</li>
+                        <li>空行</li>
+                        <li>请求数据：POST 方法中使用。</li>
+                    </ul>
+                </section>
+
+
+                <section>
+                    <h4>HTTP响应报文：状态行、消息报头、响应正文。</h4>
+                    <p>状态行: HTTP-Version Status-Code Reason-Phrase CRLF</p>
+                    <img src="images/res1.png" alt="">
+                </section>
+
+                <section>
+                    <h3>5. HTML 页面加载、解析</h3>
+                    <ul>
+                        <li>拿到 html 文件</li>
+                        <li style="white-space:nowrap">head 标签内有 link 外部 CSS 文件
+                            <br>(发起请求，返回CSS文件)</li>
+                        <li>body 部分开始渲染</li>
+                        <li>img 请求，继续渲染下面的元素</li>
+                        <li>重排/重绘</li>
+                        <li>JS 执行</li>
+                        <li>非严格按照上述顺序执行，主要看 js，css 外部文件
+                            <br>的位置和对布局的改变情况</li>
+                    </ul>
+                    <h3 class="fragment">来个 <a href="demo.html" target="_blank">DEMO</a> </h3>
+                    <!-- 打开 DEMO.html 开始 -->
+                    <!-- 1. css可以同时进行五条请求 -->
+                    <!-- 从上到下 从左到右 依次渲染 boreder -->
+                    <!-- js加载的时候会阻塞 -->
+                </section>
+
+                <section>
+                    <h3>5.1 HTML head 头结构</h3>
+                    <h4>Read More： <a href="http://padding.me/blog/2014/08/26/html-head-tags/" target="_blank">HTML head 头标签</a></h4>
+                </section>
+
+
+                <section>
+                    <h3>5.2 浏览器的渲染原理</h3>
+                    <h4>5.2.1 浏览器大致工作过程</h4>
+                    <img src="images/Render-Process.jpg" alt="">
+                </section>
+
+
+                <section>
+                    <h4>5.2.2 DOM解析 </h4>
+                    <img src="images/dom1.png" width="500" alt="">
+                    <img src="images/DOM-Tree-01.jpg" alt="" class="fragment">
+                </section>
+
+
+                <section>
+                    <h4>5.2.3 CSS解析</h4>
+                    <img src="images/CSS-Content-Tree-Example.jpg" alt="">
+                    <img class="fragment" src="images/Firefox-style-context-tree.png" alt="">
+                    <p class="fragment" style="text-align:left">CSS 匹配 HTML元素是一个相当复杂和有性能问题的事情。
+                        <br>所以，你就会在N多地方看到很多人都告诉你，DOM树要小，CSS尽量用 id 和 class，千万不要过渡层叠下去，……</p>
+                    <!-- CSS匹配DOM Tree主要是从右到左解析CSS的Selector， -->
+                </section>
+
+
+                <section>
+                    <h4>5.2.4 渲染</h4>
+                    <img src="images/Render-Process-Skipping.jpg" alt="">
+                    <ol style="white-space:nowrap">
+                        <li>计算CSS样式</li>
+                        <li>构建Render Tree</li>
+                        <li>Layout</li>
+                        <li>正式开画</li>
+                    </ol>
+                </section>
+
+                <section>
+                    <ul>
+                        <li>
+                            Repaint:屏幕的一部分要重画，比如某个CSS的背景色变了。但是元素的几何尺寸没有变。</li>
+                        <li>Reflow:意味着元件的几何尺寸变了，需要重新验证并计算Render Tree。</li>
+                        <li>增量异步 Reflow: 浏览器会把这样的操作积攒一批，做一次 Reflow。</li>
+                        <li>Reflow 的成本比 Repaint 的成本高得多的多。</li>
+                    </ul>
+                </section>
+
+
+                <section>
+                    <h3>什么时候会发生 Repait？</h3>
+                    <ul>
+                        <li>
+                            Initial：网页初始化的时候；</li>
+                        <li>Incremental：一些 Javascript 在操作 DOM Tree时；</li>
+                        <li>Resize：其些元件的尺寸变了；</li>
+                        <li>StyleChange：如果 CSS 的属性发生变化了；</li>
+                        <li>Dirty：几个 Incremental 的 reflow 发生在同一个 frame 的子树上。</li>
+                    </ul>
+                </section>
+
+
+                <section>
+                    <h3>减少Reflow/Repaint</h3>
+                    <ul>
+                        <li>1）不要一条一条地修改DOM的样式。与其这样，还不如预先定义好css的class，然后修改DOM的className</li>
+                        <li>2）把 DOM 离线后修改</li>
+                        <li>3）不要把 DOM 结点的属性值放在一个循环里当成循环里的变量</li>
+                        <li>4）尽可能的修改层级比较低的 DOM</li>
+                        <li>5）为动画的 HTML 元件使用 fixed 或 absoulte 的 position</li>
+                        <li>6）千万不要使用 table 布局</li>
+                    </ul>
+                </section>
+
+
+                <section>
+                    <h3>5.3 HTML & CSS & JavaScript</h3>
+                    <img src="images/34.png" alt="">
+                    <h4 class="fragment">结构、表现、行为分离：<br>HTML 是名词，CSS 是形容词和副词，JavaScript 是动词。</h4>
+                </section>
+
+
+                <section>
+                    <h3> 盒子模型</h3>
+                    <img src="images/box.jpg" alt="">
+                </section>
+
+
+                <section>
+                    <h3>HTML 标签 / CSS 属性</h3>
+                    <P><a href="http://www.w3school.com.cn/" target="_blank">http://www.w3school.com.cn/</a>
+                    </P>
+                    <p><a href="https://developer.mozilla.org/" target="_blank">https://developer.mozilla.org/</a>
+                    </p>
+                </section>
+
+                <section>
+                    <h3>display</h3>
+                    <ul>
+                        <li>display:block</li>
+                        <li>display:inline</li>
+                        <li>display:inline-block</li>
+                        <li>...</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>CSS 优先级</h3>
+                    <p>外部样式<内部样式 <内联样式 </p>
+                    <img width="700" src="images/jc6_002_thumb.png" alt="">
+                </section>
+
+                <section>
+                    <h3>CSS 优先级法则：</h3>
+                    <ul>
+                        <li>选择器都有一个权值，权值越大越优先；</li>
+                        <li>当权值相等时，后出现的样式表设置要优于先出现的样式表设置；</li>
+                        <li>创作者的规则高于浏览者：即网页编写者设置的CSS 样式的优先权高于浏览器所设置的样式；</li>
+                        <li>继承的CSS 样式不如后来指定的CSS 样式；</li>
+                        </li>
+                        <li>在同一组属性设置中标有“!important”规则的优先级最大。</li>
+                    </ul>
+                </section>
+
+
+
+                <section>
+                    <h3>定位</h3>
+                    <ul>
+                        <li>position: static</li>
+                        <li>position: relative</li>
+                        <li>position: fixed</li>
+                        <li>position: absolute</li>
+                        <li>z-index</li>
+                    </ul>
+                </section>
+
+
+                <section>
+                    <h3>浮动</h3>
+                    <!-- <h4>闭合浮动</h4> -->
+                    <img width="600" class="fragment" src="images/clearfix1.png" alt="">
+                </section>
+
+                <section>
+                    <h3>布局</h3>
+                    <h4>Read More:<a href="http://zh.learnlayout.com/">学习CSS布局</a></h4>
+                </section>
+
+                <section>
+                    <h3>没有谈到的内容</h3>
+                    <ul>
+                        <li>操作系统/计算机组成</li>
+                        <li>重定向</li>
+                        <li>CDN</li>
+                        <li>Ajax</li>
+                        <li>代理</li>
+                        <li>HTTPS</li>
+                        <li>移动端又怎么样？</li>
+                        <li>More...</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>那么输入一个 URL 地址到底发生了什么</h3>
+                    <ol>
+                        <li>输入 地址</li>
+                        <li>DNS 查询</li>
+                        <li>TCP 连接</li>
+                        <li>HTTP 请求</li>
+                        <li style="white-space:nowrap">HTML 页面加载/渲染</li>
+                    </ol>
+                </section>
+
+
+                <section>
+                    <h3>一些启示：</h3>
+                    <ol>
+                        <li>
+                            知其然，知其所以然；
+                        </li>
+                        <li>
+                            遵从标准/最佳实践
+                        </li>
+                        <li style="white-space:nowrap">Yahoo 优化网站性能 14条</li>
+                    </ol>
+                </section>
+
+                <section>
+                    <h3>Yahoo 优化网站性能 14条</h3>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>1. 尽可能的减少 HTTP 的请求数</td>
+                                <td align="right">[content]</td>
+                            </tr>
+                            <tr>
+                                <td>2. 使用 CDN（Content Delivery Network）</td>
+                                <td align="right">[server]</td>
+                            </tr>
+                            <tr>
+                                <td>3. 添加 Expires 头(或者 Cache-control )</td>
+                                <td align="right">[server]</td>
+                            </tr>
+                            <tr>
+                                <td>4. Gzip 组件 </td>
+                                <td align="right">[server]</td>
+                            </tr>
+                            <tr>
+                                <td>5. 将 CSS 样式放在页面的上方</td>
+                                <td align="right">[css]</td>
+                            </tr>
+                            <tr>
+                                <td>6. 将脚本移动到底部（包括内联的）</td>
+                                <td align="right">[javascript]</td>
+                            </tr>
+                            <tr>
+                                <td>7. 避免使用 CSS 中的 Expressions </td>
+                                <td align="right">[css]</td>
+                            </tr>
+                            <tr>
+                                <td>8. 将 JavaScript 和 CSS 独立成外部文件</td>
+                                <td align="right">[javascript] [css]</td>
+                            </tr>
+                            <tr>
+                                <td>9. 减少 DNS 查询 </td>
+                                <td align="right">[content]</td>
+                            </tr>
+                            <tr>
+                                <td>10. 压缩 JavaScript 和 CSS (包括内联的) </td>
+                                <td align="right">[javascript] [css]</td>
+                            </tr>
+                            <tr>
+                                <td>11. 避免重定向 </td>
+                                <td align="right">[server]</td>
+                            </tr>
+                            <tr>
+                                <td>12. 移除重复的脚本 </td>
+                                <td align="right">[javascript]</td>
+                            </tr>
+                            <tr>
+                                <td>13. 配置实体标签（ETags）</td>
+                                <td align="right">[css]</td>
+                            </tr>
+                            <tr>
+                                <td>14. 使 AJAX 缓存</td>
+                                <td align="right">[content]</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </section>
+
+
+                <section>
+                    <h4>Reference</h4>
+                    <ul class="reference">
+                        <li><a href="http://div.io/topic/457">从输入 URL 到页面加载完成的过程中都发生了什么事情？</a>
+                        </li>
+
+                        <li>
+                            <a href="http://developer.51cto.com/art/201007/209634_all.htm" target="_blank">从输入网址到显示页面：浏览器工作原理拆解分析</a>
+                        </li>
+                        <li>
+                            <a href="http://www.html5rocks.com/en/tutorials/internals/howbrowserswork/" target="_blank">How Browsers Work: Behind the scenes of modern web browsers</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/alex/what-happens-when" target="_blank">What happens when...</a>
+                        </li>
+                        <li>
+                            <a href="http://stackoverflow.com/questions/2092527/what-happens-when-you-type-in-a-url-in-browser" target="_blank">what happens when you type in a URL in browser</a>
+                        </li>
+                        <li>
+                            <a href="http://edusagar.com/articles/view/70/What-happens-when-you-type-a-URL-in-browser" target="_blank">What happens when you type a URL in browser</a>
+                        </li>
+                        <li>
+                            <a href="http://web.stanford.edu/class/msande91si/www-spr04/readings/week1/InternetWhitepaper.htm" target="_blank">How Does the Internet Work?</a>
+                        </li>
+
+                        <li>
+                            <a href="http://blog.jobbole.com/33951/" target="_blank">当你输入一个网址，实际会发生什么?</a>
+                        </li>
+                        <li>
+                            <a href="http://coolshell.cn/articles/9666.html" target="_blank">浏览器的渲染原理简介</a>
+                        </li>
+                        <li>
+                            <a href="http://developer.51cto.com/art/201311/418133.htm" target="_blank">专题：浏览器:渲染重绘、重排两三事</a>
+                        </li>
+                        <li>
+                            <a href="http://www.nowamagic.net/academy/detail/48110160" target="_blank">浏览器加载和渲染HTML的顺序以及Gzip的问题</a>
+                        </li>
+                        <li>
+                            <a href="http://div.io/topic/591">http://div.io/topic/591</a>
+                        </li>
+                        <li>
+                            <a href="http://div.io/topic/736">http://div.io/topic/736</a>
+                        </li>
+                        <li>
+                            <a href="http://div.io/topic/811">http://div.io/topic/811</a>
+                        </li>
+                        <li><a href="javascript:void(0)">More and more</a>
+                        </li>
+                    </ul>
+                </section>
             </section>
+            <!-- 输入网址之后 end -->
 
             <section>
-                <h3>DNS 查询过程</h3>
-                <ol>
-                    <li>浏览器缓存</li>
-<!--                      – 浏览器会缓存DNS记录一段时间。 有趣的是，操作系统没有告诉浏览器储存DNS记录的时间，这样不同浏览器会储存个自固定的一个时间（2分钟到30分钟不等）。 -->
-                    <li>系统缓存</li>
-<!-- 系统缓存 – 如果在浏览器缓存里没有找到需要的记录，浏览器会做一个系统调用（windows里是gethostbyname）。这样便可获得系统缓存中的记录。 -->
-                    <li>路由器缓存</li>
-<!-- 路由器缓存 – 接着，前面的查询请求发向路由器，它一般会有自己的DNS缓存。 -->
-                    <li>ISP DNS 缓存</li>
-<!-- ISP DNS 缓存 – 接下来要check的就是ISP缓存DNS的服务器。在这一般都能找到相应的缓存记录。 -->
-                    <li style="white-space:nowrap">进行递归搜索</li>
-<!-- 递归搜索 – 你的ISP的DNS服务器从跟域名服务器开始进行递归搜索，从.com顶级域名服务器到Facebook的域名服务器。一般DNS服务器的缓存中会有.com域名服务器中的域名，所以到顶级服务器的匹配过程不是那么必要了。 -->
-                </ol>
+                <section>
+                    <h2>Fuck (干) Things (货), Take Away!</h2>
+                </section>
+                <section>
+                    <h2><a href="https://www.zybuluo.com/paddingme/note/41682">前端资源推荐</a></li></h2>
+                </section>
             </section>
 
-            <section>
-                <h4>DNS 递归查询</h4>
-                <img src="images/11.png" alt="">
-<!-- 第一步是向我这台机器的ISPDNS获取到根域服务区的13个IP和主机名[b-j].root-servers.net.。 -->
-<!-- 第二步是向其中的一台根域服务器（Servername就是末行小括号里面的）发送www.baidu.com的查询请求，他返回了com.顶级域的服务器IP（未显示）和名称， -->
-<!-- 第三步，便向com.域的一台服务器192.33.4.12请求,www.baidu.com，他返回了baidu.com域的服务器IP（未显示）和名称，百度有四台顶级域的服务器 -->
-<!-- 第四部 拿到IP -->
-            </section>
-
-            <section>
-                <h4>DNS 递归查询</h4>
-                <img src="images/12.png" alt="">
-            </section>
-
-            <section>
-                <h3>DNS 递归查询</h3>
-                <img src="images/dnsss1.png" alt="">
-            </section>
-<!--     ①本机向local dns请求www.baidu.com
-         ②local dns向根域请求www.baidu.com，根域返回com.域的服务器IP
-         ③向com.域请求www.baidu.com，com.域返回baidu.com域的服务器IP
-         ④向baidu.com请求www.baidu.com，返回cname www.a.shifen.com和a.shifen.com域的服务器IP
-         ⑤向root域请求www.a.shifen.com
-         ⑥向com.域请求www.a.shife.com
-         ⑦向shifen.com请求
-         ⑧向a.shifen.com域请求
-         ⑨拿到www.a.shifen.com的IP
-         ⑩localdns返回本机www.baidu.com cname www.a.shifen.com 以及 www.a.shifen.com的IP -->
-
-
-            <section>
-                <h3>3. 建立 TCP 链接</h3>
-                <img class="fragment" src="images/tcp.png" alt="" class="fragemet">
-            </section>
-
-
-            <section>
-                <img src="images/tcp1.jpg" alt="">
-            </section>
-
-            <section>
-                <img src="images/3111.png" alt="">
-            </section>
-
-            <section>
-                <h3>TCP 三次握手</h3>
-                <p class="fragment">---> 「你瞅啥？」</p>
-                <p class="fragment">「瞅你咋地？」 <----</p>
-                <p class="fragment">-->「来咱俩唠唠。」</p>
-                <p class="fragment">然后就唠上了。</p>
-            </section>
-<!-- 还有四次挥手我不想说了、 -->
-
-            <section>
-                <h3>4. 发起 HTTP 请求</h3>
-                 <img src="images/3111.png" alt="">
-            </section>
-
-            <section>
-                <img src="images/3222.png" alt="">
-            </section>
-
-            <section>
-                <img src="images/3333.png" alt="">
-            </section>
-
-
-
-<!-- 用 wireshark 截图分析 -->
-
-
-            <section>
-                <img src="images/fiddler1.png" alt="">
-                <!-- 说下请求首部 head，响应头部 head  http://raytaylorlin.com/Tech/web/HTTP/HTTP-message/ -->
-                <!-- http://www.cnblogs.com/biyeymyhjob/archive/2012/07/28/2612910.html -->
-            </section>
-
-
-            <section>
-                <img src="images/req.png" alt="">
-                <!-- 一个HTTP请求报文由请求行（request line）、请求头部（header）、空行和请求数据4个部分组成 -->
-                <ul>
-                    <li>request line：GET /index.html HTTP/1.1</li>
-                    <!-- 请求行由请求方法字段、URL字段和HTTP协议版本字段3个字段组成，它们用空格分隔。例如，GET /index.html HTTP/1.1。HTTP协议的请求方法有GET、POST、HEAD、PUT、DELETE、OPTIONS、TRACE、CONNECT。 -->
-                    <li>header：User-Agent:XXX/Accept：XXX/Host：XXX</li><!-- 请求头部由关键字/值对组成，每行一对，关键字和值用英文冒号“:”分隔。请求头部通知服务器有关于客户端请求的信息，典型的请求头有：User-Agent：产生请求的浏览器类型。Accept：客户端可识别的内容类型列表。Host：请求的主机名，允许多个域名同处一个IP地址，即虚拟主机。 -->
-                    <li>空行<!-- 最后一个请求头之后是一个空行，发送回车符和换行符，通知服务器以下不再有请求头。--></li>
-                    <li>请求数据：POST 方法中使用。<!-- POST方法适用于需要客户填写表单的场合。与请求数据相关的最常使用的请求头是Content-Type和Content-Length。 --></li>
-                </ul>
-            </section>
-
-
-            <section>
-                <h4>HTTP响应报文：状态行、消息报头、响应正文。</h4>
-                <p>状态行: HTTP-Version Status-Code Reason-Phrase CRLF</p>
-<!--     HTTP-Version表示服务器HTTP协议的版本；Status-Code表示服务器发回的响应状态代码；Reason-Phrase表示状态代码的文本描述 -->
-                <img src="images/res1.png" alt="">
-            </section>
-
-            <section>
-                <h3>5. HTML 页面加载、解析</h3>
-                <ul>
-                    <li>拿到 html 文件</li>
-                    <li style="white-space:nowrap">head 标签内有 link 外部 CSS 文件<br>(发起请求，返回CSS文件)</li>
-                    <li>body 部分开始渲染</li>
-                    <li>img 请求，继续渲染下面的元素</li>
-                    <li>重排/重绘</li>
-                    <li>JS 执行</li>
-                    <li>非严格按照上述顺序执行，主要看 js，css 外部文件<br>的位置和对布局的改变情况</li>
-                </ul>
-                <h3 class="fragment">来个 <a href="demo.html" target="_blank">DEMO</a> </h3>
-                <!-- 打开 DEMO.html 开始 -->
-                <!-- 1. css可以同时进行五条请求 -->
-                <!-- 从上到下 从左到右 依次渲染 boreder -->
-                <!-- js加载的时候会阻塞 -->
-            </section>
-
-            <section>
-                <h3>5.1 HTML head 头结构</h3>
-                <h4>Read More： <a href="http://padding.me/blog/2014/08/26/html-head-tags/" target="_blank">HTML head 头标签</a></h4>
-            </section>
-
-
-            <section>
-                <h3>5.2 浏览器的渲染原理</h3>
-                <h4>5.2.1 浏览器大致工作过程</h4>
-                <img src="images/Render-Process.jpg" alt="">
-                <!-- http://coolshell.cn/articles/9666.html -->
-                <!-- 1）浏览器会解析三个东西：
-一个是HTML/SVG/XHTML，事实上，Webkit有三个C++的类对应这三类文档。解析这三种文件会产生一个DOM Tree。
-CSS，解析CSS会产生CSS规则树。
-Javascript，脚本，主要是通过DOM API和CSSOM API来操作DOM Tree和CSS Rule Tree.
-2）解析完成后，浏览器引擎会通过DOM Tree 和 CSS Rule Tree 来构造 Rendering Tree。注意：
-
-Rendering Tree 渲染树并不等同于DOM树，因为一些像Header或display:none的东西就没必要放在渲染树中了。
-CSS 的 Rule Tree主要是为了完成匹配并把CSS Rule附加上Rendering Tree上的每个Element。也就是DOM结点。也就是所谓的Frame。
-然后，计算每个Frame（也就是每个Element）的位置，这又叫layout和reflow过程。
-3）最后通过调用操作系统Native GUI的API绘制。 -->
-            </section>
-
-
-            <section>
-                <h4>5.2.2 DOM解析 </h4>
-                <img src="images/dom1.png" width="500" alt="">
-                <img src="images/DOM-Tree-01.jpg" alt="" class="fragment">
-            </section>
-
-
-            <section>
-                <h4>5.2.3 CSS解析</h4>
-                <img src="images/CSS-Content-Tree-Example.jpg" alt="">
-                <img class="fragment" src="images/Firefox-style-context-tree.png" alt="">
-                <p class="fragment" style="text-align:left">CSS 匹配 HTML元素是一个相当复杂和有性能问题的事情。<br>所以，你就会在N多地方看到很多人都告诉你，DOM树要小，CSS尽量用 id 和 class，千万不要过渡层叠下去，……</p>
-                <!-- CSS匹配DOM Tree主要是从右到左解析CSS的Selector， -->
-            </section>
-
-
-            <section>
-                <h4>5.2.4 渲染</h4>
-                <img src="images/Render-Process-Skipping.jpg" alt="">
-                <ol style="white-space:nowrap">
-                    <li>计算CSS样式</li>
-                    <li>构建Render Tree</li>
-                    <li>Layout <!-- – 定位坐标和大小，是否换行，各种position, overflow, z-index属性 …… --></li>
-                    <li>正式开画</li>
-                </ol>
-            </section>
-
-            <section>
-                <ul>
-                    <li>
-                    Repaint:屏幕的一部分要重画，比如某个CSS的背景色变了。但是元素的几何尺寸没有变。</li>
-                     <li>Reflow:意味着元件的几何尺寸变了，需要重新验证并计算Render Tree。</li>
-                     <li>增量异步 Reflow: 浏览器会把这样的操作积攒一批，做一次reflow，这又叫。</li>
-                     <li>Reflow 的成本比 Repaint 的成本高得多的多。</li>
-                </ul>
-            </section>
-
-
-            <section>
-                <h3>什么时候会发生 Repait？</h3>
-                <ul>
-                    <li>
-                        Initial：网页初始化的时候；</li>
-    <li>Incremental：一些 Javascript 在操作 DOM Tree时；</li>
-    <li>Resize：其些元件的尺寸变了；</li>
-    <li>StyleChange：如果 CSS 的属性发生变化了；</li>
-    <li>Dirty：几个 Incremental 的 reflow 发生在同一个 frame 的子树上。</li>
-                </ul>
-            </section>
-
-
-            <section>
-            <h3>减少Reflow/Repaint</h3>
-                <ul>
-                    <li>1）不要一条一条地修改DOM的样式。与其这样，还不如预先定义好css的class，然后修改DOM的className</li>
-                    <li>2）把 DOM 离线后修改</li>
-                    <li>3）不要把 DOM 结点的属性值放在一个循环里当成循环里的变量</li>
-                    <li>4）尽可能的修改层级比较低的 DOM</li>
-                    <li>5）为动画的 HTML 元件使用 fixed 或 absoulte 的 position</li>
-                    <li>6）千万不要使用 table 布局</li>
-                </ul>
-            </section>
-
-
-            <section>
-                <h3>5.3 HTML & CSS & JavaScript</h3>
-                <img src="images/34.png" alt="">
-                <h4 class="fragment">结构、表现、行为分离：<br>HTML 是名词，CSS 是形容词和副词，JavaScript 是动词。</h4>
-            </section>
-
-
-            <section>
-                <h3> 盒子模型</h3>
-                <img src="images/box.jpg" alt="">
-                <!-- http://www.cnblogs.com/jdonson/archive/2011/06/10/2077932.html -->
-            </section>
-
-
-            <section>
-                <h3>HTML 标签 / CSS 属性</h3>
-                <P><a href="http://www.w3school.com.cn/" target="_blank">http://www.w3school.com.cn/</a></P>
-                <p><a href="https://developer.mozilla.org/" target="_blank">https://developer.mozilla.org/</a></p>
-            </section>
-
-            <section>
-                <h3>display</h3>
-                <ul>
-                    <li>display:block</li>
-                    <li>display:inline</li>
-                    <li>display:inline-block</li>
-                    <li>...</li>
-                </ul>
-            </section>
-
-            <section>
-                <h3>CSS 优先级</h3>
-                <p>
-                    外部样式 <内部样式 <内联样式
-                </p>
-                <img width="700" src="images/jc6_002_thumb.png" alt="">
-
-                <!-- <p>还有顺序</p> -->
-<!--                 <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Specificity">https://developer.mozilla.org/zh-CN/docs/Web/CSS/Specificity</a></p>
-                <p><a href="http://www.cnblogs.com/xugang/archive/2010/09/24/1833760.html">http://www.cnblogs.com/xugang/archive/2010/09/24/1833760.html</a></p> -->
-            </section>
-
-            <section>
-<h3>CSS 优先级法则：</h3>
-<ul>
-<li>选择器都有一个权值，权值越大越优先；</li>
-
-<li>当权值相等时，后出现的样式表设置要优于先出现的样式表设置；</li>
-
-<li>创作者的规则高于浏览者：即网页编写者设置的CSS 样式的优先权高于浏览器所设置的样式；</li>
-
-<li>继承的CSS 样式不如后来指定的CSS 样式；</li></li>
-
-<li>在同一组属性设置中标有“!important”规则的优先级最大。</li>
-</ul>
-            </section>
-
-
-
-            <section>
-                <h3>定位</h3>
-                <ul>
-                    <li>position: static</li>
-                    <li>position: relative</li>
-                    <li>position: fixed</li>
-                    <li>position: absolute</li>
-                    <li>z-index</li>
-                </ul>
-            </section>
-
-
-            <section>
-                <h3>浮动</h3>
-                <!-- <h4>闭合浮动</h4> -->
-                <img width="600" class="fragment" src="images/clearfix1.png" alt="">
-            </section>
-
-            <section>
-                <h3>布局</h3>
-                <h4>=====》<a href="http://zh.learnlayout.com/">学习CSS布局</a></h4>
-            </section>
-
-            <section>
-                <h3>没有谈到的内容</h3>
-                <ul>
-                    <li>操作系统/计算机组成</li>
-                    <li>重定向</li>
-                    <li>CDN</li>
-                    <li>Ajax</li>
-                    <li>代理</li>
-                    <li>HTTPS</li>
-                    <li>移动端又怎么样？</li>
-                    <li>More...</li>
-                </ul>
-            </section>
-
-            <section>
-                <h3>那么输入一个 URL 地址到底发生了什么</h3>
-                <ol>
-                    <li>输入 地址</li>
-                    <li>DNS 查询</li>
-                    <li>TCP 连接</li>
-                    <li>HTTP 请求</li>
-                    <li style="white-space:nowrap">HTML 页面加载/渲染</li>
-                </ol>
-            </section>
-
-
-            <section>
-                <h3>一些启示：</h3>
-                <ol>
-                    <li>
-                        知其然，知其所以然；
-                    </li>
-                    <li>
-                        遵从标准/最佳实践
-                    </li>
-                    <li style="white-space:nowrap">Yahoo 优化网站性能 14条</li>
-                </ol>
-            </section>
-
-            <section>
-                <h3>Yahoo 优化网站性能 14条</h3>
-                <!-- http://www.planabc.net/2008/03/22/high_performance_web_pages/ -->
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>1. 尽可能的减少 HTTP 的请求数</td>
-                            <td align="right">[content]</td>
-                        </tr>
-                        <tr>
-                            <td>2. 使用 CDN（Content Delivery Network）</td>
-                            <td align="right">[server]</td>
-                        </tr>
-                        <tr>
-                            <td>3. 添加 Expires 头(或者 Cache-control )</td>
-                            <td align="right">[server]</td>
-                        </tr>
-                        <tr>
-                            <td>4. Gzip 组件 </td>
-                            <td align="right">[server]</td>
-                        </tr>
-                        <tr>
-                            <td>5. 将 CSS 样式放在页面的上方</td>
-                            <td align="right">[css]</td>
-                        </tr>
-                        <tr>
-                            <td>6. 将脚本移动到底部（包括内联的）</td>
-                            <td align="right">[javascript]</td>
-                        </tr>
-                        <tr>
-                            <td>7. 避免使用 CSS 中的 Expressions </td>
-                            <td align="right">[css]</td>
-                        </tr>
-                        <tr>
-                            <td>8. 将 JavaScript 和 CSS 独立成外部文件</td>
-                            <td align="right">[javascript] [css]</td>
-                        </tr>
-                        <tr>
-                            <td>9. 减少 DNS 查询 </td>
-                            <td align="right">[content]</td>
-                        </tr>
-                        <tr>
-                            <td>10. 压缩 JavaScript 和 CSS (包括内联的) </td>
-                            <td align="right">[javascript] [css]</td>
-                        </tr>
-                        <tr>
-                            <td>11. 避免重定向 </td>
-                            <td align="right">[server]</td>
-                        </tr>
-                        <tr>
-                            <td>12. 移除重复的脚本 </td>
-                            <td align="right">[javascript]</td>
-                        </tr>
-                        <tr>
-                            <td>13. 配置实体标签（ETags）</td>
-                            <td align="right">[css]</td>
-                        </tr>
-                        <tr>
-                            <td>14. 使 AJAX 缓存</td>
-                            <td align="right">[content]</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-            </section>
-
-
-            <section>
-                <h4>Reference</h4>
-                <ul class="reference">
-                    <li><a href="http://div.io/topic/457">从输入 URL 到页面加载完成的过程中都发生了什么事情？</a>
-                    </li>
-
-                    <li>
-                        <a href="http://developer.51cto.com/art/201007/209634_all.htm" target="_blank">从输入网址到显示页面：浏览器工作原理拆解分析</a>
-                    </li>
-                    <li>
-                        <a href="http://www.html5rocks.com/en/tutorials/internals/howbrowserswork/" target="_blank">How Browsers Work: Behind the scenes of modern web browsers</a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/alex/what-happens-when" target="_blank">What happens when...</a>
-                    </li>
-                    <li>
-                        <a href="http://stackoverflow.com/questions/2092527/what-happens-when-you-type-in-a-url-in-browser" target="_blank">what happens when you type in a URL in browser</a>
-                    </li>
-                    <li>
-                        <a href="http://edusagar.com/articles/view/70/What-happens-when-you-type-a-URL-in-browser" target="_blank">What happens when you type a URL in browser</a>
-                    </li>
-                    <li>
-                        <a href="http://web.stanford.edu/class/msande91si/www-spr04/readings/week1/InternetWhitepaper.htm" target="_blank">How Does the Internet Work?</a>
-                    </li>
-
-                    <li>
-                        <a href="http://blog.jobbole.com/33951/" target="_blank">当你输入一个网址，实际会发生什么?</a>
-                    </li>
-                    <li>
-                        <a href="http://coolshell.cn/articles/9666.html" target="_blank">浏览器的渲染原理简介</a>
-                    </li>
-                    <li>
-                        <a href="http://developer.51cto.com/art/201311/418133.htm" target="_blank">专题：浏览器:渲染重绘、重排两三事</a>
-                    </li>
-                    <li>
-                        <a href="http://www.nowamagic.net/academy/detail/48110160" target="_blank">浏览器加载和渲染HTML的顺序以及Gzip的问题</a>
-                    </li>
-                    <li>
-                        <a href="http://div.io/topic/591">http://div.io/topic/591</a>
-                    </li>
-                    <li>
-                        <a href="http://div.io/topic/736">http://div.io/topic/736</a>
-                    </li>
-                    <li>
-                        <a href="http://div.io/topic/811">http://div.io/topic/811</a>
-                    </li>
-                    <li><a href="javascript:void(0)">More and more</a></li>
-                </ul>
-            </section>
-        </section>
-
-        <!-- 输入网址之后 end -->
-
-
-
-
-
-
-        <section>
-                <section><h2>Fuck (干) Things (货), Take away!</h2></section>
-<section>                <h2><a href="https://www.zybuluo.com/paddingme/note/41682">前端资源推荐</a></li></h2></section>
-        </section>
-
-<!--
+            <!--
         <section>
             <section><h3>Happy（Hey）New (Cutter) Years(Boy)!</h3></section>
             <section class="couplet">
@@ -673,42 +600,41 @@ CSS 的 Rule Tree主要是为了完成匹配并把CSS Rule附加上Rendering Tre
             </section>
         </section>
 -->
-        <section class="fin">
-            <h1>Q & A</h1>
-            <h2 class="title">&lt;thank-you&gt;</h2>
-            <div class="box-small group">
-                <img class="avatar" src="images/avatar.jpg" width="64" height="64" alt="avatar">
-                <a href="http://twitter.com/paddingme" target="_blank">@PaddingMe</a>
-            </div>
-
-            <div class="box-small group">
-                <img class="avatar" src="images/favicon11.ico" width="64" height="64" alt="avatar">
-                <a href="http://padding.me" target="_blank">http://padding.me</a>
-                <br>
-
-            </div>
-
-            <p>Powered By <a href="https://github.com/hakimel/reveal.js/">reveal.js</a></p>
-        </section>
+            <section class="fin">
+                <h1>Q & A</h1>
+                <h2 class="title">&lt;thank-you&gt;</h2>
+                <div class="box-small group">
+                    <img class="avatar" src="images/avatar.jpg" width="64" height="64" alt="avatar">
+                    <a href="http://twitter.com/paddingme" target="_blank">@PaddingMe</a>
+                </div>
+                <div class="box-small group">
+                    <img class="avatar" src="images/favicon11.ico" width="64" height="64" alt="avatar">
+                    <a href="http://padding.me" target="_blank">http://padding.me</a>
+                    <br>
+                </div>
+                <p>Powered By <a href="https://github.com/hakimel/reveal.js/">reveal.js</a></p>
+            </section>
+        </div>
     </div>
-</div>
 
 
-<script src="js/libs/jquery.min.js"></script>
-<script src="lib/js/head.min.js"></script>
-<script src="js/libs/reveal.min.js"></script>
-<script>
+    <script src="js/libs/jquery.min.js"></script>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/libs/reveal.min.js"></script>
+    <script>
     Reveal.initialize({
         history: true,
         width: 1240,
         transition: 'linear',
         theme: 'default',
-        slideNumber: true,
-        dependencies: [
-                    { src: 'plugin/zoom-js/zoom.js', async: true }
-                ]
+        slideNumber: false,
+        dependencies: [{
+            src: 'plugin/zoom-js/zoom.js',
+            async: true
+        }]
     });
-</script>
-<!-- <script src="../../javascripts/google_analytics.js"></script> -->
+    </script>
+    <script src="../../javascripts/google_analytics.js"></script>
 </body>
+
 </html>
