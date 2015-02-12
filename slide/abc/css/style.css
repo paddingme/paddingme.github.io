@@ -603,12 +603,15 @@ hr {
 
 
 /*reference*/
+.reference {
+    font-size: 14px;
+}
 .reference li a{
-    font-size: 28px;
+    font-size: 20px;
 }
 
 .reference li {
-line-height: 34px;
+line-height: 26px;
 }
 
 
