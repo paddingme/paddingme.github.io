@@ -314,6 +314,7 @@ body {
     color: #DCDCDC
 }
 .reveal table {
+    font-size: 22px;
     margin: auto;
     border-collapse: collapse;
     border-spacing: 0
@@ -482,7 +483,7 @@ hr {
     border-radius: 50%
 }
 .reveal table th, .reveal table td {
-    text-align: center
+    text-align: left;
 }
 .reveal table .g {
     font-style: italic;
@@ -615,4 +616,3 @@ line-height: 34px;
 .couplet h5 {
     font-family: 隶书;
 }
-
