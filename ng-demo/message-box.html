@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>message-box demo</title>
+  <link rel="stylesheet" href="lib/bootstrap.min.css">
+  <script src="lib/angular.min.js"></script>
+  <style>
+    textarea {
+      width: 400px;
+      height: 100px;
+      margin: 0 auto;
+    }
+    .center-block {
+      width: 400px;
+      margin-top: 100px;
+    }
+  </style>
+
+</head>
+<body ng-app="message-box">
+
+  <div class="container center-block" ng-controller="TextAreaWithLimitCtrl">
+    <div class="row">
+      <textarea  ng-model="message">{{message}}</textarea>
+      <strong ng-show="showWarn()" ng-class="{'text-danger': shouldWarn()}">Remaining: {{remaining()}}</strong>
+    </div>
+    <div class="row clearfix">
+      <div class="pull-right">
+       <button class="btn btn-primary" ng-click="send()" ng-disabled="!hasValidLength()">Send</button>
+       <button class="btn" ng-click="clear()">Clear</button>
+      </div>
+    </div>
+  </div>
+
+
+<script>
+  angular.module("message-box", []);
+
+  angular.module("message-box").controller('TextAreaWithLimitCtrl', ['$scope', function($scope){
+      var MAX_LEN = 30; WARN_LEN = 10;
+      $scope.message = $scope.message || "";
+      $scope.shouldWarn = function() {
+        return $scope.remaining() < 0 ;
+      };
+      $scope.remaining = function(){
+        return MAX_LEN - $scope.message.length ;
+      }
+      $scope.send = function(){
+        alert("successed!");
+      };
+      $scope.showWarn = function(){
+       return MAX_LEN - $scope.message.length < WARN_LEN;
+      }
+      $scope.clear = function(message){
+        $scope.message ="";
+      };
+      $scope.hasValidLength = function(){
+         return $scope.message.length > 0 && $scope.message.length < MAX_LEN;
+      }
+  }])
+
+
+</script>
+</body>
+</html>
