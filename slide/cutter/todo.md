@@ -18,7 +18,7 @@ html + js + css
 
 ## HTML
 
-常用的：div p h1~h5 ul li ol dl dd dt table tr td form input label button
+常用的：div p h1~h5 ul li ol dl dd dt table tr td form input label button span
 
 HTML 的语义化 10 PPT 有
 
