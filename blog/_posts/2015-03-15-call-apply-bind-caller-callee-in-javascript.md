@@ -9,7 +9,7 @@ tags:
 
 我们可以将 call() 和 apply() 看作是某个对象的方法，通过调用方法的形式来间接调用函数。
 call() 和 apply() 的第一个实参是要调用函数的母对象，它是调用上下文，在函数体内通过 this 来获得对它的引用。在 ECMAScript 5 严格模式中， call() 和 apply() 的第一个实参都会变为 this 的值，哪怕
-传入的实参是原始值甚至是 null 或 undefined 。在 ECMAScript 和非严格模式中，传入的 null 和 underfined 都会被全局对象代替。而其他原始值则会被相应的包装对象（wrapper object）所代替。
+传入的实参是原始值甚至是 null 或 undefined 。在 ECMAScript 3 和非严格模式中，传入的 null 和 underfined 都会被全局对象代替。而其他原始值则会被相应的包装对象（wrapper object）所代替。
 
 
 对于 call() 来说，第一个调用上下文实参之后的所有实参就是要传入待调用函数的值。
@@ -80,6 +80,8 @@ if(!Function.prototype.bind) {
 ```
 
 ECMAScirpt 5 中的 bind() 方法有一些特性是上述无法模拟的。
-- 真正的 bind() 方法返回一个函数对象，这个函数对象的 length 属性是绑定啊哈念书的形参个数减去实参的个数。
+
+- 真正的 bind() 方法返回一个函数对象，这个函数对象的 length 属性是绑定函数的形参个数减去实参的个数。
 - bind() 可顺带用作构造函数。将忽略传入 bind() 中的 this，原始函数就会以构造函数的形式调用，其实参也将绑定。**在运行时将 bind() 所返回的函数用作构造函数时，所传入实参会原封不动的传入原始函数。**
+
   由于 bind() 方法所返回的函数并不包含 prototype 属性（普通函数的 prototype 属性是不能被删除的），并且将这些绑定的函数用作构造函数时所创建的对象从原始的未绑定的构造函数中继承 prototype。
