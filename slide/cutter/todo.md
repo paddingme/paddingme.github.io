@@ -45,6 +45,8 @@ HTML 的语义化 10 PPT 有
 
 4. z-index
 
+5. css  选择器
+
 5. 优先级的问题
 
 6. 居中
@@ -72,3 +74,4 @@ HTML 的语义化 10 PPT 有
     -  CSS3 大漠
 
 
+http://netsmell.com/apps/A-Single-Div/

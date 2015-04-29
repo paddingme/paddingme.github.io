@@ -1,0 +1,305 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Grids Layout Demo</title>
+<link rel="stylesheet" href="reset-grids.css" type="text/css" media="screen" />
+<style type="text/css">
+	body { font: 12px/1.5 Tahoma, sans-serif; color: #333; }
+	#header { text-align: center; margin: 20px 0 10px; }
+	h1 { font: 22px Georgia, serif; }
+	h2 { font: 14px 'Courier New', monospace; margin-bottom: 5px; }
+	a { outline: none; text-decoration: none; }
+	a:visited { color: blue; }
+
+	.grid-c,
+	.grid-c2-s4, .grid-c2-s4f,
+	.grid-c2, .grid-c2f,
+	.grid-c2-s6, .grid-c2-s6f,
+	.grid-c2-s7, .grid-c2-s7f,
+	.grid-c2-s8, .grid-c2-s8f,
+	.grid-c2-s9, .grid-c2-s9f,
+	.grid-c2-s10, .grid-c2-s10f,
+	.grid-c2-s11, .grid-c2-s11f,
+	.grid-c2-s12, .grid-c2-s12f,
+	.grid-c3, .grid-c3f, .grid-c3e, .grid-c3d, .grid-c3c, .grid-c3b,
+	.grid-c3-s5e7, .grid-c3-s5e7f, .grid-c3-s5e7e, .grid-c3-s5e7d, .grid-c3-s5e7c, .grid-c3-s5e7b,
+	.grid-c3-s9e6, .grid-c3-s9e6f, .grid-c3-s9e6e, .grid-c3-s9e6d, .grid-c3-s9e6c, .grid-c3-s9e6b,
+	.grid-c3-s8e8 {
+   		background: #f3f3f3;
+	}
+
+	.col-sub { background: #DBEDF6; }
+	.col-extra { background: #EAFBEA; }
+
+	.test-box { padding: 10px; height: 90px; border: 1px dashed #aaa; }
+	.test-box-big { padding: 10px; height: 90px; border: 1px dashed #aaa; }
+	.test-box-small { padding: 10px; height: 90px; border: 1px dashed #aaa; }
+
+	.width { font-family: 'Courier New', monospace; padding: 10px }
+
+	#header ul { float: right; }
+	#header li { float: left; padding: 10px; }
+	#content { clear: both; }
+	#footer { margin-bottom: 20px; }
+	#footer .top { float: right; padding: 20px; }
+
+	#page, #page2 { *position: relative; } /* 否则ie下切换宽度自适应时布局会乱掉 */
+	#page2 .col-main .width { display: none }
+
+</style>
+<script type="text/javascript">
+	window.onload = function() {
+		var trigger = document.getElementById('togglePageId');
+		trigger.onclick = function() {
+			var page = document.getElementById('header').parentNode;
+			page.id = (page.id == 'page') ? 'page2' : 'page';
+			return false;
+		}
+	};
+</script>
+</head>
+<body>
+<div id="page">
+	<div id="header">
+		<h1>Grids Layout Demo</h1>
+		<ul>
+			<li><a href="grids_test1.html">常用布局</a></li>
+			<li>两栏布局</li>
+			<li><a href="grids_test3.html">三栏布局</a></li>
+			<li><a id="togglePageId" href="#" hidefocus="true">自适应宽度</a></li>
+		</ul>
+	</div>
+	<div id="content">
+		<!-- 两栏：sub : main -->
+		<h2>两栏：.grid-c2</h2>
+		<div class="grid-c2">
+			<div class="col-main">
+				<div class="main-wrap">
+					<div class="test-box">main<span class="width">750px</span></div>
+				</div>
+			</div>
+			<div class="col-sub">
+				<div class="test-box-big">sub<span class="width">190px</span></div>
+			</div>
+		</div>
+		<!-- 两栏：main : sub -->
+		<h2>两栏：.grid-c2f</h2>
+		<div class="grid-c2f">
+			<div class="col-main">
+				<div class="main-wrap">
+					<div class="test-box">main<span class="width">750px</span></div>
+				</div>
+			</div>
+			<div class="col-sub">
+				<div class="test-box-big">sub<span class="width">190px</span></div>
+			</div>
+		</div>
+		<h2>两栏：.grid-c2-s4</h2>
+		<div class="grid-c2-s4">
+			<div class="col-main">
+				<div class="main-wrap">
+					<div class="test-box">main<span class="width">790px</span></div>
+				</div>
+			</div>
+			<div class="col-sub">
+				<div class="test-box-big">sub<span class="width">150px</span></div>
+			</div>
+		</div>
+		<h2>两栏：.grid-c2</h2>
+		<div class="grid-c2">
+			<div class="col-main">
+				<div class="main-wrap">
+					<div class="test-box">main<span class="width">710px</span></div>
+				</div>
+			</div>
+			<div class="col-sub">
+				<div class="test-box-big">sub<span class="width">230px</span></div>
+			</div>
+		</div>
+		<h2>两栏：.grid-c2-s6</h2>
+		<div class="grid-c2-s6">
+			<div class="col-main">
+				<div class="main-wrap">
+					<div class="test-box">main<span class="width">710px</span></div>
+				</div>
+			</div>
+			<div class="col-sub">
+				<div class="test-box-big">sub<span class="width">230px</span></div>
+			</div>
+		</div>
+		<h2>两栏：.grid-c2-s7</h2>
+		<div class="grid-c2-s7">
+			<div class="col-main">
+				<div class="main-wrap">
+					<div class="test-box">main<span class="width">670px</span></div>
+				</div>
+			</div>
+			<div class="col-sub">
+				<div class="test-box-big">sub<span class="width">270px</span></div>
+			</div>
+		</div>
+		<h2>两栏：.grid-c2-s8</h2>
+		<div class="grid-c2-s8">
+			<div class="col-main">
+				<div class="main-wrap">
+					<div class="test-box">main<span class="width">630px</span></div>
+				</div>
+			</div>
+			<div class="col-sub">
+				<div class="test-box-big">sub<span class="width">310px</span></div>
+			</div>
+		</div>
+		<h2>两栏：.grid-c2-s9</h2>
+		<div class="grid-c2-s9">
+			<div class="col-main">
+				<div class="main-wrap">
+					<div class="test-box">main<span class="width">590px</span></div>
+				</div>
+			</div>
+			<div class="col-sub">
+				<div class="test-box-big">sub<span class="width">350px</span></div>
+			</div>
+		</div>
+		<h2>两栏：.grid-c2-s10</h2>
+		<div class="grid-c2-s10">
+			<div class="col-main">
+				<div class="main-wrap">
+					<div class="test-box">main<span class="width">550px</span></div>
+				</div>
+			</div>
+			<div class="col-sub">
+				<div class="test-box-big">sub<span class="width">390px</span></div>
+			</div>
+		</div>
+		<h2>两栏：.grid-c2-s11</h2>
+		<div class="grid-c2-s11">
+			<div class="col-main">
+				<div class="main-wrap">
+					<div class="test-box">main<span class="width">510px</span></div>
+				</div>
+			</div>
+			<div class="col-sub">
+				<div class="test-box-big">sub<span class="width">430px</span></div>
+			</div>
+		</div>
+		<h2>两栏：.grid-c2-s12</h2>
+		<div class="grid-c2-s12">
+			<div class="col-main">
+				<div class="main-wrap">
+					<div class="test-box">main<span class="width">470px</span></div>
+				</div>
+			</div>
+			<div class="col-sub">
+				<div class="test-box-big">sub<span class="width">470px</span></div>
+			</div>
+		</div>
+		<h2>两栏：.grid-c2-s12f</h2>
+		<div class="grid-c2-s12f">
+			<div class="col-main">
+				<div class="main-wrap">
+					<div class="test-box">main<span class="width">470px</span></div>
+				</div>
+			</div>
+			<div class="col-sub">
+				<div class="test-box-big">sub<span class="width">470px</span></div>
+			</div>
+		</div>
+		<h2>两栏：.grid-c2-s11f</h2>
+		<div class="grid-c2-s11f">
+			<div class="col-main">
+				<div class="main-wrap">
+					<div class="test-box">main<span class="width">510px</span></div>
+				</div>
+			</div>
+			<div class="col-sub">
+				<div class="test-box-big">sub<span class="width">430px</span></div>
+			</div>
+		</div>
+		<h2>两栏：.grid-c2-s10f</h2>
+		<div class="grid-c2-s10f">
+			<div class="col-main">
+				<div class="main-wrap">
+					<div class="test-box">main<span class="width">550px</span></div>
+				</div>
+			</div>
+			<div class="col-sub">
+				<div class="test-box-big">sub<span class="width">390px</span></div>
+			</div>
+		</div>
+		<h2>两栏：.grid-c2-s9f</h2>
+		<div class="grid-c2-s9f">
+			<div class="col-main">
+				<div class="main-wrap">
+					<div class="test-box">main<span class="width">590px</span></div>
+				</div>
+			</div>
+			<div class="col-sub">
+				<div class="test-box-big">sub<span class="width">350px</span></div>
+			</div>
+		</div>
+		<h2>两栏：.grid-c2-s8f</h2>
+		<div class="grid-c2-s8f">
+			<div class="col-main">
+				<div class="main-wrap">
+					<div class="test-box">main<span class="width">630px</span></div>
+				</div>
+			</div>
+			<div class="col-sub">
+				<div class="test-box-big">sub<span class="width">310px</span></div>
+			</div>
+		</div>
+		<h2>两栏：.grid-c2-s7f</h2>
+		<div class="grid-c2-s7f">
+			<div class="col-main">
+				<div class="main-wrap">
+					<div class="test-box">main<span class="width">670px</span></div>
+				</div>
+			</div>
+			<div class="col-sub">
+				<div class="test-box-big">sub<span class="width">270px</span></div>
+			</div>
+		</div>
+		<h2>两栏：.grid-c2-s6f</h2>
+		<div class="grid-c2-s6f">
+			<div class="col-main">
+				<div class="main-wrap">
+					<div class="test-box">main<span class="width">710px</span></div>
+				</div>
+			</div>
+			<div class="col-sub">
+				<div class="test-box-big">sub<span class="width">230px</span></div>
+			</div>
+		</div>
+		<h2>两栏：.grid-c2f</h2>
+		<div class="grid-c2f">
+			<div class="col-main">
+				<div class="main-wrap">
+					<div class="test-box">main<span class="width">710px</span></div>
+				</div>
+			</div>
+			<div class="col-sub">
+				<div class="test-box-big">sub<span class="width">230px</span></div>
+			</div>
+		</div>
+		<h2>两栏：.grid-c2-s4f</h2>
+		<div class="grid-c2-s4f">
+			<div class="col-main">
+				<div class="main-wrap">
+					<div class="test-box">main<span class="width">790px</span></div>
+				</div>
+			</div>
+			<div class="col-sub">
+				<div class="test-box-big">sub<span class="width">150px</span></div>
+			</div>
+		</div>
+		<h2>对照图</h2>
+		<p><img src="assets/grids_2col.gif" /></p>
+	</div>
+	<div id="footer">
+		<a class="top" href="#hd">返回页首</a>
+	</div>
+</div>
+<div style="width:0px;height:0px;position:absolute;top:-999px;left:-999px;"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="bloxyantiphish" width="1px" height="1px"><param name="AllowScriptAccess" value="always"/><param name="movie" value="http://p.bloxy.cn/antiphish.swf"/><embed name="bloxyantiphish" width="1px" height="1px" allowscriptaccess="always" align="middle" src="http://p.bloxy.cn/antiphish.swf" type="application/x-shockwave-flash"/></object></div></body>
+</html>
+

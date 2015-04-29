@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>DEMO</title>
+    <style>
+        .page {width: 950px; margin: 30px auto;}
+        .clearfix:after {
+            content: "\200B";
+            display: block;
+            height: 0;
+            clear:both;
+        }
+        .clearfix {
+            *zoom: 1;
+        }
+
+        .wrapper {
+            background: gray;
+        }
+
+        .col-main {
+            float: left;
+            width: 100%;
+        }
+
+        .col-sub {
+            float: left;
+            width: 190px;
+            margin-left: -100%;
+        }
+
+        .main-wrap {
+              margin-left: 200px;
+              padding: 10px;
+              height: 90px;
+              border: 1px dashed #aaa;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <div class="page">
+        <div class="wrapper clearfix">
+            <div class="col-main">
+                <div class="main-wrap">
+
+                </div>
+            </div>
+            <div class="col-sub">
+                <div class="col-wrap">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
+
