@@ -1,77 +1,106 @@
-# 如何切图
+题目： The ABC of  Front-end Web Development ( 前端 Web 开发基础知识)
 
-<!-- 重构工程师 -->
+受众： 组里同事、以及对一些前端感兴趣的同学
 
-首先给大家演示下如何切图。 可以用之前的 PPT 图片 cutter man
+内容： 分享做网站的一些基础知识，以及大家在做网站，写前台代码的一些常见错误和没有注意的地方。
 
-不保证会切！
+时间： 1h
+
+注意：先把自己向分享的东西全贴到 PPT 上，如果时间不够，后面的就快速过一遍。然后留下在线的地址。
 
 
-<!-- 没有时间查资料确保每一个细节都是对的。 -->
 
-## 文件结构
+可以随时被打断，如果没说清楚或者说的不对或者可以随时被打断
 
-html + js + css
 
-- 介绍 html 结构
-- 常用的 html head 头部分
+重点：
 
-## HTML
+```
+重点是让后端同学了解 浏览器运行机制（盒子如何摆放/盒模型），以及前端代码结构（html & css & js）。
+其他的可以点到为止，更详细的后面进行分享。
+如何调 css (优先级的问题)！
+head 头部分（ 细节什么的）
+清除浮动 ()
+居中 ()
+各种盒模型 ()
+```
 
-常用的：div p h1~h5 ul li ol dl dd dt table tr td form input label button span
 
-HTML 的语义化 10 PPT 有
+# 分享提纲
 
-## CSS
+1.  前端到了如何酷炫的地步？
 
-1. 框（块状元素，行内元素） 盒子模型
+    CSS3 酷炫掉渣天的效果。 打地鼠。 one-singal-div
 
-    - display: block;
-    - display: inline;
-    - display: inline-block(!);
-    - overflow
+    NodeJS 可以分享以前用 nodejs 做的 在线聊天小程序。（让大家看代码结构什么的。后端同学有没有感觉到压力？哇哈哈哈啊哈）
 
-2. 浮动
+    移动端（Hybrid App）（移动端同学你们有没有感觉到压力，哈哈哈哈哈？）
 
-    - 浮动的原理(!)
-    - 如何清除浮动(!)
+    HTML5 可以参考 iWeb 大会上的一些软件或者什么的。
 
-3. 定位
+    薪资（eleme）
 
-    - position: static
-    - position: relative
-    - position: absolute
-    - position: fixed
+    可以参考那个 job deer 等的数据。
 
-4. z-index
+   （想提醒做后端、服务器端的同学有点危机感，饭碗随时会被抢。）
+   （想提醒没有学前端的同学快点学前端，不学会后悔。）
 
-5. css  选择器
+   （动画可以那个小孩武功的动画）
 
-5. 优先级的问题
+这个过程我们学到了什么？
+
+css 放上面  js 下面。
+
+2. 我们输入一个网址，一个网页是如何渲染的。
+
+(重点在 HEAD 头， 请求， 兼容模式。)
+
+
+
+
+知识点: 盒模型、正常文档流、渲染、
+
+
+2. ABC
+
+
+一个完整的 html 文件是怎么样的
+网页结构 HTML CSS JavaScript 的 结构行为表现分离。（可参考玉伯 winter 克军 还有前端农民工 的一些演讲。）
+
+
+3.  盒子的问题。
+
+
+4.  CSS 优先级问题。（针对大家不会CSS 样式的的问题）
+
+
+4.  使用 chrome 进行调试。（针对大家不会用 chrome 的问题）
+
+
+5.  闭合浮动的问题。
+
+
+用一句话总结了HTML,CSS,JS的关系。HTML是名词，JS是动词，CSS是形容词和副词。
+=======
 
 6. 居中
 
 
-7. 布局
+3. 后端同学的一些错误
 
-    -  http://zh.learnlayout.com/
-    -  http://www.dqqd.me/avatar/fly/grids_test3.html
+   1.  不要在 html 里改样式
+   1.  JS 往下放、CSS 往上放 （可以截取内网代码错误）
+   1.  导航可以用 CSS 写 不要用 JS  写（增加代码体积，难以调试，还要考虑兼容性什么的，反正也要写 CSS 不是吗）
 
+   穿插讲解 http 浏览器原理。
 
-8. 前端重构博客：
+4.  CSS  盒子
 
-    大漠，张鑫旭，[doyoe](http://blog.doyoe.com/), 一丝
+5.  优先级。
 
-9. API 查询
-
-    - doyoe的 css 手册
-    - w3cschool.com.cn
-
-10. 书
-
-    -  CSS 权威指南
-    -  CSS 高级进阶
-    -  CSS3 大漠
+5.  head 里的标签
 
 
-http://netsmell.com/apps/A-Single-Div/
+
+<!-- todo 问老大 域名部署什么的 -->
+ <!-- todo 让产品帮我改下 gif -->

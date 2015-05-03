@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="utf-8">
+    <title>To Be A Slicer by PaddingMe </title>
+    <meta name="keywords" content="To Be a Slicer  by PaddingMe">
+    <meta name="description" content="To Be a Slicer  by PaddingMe">
+
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="PaddingMe,padding4me@gmail.com">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/zenburn.css">
+    <link rel="shortcut icon" type="image/x-icon" href="http://padding.me/favicon.ico">
+
+    <script>
+    if (window.location.search.match(/print-pdf/gi)) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'css/print/pdf.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    }
+    </script>
+
+    <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+1
+</head>
+
+<body>
+    <a href="http://www.lezhixing.com.cn" target="_blank" class="logo ir">乐知行</a>
+    <div class="reveal">
+        <div class="slides">
+            <section class="aloha">
+                <h1 class="title">To Be A Slicer</h1>
+                <h3><em>『论一个切图仔的自我修养』</em></h3>
+                <h3>@<a href="http://twitter.com/paddingme">PaddingMe</a></h3>
+                <h3>2015-05-05</h3>
+            </section>
+
+<!-- 大概讲1个半-2小时，跟上思路，随时打断  注意这里只介绍 HTML4  CSS2 的知识!-->
+
+<!-- 首选介绍切图大致流程  -->
+            <section>
+                <section>
+                    <h2>HTML & CSS & JavaScript</h2>
+                </section>
+                <section>
+                    <h3>
+                        <blockquote style="width: 80%;">一入前段深似海，别人当我切图仔。</blockquote>
+                    </h3>
+                </section>
+                <section>
+                    <img src="images/cutter.png" width="800" height="270" alt="">
+                </section>
+                <section>
+                    <img src="images/34.png" width="800" height="270" alt="">
+                </section>
+                <section>
+                    <img src="images/art.jpg" width="800" height="270" alt="">
+                </section>
+            </section>
+
+
+            <section>
+                <!-- 摘自 http://justineo.github.io/slideshows/semantic-html-->
+
+                <section>
+                    <h2> HTML </h2>
+                    <img src="images/iknht.jpg" width="500" height="420" alt="">
+                </section>
+
+<!-- To publish information for global distribution, one needs a universally understood language, a kind of publishing mother tongue that all computers may potentially understand. -->
+
+                <section>
+                    <h3> 认识 HTML 标签</h3>
+                    <p>
+                        <code>h1</code>-<code>h6</code> , <code>p</code> , <code>div</code>
+                    </p>
+                    <p>
+                        <code>span</code> , <code>img</code> , <code>input</code> , <code>label</code> , <code>a</code>
+                    </p>
+                    <p>
+                        <code>ol</code> , <code>ul</code> , <code>li</code>
+                    </p>
+                    <p>
+                        <code>dd</code> , <code>dt</code> , <code>dl</code>
+                    </p>
+                    <p>
+                        <code>table</code> , <code>th</code> , <code>td</code> , <code>tr</code>
+                    </p>
+                </section>
+
+
+
+
+                <section>
+                    <h3>全局属性</h3>
+                </section>
+
+                <section>
+                    <div>
+                        <h4><code>id</code> 属性</h4>
+                        <p>标示符 (用于引用)，不应依赖其语义处理相应元素</p>
+                    </div>
+
+                    <br>
+                    <div class="fragment">
+                        <h4><code>class</code> 属性</h4>
+                        <p><q lang="en" cite="http://dev.w3.org/html5/spec/global-attributes.html#classes">authors are encouraged to use values that describe <br> the <em>nature of the content</em></q></p>
+                    </div>
+                </section>
+
+                <section>
+                    <div>
+                        <h4><code>title</code> 属性</h4>
+                        <ul style="font-size:80%;">
+                            <li>链接 - 描述目标信息</li>
+                            <li>图片 - 版权 / 描述</li>
+                            <li>引用 - 来源信息</li>
+                            <li>交互元素 - 操作指南</li>
+                            <li>...</li>
+                        </ul>
+                    </div>
+
+                    <div class="fragment">
+                        <h4><code>lang</code> 属性</h4>
+                        <p>内容的语言</p>
+                    </div>
+                </section>
+
+
+                <section>
+                    <h3>h1-h6 元素</h3>
+                    <pre><code data-trim>
+<h1>这是一级标题</h1>
+
+<h2>这是二级标题</h2>
+
+<h3>这是三级标题</h3>
+
+<h4>这是四级标题</h4>
+
+<h5>这是五级标题</h5>
+
+<h6>这是六级标题</h6>
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h3><code>p</code> 元素</h3>
+                    <ul>
+                        <li class="fragment">
+                            「段落」的显式表述<br>
+                            <small>段落是主题接近的若干句子组成的文本块 (<a href="http://dev.w3.org/html5/spec/content-models.html#paragraphs">via</a>)</small>
+                        </li>
+                        <li class="fragment">非优先考虑的选择</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3><code>div</code> 元素</h3>
+                    <ul>
+                        <li class="fragment">本身无语义</li>
+                        <li class="fragment">可以和 <code>class</code>, <code>lang</code>, <code>title</code> 等属性结合，<br>为一系列连续的内容增加语义</li>
+                        <li class="fragment">最后考虑的选择</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3><code>ol</code>, <code>ul</code>, <code>li</code> 元素</h3>
+                    <ul>
+                        <li class="fragment">有序 / 无序列表</li>
+                        <li class="fragment">改变列表项顺序是否影响表达</li>
+                        <li class="fragment"><code>ol</code> 下 <code>li</code> 元素的 <code>value</code> 属性代表该列表项的序号值</li>
+                    </ul>
+                </section>
+
+                <section>
+                      <pre class="fragment"><code  data-trim>
+
+<p>Relegation zone:</p>
+<ol>
+    <li>Bolton Wanderers</li>
+    <li>Blackburn Rovers</li>
+    <li>Wolverhampton Wanderers</li>
+</ol>
+
+                    </code></pre>
+
+                    <div class="fragment">
+                        <p>Relegation zone:</p>
+                        <ol>
+                            <li>Bolton Wanderers</li>
+                            <li>Blackburn Rovers</li>
+                            <li>Wolverhampton Wanderers</li>
+                        </ol>
+                    </div>
+                </section>
+
+                <section>
+                      <pre class="fragment"><code  data-trim>
+
+<p>Relegation zone:</p>
+<ul>
+    <li>Bolton Wanderers</li>
+    <li>Blackburn Rovers</li>
+    <li>Wolverhampton Wanderers</li>
+</ul>
+
+                    </code></pre>
+
+                    <div class="fragment">
+                        <p>Relegation zone:</p>
+                        <ul>
+                            <li>Bolton Wanderers</li>
+                            <li>Blackburn Rovers</li>
+                            <li>Wolverhampton Wanderers</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section>
+                    <h3><code>dl</code>, <code>dt</code>, <code>dd</code> 元素</h3>
+                    <ul>
+                        <li class="fragments">名值对的集合</li>
+                        <li class="fragments">术语定义表 / 元数据 / <abbr title="Frequently asked questions">FAQ</abbr> / ...</li>
+                    </ul>
+                    <pre class="fragment"><code data-trim>
+<dl>
+  <dt><dfn>happiness</dfn></dt>
+  <dd class="part-of-speech"><i><abbr>n.</abbr></i></dd>
+  <dd>The state of being happy.</dd>
+  <dd>Good fortune; success. <q>Oh <b>happiness</b>! It worked!</q></dd>
+  <dt><dfn>rejoice</dfn></dt>
+  <dd><i class="part-of-speech"><abbr>v.intr.</abbr></i> To be delighted oneself.</dd>
+  <dd><i class="part-of-speech"><abbr>v.tr.</abbr></i> To cause one to be delighted.</dd>
+</dl>
+                    </code></pre>
+
+                </section>
+
+                <section>
+                    <dl>
+                        <dt><dfn>happiness</dfn></dt>
+                        <dd class="part-of-speech"><i><abbr>n.</abbr></i></dd>
+                        <dd>The state of being happy.</dd>
+                        <dd>Good fortune; success. <q>Oh <b>happiness</b>! It worked!</q></dd>
+                        <dt><dfn>rejoice</dfn></dt>
+                        <dd><i class="part-of-speech"><abbr>v.intr.</abbr></i> To be delighted oneself.</dd>
+                        <dd><i class="part-of-speech"><abbr>v.tr.</abbr></i> To cause one to be delighted.</dd>
+                    </dl>
+                </section>
+
+
+                <section>
+
+                    <h3><code>span</code> 元素</h3>
+                    <ul>
+                        <li class="fragment">本身无语义</li>
+                        <li class="fragment">可以和 <code>class</code>, <code>lang</code> 等属性结合，为文本片段增加语义</li>
+                         <li class="fragment">有更合适的元素时不应选择 <code>span</code></li>
+                    </ul>
+                    <figure class="fragment">
+                    <pre><code data-trim>
+<span class="keyword">var</span> greet = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+    console.log(<span class="string">"Hello world."</span>);
+}
+                    </code></pre>
+                            <figcaption>适用场景之一是代码高亮</figcaption>
+                        </figure>
+                    </section>
+
+                    <section>
+                        <h3><code>img</code> 元素</h3>
+                        <ul>
+                            <li class="fragment">
+                                <p><code>src</code>, <code>alt</code> 属性决定了图片的含义</p>
+                                <ul class="fragment">
+                                    <li>有 <code>src</code> 且 <code>alt</code> 为空字符串，代表装饰用图</li>
+                                    <li>有 <code>src</code> 且 <code>alt</code> 为非空字符串，图为文档内容的一部分</li>
+                                    <li>有 <code>src</code> 且无 <code>alt</code>，图为内容一部分但无等价的文本内容可用</li>
+                                </ul>
+                            </li>
+                            <li class="fragment">用 <code>alt</code> 文本替换图片，文档含义尽可能<strong>不变</strong></li>
+                        </ul>
+                        <pre class="fragment"><code data-trim>
+<p>
+  You are standing in an open field west of a house.
+  <img src="house.jpeg" alt="<s>A white house</s><strong>The house is white</strong>, with a boarded front door." >
+  There is a small mailbox here.
+</p>
+                        </code></pre>
+
+                    </section>
+
+
+
+
+                    <section>
+                        <h3><code>a</code> 元素</h3>
+                        <ul>
+                            <li class="fragment">存在 <code>href</code> 属性时为超链接</li>
+                            <li class="fragment">缺少 <code>href</code> 属性时为链接占位符</li>
+                        </ul>
+                        <pre class="fragment"><code data-trim>
+<ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/news">News</a></li>
+    <li><a>Examples</a></li>
+</ul>
+                        </code></pre>
+                    </section>
+
+
+                    <section>
+                        <h3>表格数据 (tabular data)</h3>
+                    </section>
+
+                    <section>
+                        <div>
+                            <h3><code>table</code> 元素</h3>
+                            <ul>
+                                <li class="fragment">用来表示超过一维的数据</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="fragment"><code>caption</code> 元素</h4>
+                            <ul>
+                                <li class="fragment">表示所处的 <code>table</code> 的标题</li>
+                            </ul>
+                            <p class="fragment"><small>当所处的 <code>table</code> 是外部 <code>figure</code> 元素的唯一子元素，应首选 <code>figcaption</code></small></p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div>
+                            <h3><code>tbody</code>, <code>thead</code>, <code>tfoot</code> 元素</h3>
+                            <ul>
+                                <li class="fragment">均为一组表格行</li>
+                                <li class="fragment"><code>thead</code> 表示列头 (通常为列标题，单元格用 <code>th</code> 元素)</li>
+                                <li class="fragment"><code>tfoot</code> 表示列脚 (通常为列数据汇总)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="fragment"><code>col</code>, <code>colgroup</code>, <code>tr</code> 元素</h4>
+                            <p class="fragment">列，列组，行</p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3><code>td</code>, <code>th</code> 元素</h3>
+                        <ul>
+                            <li class="fragment"><code>td</code> - 数据单元格</li>
+                            <li class="fragment"><code>th</code> - 标题单元格</li>
+                        </ul>
+                 <!--        <p class="fragment"><code>th</code> 的 <code>scope</code> 属性表示标题对应的数据范围</p> -->
+                <!--         <p class="fragment"><img src="img/table-scope-diagram.png" alt="table scope diagram"></p> -->
+                    </section>
+
+                    <section>
+
+<pre><code data-trim style="height:500px;max-height:500px">
+<p>Table with thead, tfoot, and tbody</p>
+<table>
+  <thead>
+    <tr>
+      <th>Header content 1</th>
+      <th>Header content 2</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td>Footer content 1</td>
+      <td>Footer content 2</td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>Body content 1</td>
+      <td>Body content 2</td>
+    </tr>
+  </tbody>
+</table>
+</code></pre>
+
+                    </section>
+
+
+                    <section>
+                        <p>Table with thead, tfoot, and tbody</p>
+                        <table>
+                          <thead>
+                            <tr>
+                              <th>Header content 1</th>
+                              <th>Header content 2</th>
+                            </tr>
+                          </thead>
+                          <tfoot>
+                            <tr>
+                              <td>Footer content 1</td>
+                              <td>Footer content 2</td>
+                            </tr>
+                          </tfoot>
+                          <tbody>
+                            <tr>
+                              <td>Body content 1</td>
+                              <td>Body content 2</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </section>
+
+
+                    <section>
+
+                    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <section>
+                    <h3> HTML 结构</h3>
+                </section>
+
+            <section>
+
+                <section>
+                    <h2> CSS </h2>
+                </section>
+
+                <section>
+                    <h3> 盒子模型</h3>
+                </section>
+
+                <section>
+                    <h3>display</h3>
+                </section>
+
+                <section>
+                    <h3>CSS 选择器</h3>
+                </section>
+
+                <section>
+                    <h3>CSS 优先级</h3>
+                    <!-- 不要使用通配符 -->
+                    <!-- 尽量不要使用 important -->
+                </section>
+
+                <section>
+                    <h4>float</h4>
+                </section>
+
+                <section>
+                    <h4>position</h4>
+                </section>
+
+                <section>
+                    <h4>z-index</h4>
+                </section>
+
+
+                <section>
+                    <h4>布局（居中）</h4>
+                </section>
+            </section>
+
+
+            <section>
+                <section>
+                    <h2>Fuck(干)things(货)take(拿)away(走)</h2>
+                </section>
+
+                <section>
+                    <h2>书籍推荐</h2>
+                    <!--     -  CSS 权威指南-  CSS 高级进阶-  CSS3 大漠 -->
+                </section>
+
+
+                <section>
+                    <h3>API 查询</h3>
+                    <!--     - doyoe的 css 手册
+                        - w3cschool.com.cn -->
+                </section>
+
+                <section>
+                    <h3>前端重构博客推荐</h3>
+                    <!-- 大漠，张鑫旭，[doyoe](http://blog.doyoe.com/), 一丝 -->
+                </section>
+
+            </section>
+
+
+            <section>
+                <h2 class="fragment">说了这么多，</h2>
+                <h2 class="fragment">其实你并不能学会切图</h2>
+                <h1 class="fragment">去！ 切！ 图！吧!</h1>
+            </section>
+
+
+
+            <section class="fin">
+                <h1>Q & A</h1>
+                <h2 class="title">&lt;thank-you&gt;</h2>
+                <div class="box-small group">
+                    <img class="avatar" src="images/avatar.jpg" width="64" height="64" alt="avatar">
+                    <a href="http://twitter.com/paddingme" target="_blank">@PaddingMe</a>
+                </div>
+                <div class="box-small group">
+                    <img class="avatar" src="images/favicon11.ico" width="64" height="64" alt="avatar">
+                    <a href="http://padding.me" target="_blank">http://padding.me</a>
+                    <br>
+                </div>
+                <p>Powered By <a href="https://github.com/hakimel/reveal.js/">reveal.js</a></p>
+            </section>
+        </div>
+    </div>
+
+
+    <script src="js/libs/jquery.min.js"></script>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/libs/reveal.min.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+    Reveal.initialize({
+        history: true,
+        width: 1240,
+        transition: 'linear',
+        theme: 'default',
+        slideNumber: false,
+
+        dependencies: [{
+            src: 'plugin/zoom-js/zoom.js',
+            async: true},
+            {   src: 'plugin/highlight/highlight.js',
+                async: true,
+                condition: function() { return !!document.querySelector( 'pre code' ); },
+                callback: function() { hljs.initHighlightingOnLoad(); } }
+            ]
+    });
+    </script>
+   <!-- <script src="../../javascripts/google_analytics.js"></script> -->
+</body>
+
+</html>
