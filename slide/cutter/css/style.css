@@ -600,8 +600,6 @@ hr {
     margin: 0 auto!important;
 }
 
-
-
 /*reference*/
 .reference {
     font-size: 14px;
@@ -609,20 +607,18 @@ hr {
 .reference li a{
     font-size: 20px;
 }
-
 .reference li {
 line-height: 26px;
 }
-
 
 /*couplet */
 .couplet h5 {
     font-family: 隶书;
 }
-
-
 .reveal code {
   color: #88b; }
-
 .reveal strong code {
   color: #add;}
+.reveal strong {
+  font-weight: 400;
+  color: #90ee90; }
