@@ -124,7 +124,7 @@
                     <div class="fragment">
                         <h4><code>class</code> 属性</h4>
                         <p>
-                            <q lang="en" cite="http://dev.w3.org/html5/spec/global-attributes.html#classes">authors are encouraged to use values that describe
+                            <q lang="en" cite="http://dev.w3.org/html5/spec/global-attributes.html#classes" style="color:white">authors are encouraged to use values that describe
                                 <br> the <em>nature of the content</em>
                             </q>
                         </p>
@@ -585,12 +585,11 @@ h2 {
                 <section>
                     <h4>类选择器</h4>
                     <pre><code data-trim>
-.nav {
-    padding:0;
-    margin: 0;
-}
 .fl {
     float: left;
+}
+p.warning {
+    font-weight: bold;
 }
                     </code></pre>
 
@@ -606,7 +605,107 @@ h2 {
                     </code></pre>
                 </section>
 
+                <section>
+                    <h4>属性选择器</h4>
 
+                    <pre><code style="max-height:530px;" data-trim class="css">
+<!-- 简单属性选择 -->
+img[alt] {
+    border: 3px solid red;
+}
+
+a[href][title] {
+    font-weight: bold;
+}
+
+<!-- 根据具体属性值选择  完全匹配-->
+div[class="nav header"] {
+    font-weight: bold;
+}
+
+<!-- 根据部分属性值选择 -->
+p[class~="waning"] {font-size:12px;}
+<!-- 等价于 -->
+p.warning {font-size:12px;}
+
+<!-- 其他子串属性选择器 -->
+p[class^="waning"] {font-size:13px;}
+p[class$="waning"] {font-size:14px;}
+p[class*="waning"] {font-size:15px;}
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h3>特定属性选择类型</h3>
+                    <pre><code data-trim class="html">
+<style>
+[lang|="en"] {color:red}
+</style>
+
+<div lang="en">Hello!</div>
+<p lang="en-us">Greetings!</p>
+<div lang="en-au">G'day!</div>
+<p lang="fr">Bonjour!</p>
+<h4 lang="cy-en">Jrooana!</h4>
+
+
+                    </code></pre>
+
+                    <style>
+                    [lang|="en"] {color:red}
+                    </style>
+
+                    <div lang="en">Hello!</div>
+                    <p lang="en-us">Greetings!</p>
+                    <div lang="en-au">G'day!</div>
+                    <p lang="fr">Bonjour!</p>
+                    <h4 lang="cy-en">Jrooana!</h4>
+                </section>
+
+
+                <section>
+                    <img src="images/DOM-Tree-01.jpg" alt="">
+                </section>
+
+                <section>
+                    <h3>后代选择器</h3>
+                    <pre><code data-trim class="css">
+div p { color:#fff;}
+
+ul li {
+    height: 30px;
+    line-height: 30px;
+}
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>后代选择器</h3>
+                    <pre><code data-trim class="css"></code></pre>
+                </section>
+                <section>
+                    <h3>后代选择器</h3>
+                    <pre><code data-trim class="css"></code></pre>
+                </section>
+                <section>
+                    <h3>后代选择器</h3>
+                    <pre><code data-trim class="css"></code></pre>
+                </section>
+                <section>
+                    <h3>后代选择器</h3>
+                    <pre><code data-trim class="css"></code></pre>
+                </section>
+                <section>
+                    <h3>后代选择器</h3>
+                    <pre><code data-trim class="css"></code></pre>
+                </section>
+
+                <section>
+                    <h3>子选择器</h3>
+                </section>
+
+                <section>
+                    <h3>相邻兄弟</h3>
+                </section>
 
                 <section>
                     <h3>CSS 优先级</h3>
@@ -668,8 +767,8 @@ h2 {
                 <section>
                     <h3 class="fragment">说了这么多，</h3>
                     <h3 class="fragment">其实你并不能学会切图!</h3>
-                    <h2 class="fragment">滚！去！切！图！吧!</h2>
-                    <h2 class="fragment">To be a peaceful slicer. =.=</h2>
+            <!--         <h2 class="fragment">滚！去！切！图！吧!</h2>
+                    <h2 class="fragment">To be a peaceful slicer. =.=</h2> -->
                 </section>
             </section>
 
