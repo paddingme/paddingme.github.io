@@ -622,3 +622,31 @@ line-height: 26px;
 .reveal strong {
   font-weight: 400;
   color: #90ee90; }
+.reveal strong, .reveal b {
+  font-weight: 400;
+  color: #90ee90;
+}
+.reveal var {
+  font-family: 'Merriweather', Georgia, serif;
+  font-style: italic;
+}
+var::before, var::after {
+  color: #666;
+  font-style: normal;
+}
+var::before {
+  content: "[";
+}
+var::after {
+  content: "]";
+}
+.reveal em {
+  font-style: normal;
+  color: #f0e68c;
+}
+
+.book img {
+  height: 300px;
+  width: 275px;
+}
+
