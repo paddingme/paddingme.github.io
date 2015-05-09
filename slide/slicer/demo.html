@@ -16,11 +16,44 @@
     <link rel="stylesheet" href="css/lzx.common.css">
     <link rel="stylesheet" href="css/demo.css">
 
+    <style>
+        body {
+            background: #ccc;
+        }
+
+
+
+        .fl {
+            float: left;
+        }
+
+
+        .clearfix:after {
+            content: "\200B";
+            display: block;
+            height: 0;
+            clear:both;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+
+        .clear {
+            clear: both;
+        }
+    </style>
+
 </head>
 <body>
     <h1 >Don't bother me, I'm rendering.....</h1>
-    <img id="killIe"src="images/kill-ie.jpg" alt="" >
-    <h2>一大堆需要 HTML 标签</h2>
+    <div class="clearfix">
+        <h2 class="fl">一大堆需要 HTML 标签</h2>
+    </div>
+
+    <div>
+        <img id="killIe"src="images/kill-ie.jpg" alt="" >
+    </div>
 
     <script src="js/demo.js"></script>
 </body>
