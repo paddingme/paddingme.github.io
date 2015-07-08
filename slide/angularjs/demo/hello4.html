@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>hello1 demo</title>
+    <script src="vendor/angular.min.js"></script>
+</head>
+
+
+<body ng-app="helloApp" ng-init="things={name:'world'}">
+    <h1>Hello,{{things.name}}</h1>
+    <div ng-controller="HelloCtrl">
+        Say Hello to: <input type="text" ng-model="things.name">
+        <h2>Hello,{{things.name}}</h2>
+    </div>
+
+
+
+    <script>
+
+    angular.module('helloApp',[])
+        .controller('HelloCtrl',function(){
+            // 
+        })
+    </script>
+
+    <!--
+
+        $rootscope.things;
+
+
+        $scope.things.name
+
+
+因为两者的data是同一个引用，对这个对象上面的属性修改，
+是可以反映到两级对象上的。
+我们通过引入一个data对象的方式，
+继续使用了原先的变量。
+     -->
+</body>
+
+</html>
+
+

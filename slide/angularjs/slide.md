@@ -99,28 +99,28 @@ Angular's dependency injector provides services to your controller when the cont
 
 When the application bootstraps, Angular creates an injector that will be used to find and inject all of the services that are required by your app. The injector itself doesn't know anything about what $http or $route services do. In fact, the injector doesn't even know about the existence of these services unless it is configured with proper module definitions.
 
-2. Hello World
+<!-- 2. Hello World
 
-ng-controller 创建作用域$scope
+ng-controller 创建作用域 $scope
 
-当浏览器启动、开始解析HTML时，DOM元素上的指令属性就会跟其他属性一样被解析，也就是说当一个Angular.js应用启动，Angular编译器就会遍历DOM树来解析HTML，寻找这些指令属性函数，在一个DOM元素上找到一个或多个这样的指令属性函数，它们就会被收集起来、排序，然后按照优先级顺序被执行。
-
-
-ng-app指令来标明一个AngularJS应用程序，并通过AngularJS完成自动初始化应用和标记应用根作用域，同时载入和指令内容相关的模块，并通过拥有ng-app指令的标签为根节点开始编译其中的DOM。
+当浏览器启动、开始解析HTML时，DOM元素上的指令属性就会跟其他属性一样被解析，也就是说当一个Angular.js应用启动，Angular编译器就会遍历DOM树来解析HTML，寻找这些指令属性函数，在一个DOM元素上找到一个或多个这样的指令属性函数，它们就会被收集起来、排序，然后按照优先级顺序被执行。 -->
 
 
+<!-- ng-app指令来标明一个AngularJS应用程序，并通过AngularJS完成自动初始化应用和标记应用根作用域，同时载入和指令内容相关的模块，并通过拥有ng-app指令的标签为根节点开始编译其中的DOM。 -->
 
-```js
+
+
+<!-- ```js
 <script src="angular.js"></script>
 
 <body ng-app ng-init="name='World!'">
     <input type="text" ng-model="name">
     <h2>Hello,{{name}}!</h2>
 </body>
-```
+``` -->
 
 
-```js
+<!-- ```js
 <script src="angular.js"></script>
 <body ng-app="helloApp" ng-controller="HelloCtrl">
     <input type="text" ng-model="name">
@@ -133,10 +133,10 @@ ng-app指令来标明一个AngularJS应用程序，并通过AngularJS完成自�
             $scope.name = "AngularJS";
         }); //引用这个模块
 </script>
-```
+``` -->
 
 
-```
+<!-- ```
 <body ng-app ng-init="name='world'">
     <h1>Hello,{{name}}!</h1>
     <div ng-controller="HelloCtrl">
@@ -144,13 +144,13 @@ ng-app指令来标明一个AngularJS应用程序，并通过AngularJS完成自�
         <h2>Hello,{{name}}!</h2>
     </div>
 </body>
-```
+``` -->
 
 ```
 <body ng-app ng-init="things={name:'world'}">
     <h1>Hello,{{things.name}}</h1>
     <div ng-controller="HelloCtrl">
-        Say Hello to: <input type="text" ng-mode="things.name">
+        Say Hello to: <input type="text" ng-model="things.name">
         <h2>Hello,{{things.name}}</h2>
     </div>
 </body>
@@ -213,3 +213,7 @@ http://www.ngnice.com/showcase/
 精通 AngularJS；
 Pro Angularjs
 
+
+
+Filter
+Filter 类似 Unix 里面的 | 管道概念，AngularJS 把它搬到了前端。还是举个例子，你们感受一下

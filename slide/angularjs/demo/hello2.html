@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>hello1 demo</title>
+    <script src="vendor/angular.min.js"></script>
+</head>
+
+
+<body ng-app="helloApp" ng-controller="HelloCtrl">
+    <input type="text" ng-model="name">
+    <h2>Hello,{{name}}!</h2>
+</body>
+
+
+<script>
+    angular.module('helloApp',[]);
+
+    angular.module('helloApp')
+    .controller('HelloCtrl',function($scope){
+        $scope.name = "wolrd";
+    });
+
+
+
+    // var helloApp = angular.module('helloApp',[]);
+
+    // helloApp.controller('HelloCtrl',function($scope){
+    //     $scope.name = "world";
+    // })
+
+
+
+
+    // angular.module('helloApp',[])
+    // .controller('HelloCtrl',function($scope){
+    //     $scope.name = "world";
+    // })
+
+
+</script>
+
+</html>
+
+
+<!-- angular 为全局命名空间；
+
+Angular.module('helloApp',[]);
+
+// 声明这个模块
+
+[] 依赖其他模块，服务或者指令 等等。
+
+这里有这个依赖注入的概念在里面
+
+我不管这些内建的服务是怎么构建的
+我现在这个模块需要依赖这个，
+你给我自动注入就可以了
+
+
+先声明后使用
+
+
+ng-controller 控制器
+
+主要来做什么
+
+初始化数据，给数据模型添加属性行为动作
+对 dom 操作不放在 controller 里
+
+$ angularjs 私有的
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>hello1 demo</title>
+    <script src="vendor/angular.min.js"></script>
+</head>
+
+<body ng-app ng-init="name='World!'">
+    <input type="text" ng-model="name">
+    <h2>Hello,{{name}}!</h2>
+</body>
+
+
+</html>
+
+
+当浏览器启动、开始解析HTML时，DOM元素上的指令属性就会跟其他属性一样被解析，
+也就是说当一个Angular.js应用启动，Angular编译器就会遍历DOM树来解析HTML，
+寻找这些指令属性函数，在一个DOM元素上找到一个或多个这样的指令属性函数，
+它们就会被收集起来、排序，然后按照优先级顺序被执行。
+
+ng-app 是 angularjs 应用的入口，从这里开始启动。
+ng-app指令来标明一个AngularJS应用程序，并通过AngularJS完成自动初始化应用和标记应用根作用域，同时载入和指令内容相关的模块，并通过拥有ng-app指令的标签为根节点开始编译其中的DOM。
+<!-- ng-app 引导bootstrap -->
+<!-- ng-model 绑定模型 -->
+<!-- {{}} 输出模型值的表达式 -->
+
+<!-- 数据双向绑定 view 随着视图的变化而变化 -->
+
+<!-- 任何用户引发的视图的改变，会映射到模型上，继而任何模型的改变，也会立刻传播到整个模板上 -->

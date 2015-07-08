@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>hello1 demo</title>
+    <script src="vendor/angular.min.js"></script>
+</head>
+
+
+<body ng-app="helloApp">
+
+
+    <div ng-controller="ParentCtrl">
+
+        <ul>
+            <li>parentPrimitive:{{parentPrimitive}}</li>
+            <li>parentObj.parentProperty:{{parentObj.parentProperty}}</li>
+        </ul>
+        <ul ng-controller="ChildCtrl">
+            <li>parentPrimitive:{{parentPrimitive}}</li>
+            <li>parentObj.parentProperty:{{parentObj.parentProperty}}</li>
+        </ul>
+    </div>
+
+
+    <script>
+
+    angular.module('helloApp',[])
+    .controller('ParentCtrl',function($scope){
+        $scope.parentPrimitive = "some primitive";
+        $scope.parentObj = {};
+        $scope.parentObj.parentProperty = "somen value";
+    })
+    .controller('ChildCtrl', function($scope){
+        $scope.parentPrimitive = "this will NOT modify the parent";
+        $scope.parentObj.parentProperty = "this WILL modify the parent"
+    })
+    </script>
+</body>
+
+</html>
+
+
