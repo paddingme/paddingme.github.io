@@ -26,6 +26,10 @@
     .reveal ul {
         margin-top: 4px;
     }
+
+    .holly li {
+        line-height: 1em;
+    }
 </style>
 </head>
 
@@ -73,6 +77,7 @@
                 <!-- 2.0完全不向下兼容 1.x... controllers 和 $scope 没了
                 框架本身采用了 AtScript 开发  TypeScript- ->
                 <!-- 2.0弱化了MVVM而强调了组件化 -->
+                <!-- 抛弃旧的浏览器 -->
                 <!-- Angular2.0 is a development platform for building mobile and desktop web applications.-->
             </section>
 
@@ -96,6 +101,15 @@
                     <li class="fragment">MVC / MV VW / MVW(MV*)</li>
                     <li class="fragment">依赖注入（dependency injection）</li>
                     <li class="fragment">可测试性（testability）</li>
+                    <li class="fragment">......</li>
+
+                    <!-- 在 Google 测试世界里，端到端测试是指作用于从用户请求到响应的整个流程和全部服务器集群的测试。
+                    端到端测试根据每个场景写脚本进行测试。
+
+                    手机搜索输入框，
+                    未搜索前是3个，
+                    搜索S 是1个，
+                    搜索S 是2个。 -->
                     <!-- 介绍单元测试/端到端测试 -->
                 </ul>
             </section>
@@ -107,7 +121,6 @@
             <h2>Two-ways Data-Binding</h2>
             </section>
 
-            <!-- 找图？？ -->
 
             <section>
                 <img src="images/Two_Way_Data_Binding.png" alt="" width="800">
@@ -116,29 +129,98 @@
             <!--  脏值检测 -->
             <section>
                 <h3><em>Demo: </em><a href="demo/hello1.html" target="_blank">hello1.html</a></h3>
+<!-- 当浏览器启动、开始解析HTML时，DOM元素上的指令属性就会跟其他属性一样被解析，
+也就是说当一个Angular.js应用启动，Angular编译器就会遍历DOM树来解析HTML，
+寻找这些指令属性函数，在一个DOM元素上找到一个或多个这样的指令属性函数，
+它们就会被收集起来、排序，然后按照优先级顺序被执行。
+
+ng-app 是 angularjs 应用的入口，从这里开始启动。
+ng-app指令来标明一个AngularJS应用程序，并通过AngularJS完成自动初始化应用和标记应用根作用域，同时载入和指令内容相关的模块，并通过拥有ng-app指令的标签为根节点开始编译其中的DOM。
+<!-- ng-app 引导bootstrap -->
+<!-- ng-model 绑定模型 -->
+<!-- {{}} 输出模型值的表达式 -->
+
+<!-- 数据双向绑定 view 随着视图的变化而变化 -->
+
+<!-- 任何用户引发的视图的改变，会映射到模型上，继而任何模型的改变，也会立刻传播到整个模板上 --> 
             </section>
 
-            <section>
-                <h3>引导AngularJS应用</h3>
-                <img style="border: 0;width: 600px;"src="images/tutorial_00.png" alt="">
-
-                <!-- 通过ngApp指令来自动引导AngularJS应用是一种简洁的方式，适合大多数情况。在高级开发中，例如使用脚本装载应用，您也可以使用bootstrap手动引导AngularJS应用。AngularJS应用引导过程有3个重要点：
-注入器(injector)将用于创建此应用程序的依赖注入(dependency injection)；注入器将会创建根作用域作为我们应用模型的范围；
-AngularJS将会链接根作用域中的DOM，从用ngApp标记的HTML标签开始，逐步处理DOM中指令和绑定。
-一旦AngularJS应用引导完毕，它将继续侦听浏览器的HTML触发事件，如鼠标点击事件、按键事件、HTTP传入响应等改变DOM模型的事件。这类事件一旦发生，AngularJS将会自动检测变化，并作出相应的处理及更新。 -->
-            </section>
-
+    
             <section>
                 <h3><em>Demo: </em><a href="demo/hello2.html" target="_blank">hello2.html</a></h3>
             </section>
+<!-- <!-- angular 为全局命名空间；
 
+Angular.module('helloApp',[]);
+
+// 声明这个模块
+
+[] 依赖其他模块，服务或者指令 等等。
+
+这里有这个依赖注入的概念在里面
+
+我不管这些内建的服务是怎么构建的
+我现在这个模块需要依赖这个，
+你给我自动注入就可以了
+
+
+先声明后使用
+
+
+ng-controller 控制器
+
+主要来做什么
+
+初始化数据，给数据模型添加属性行为动作
+对 dom 操作不放在 controller 里
+
+$ angularjs 私有的
+
+ -->
             <section>
-                <h3><em>Demo: </em><a href="demo/hello2.html" target="_blank">hello3.html</a></h3>
+                <h3><em>Demo: </em><a href="demo/hello3.html" target="_blank">hello3.html</a></h3>
+            </section>
+<!--
+
+这里涉及到 作用域的问题
+
+ ng-app 这里产生 $rootScope 上面 ng-init 生成数据模型 name
+绑定到 $rootscope;
+
+---- $rootscope.name (root)
+
+------ $scope.name (HelloCtrl)
+
+ng-controller="HelloCtrl" 生成新的作用域 $scope
+ng-model 产生数据模型 name 绑定到 $scope 上
+
+
+
+$scope 的问题
+
+
+$scope 相当于 MVVM 模式的里面 VM 视图模型层。
+
+
+  -->
+            <section>
+                <h3><em>Demo: </em><a href="demo/hello4.html" target="_blank">hello4.html</a></h3>
             </section>
 
-            <section>
-                <h3><em>Demo: </em><a href="demo/hello2.html" target="_blank">hello4.html</a></h3>
-            </section>
+            <!--
+
+
+        $rootscope.things;
+
+
+        $scope.things.name
+
+
+因为两者的data是同一个引用，对这个对象上面的属性修改，
+是可以反映到两级对象上的。
+我们通过引入一个data对象的方式，
+继续使用了原先的变量。
+-->
         </section>
 
         <section>
@@ -261,7 +343,68 @@ ng-controller指令就是用来定义应用程序控制器的，并且同时创�
             <section><h3><em>Demo: </em><a href="demo/route-demo/#/phones">route-Demo</a></h3></section>
         </section>
 
+        <section>
+            <section>
+                <h2>How AngularJS run</h2>
+            </section>
+            <section>
+                <h3>AngularJS应用 启动过程</h3>
+                <img style="float:left;border: 0;width: 500px;background:none;box-shadow:none"src="images/44.png" alt="">
+                <ul style="  position: relative;top: 70px;">
+                    <li class="fragment">浏览器载入HTML，解析成DOM</li>
+                    <li class="fragment">加载Angular类库</li>
+                    <li class="fragment">DOMContentLoaded事件中开始bootstrap</li>
+                    <li class="fragment">寻找 ng-app， 注入服务</li>
+                    <li class="fragment">编译DOM并链接到对应的scope数据</li>
+                </ul>
 
+                <!-- 通过ngApp指令来自动引导AngularJS应用是一种简洁的方式，适合大多数情况。在高级开发中，例如使用脚本装载应用，您也可以使用bootstrap手动引导AngularJS应用。AngularJS应用引导过程有3个重要点：
+注入器(injector)将用于创建此应用程序的依赖注入(dependency injection)；注入器将会创建根作用域作为我们应用模型的范围；
+AngularJS将会链接根作用域中的DOM，从用ngApp标记的HTML标签开始，逐步处理DOM中指令和绑定。
+一旦AngularJS应用引导完毕，它将继续侦听浏览器的HTML触发事件，如鼠标点击事件、按键事件、HTTP传入响应等改变DOM模型的事件。这类事件一旦发生，AngularJS将会自动检测变化，并作出相应的处理及更新。 -->
+            </section>
+
+
+            <section>
+                <h3>AngularJS应用  执行期</h3>
+                <img src="images/55.png" style="float:left;border: 0;width: 500px;background:none;box-shadow:none" alt="">
+                <ul>
+                    <li class="fragment">浏览器等待用户事件触发<br>（用户交互，定时器，网络事件…）
+                    </li>
+                    <li class="fragment">浏览器执行事件回调，进入Javascript上下文</li>
+                    <li class="fragment">Angular在$apply中接管了JS的执行部分</li>
+                    <li class="fragment">Angular进入$digest循环</li>
+                    <li class="fragment">Angular进行脏数据检查</li>
+                    <li class="fragment">批量更新DOM，$digest结束</li>
+                    <li class="fragment">浏览器开始渲染</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>执行器示例</h3>
+                <img  style="border: 0;width: 400px;background:none;box-shadow:none"src="images/66.png" alt="">
+                <ul class="holly" >
+                    <li><small>编译期</small>
+                        <ul>
+                            <li class="fragment"><small>Angular解析Directive: input[text]</small></li>
+                            <li class="fragment"><small>解析ng-model并为input绑定key事件</small></li>
+                            <li class="fragment"><small>为{{vm.name}}建立$watch表达式，进行监听</small></li>
+                        </ul>
+                    </li>
+                    <li class="fragment"><small>执行期</small>
+                        <ul>
+                            <li class="fragment"><small>用户在input输入按键，触发了浏览器的key事件</small></li>
+                            <li class="fragment"><small>事件回调， 进入Javascript上下文</small></li>
+                            <li class="fragment"><small>angular接管，在$apply中修改scope的name取值</small></li>
+                            <li class="fragment"><small>触发$digest流程</small></li>
+                            <li class="fragment"><small>脏数据检测，发现$watch列表中的name值变更</small></li>
+                            <li class="fragment"><small>通知对应的处理函数， 更新DOM</small></li>
+                            <li class="fragment"><small>Angular退出执行上下文，退出Javascript的事件处理函数</small></li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </section>
         <section>
             <section>
                 <h2>How to write AngularJS</h2>
@@ -318,7 +461,7 @@ ng-controller指令就是用来定义应用程序控制器的，并且同时创�
                     <li>定义下拉框B的数据源和model</li>
                     <li>在$watch里更新model引用</li>
                 </ul>
-                 <img class="fragment" src="images/4.png" alt="" style="width: 226px;height: 300px;border: 0;">
+                 <img class="fragment" src="images/11.png" alt="" style="width: 226px;height: 300px;border: 0;">
                  <h4 class="fragment"><em>Demo:</em><a href="demo/cascade/index.tpl.html" target="_blank">cascade.html</a></h4>
             </section>
 
@@ -336,6 +479,8 @@ ng-controller指令就是用来定义应用程序控制器的，并且同时创�
 指导开发者完成构建应用程序的整个历程：从用户界面的设计，到编写业务逻辑，再到测试。
 Angular遵循软件工程的MVC模式，并鼓励展现，数据，和逻辑组件之间的松耦合。通过依赖注入（dependency injection），Angular为客户端的Web应用带来了传统服务端的服务，例如独立于视图的控制。因此，后端减少了许多负担，产生了更轻的Web应用。</section> -->
         </section>
+
+
 
 
 
@@ -420,6 +565,7 @@ Angular遵循软件工程的MVC模式，并鼓励展现，数据，和逻辑组�
                 <a href="http://padding.me" target="_blank">http://padding.me</a>
                 <br>
             </div>
+            <p><a href="http://padding.me/slide/angularjs">http://padding.me/slide/angularjs</a></p>
             <p>Powered By <a href="https://github.com/hakimel/reveal.js/">reveal.js</a></p>
         </section>
     </div>
