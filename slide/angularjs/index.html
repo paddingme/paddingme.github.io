@@ -29,9 +29,9 @@
     <div class="slides">
 
         <section class="aloha">
-            <h1 class="title">Beginning AngularJS</h1>
-            <h2 class="subtitle">AngularJS 初探</h2>
-            <p>by <a href="http://twitter.com/paddingme">PaddingMe</a></p>
+            <h1 class="title"><strong>Beginning AngularJS</strong></h1>
+            <img style="border: 0;background: transparent;box-shadow: none;width: 627px;"src="images/AngulaJSLogo.png" alt="">
+            <p>by <a href="http://twitter.com/paddingme" style="color:#eeeeee">PaddingMe</a></p>
             <P>2015-07-08</P>
         </section>
 
@@ -43,7 +43,7 @@
             </section>
             <section>
                 <img src="images/1398932756598-angularjs.jpg" alt=""width="800" style="border:0">
-                <h4>Angularjs 是由 Google 维护，采用 JavaScript 语言编写的<br>开源客户端（clien-side） MVC 框架,帮助开发者编写<br>现代化的单页面应用（singal-page application）</h4>
+                <blockquote>Angularjs 是由 Google 维护，采用 JavaScript 语言编写的开源客户端（clien-side） MVC 框架,帮助开发者编写现代化的单页面应用（singal-page application）。</blockquote>
 
                 <!-- SPA：单页面应用是指用户通过浏览器加载独立的 HTML 页面并且无需离开此导航页面。对用户操作来说，一旦加载和执行单个页面应用程序通常会有更多的响应，这就需要返回到后端 Web 服务器，而单页面应用为用户提供了一个更接近本地移动或桌面应用程序的体验，这就是单页面应用的优势所在。 -->
             </section>
@@ -201,14 +201,26 @@ ng-controller指令就是用来定义应用程序控制器的，并且同时创�
 
             <section>
                 <h3>jQuery程序猿</h3>
-                <ul>
+                <ul style="position: relative;top: -100px;margin-right: 39px;">
                     <li>分别监控下拉框A/B/C的change事件</li>
                     <li>在事件中，取得下级的引用</li>
                     <li>查询符合上级筛选条件的下级数据</li>
                     <li>循环，更新下级的数据,更新下下级的数据</li>
                     <li>....</li>
                 </ul>
-                <img src="images/2.png" alt="">
+                <img class="fragment" src="images/3.png" alt="">
+            </section>
+
+
+            <section>
+                <h3>AngularJS攻城狮</h3>
+                <ul style="position: relative;top: -100px;margin-right: 39px;">
+                    <li>定义下拉框A的数据源和model</li>
+                    <li>定义下拉框B的数据源和model</li>
+                    <li>在$watch里更新model引用</li>
+                </ul>
+                 <img class="fragment" src="images/4.png" alt="" style="width: 226px;height: 300px;border: 0;">
+                 <h4 class="fragment"><em>Demo:</em><a href="demo/cascade/index.tpl.html" target="_blank">cascade.html</a></h4>
             </section>
 
             <section>
@@ -237,6 +249,10 @@ Angular遵循软件工程的MVC模式，并鼓励展现，数据，和逻辑组�
             </section>
 
 
+
+            <section>
+                <img src="images/feelings_about_angularjs_over_time.png" alt="">
+            </section>
             <section>
                 <img src="images/anghero.jpeg" alt="get from http://nathanleclaire.com/blog/2013/12/07/dont-fear-directives-in-angular-js/">
                 <h3><em>Superheroic</em></h3>
