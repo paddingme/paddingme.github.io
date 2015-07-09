@@ -43,28 +43,43 @@
             </section>
             <section>
                 <img src="images/1398932756598-angularjs.jpg" alt=""width="800" style="border:0">
-                <blockquote>Angularjs 是由 Google 维护，采用 JavaScript 语言编写的开源客户端（clien-side） MVC 框架,帮助开发者编写现代化的单页面应用（singal-page application）。</blockquote>
 
+
+                <h3><em>Google + JavaScript + Client-side + MVC + SPA</em></h3>
+        <!--         <blockquote>Angularjs 是由 Google 维护，采用 JavaScript 语言编写的开源客户端（clien-side） MVC 框架,帮助开发者编写现代化的单页面应用（singal-page application）。</blockquote> -->
                 <!-- SPA：单页面应用是指用户通过浏览器加载独立的 HTML 页面并且无需离开此导航页面。对用户操作来说，一旦加载和执行单个页面应用程序通常会有更多的响应，这就需要返回到后端 Web 服务器，而单页面应用为用户提供了一个更接近本地移动或桌面应用程序的体验，这就是单页面应用的优势所在。 -->
             </section>
 
 
-            <section>
-                <h3>现在版本 1.4</h3>
-                <h3>未来 2.0</h3>
+            <section style="text-align:left;  width: 70%;margin-left:200px">
+
+
+                <h3><strong>Version</strong></h3>
+                <h4>Current Version: 1.4.2<small>(stable)</small></h4>
+                <h4>Future Version: Angular 2.0<small>(Developer Preview)</small></h4>
                 <!-- 1.4 VS 2.0 的区别是什么，未来是什么 -->
-                <h3>适用场景</h3>
-                <p>它尤其适合编写大量的 CRUD（增删改查）操作的，具有 Ajax 风格的富客户端应用。</p>
+
+                <div class="fragment">
+                    <h3>适用场景</h3>
+                    <p>它尤其适合编写大量的 CRUD（增删改查）操作的，具有 Ajax 风格的富客户端应用。</p>
+                </div>
+                <!-- Angular2.0 is a development platform for building mobile and desktop web applications. -->
             </section>
 
             <section>
                 <h3>Angularjs future</h3>
                 <!-- 介绍 angularjs 特性、能做什么以及适用场景 -->
 
+
+                <img src="images/a.jpg" alt="">
+            </section>
+
+            <section>
                 <ul>
+                <!-- 后面详细讲 -->
                     <li>双向数据绑定</li>
                     <li>依赖注入</li>
-                    <li>MVC</li>
+                    <li>MVC /MVVW/MVW(MV*)</li>
                     <li>自定义指令</li>
                 </ul>
             </section>
@@ -73,7 +88,13 @@
 
         <section>
             <section>
-            <h2>Two-ways Binding</h2>
+            <h2>Two-ways Data-Binding</h2>
+            </section>
+
+            <!-- 找图？？ -->
+
+            <section>
+                <img src="images/Two_Way_Data_Binding.png" alt="" width="800">
             </section>
             <section>
                 <h3><em>Demo: </em><a href="demo/hello1.html" target="_blank">hello1.html</a></h3>
@@ -93,9 +114,30 @@
         </section>
 
         <section>
-            <h2>MVC ？ MVW ? MVVM</h2>
 
-            <p>MVVM模式是Model-View-ViewMode模式的简称。由视图(View)、视图模型(ViewModel)、模型(Model)三部分组成，通过这三部分实现 UI逻辑、呈现逻辑和状态控制、数据与业务逻辑的分离。
+            <section>
+                <h2>MVC ？  MVVM? MVW </h2>
+
+
+                <!-- Angularjs 是前端 MVC 框架，  model-view-controller -->
+
+                <!-- Angularjs官方认为 它们是 Model - View - WhatEver 不要关注到底是个怎么样的框架 -->
+
+                <!-- MVVM  Model-View-viewModel  （$scope　就是视图模型层）—— -->
+
+
+                <h4>MVC = Model + View + Controller</h4>
+                <h4>MVVM = Model + View + ViewController</h4>
+                <h4>MVW = Model + View + Whatever</h4>
+           </section>
+
+            <section>
+                 <img src="images/mvc.png" alt=""  width="800">
+            </section>
+ <!--            <p>
+
+
+            MVVM模式是Model-View-ViewMode模式的简称。由视图(View)、视图模型(ViewModel)、模型(Model)三部分组成，通过这三部分实现 UI逻辑、呈现逻辑和状态控制、数据与业务逻辑的分离。
 
 Model将和ViewModel互动(通过$scope对象)，将监听Model的变化。这些可以通过View来发送和渲染，由HTML来展示你的 代码。View可以通过$routeProvider对象来支配，所以你可以深度的链接和组织你的View和Controller，将他们变成导航 URL。AngualrJS同时提供了无状态的Controller，可以用来初始化和控制$scope对象。
 
@@ -108,8 +150,10 @@ Controller负责设置初始状态和参数化$scope方法用以控制行为。�
 
 View是AngularJS解析后渲染和绑定后生成的HTML。这个部分帮助你创建web应用的架构。$scope拥有一个针对数据的参考，controller定义行为，view处理布局和互动。
 
-ng-controller指令就是用来定义应用程序控制器的，并且同时创建了一个新的作用域关联到相应的DOM元素上。</p>
+ng-controller指令就是用来定义应用程序控制器的，并且同时创建了一个新的作用域关联到相应的DOM元素上。</p> -->
         </section>
+
+
 
         <section>
             <h2>DI</h2>
@@ -251,12 +295,27 @@ Angular遵循软件工程的MVC模式，并鼓励展现，数据，和逻辑组�
 
 
             <section>
-                <img src="images/feelings_about_angularjs_over_time.png" alt="">
+                <img style="width: 700px;border: 0;" src="images/feelings_about_angularjs_over_time.png" alt="">
             </section>
+
+
+
             <section>
-                <img src="images/anghero.jpeg" alt="get from http://nathanleclaire.com/blog/2013/12/07/dont-fear-directives-in-angular-js/">
+                <img style="border:0"src="images/keep-calm-and-use-angularjs.png" alt="">
+            </section>
+
+
+    <!--         <section>
+                <img src="images/anghero.png" alt="get from http://nathanleclaire.com/blog/2013/12/07/dont-fear-directives-in-angular-js/">
                 <h3><em>Superheroic</em></h3>
             </section>
+ -->
+
+        
+            <section  data-background="images/33.png">
+                <img class="fragment" style="  border: 0;background: none;box-shadow: none;   position: absolute;bottom: 0;right: 0;width: 300px;height: 456px;  float: right;position: relative;right: -100px;"src="images/anghero.png" alt="get from http://nathanleclaire.com/blog/2013/12/07/dont-fear-directives-in-angular-js/">
+            </section>
+
 
         </section>
 
@@ -290,7 +349,7 @@ Angular遵循软件工程的MVC模式，并鼓励展现，数据，和逻辑组�
         history: true,
         width: 1240,
         transition: 'linear',
-        theme: 'default'
+        theme: 'default',
     });
 </script>
 <script src="../../javascripts/google_analytics.js"></script>
