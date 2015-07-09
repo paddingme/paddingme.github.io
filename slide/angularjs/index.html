@@ -21,6 +21,12 @@
         document.getElementsByTagName( 'head' )[0].appendChild( link );
     }
 </script>
+
+<style>
+    .reveal ul {
+        margin-top: 4px;
+    }
+</style>
 </head>
 
 <body>
@@ -61,9 +67,13 @@
 
                 <div class="fragment">
                     <h3>适用场景</h3>
-                    <p>它尤其适合编写大量的 CRUD（增删改查）操作的，具有 Ajax 风格的富客户端应用。</p>
+                    <p>尤其适合编写大量的 CRUD（增删改查）操作的，具有 Ajax 风格的富客户端应用。</p>
+                    <!--  -->
                 </div>
-                <!-- Angular2.0 is a development platform for building mobile and desktop web applications. -->
+                <!-- 2.0完全不向下兼容 1.x... controllers 和 $scope 没了
+                框架本身采用了 AtScript 开发  TypeScript- ->
+                <!-- 2.0弱化了MVVM而强调了组件化 -->
+                <!-- Angular2.0 is a development platform for building mobile and desktop web applications.-->
             </section>
 
             <section>
@@ -74,13 +84,19 @@
                 <img src="images/a.jpg" alt="">
             </section>
 
+
+
             <section>
                 <ul>
-                <!-- 后面详细讲 -->
-                    <li>双向数据绑定</li>
-                    <li>依赖注入</li>
-                    <li>MVC /MVVW/MVW(MV*)</li>
-                    <li>自定义指令</li>
+                    <li>使用 HTML 作为模板语言</li>
+                    <li class="fragment">无须对 DOM 进行显示刷新</li>
+                    <!-- 可以通过用户动作 浏览器事件  模型的变化来决定何时刷新何类模板 -->
+                    <li class="fragment">有趣的和可扩展的组件子系统让浏览器<br>解释自定义 HTML 标签以及属性</li>
+                    <li class="fragment">双向数据绑定</li>
+                    <li class="fragment">MVC / MV VW / MVW(MV*)</li>
+                    <li class="fragment">依赖注入（dependency injection）</li>
+                    <li class="fragment">可测试性（testability）</li>
+                    <!-- 介绍单元测试/端到端测试 -->
                 </ul>
             </section>
         </section>
@@ -96,8 +112,20 @@
             <section>
                 <img src="images/Two_Way_Data_Binding.png" alt="" width="800">
             </section>
+
+            <!--  脏值检测 -->
             <section>
                 <h3><em>Demo: </em><a href="demo/hello1.html" target="_blank">hello1.html</a></h3>
+            </section>
+
+            <section>
+                <h3>引导AngularJS应用</h3>
+                <img style="border: 0;width: 600px;"src="images/tutorial_00.png" alt="">
+
+                <!-- 通过ngApp指令来自动引导AngularJS应用是一种简洁的方式，适合大多数情况。在高级开发中，例如使用脚本装载应用，您也可以使用bootstrap手动引导AngularJS应用。AngularJS应用引导过程有3个重要点：
+注入器(injector)将用于创建此应用程序的依赖注入(dependency injection)；注入器将会创建根作用域作为我们应用模型的范围；
+AngularJS将会链接根作用域中的DOM，从用ngApp标记的HTML标签开始，逐步处理DOM中指令和绑定。
+一旦AngularJS应用引导完毕，它将继续侦听浏览器的HTML触发事件，如鼠标点击事件、按键事件、HTTP传入响应等改变DOM模型的事件。这类事件一旦发生，AngularJS将会自动检测变化，并作出相应的处理及更新。 -->
             </section>
 
             <section>
@@ -134,6 +162,35 @@
             <section>
                  <img src="images/mvc.png" alt=""  width="800">
             </section>
+
+            <section>
+                <h4><em>Demo:   </em><a href="demo/invoice1.html">invoice1</a></em></h4>
+                <img style="border:0;  width: 600px;"src="images/concepts-databinding2.png" alt="">
+            </section>
+
+            <section>
+                <h4> filter</h4>
+                <ul>
+                    <li>currency(货币)</li>
+                    <li>date(日期)</li>
+                    <li>filter(子串匹配)</li>
+                    <li>json(格式化json对象)</li>
+                    <li>limitTo(限制个数)</li>
+                    <li>lowercase(小写)</li>
+                    <li>uppercase(大写)</li>
+                    <li>number(数字)</li>
+                    <li>orderBy(排序)</li>
+                </ul>
+            </section>
+
+            <section>
+                <h4><em>Demo:   </em><a href="demo/invoice2.html">invoice2</a></em></h4>
+                <img style="border:0;  width: 500px;"src="images/concepts-module-service.png" alt="">
+            </section>
+
+
+   
+
  <!--            <p>
 
 
@@ -155,22 +212,20 @@ ng-controller指令就是用来定义应用程序控制器的，并且同时创�
 
 
 
-        <section>
-            <h2>DI</h2>
-        </section>
+
 
 
         <section>
             <section><h2>Diretive</h2></section>
-            <section>
+            <!-- <section>
                 <h3>
                     html as template
                 </h3>
 
-                <!-- $ 内部指令 咱们可以自己创造指令 -->
+                 内部指令 咱们可以自己创造指令
 
-                <!-- 优先使用内部指令 -->
-            </section>
+                 优先使用内部指令 
+            </section> -->
 
 
             <section>
@@ -182,23 +237,23 @@ ng-controller指令就是用来定义应用程序控制器的，并且同时创�
 
 
 
-        <section>
+  <!--       <section>
             <h2>Service</h2>
             <!-- 少一个例子 -->
-        </section>
-
+        <!-- </section> -->
+      <!--
         <section>
             <section>
                 <h2>filter</h2>
-                <!-- http://checkcheckzz.gitbooks.io/angularjs-learning-notes/content/chapter8/8-5.html -->
+           http://checkcheckzz.gitbooks.io/angularjs-learning-notes/content/chapter8/8-5.html -->
 
-                <!-- http://www.cnblogs.com/lvdabao/p/3475426.html -->
+                <!-- http://www.cnblogs.com/lvdabao/p/3475426.html 
             </section>
 
             <section>
-                currency(货币)、date(日期)、filter(子串匹配)、json(格式化json对象)、limitTo(限制个数)、lowercase(小写)、uppercase(大写)、number(数字)、orderBy(排序)。
+                
             </section>
-        </section>
+        </section>-->
 
         <section>
             <section><h2>Route</h2></section>
@@ -269,20 +324,17 @@ ng-controller指令就是用来定义应用程序控制器的，并且同时创�
 
             <section>
                 <h2>AngularJs philosophy</h2>
+                <p class="fragment">  声明式编程应该用于构建用户界面以及编写软件构建，<br>而指令式编程非常适合来表示业务逻辑。</p>
             </section>
 
-            <section>
-                即声明式编程应该用于构建用户界面以及编写软件构建，而指令式编程非常适合来表示业务逻辑。
-            </section>
-
-            <section>框架采用并扩展了传统HTML，通过双向的数据绑定来适应动态内容，双向的数据绑定允许模型和视图之间的自动同步。因此，AngularJS使得对DOM的操作不再重要并提升了可测试性。</section>
+<!-- <section>框架采用并扩展了传统HTML，通过双向的数据绑定来适应动态内容，双向的数据绑定允许模型和视图之间的自动同步。因此，AngularJS使得对DOM的操作不再重要并提升了可测试性。</section>
 
             <section>设计目标：
 将应用逻辑与对DOM的操作解耦。这会提高代码的可测试性。
 将应用程序的测试看的跟应用程序的编写一样重要。代码的构成方式对测试的难度有巨大的影响。
 将应用程序的客户端与服务器端解耦。这允许客户端和服务器端的开发可以齐头并进，并且让双方的复用成为可能。
 指导开发者完成构建应用程序的整个历程：从用户界面的设计，到编写业务逻辑，再到测试。
-Angular遵循软件工程的MVC模式，并鼓励展现，数据，和逻辑组件之间的松耦合。通过依赖注入（dependency injection），Angular为客户端的Web应用带来了传统服务端的服务，例如独立于视图的控制。因此，后端减少了许多负担，产生了更轻的Web应用。</section>
+Angular遵循软件工程的MVC模式，并鼓励展现，数据，和逻辑组件之间的松耦合。通过依赖注入（dependency injection），Angular为客户端的Web应用带来了传统服务端的服务，例如独立于视图的控制。因此，后端减少了许多负担，产生了更轻的Web应用。</section> -->
         </section>
 
 
@@ -298,6 +350,41 @@ Angular遵循软件工程的MVC模式，并鼓励展现，数据，和逻辑组�
                 <img style="width: 700px;border: 0;" src="images/feelings_about_angularjs_over_time.png" alt="">
             </section>
 
+
+            <section>
+
+                <ul>
+                    <li>
+                        社区
+
+                        <ul>
+                            <li><a href="http://angularjs.org">http://angularjs.org</a>(墙)</li>
+                            <li><a href="http://www.ngnice.com/">http://www.ngnice.com/</a></li>
+                            <li> <a href="http://www.ngnice.com/showcase/">ngcie showcase</a></li>
+                            <li><a href="http://www.angularjs.cn/">http://www.angularjs.cn/</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+
+                        博客
+                        <ul>
+                            <li><a href="https://github.com/xufei/blog/issues">Xufei</a></li>
+                        </ul>
+                    </li>
+
+                    <li> 书籍
+                        <ul>
+                            <li>精通 Angularjs</li>
+                            <li>Pro Angularjs</li>
+                            <li>Angularjs 权威教程</li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+
+            </section>
 
 
             <section>
