@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="utf-8">
+    <title>PaddingMe</title>
+    <meta name="keywords" content="关键词">
+    <meta name="description" content="描述内容">
+
+    <meta name="robots" content="index,follow">
+
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+
+    <link rel="shortcut icon" type="image/x-icon" href="http://padding.me/favicon.ico">
+
+    <link rel="stylesheet" href="css/lzx.common.css">
+    <link rel="stylesheet" href="css/demo.css">
+
+    <style>
+        body {
+            background: #ccc;
+        }
+
+
+
+        .fl {
+            float: left;
+        }
+
+
+        .clearfix:after {
+            content: "\200B";
+            display: block;
+            height: 0;
+            clear:both;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+
+        .clear {
+            clear: both;
+        }
+    </style>
+
+</head>
+<body>
+    <h1 >Don't bother me, I'm rendering.....</h1>
+    <div class="clearfix">
+        <h2 class="fl">一大堆需要 HTML 标签</h2>
+    </div>
+
+    <div>
+        <img id="killIe"src="images/kill-ie.jpg" alt="" >
+    </div>
+
+    <script src="js/demo.js"></script>
+</body>
+</html>

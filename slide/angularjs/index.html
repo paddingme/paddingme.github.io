@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8">
+<title>Beginning AngularJS</title>
+<meta name="keywords" content="AngularJS,Beginning AngularJS, 初识 AngularJS, AngularJS 初探">
+<meta name="description" content="初识 AngularJS by PaddingMe ">
+<meta name="author" content="PaddingMe">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="css/reveal.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/zenburn.css">
+<link rel="shortcut icon" href="http://padding.me/favicon.ico" type="image/x-icon">
+
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+
+<style>
+    .reveal ul {
+        margin-top: 4px;
+    }
+
+    .holly li {
+        line-height: 1em;
+    }
+</style>
+</head>
+
+<body>
+<a href="http://www.lezhixing.com.cn" target="_blank" class="logo ir">乐知行</a>
+<div class="reveal">
+    <div class="slides">
+
+        <section class="aloha">
+            <h1 class="title"><strong>Beginning AngularJS</strong></h1>
+            <img style="border: 0;background: transparent;box-shadow: none;width: 627px;"src="images/AngulaJSLogo.png" alt="">
+            <p>by <a href="http://twitter.com/paddingme" style="color:#eeeeee">PaddingMe</a></p>
+            <P>2015-07-08</P>
+        </section>
+
+
+
+        <section>
+            <section>
+                <h2>What is AngularJS?</h2>
+            </section>
+            <section>
+                <img src="images/1398932756598-angularjs.jpg" alt=""width="800" style="border:0">
+
+
+                <h3><em>Google + JavaScript + Client-side + MVC + SPA</em></h3>
+        <!--         <blockquote>Angularjs 是由 Google 维护，采用 JavaScript 语言编写的开源客户端（clien-side） MVC 框架,帮助开发者编写现代化的单页面应用（singal-page application）。</blockquote> -->
+                <!-- SPA：单页面应用是指用户通过浏览器加载独立的 HTML 页面并且无需离开此导航页面。对用户操作来说，一旦加载和执行单个页面应用程序通常会有更多的响应，这就需要返回到后端 Web 服务器，而单页面应用为用户提供了一个更接近本地移动或桌面应用程序的体验，这就是单页面应用的优势所在。 -->
+            </section>
+
+
+            <section style="text-align:left;  width: 70%;margin-left:200px">
+
+
+                <h3><strong>Version</strong></h3>
+                <h4>Current Version: 1.4.2<small>(stable)</small></h4>
+                <h4>Future Version: Angular 2.0<small>(Developer Preview)</small></h4>
+                <!-- 1.4 VS 2.0 的区别是什么，未来是什么 -->
+
+                <div class="fragment">
+                    <h3>适用场景</h3>
+                    <p>尤其适合编写大量的 CRUD（增删改查）操作的，具有 Ajax 风格的富客户端应用。</p>
+                    <!--  -->
+                </div>
+                <!-- 2.0完全不向下兼容 1.x... controllers 和 $scope 没了
+                框架本身采用了 AtScript 开发  TypeScript- ->
+                <!-- 2.0弱化了MVVM而强调了组件化 -->
+                <!-- 抛弃旧的浏览器 -->
+                <!-- Angular2.0 is a development platform for building mobile and desktop web applications.-->
+            </section>
+
+            <section>
+                <h3>Angularjs future</h3>
+                <!-- 介绍 angularjs 特性、能做什么以及适用场景 -->
+
+
+                <img src="images/a.jpg" alt="">
+            </section>
+
+
+
+            <section>
+                <ul>
+                    <li>使用 HTML 作为模板语言</li>
+                    <li class="fragment">无须对 DOM 进行显示刷新</li>
+                    <!-- 可以通过用户动作 浏览器事件  模型的变化来决定何时刷新何类模板 -->
+                    <li class="fragment">有趣的和可扩展的组件子系统让浏览器<br>解释自定义 HTML 标签以及属性</li>
+                    <li class="fragment">双向数据绑定</li>
+                    <li class="fragment">MVC / MV VW / MVW(MV*)</li>
+                    <li class="fragment">依赖注入（dependency injection）</li>
+                    <li class="fragment">可测试性（testability）</li>
+                    <li class="fragment">......</li>
+
+                    <!-- 在 Google 测试世界里，端到端测试是指作用于从用户请求到响应的整个流程和全部服务器集群的测试。
+                    端到端测试根据每个场景写脚本进行测试。
+
+                    手机搜索输入框，
+                    未搜索前是3个，
+                    搜索S 是1个，
+                    搜索S 是2个。 -->
+                    <!-- 介绍单元测试/端到端测试 -->
+                </ul>
+            </section>
+        </section>
+
+
+        <section>
+            <section>
+            <h2>Two-ways Data-Binding</h2>
+            </section>
+
+
+            <section>
+                <img src="images/Two_Way_Data_Binding.png" alt="" width="800">
+            </section>
+
+            <!--  脏值检测 -->
+            <section>
+                <h3><em>Demo: </em><a href="demo/hello1.html" target="_blank">hello1.html</a></h3>
+<!-- 当浏览器启动、开始解析HTML时，DOM元素上的指令属性就会跟其他属性一样被解析，
+也就是说当一个Angular.js应用启动，Angular编译器就会遍历DOM树来解析HTML，
+寻找这些指令属性函数，在一个DOM元素上找到一个或多个这样的指令属性函数，
+它们就会被收集起来、排序，然后按照优先级顺序被执行。
+
+ng-app 是 angularjs 应用的入口，从这里开始启动。
+ng-app指令来标明一个AngularJS应用程序，并通过AngularJS完成自动初始化应用和标记应用根作用域，同时载入和指令内容相关的模块，并通过拥有ng-app指令的标签为根节点开始编译其中的DOM。
+<!-- ng-app 引导bootstrap -->
+<!-- ng-model 绑定模型 -->
+<!-- {{}} 输出模型值的表达式 -->
+
+<!-- 数据双向绑定 view 随着视图的变化而变化 -->
+
+<!-- 任何用户引发的视图的改变，会映射到模型上，继而任何模型的改变，也会立刻传播到整个模板上 --> 
+            </section>
+
+    
+            <section>
+                <h3><em>Demo: </em><a href="demo/hello2.html" target="_blank">hello2.html</a></h3>
+            </section>
+<!-- <!-- angular 为全局命名空间；
+
+Angular.module('helloApp',[]);
+
+// 声明这个模块
+
+[] 依赖其他模块，服务或者指令 等等。
+
+这里有这个依赖注入的概念在里面
+
+我不管这些内建的服务是怎么构建的
+我现在这个模块需要依赖这个，
+你给我自动注入就可以了
+
+
+先声明后使用
+
+
+ng-controller 控制器
+
+主要来做什么
+
+初始化数据，给数据模型添加属性行为动作
+对 dom 操作不放在 controller 里
+
+$ angularjs 私有的
+
+ -->
+            <section>
+                <h3><em>Demo: </em><a href="demo/hello3.html" target="_blank">hello3.html</a></h3>
+            </section>
+<!--
+
+这里涉及到 作用域的问题
+
+ ng-app 这里产生 $rootScope 上面 ng-init 生成数据模型 name
+绑定到 $rootscope;
+
+---- $rootscope.name (root)
+
+------ $scope.name (HelloCtrl)
+
+ng-controller="HelloCtrl" 生成新的作用域 $scope
+ng-model 产生数据模型 name 绑定到 $scope 上
+
+
+
+$scope 的问题
+
+
+$scope 相当于 MVVM 模式的里面 VM 视图模型层。
+
+
+  -->
+            <section>
+                <h3><em>Demo: </em><a href="demo/hello4.html" target="_blank">hello4.html</a></h3>
+            </section>
+
+            <!--
+
+
+        $rootscope.things;
+
+
+        $scope.things.name
+
+
+因为两者的data是同一个引用，对这个对象上面的属性修改，
+是可以反映到两级对象上的。
+我们通过引入一个data对象的方式，
+继续使用了原先的变量。
+-->
+        </section>
+
+        <section>
+
+            <section>
+                <h2>MVC ？  MVVM? MVW </h2>
+
+
+                <!-- Angularjs 是前端 MVC 框架，  model-view-controller -->
+
+                <!-- Angularjs官方认为 它们是 Model - View - WhatEver 不要关注到底是个怎么样的框架 -->
+
+                <!-- MVVM  Model-View-viewModel  （$scope　就是视图模型层）—— -->
+
+
+                <h4>MVC = Model + View + Controller</h4>
+                <h4>MVVM = Model + View + ViewController</h4>
+                <h4>MVW = Model + View + Whatever</h4>
+           </section>
+
+            <section>
+                 <img src="images/mvc.png" alt=""  width="800">
+            </section>
+
+            <section>
+                <h4><em>Demo:   </em><a href="demo/invoice1.html">invoice1</a></em></h4>
+                <img style="border:0;  width: 600px;"src="images/concepts-databinding2.png" alt="">
+            </section>
+
+            <section>
+                <h4> filter</h4>
+                <ul>
+                    <li>currency(货币)</li>
+                    <li>date(日期)</li>
+                    <li>filter(子串匹配)</li>
+                    <li>json(格式化json对象)</li>
+                    <li>limitTo(限制个数)</li>
+                    <li>lowercase(小写)</li>
+                    <li>uppercase(大写)</li>
+                    <li>number(数字)</li>
+                    <li>orderBy(排序)</li>
+                </ul>
+            </section>
+
+            <section>
+                <h4><em>Demo:   </em><a href="demo/invoice2.html">invoice2</a></em></h4>
+                <img style="border:0;  width: 500px;"src="images/concepts-module-service.png" alt="">
+            </section>
+
+
+   
+
+ <!--            <p>
+
+
+            MVVM模式是Model-View-ViewMode模式的简称。由视图(View)、视图模型(ViewModel)、模型(Model)三部分组成，通过这三部分实现 UI逻辑、呈现逻辑和状态控制、数据与业务逻辑的分离。
+
+Model将和ViewModel互动(通过$scope对象)，将监听Model的变化。这些可以通过View来发送和渲染，由HTML来展示你的 代码。View可以通过$routeProvider对象来支配，所以你可以深度的链接和组织你的View和Controller，将他们变成导航 URL。AngualrJS同时提供了无状态的Controller，可以用来初始化和控制$scope对象。
+
+
+Model用于封装与应用程序的业务逻辑相关的数据以及对数据的处理方法。它具有对数据直接访问的权利，例如对数据库的访问，Model不依赖于View和ViewModel，也就是说，模型不关心会被如何显示或是如何被操作，模型也不能包含任何用户使用的与界面相关的逻辑。
+
+ViewModel是一个用来提供特别数据和方法从而维护指定view的对象,。ViewModel是$scope的对象，只存在于AnguarJS的应用中。$scope只是一个简单的js对象，这个对象使用简单的API来侦测和广播状态变化。
+
+Controller负责设置初始状态和参数化$scope方法用以控制行为。需要指出的controller并不保存状态也不和远程服务互动。
+
+View是AngularJS解析后渲染和绑定后生成的HTML。这个部分帮助你创建web应用的架构。$scope拥有一个针对数据的参考，controller定义行为，view处理布局和互动。
+
+ng-controller指令就是用来定义应用程序控制器的，并且同时创建了一个新的作用域关联到相应的DOM元素上。</p> -->
+        </section>
+
+
+
+
+
+
+        <section>
+            <section><h2>Diretive</h2></section>
+            <!-- <section>
+                <h3>
+                    html as template
+                </h3>
+
+                 内部指令 咱们可以自己创造指令
+
+                 优先使用内部指令 
+            </section> -->
+
+
+            <section>
+                <h3>
+                  <em>Demo: </em><a href="demo/clock.html" target="_blank">clock</a>
+                </h3>
+            </section>
+        </section>
+
+
+
+  <!--       <section>
+            <h2>Service</h2>
+            <!-- 少一个例子 -->
+        <!-- </section> -->
+      <!--
+        <section>
+            <section>
+                <h2>filter</h2>
+           http://checkcheckzz.gitbooks.io/angularjs-learning-notes/content/chapter8/8-5.html -->
+
+                <!-- http://www.cnblogs.com/lvdabao/p/3475426.html 
+            </section>
+
+            <section>
+                
+            </section>
+        </section>-->
+
+        <section>
+            <section><h2>Route</h2></section>
+
+            <section><h3><em>Demo: </em><a href="demo/route-demo/#/phones">route-Demo</a></h3></section>
+        </section>
+
+        <section>
+            <section>
+                <h2>How AngularJS run</h2>
+            </section>
+            <section>
+                <h3>AngularJS应用 启动过程</h3>
+                <img style="float:left;border: 0;width: 500px;background:none;box-shadow:none"src="images/44.png" alt="">
+                <ul style="  position: relative;top: 70px;">
+                    <li class="fragment">浏览器载入HTML，解析成DOM</li>
+                    <li class="fragment">加载Angular类库</li>
+                    <li class="fragment">DOMContentLoaded事件中开始bootstrap</li>
+                    <li class="fragment">寻找 ng-app， 注入服务</li>
+                    <li class="fragment">编译DOM并链接到对应的scope数据</li>
+                </ul>
+
+                <!-- 通过ngApp指令来自动引导AngularJS应用是一种简洁的方式，适合大多数情况。在高级开发中，例如使用脚本装载应用，您也可以使用bootstrap手动引导AngularJS应用。AngularJS应用引导过程有3个重要点：
+注入器(injector)将用于创建此应用程序的依赖注入(dependency injection)；注入器将会创建根作用域作为我们应用模型的范围；
+AngularJS将会链接根作用域中的DOM，从用ngApp标记的HTML标签开始，逐步处理DOM中指令和绑定。
+一旦AngularJS应用引导完毕，它将继续侦听浏览器的HTML触发事件，如鼠标点击事件、按键事件、HTTP传入响应等改变DOM模型的事件。这类事件一旦发生，AngularJS将会自动检测变化，并作出相应的处理及更新。 -->
+            </section>
+
+
+            <section>
+                <h3>AngularJS应用  执行期</h3>
+                <img src="images/55.png" style="float:left;border: 0;width: 500px;background:none;box-shadow:none" alt="">
+                <ul>
+                    <li class="fragment">浏览器等待用户事件触发<br>（用户交互，定时器，网络事件…）
+                    </li>
+                    <li class="fragment">浏览器执行事件回调，进入Javascript上下文</li>
+                    <li class="fragment">Angular在$apply中接管了JS的执行部分</li>
+                    <li class="fragment">Angular进入$digest循环</li>
+                    <li class="fragment">Angular进行脏数据检查</li>
+                    <li class="fragment">批量更新DOM，$digest结束</li>
+                    <li class="fragment">浏览器开始渲染</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>执行器示例</h3>
+                <img  style="border: 0;width: 400px;background:none;box-shadow:none"src="images/66.png" alt="">
+                <ul class="holly" >
+                    <li><small>编译期</small>
+                        <ul>
+                            <li class="fragment"><small>Angular解析Directive: input[text]</small></li>
+                            <li class="fragment"><small>解析ng-model并为input绑定key事件</small></li>
+                            <li class="fragment"><small>为{{vm.name}}建立$watch表达式，进行监听</small></li>
+                        </ul>
+                    </li>
+                    <li class="fragment"><small>执行期</small>
+                        <ul>
+                            <li class="fragment"><small>用户在input输入按键，触发了浏览器的key事件</small></li>
+                            <li class="fragment"><small>事件回调， 进入Javascript上下文</small></li>
+                            <li class="fragment"><small>angular接管，在$apply中修改scope的name取值</small></li>
+                            <li class="fragment"><small>触发$digest流程</small></li>
+                            <li class="fragment"><small>脏数据检测，发现$watch列表中的name值变更</small></li>
+                            <li class="fragment"><small>通知对应的处理函数， 更新DOM</small></li>
+                            <li class="fragment"><small>Angular退出执行上下文，退出Javascript的事件处理函数</small></li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>How to write AngularJS</h2>
+            </section>
+
+            <section>
+                <h3>Thing in FE developing</h3>
+            </section>
+
+
+            <section>
+                <h3>传统前端开发思维</h3>
+                <ul>
+                    <li>以JQuery为代表</li>
+                    <li><strong style="color:green">以DOM为中心</strong></li>
+                    <li>关注VIEW层的变化和用户操作</li>
+                    <li>「我有这样一个DOM，我想让它做XX」</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>新一代前端开发思维</h3>
+                <ul>
+                    <li>以AngularJS为代表</li>
+                    <li><strong style="color:green">以Data为中心</strong></li>
+                    <li>以JQuery为代表</li>
+                    <li>MVW = Model + View + WhatEver</li>
+                </ul>
+            </section>
+
+
+            <section>
+                <h3>实现一个下拉框(三级+级联)</h3>
+                <img src="images/1.png" alt="">
+            </section>
+
+            <section>
+                <h3>jQuery程序猿</h3>
+                <ul style="position: relative;top: -100px;margin-right: 39px;">
+                    <li>分别监控下拉框A/B/C的change事件</li>
+                    <li>在事件中，取得下级的引用</li>
+                    <li>查询符合上级筛选条件的下级数据</li>
+                    <li>循环，更新下级的数据,更新下下级的数据</li>
+                    <li>....</li>
+                </ul>
+                <img class="fragment" src="images/3.png" alt="">
+            </section>
+
+
+            <section>
+                <h3>AngularJS攻城狮</h3>
+                <ul style="position: relative;top: -100px;margin-right: 39px;">
+                    <li>定义下拉框A的数据源和model</li>
+                    <li>定义下拉框B的数据源和model</li>
+                    <li>在$watch里更新model引用</li>
+                </ul>
+                 <img class="fragment" src="images/11.png" alt="" style="width: 226px;height: 300px;border: 0;">
+                 <h4 class="fragment"><em>Demo:</em><a href="demo/cascade/index.tpl.html" target="_blank">cascade.html</a></h4>
+            </section>
+
+            <section>
+                <h2>AngularJs philosophy</h2>
+                <p class="fragment">  声明式编程应该用于构建用户界面以及编写软件构建，<br>而指令式编程非常适合来表示业务逻辑。</p>
+            </section>
+
+<!-- <section>框架采用并扩展了传统HTML，通过双向的数据绑定来适应动态内容，双向的数据绑定允许模型和视图之间的自动同步。因此，AngularJS使得对DOM的操作不再重要并提升了可测试性。</section>
+
+            <section>设计目标：
+将应用逻辑与对DOM的操作解耦。这会提高代码的可测试性。
+将应用程序的测试看的跟应用程序的编写一样重要。代码的构成方式对测试的难度有巨大的影响。
+将应用程序的客户端与服务器端解耦。这允许客户端和服务器端的开发可以齐头并进，并且让双方的复用成为可能。
+指导开发者完成构建应用程序的整个历程：从用户界面的设计，到编写业务逻辑，再到测试。
+Angular遵循软件工程的MVC模式，并鼓励展现，数据，和逻辑组件之间的松耦合。通过依赖注入（dependency injection），Angular为客户端的Web应用带来了传统服务端的服务，例如独立于视图的控制。因此，后端减少了许多负担，产生了更轻的Web应用。</section> -->
+        </section>
+
+
+
+
+
+        <section>
+            <section>
+                <h2>How to learn Angularjs</h2>
+            </section>
+
+
+
+            <section>
+                <img style="width: 700px;border: 0;" src="images/feelings_about_angularjs_over_time.png" alt="">
+            </section>
+
+
+            <section>
+
+                <ul>
+                    <li>
+                        社区
+
+                        <ul>
+                            <li><a href="http://angularjs.org">http://angularjs.org</a>(墙)</li>
+                            <li><a href="http://www.ngnice.com/">http://www.ngnice.com/</a></li>
+                            <li> <a href="http://www.ngnice.com/showcase/">ngcie showcase</a></li>
+                            <li><a href="http://www.angularjs.cn/">http://www.angularjs.cn/</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+
+                        博客
+                        <ul>
+                            <li><a href="https://github.com/xufei/blog/issues">Xufei</a></li>
+                        </ul>
+                    </li>
+
+                    <li> 书籍
+                        <ul>
+                            <li>精通 Angularjs</li>
+                            <li>Pro Angularjs</li>
+                            <li>Angularjs 权威教程</li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+
+            </section>
+
+
+            <section>
+                <img style="border:0"src="images/keep-calm-and-use-angularjs.png" alt="">
+            </section>
+
+
+    <!--         <section>
+                <img src="images/anghero.png" alt="get from http://nathanleclaire.com/blog/2013/12/07/dont-fear-directives-in-angular-js/">
+                <h3><em>Superheroic</em></h3>
+            </section>
+ -->
+
+        
+            <section  data-background="images/33.png">
+                <img class="fragment" style="  border: 0;background: none;box-shadow: none;   position: absolute;bottom: 0;right: 0;width: 300px;height: 456px;  float: right;position: relative;right: -100px;"src="images/anghero.png" alt="get from http://nathanleclaire.com/blog/2013/12/07/dont-fear-directives-in-angular-js/">
+            </section>
+
+
+        </section>
+
+
+
+        <section class="fin">
+            <h2 class="title">&lt;thank-you&gt;</h2>
+            <div class="box-small group">
+                <img class="avatar" src="images/avatar.jpg" width="64" height="64" alt="avatar">
+                <a href="http://twitter.com/paddingme" target="_blank">@PaddingMe</a>
+            </div>
+
+            <div class="box-small group">
+                <img class="avatar" src="images/favicon.ico" width="64" height="64" alt="avatar">
+                <a href="http://padding.me" target="_blank">http://padding.me</a>
+                <br>
+            </div>
+            <p><a href="http://padding.me/slide/angularjs">http://padding.me/slide/angularjs</a></p>
+            <p>Powered By <a href="https://github.com/hakimel/reveal.js/">reveal.js</a></p>
+        </section>
+    </div>
+</div>
+
+
+
+
+<script src="js/libs/jquery.min.js"></script>
+<script src="lib/js/head.min.js"></script>
+<script src="js/libs/reveal.min.js"></script>
+<script>
+    Reveal.initialize({
+        history: true,
+        width: 1240,
+        transition: 'linear',
+        theme: 'default',
+    });
+</script>
+<script src="../../javascripts/google_analytics.js"></script>
+</body>
+</html>

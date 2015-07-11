@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+/**
+ * @file: lzx.common.css(v0.0.1)
+ * @author: huhb
+ * @update: 20150105
+ * @note: lzx.common.css 结合 html5-reset.css,kissy-cssreset.css,normalize.css,css-tools-css-reset 等
+ * reset/common css，结合 lzx 校园网站建设需要，适合 lzx 适用的 common css。
+ * @doc: todo
+ */
+body, h1, h2, h3, h4, h5, h6, hr, p,dl, dt, dd, ul, ol, li, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+body,button, input, select, textarea {
+    font: 14px/1.5 Helvetica, Tahoma, Arial,"Microsoft YaHei", "微软雅黑", STXihei,"华文细黑", SimSun, "\5b8b\4f53", Heiti, "黑体",sans-serif;
+}
+h1 { font-size: 21px;}
+h2 { font-size: 18px; }
+h3 { font-size: 16px; }
+h4, h5, h6 { font-size: 100%; }
+small { font-size: 12px; }
+ul, ol { list-style: none; }
+a {
+  text-decoration: none;
+  color: #fff;
+}
+a:hover {
+  color: green;
+  text-decoration: underline;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+img { border: none; }
+button, input, select, textarea {
+    font-size: 100%;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+hr {
+    border: none;
+    height: 1px;
+}
+:focus {
+  outline: 0;
+}
+.clearfix:after {
+  content:"\200B";
+  display:block;
+  height:0;
+  clear:both;
+}
+.clearfix { *zoom:1; }
+.fl { float: left;}
+.fr { float: right;}
+.w {
+  width: 1007px;
+  margin: 0 auto;
+}
+/*.tc {
+  text-align: center;
+}
+.vm {
+  vertical-align: middle;
+}
+*/
+.tl { text-align: left; }
+.mr10 { margin-right: 10px;}
+.hide {display: none;}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>Cascade Demo</title>
+    <link rel="stylesheet" href="../vendor/bootstrap.min.css">
+    <script src="../vendor/angular.min.js"></script>
+</head>
+<body ng-app="cascade" ng-controller="cascadeCtrl" class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <select class="form-control" ng-model="vm.country" ng-options="contry.label for contry in vm.countries">
+                <option value="">-- 请选择国家--</option>
+            </select>
+        </div>
+
+        <div class="col-md-4" ng-if="vm.country.provinces">
+            <select class="form-control" ng-model="vm.province" ng-options="province.label for province in vm.country.provinces">
+                <option value="">-- 请选择省份--</option>
+            </select>
+        </div>
+
+
+        <div class="col-md-4" ng-if="vm.province.cities">
+            <select class="form-control" ng-model="vm.city" ng-options="city.label for city in vm.province.cities">
+                <option value="">-- 请选择城市/县区--</option>
+            </select>
+        </div>
+    </div>
+
+    <hr>
+    <div class="alert alert-info">您选择的是{{vm.country.label}}-->{{vm.province.label}}-->{{vm.city.label}}</div>
+
+
+    <script src="app.js"></script>
+    <script src="city-data.js"></script>
+    <script src="cascadeCtrl.js"></script>
+
+</body>
+</html>
