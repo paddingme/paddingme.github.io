@@ -475,3 +475,23 @@ blockquote p.attribution {
     margin-top: 0;
   }
 }
+
+
+/*20150712*/
+
+.fr {
+    float: right;
+}
+
+
+.clearfix:after {
+    content: '\200B';
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
