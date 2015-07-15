@@ -30,6 +30,9 @@
     .holly li {
         line-height: 1em;
     }
+    .holly small {
+        font-size: .8em;
+    }
 </style>
 </head>
 
@@ -142,10 +145,10 @@ ng-app指令来标明一个AngularJS应用程序，并通过AngularJS完成自�
 
 <!-- 数据双向绑定 view 随着视图的变化而变化 -->
 
-<!-- 任何用户引发的视图的改变，会映射到模型上，继而任何模型的改变，也会立刻传播到整个模板上 --> 
+<!-- 任何用户引发的视图的改变，会映射到模型上，继而任何模型的改变，也会立刻传播到整个模板上 -->
             </section>
 
-    
+
             <section>
                 <h3><em>Demo: </em><a href="demo/hello2.html" target="_blank">hello2.html</a></h3>
             </section>
@@ -271,7 +274,7 @@ $scope 相当于 MVVM 模式的里面 VM 视图模型层。
             </section>
 
 
-   
+
 
  <!--            <p>
 
@@ -306,7 +309,7 @@ ng-controller指令就是用来定义应用程序控制器的，并且同时创�
 
                  内部指令 咱们可以自己创造指令
 
-                 优先使用内部指令 
+                 优先使用内部指令
             </section> -->
 
 
@@ -329,11 +332,11 @@ ng-controller指令就是用来定义应用程序控制器的，并且同时创�
                 <h2>filter</h2>
            http://checkcheckzz.gitbooks.io/angularjs-learning-notes/content/chapter8/8-5.html -->
 
-                <!-- http://www.cnblogs.com/lvdabao/p/3475426.html 
+                <!-- http://www.cnblogs.com/lvdabao/p/3475426.html
             </section>
 
             <section>
-                
+
             </section>
         </section>-->
 
@@ -382,7 +385,7 @@ AngularJS将会链接根作用域中的DOM，从用ngApp标记的HTML标签开�
 
             <section>
                 <h3>执行器示例</h3>
-                <img  style="border: 0;width: 400px;background:none;box-shadow:none"src="images/66.png" alt="">
+                <img  style="border: 0;width: 400px;background:none;box-shadow:none;height: 355px;"src="images/66.png" alt="">
                 <ul class="holly" >
                     <li><small>编译期</small>
                         <ul>
@@ -411,7 +414,7 @@ AngularJS将会链接根作用域中的DOM，从用ngApp标记的HTML标签开�
             </section>
 
             <section>
-                <h3>Thing in FE developing</h3>
+                <h3>Thinking in FE developing</h3>
             </section>
 
 
@@ -419,7 +422,7 @@ AngularJS将会链接根作用域中的DOM，从用ngApp标记的HTML标签开�
                 <h3>传统前端开发思维</h3>
                 <ul>
                     <li>以JQuery为代表</li>
-                    <li><strong style="color:green">以DOM为中心</strong></li>
+                    <li><strong style="color:rgb(248, 85, 95)">以DOM为中心</strong></li>
                     <li>关注VIEW层的变化和用户操作</li>
                     <li>「我有这样一个DOM，我想让它做XX」</li>
                 </ul>
@@ -429,7 +432,7 @@ AngularJS将会链接根作用域中的DOM，从用ngApp标记的HTML标签开�
                 <h3>新一代前端开发思维</h3>
                 <ul>
                     <li>以AngularJS为代表</li>
-                    <li><strong style="color:green">以Data为中心</strong></li>
+                    <li><strong style="color:rgb(248, 85, 95)">以Data为中心</strong></li>
                     <li>以JQuery为代表</li>
                     <li>MVW = Model + View + WhatEver</li>
                 </ul>
@@ -465,6 +468,25 @@ AngularJS将会链接根作用域中的DOM，从用ngApp标记的HTML标签开�
                  <h4 class="fragment"><em>Demo:</em><a href="demo/cascade/index.tpl.html" target="_blank">cascade.html</a></h4>
             </section>
 
+
+            <section>
+                <h3>摆脱思维定势</h3>
+
+                <ul>
+                    <li>时刻以数据为中心进行思考
+                        <ul>
+                            <li>构思数据结构</li>
+                            <li>构思操作逻辑，声明式</li>
+                            <li>双向绑定VIEW，慎用逻辑</li>
+                            <li>忘记<em>「我有这么一个DOM，我想让它实现XXX」</em></li>
+                        </ul>
+                    </li>
+                    <li>除了Directive，其他地方<strong>决不</strong>能操作DOM</li>
+                    <li>善于内置指令组合，适当写自定义指令</li>
+                </ul>
+
+                <img class="fragment" src="images/88.png" alt="" style="width: 226px;height: 300px;border: 0;">
+            </section>
             <section>
                 <h2>AngularJs philosophy</h2>
                 <p class="fragment">  声明式编程应该用于构建用户界面以及编写软件构建，<br>而指令式编程非常适合来表示业务逻辑。</p>
@@ -533,7 +555,7 @@ Angular遵循软件工程的MVC模式，并鼓励展现，数据，和逻辑组�
 
 
             <section>
-                <img style="border:0"src="images/keep-calm-and-use-angularjs.png" alt="">
+                <img style="border:0"src="images/keep-calm-and-learn-angular-js.png" alt="">
             </section>
 
 
@@ -543,7 +565,7 @@ Angular遵循软件工程的MVC模式，并鼓励展现，数据，和逻辑组�
             </section>
  -->
 
-        
+
             <section  data-background="images/33.png">
                 <img class="fragment" style="  border: 0;background: none;box-shadow: none;   position: absolute;bottom: 0;right: 0;width: 300px;height: 456px;  float: right;position: relative;right: -100px;"src="images/anghero.png" alt="get from http://nathanleclaire.com/blog/2013/12/07/dont-fear-directives-in-angular-js/">
             </section>
