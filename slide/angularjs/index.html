@@ -242,12 +242,20 @@ $scope 相当于 MVVM 模式的里面 VM 视图模型层。
                 <h4>MVC = Model + View + Controller</h4>
                 <h4>MVVM = Model + View + ViewController</h4>
                 <h4>MVW = Model + View + Whatever</h4>
+                <!-- Model-View-Whatever. Where Whatever stands for “whatever works for you”. -->
            </section>
 
             <section>
                  <img src="images/mvc.png" alt=""  width="800">
             </section>
 
+            <section>
+                <img src="images/angular-mvvm.png" alt="" width="800">
+            </section>
+<!-- View：它专注于界面的显示和渲染，在angular中则是包含一堆声明式Directive的视图模板。
+ViewModel：它是View和Model的粘合体，负责View和Model的交互和协作，它负责给View提供显示的数据，以及提供了View中Command事件操作Model的途径；在angular中$scope对象充当了这个ViewModel的角色；
+Model：它是与应用程序的业务逻辑相关的数据的封装载体，它是业务领域的对象，Model并不关心会被如何显示或操作，所以模型也不会包含任何界面显示相关的逻辑。在web页面中，大部分Model都是来自Ajax的服务端返回数据或者是全局的配置对象；而angular中的service则是封装和处理这些与Model相关的业务逻辑的场所，这类的业务服务是可以被多个Controller或者其他service复用的领域服务。
+Controller：这并不是MVVM模式的核心元素，但它负责ViewModel对象的初始化，它将组合一个或者多个service来获取业务领域Model放在ViewModel对象上，使得应用界面在启动加载的时候达到一种可用的状态。 -->
             <section>
                 <h4><em>Demo:   </em><a href="demo/invoice1.html">invoice1</a></em></h4>
                 <img style="border:0;  width: 600px;"src="images/concepts-databinding2.png" alt="">
@@ -528,6 +536,8 @@ Angular遵循软件工程的MVC模式，并鼓励展现，数据，和逻辑组�
                             <li><a href="http://angularjs.org">http://angularjs.org</a>(墙)</li>
                             <li><a href="http://www.ngnice.com/">http://www.ngnice.com/</a></li>
                             <li> <a href="http://www.ngnice.com/showcase/">ngcie showcase</a></li>
+                            <li><a href="http://ngmodules.org/">http://ngmodules.org/</a></li>
+                            <!-- ng-bootstrap 介绍下 -->
                             <li><a href="http://www.angularjs.cn/">http://www.angularjs.cn/</a></li>
                         </ul>
                     </li>
@@ -547,6 +557,8 @@ Angular遵循软件工程的MVC模式，并鼓励展现，数据，和逻辑组�
                             <li>Angularjs 权威教程</li>
                         </ul>
                     </li>
+
+                    <li><a href="https://github.com/johnpapa/angular-styleguide/blob/master/i18n/zh-CN.md">Angular风格指南</a></li>
 
                 </ul>
 
