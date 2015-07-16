@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-cmn-Hans">
+
 <head>
     <meta charset="UTF-8">
     <title>hello1 demo</title>
@@ -9,25 +10,26 @@
 <body ng-app="ezstuff">
     <ez-clock></ez-clock>
 
-<script>
-/**
-* ezstuff Module
-*
-* Description
-*/
-angular.module('ezstuff', [])
-.directive('ezClock',function(){
-    return {
-        restrict : 'E',
-        template : '<div></div>',
-        link : function(scope,element,attrs){
-            setInterval(function(){
-                var d = new Date();
-                element.text(d.toString());
-            },1000);
-        }
-    }
-});
-</script>
+    <script>
+    /**
+     * ezstuff Module
+     *
+     * Description
+     */
+    angular.module('ezstuff', [])
+        .directive('ezClock', function() {
+            return {
+                restrict: 'E',
+                template: '<div></div>',
+                link: function(scope, element, attrs) {
+                    setInterval(function() {
+                        var d = new Date();
+                        element.text(d.toString());
+                    }, 1000);
+                }
+            }
+        });
+    </script>
 </body>
+
 </html>
