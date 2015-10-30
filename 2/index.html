@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>倒计时 DEMO</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+    	body {
+    		background-color:#EDEDED
+    	}
+		
+		h1 {
+			text-align: center;
+			margin-top: 140px;
+		}
+    	#Stage_jbeeb_3 {
+			position: fixed!important;
+			top: 50%!important;
+			left: 50%!important;
+			margin-left: -200px;
+    	}
+    </style>
+</head>
+
+<body class="container">
+
+
+
+    <h1>敢拼趁现在，赢在双十一</h1>
+    <h1 style="margin-top:5%;font-size:44px;">距离2015年11月11日还有</h1>
+    <script src="js/countdown.js" type="text/javascript"></script>
+    <script>
+    var myCountdownTest = new Countdown({
+        year: 2015,
+        month: 11,
+        day: 11,
+        width: 400,
+        height: 100,
+        rangeHi:"hour",
+		style:"flip"
+    });
+    </script>
+
+</body>
+
+</html>

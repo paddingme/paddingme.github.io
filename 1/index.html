@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>轻量级jQuery倒计时插件 - 站长素材</title>
+
+<style type="text/css">
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400);
+body {
+	background: #363f48;
+	color: white;
+	font: normal 12px 'Open Sans', sans-serif;
+	margin-top: 20px;
+}
+ul.countdown {
+	list-style: none;
+	margin: 75px 0;
+	padding: 0;
+	display: block;
+	text-align: center;
+}
+ul.countdown li {
+	display: inline-block;
+}
+ul.countdown li span {
+	font-size: 80px;
+	font-weight: 300;
+	line-height: 80px;
+}
+ul.countdown li.seperator {
+	font-size: 80px;
+	line-height: 70px;
+	vertical-align: top;
+}
+ul.countdown li p {
+	color: #a7abb1;
+	font-size: 14px;
+}
+a {
+	color: #76949F;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+.source {
+	width: 405px;
+	margin: 0 auto;
+	background: #4f5861;
+	color: #a7abb1;
+	font-weight: bold;
+	display: block;
+	white-space: pre;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+.btn {
+	background: #f56c4c;
+	margin: 40px auto;
+	padding: 12px;
+	display: block;
+	width: 100px;
+	color: white;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-decoration: none;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+.btn:hover {
+	text-decoration: none;
+	opacity: .7;
+}
+</style>
+
+</head>
+<body>
+<h1 align="center" style="margin-top:150px;font-size: 32px;;">敢拼趁现在，共赢双十一</h1>
+<h1 style="font-size: 42px;text-align:center">距离2015年11月11日还有</h1>
+<ul class="countdown">
+  <!-- <li> <span class="days">00</span> -->
+    <!-- <p class="days_ref">days</p> -->
+<!--   </li>
+  <li class="seperator">天</li> -->
+  <li> <span class="hours">00</span>
+    <!-- <p class="hours_ref">hours</p> -->
+  </li>
+  <li class="seperator">时</li>
+  <li> <span class="minutes">00</span>
+    <!-- <p class="minutes_ref">minutes</p> -->
+  </li>
+  <li class="seperator">分</li>
+  <li> <span class="seconds">00</span>
+    <!-- <p class="seconds_ref">秒</p> -->
+  </li>
+   <li class="seperator">秒</li>
+</ul>
+<script type="text/javascript" src="js/jquery.min.js"></script> 
+<script type="text/javascript" src="js/jquery.downCount.js"></script> 
+<script>
+	$('.countdown').downCount({
+		date: '11/11/2015 00:00:00',
+		offset: +10
+	}, function () {
+		alert('倒计时结束!');
+	});
+</script>
+
+
+</body>
+</html>
