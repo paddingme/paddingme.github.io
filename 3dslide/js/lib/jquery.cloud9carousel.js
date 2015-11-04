@@ -67,6 +67,7 @@
       $reflection.css( 'margin-top', options.mirror.gap + 'px' );
       $reflection.css( 'width', '100%' );
       element.style.width = "100%";
+       element.style.height = "220px";
 
       // The item element now contains the image and reflection
       this.element = this.element.parentNode;
@@ -170,6 +171,7 @@
         this.yOrigin + (scale * sin * this.yRadius),
         scale
       );
+
     }
 
     this.render = function() {
@@ -377,7 +379,7 @@
         fps: 30,              // fixed frames per second (if smooth animation is off)
         speed: 4,             // positive number
         autoPlay: 0,          // [ 0: off | number of items (integer recommended, positive is clockwise) ]
-        autoPlayDelay: 4000,
+        autoPlayDelay: 8000,
         bringToFront: false,
         itemClass: 'cloud9-item',
         handle: 'carousel'

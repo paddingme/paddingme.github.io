@@ -55,8 +55,9 @@
 					wrapper.className = img.className;
 					$(img).data("reflected", wrapper.style.cssText = img.style.cssText);
 					$(wrapper).css({width: imageWidth, height: imageHeight + reflectionHeight, overflow: "hidden"});
-					img.style.cssText = "display: block; border: 0px";
+					img.style.cssText = "display: block; border: 2px solid #fff";
 					img.className = "reflected";
+
 				}
 
 				if (img.complete) doReflect();

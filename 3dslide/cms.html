@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="http://115.28.134.189:8083//cms/r/cms/ezyz/ezyz/css/style.css">
 
   <script src="http://libs.useso.com/js/jquery/1.8.0/jquery-1.8.0.js"></script>
-  <script src="http://padding.me/3dslide/js/lib/jquery.reflection.js"></script>
-  <script src="http://padding.me/3dslide/js/lib/jquery.cloud9carousel.js"></script>
+  <script src="js/lib/jquery.reflection.js"></script>
+  <script src="js/lib/jquery.cloud9carousel.js"></script>
 
     </script>
 <!-- // huhb -->
@@ -100,35 +100,52 @@ a:hover {
     color: #666;
 }
 
-/*tofix 文字居中*/
 
-.snav {
-  width: 1024px;
-  margin: 0 auto;
-  background: red;
-}
-/*    position: absolute;
-    bottom: 320px;
-    background: #DCD5D5;
-    width: 300px;
-    left: 362px;
-    z-index: 9999;
-    padding: 10px 0;
-    opacity: 0.5;
-    color: red;
-    text-align: center;*/
 #carousel-left {
-  left: 40px;
-  top:313px;
+    left: -380px;
+    top: -140px;
 }
 #carousel-right {
-  right: 40px;
-  top:313px;
+    right: -380px;
+    top: -140px;
 }
-/*.cloud9-item .reflected { 
-  width:400px!important;
-  height:250px!important;
-}*/
+.cloud9-item {
+    width: 350px;
+    height: 262px;
+}
+.item-title {
+    width:100%!important;
+}
+.snav {
+    height: 40px;
+    position: relative;
+    top: -320px;
+    width: 350px;
+    z-index: 999999;
+    margin: 0 auto;
+
+}
+.carousel-container {
+   width:1024px;
+   margin:0 auto;
+   background: none;height:500px;
+   overflow: visible!important;
+}
+.shaows {
+   width:100%;
+   text-align:center;
+   line-height:40px;
+
+   font-size:22px;
+   font-weight:bold;
+   background-color: rgba(60,57,57,.5);
+   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f3C3939,endColorstr=#7f3C3939);zoom:1;
+}
+.shaows  a {
+   color:red;
+}
+:root .shaows{filter:none\9;}/*for IE9*/
+
 </style>
 </head>
 
@@ -143,17 +160,17 @@ a:hover {
     </div>
 
 
-    <div class="carousel-container" id="carouselDiv" style="width:1024px;margin:0 auto;background: none;height:500px;overflow: visible!important;">
-
-        <img class="cloud9-item" src="http://115.28.134.189:8083/cms/u/cms/ezyz/201505/19170635dw7b-thumb-medium.jpg" alt="图书馆">
-        <img class="cloud9-item" src="http://115.28.134.189:8083/cms/u/cms/ezyz/201505/19170523hsxm-thumb-medium.jpg" alt="特色教师">
-        <img class="cloud9-item" src="http://115.28.134.189:8083/cms/u/cms/ezyz/201505/19161534cibn-thumb-medium.jpg" alt="实验楼">
-        <img class="cloud9-item" src="http://115.28.134.189:8083/cms/u/cms/ezyz/201505/11165048ws46-thumb-medium.jpg" alt="教学大楼">
+    <div class="carousel-container" id="carouselDiv" >
+        <img class="cloud9-item" src="http://115.28.134.189:8083/cms/u/cms/ezyz/201505/19170635dw7b-thumb-medium.jpg" alt="<p class='shaows'><a href='http://115.28.134.189:8083/cms/ezyz/banner/709.jhtml'>图书馆</a></p>">
+        <img class="cloud9-item" src="http://115.28.134.189:8083/cms/u/cms/ezyz/201505/19170635dw7b-thumb-medium.jpg" alt="<p class='shaows'><a href='http://115.28.134.189:8083/cms/ezyz/banner/709.jhtml'>图书馆</a></p>">
+        <img class="cloud9-item" src="http://115.28.134.189:8083/cms/u/cms/ezyz/201505/19170523hsxm-thumb-medium.jpg" alt="<p class='shaows'><a href='http://115.28.134.189:8083/cms/ezyz/banner/709.jhtml'>特色教师</a></p>">
+        <img class="cloud9-item" src="http://115.28.134.189:8083/cms/u/cms/ezyz/201505/19161534cibn-thumb-medium.jpg" alt="<p class='shaows'><a href='http://115.28.134.189:8083/cms/ezyz/banner/709.jhtml'>实验楼</a></p>">
+        <img class="cloud9-item" src="http://115.28.134.189:8083/cms/u/cms/ezyz/201505/11165048ws46-thumb-medium.jpg" alt="<p class='shaows'><a href='http://115.28.134.189:8083/cms/ezyz/banner/709.jhtml'>教学大楼</a></p>">
     </div>
 
 
-    <div class="snav">
-             <p id="item-title" style="display:none">&nbsp;</p>
+    <div class="snav" >
+             <p id="item-title" style="display:none;">&nbsp;</p>
             <div id="carousel-left" class="dg-prev">
                 <img src="http://115.28.134.189:8083/cms/r/cms/ezyz/ezyz/images/arrow-left.png" class="sign-button"/>
             </div>
@@ -180,17 +197,17 @@ a:hover {
         onLoaded: function() {
           showcase.css( 'visibility', 'visible' )
           showcase.css( 'display', 'none' )
-          showcase.fadeIn( 1500 )
+          showcase.fadeIn( 3000 )
         }
       } )
 
       function rendered( carousel ) {
-        title.text( carousel.nearestItem().element.alt )
 
+        title.html( carousel.nearestItem().element.alt);
         // Fade in based on proximity of the item
-        var c = Math.cos((carousel.floatIndex() % 1) * 2 * Math.PI)
-        title.css('opacity', 0.5 + (0.5 * c));
-        title.show(1500);
+        // var c = Math.cos((carousel.floatIndex() % 1) * 2 * Math.PI)
+        // title.css('opacity', 0.5 + (0.5 * c));
+        title.show(1000).delay(6000).hide(1000)
       }
 
     })

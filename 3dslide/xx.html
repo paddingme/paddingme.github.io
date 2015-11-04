@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!--
+    Species endangered by Homo sapiens
+    Demo by Ildar Sagdejev ( http://twitter.com/tknomad )
+  -->
+  <meta charset="UTF-8">
+  <title>Endangered species</title>
+  <link rel="stylesheet" href="css/common.css">
+  <style>
+    body {
+      background: url(images/species/bg.jpg) no-repeat center top fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    a {
+      color: #e5e616;
+    }
+    a:hover {
+      color: #88a7f7;
+    }
+    .wrap > h1 {
+      color: rgb(221, 142, 22);
+      margin: 14px auto 0;
+    }
+    #showcase {
+      height: 570px;
+      overflow: visible !important;
+    }
+    .card {
+      width: 260px;
+      padding: 12px;
+      text-align: center;
+      background-color: rgba(61, 9, 9, 0.8);
+      border: 2px white dotted;
+      border-radius: 12px;
+    }
+    .card h2 {
+      margin: 0 0 7px 0;
+    }
+    .card a {
+      font-size: 18px;
+      display: block;
+    }
+    .card p {
+      font-size: 15px;
+    }
+    .nav {
+      width: 64px;
+      height: 134px;
+      color: #ccc;
+      font: bold 3em "Lucida Grande";
+      text-align: center;
+      text-shadow: 0px 1px 0px #f5f5f5;
+      background: rgba(150, 150, 150, 0.5);
+      border: solid 2px rgba(0, 0, 0, 0.4);
+      -webkit-box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.45);
+      -moz-box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.45);
+      box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.45);
+      cursor: pointer;
+      position: absolute;
+      top: 33%;
+    }
+    .nav:active,
+    .nav.down {
+      background: rgba(120, 120, 120, 0.5);
+      border: solid 2px rgba(0, 0, 0, 0.55);
+    }
+    .nav.left {
+      left: -43px;
+      -webkit-border-radius: 12px 5px 5px 12px;
+      -moz-border-radius: 12px 5px 5px 12px;
+      border-radius: 12px 5px 5px 12px;
+    }
+    .nav.right {
+      right: -43px;
+      -webkit-border-radius: 5px 12px 12px 5px;
+      -moz-border-radius: 5px 12px 12px 5px;
+      border-radius: 5px 12px 12px 5px;
+    }
+    footer hr {
+      width: 6px;
+    }
+    #share {
+      top: -84px;
+    }
+    #credits {
+      top: -78px;
+    }
+    #photo-credits {
+      text-align: center;
+    }
+    #photo-credits h1 {
+      font-size: 1em;
+      margin-top: 0;
+      margin-bottom: 6px;
+    }
+    #photo-credits > ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrap">
+    <div id="showcase" class="noselect">
+      <div class="card">
+        <h2>Bengal Tiger</h2>
+        <img src="images/species/tiger.jpg">
+        <p>
+         Over the past century tiger numbers have fallen dramatically, with a decreasing population trend. None of the Tiger Conservation Landscapes within the Bengal tiger range is large enough to support an effective population size of 250 individuals. Habitat losses and the extremely large-scale incidences of poaching are serious threats to the species' survival.
+        </p>
+        <a href="http://en.wikipedia.org/wiki/Bengal_tiger">Learn more...</a>
+      </div>
+      <div class="card">
+        <h2>Giant Panda</h2>
+        <img src="images/species/panda.jpg">
+        <p>
+          The giant panda is an endangered species, threatened by continued habitat loss and by a very low birthrate, both in the wild and in captivity. Its range is currently confined to a small portion on the western edge of its historical range, which stretched through southern and eastern China, northern Myanmar, and northern Vietnam.
+        </p>
+        <a href="http://en.wikipedia.org/wiki/Giant_panda">Learn more...</a>
+      </div>
+      <div class="card">
+        <h2>Asian Elephant</h2>
+        <img src="images/species/elephant.jpg">
+        <p>
+          The pre-eminent threats to Asian elephants today are loss, degradation and fragmentation of habitat, leading in turn to increasing conflicts between humans and elephants. They are poached for ivory and a variety of other products including meat and leather.
+        </p>
+        <a href="http://en.wikipedia.org/wiki/Asian_elephant">Learn more...</a>
+      </div>
+      <div class="card">
+        <h2>Bornean Orangutan</h2>
+        <img src="images/species/orangutan.jpg">
+        <p>
+          Orangutan are becoming increasingly endangered due to habitat destruction and the bushmeat trade, and young orangutans are captured to be sold as pets, usually entailing the killing of their mothers.
+        </p>
+        <a href="http://en.wikipedia.org/wiki/Bornean_orangutan">Learn more...</a>
+      </div>
+      <div class="card">
+        <h2>Common Chimpanzee</h2>
+        <img src="images/species/chimp.jpg">
+        <p>
+          The biggest threats to the common chimpanzee are habitat destruction, poaching and disease. Chimpanzee habitats have been limited by deforestation in both West and Central Africa. Road building has caused habitat degradation and fragmentation of chimpanzee populations and may allow poachers more access to areas that have not been seriously impacted by humans.
+        </p>
+        <a href="http://en.wikipedia.org/wiki/Common_chimpanzee">Learn more...</a>
+      </div>
+      <div class="card">
+        <h2>Rothschild's Giraffe</h2>
+        <img src="images/species/giraffe.jpg">
+        <p>
+          While giraffes in general are classified as Least Concern, Rothschild's giraffe is at particular risk of hybridisation, as the population is so limited in numbers. Very few locations are left where Rothschild's giraffe can be seen in the wild, with notable spots being Lake Nakuru National Park in Kenya and Murchison Falls National Park in northern Uganda.
+        </p>
+        <a href="http://en.wikipedia.org/wiki/Rothschild%27s_giraffe">Learn more...</a>
+      </div>
+    </div>
+    <button class="nav noselect left">
+      &lt;
+    </button>
+    <button class="nav noselect right">
+      &gt;
+    </button>
+  </div>
+
+  <script src="js/lib/jquery.js"></script>
+  <script src="js/lib/jquery.cloud9carousel.js"></script>
+  <script>
+    $(function() {
+      var showcase = $("#showcase")
+      showcase.Cloud9Carousel( {
+        yOrigin: 42,
+        yRadius: 40,
+        itemClass: "card",
+        buttonLeft: $(".nav.left"),
+        buttonRight: $(".nav.right"),
+        bringToFront: true,
+        onLoaded: function() {
+          showcase.css( 'visibility', 'visible' )
+          showcase.css( 'display', 'none' )
+          showcase.fadeIn( 1500 )
+        }
+      } )
+      //
+      // Simulate physical button click effect
+      //
+      $('.nav').click( function( e ) {
+        var b = $(e.target).addClass( 'down' )
+        setTimeout( function() { b.removeClass( 'down' ) }, 80 )
+      } )
+      $(document).keydown( function( e ) {
+        //
+        // More codes: http://www.javascripter.net/faq/keycodes.htm
+        //
+        switch( e.keyCode ) {
+          /* left arrow */
+          case 37:
+            $('.nav.left').click()
+            break
+          /* right arrow */
+          case 39:
+            $('.nav.right').click()
+        }
+      } )
+    })
+  </script>
+  <script src="js/social.js" async></script>
+</body>
+</html>
