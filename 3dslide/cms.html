@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <title>北京二中亦庄学校</title>
+    <meta name="keywords" content="北京二中亦庄学校">
+    <meta name="description" content="北京二中亦庄学校">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="robots" content="index,follow">
+    <link rel="stylesheet" href="http://115.28.134.189:8083//cms/r/cms/ezyz/ezyz/css/style.css">
+
+  <script src="http://libs.useso.com/js/jquery/1.8.0/jquery-1.8.0.js"></script>
+  <script src="http://padding.me/3dslide/js/lib/jquery.reflection.js"></script>
+  <script src="http://padding.me/3dslide/js/lib/jquery.cloud9carousel.js"></script>
+
+    </script>
+<!-- // huhb -->
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    font: 14px STSong, SimSun, sans-serif;
+    background: url(http://115.28.134.189:8083//cms/r/cms/ezyz/ezyz/images/intro.png) no-repeat #fff;
+
+    /*toadd*/
+    background-position: top center;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.header {
+    position: relative;
+    text-align: center;
+    background: #fff;
+    border-bottom: 4px solid red;
+    margin-bottom: 80px;
+}
+
+.logo {
+    width: 436px;
+    height: 126px;
+    border: 0;
+}
+
+.link {
+    position: absolute;
+    top: 10px;
+    right: 10%;
+    width: 228px;
+    height: 12px;
+    background: url(http://115.28.134.189:8083//cms/r/cms/ezyz/ezyz/images/intro-link.png) no-repeat;
+}
+
+.link a {
+    position: absolute;
+    top: -2px;
+    display: block;
+    width: 60px;
+    height: 16px;
+    *background: url(_blank);
+}
+
+.addfav {
+    left: 0
+}
+
+.sethome {
+    left: 83px;
+}
+
+.footer {
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+}
+
+.senior {
+    text-align: center;
+}
+
+.senior span {
+    color: #666;
+}
+
+.lzx {
+    text-align: center;
+    color: #666;
+}
+
+/*tofix 文字居中*/
+
+.snav {
+  width: 1024px;
+  margin: 0 auto;
+  background: red;
+}
+/*    position: absolute;
+    bottom: 320px;
+    background: #DCD5D5;
+    width: 300px;
+    left: 362px;
+    z-index: 9999;
+    padding: 10px 0;
+    opacity: 0.5;
+    color: red;
+    text-align: center;*/
+#carousel-left {
+  left: 40px;
+  top:313px;
+}
+#carousel-right {
+  right: 40px;
+  top:313px;
+}
+/*.cloud9-item .reflected { 
+  width:400px!important;
+  height:250px!important;
+}*/
+</style>
+</head>
+
+
+<body>
+    <div class="header">
+        <a href="/cms/ezyz/index/index.jhtml"><img class="logo" src="http://115.28.134.189:8083/cms/r/cms/ezyz/ezyz/images/intro-logo.png" alt=""></a>
+        <div class="link">
+            <a href="#" onclick="AddFavorite(window.location,document.title)" class="addfav"></a>
+            <a href="#" onclick="SetHome(this,window.location)" class="sethome"></a>
+        </div>
+    </div>
+
+
+    <div class="carousel-container" id="carouselDiv" style="width:1024px;margin:0 auto;background: none;height:500px;overflow: visible!important;">
+
+        <img class="cloud9-item" src="http://115.28.134.189:8083/cms/u/cms/ezyz/201505/19170635dw7b-thumb-medium.jpg" alt="图书馆">
+        <img class="cloud9-item" src="http://115.28.134.189:8083/cms/u/cms/ezyz/201505/19170523hsxm-thumb-medium.jpg" alt="特色教师">
+        <img class="cloud9-item" src="http://115.28.134.189:8083/cms/u/cms/ezyz/201505/19161534cibn-thumb-medium.jpg" alt="实验楼">
+        <img class="cloud9-item" src="http://115.28.134.189:8083/cms/u/cms/ezyz/201505/11165048ws46-thumb-medium.jpg" alt="教学大楼">
+    </div>
+
+
+    <div class="snav">
+             <p id="item-title" style="display:none">&nbsp;</p>
+            <div id="carousel-left" class="dg-prev">
+                <img src="http://115.28.134.189:8083/cms/r/cms/ezyz/ezyz/images/arrow-left.png" class="sign-button"/>
+            </div>
+            <div id="carousel-right" class="dg-next">
+                <img src="http://115.28.134.189:8083/cms/r/cms/ezyz/ezyz/images/arrow-right.png" class="sign-button"/>
+            </div>
+    </div>
+<script>
+    $(function() {
+      var showcase = $("#carouselDiv"), title = $('#item-title')
+
+      showcase.Cloud9Carousel( {
+        yOrigin: 42,
+        yRadius: 48,
+        mirror: {
+          gap: 0,
+          height: 0.5
+        },
+        buttonLeft: $("#carousel-left"),
+        buttonRight: $("#carousel-right"),
+        autoPlay: 1,
+        bringToFront: true,
+        onRendered: rendered,
+        onLoaded: function() {
+          showcase.css( 'visibility', 'visible' )
+          showcase.css( 'display', 'none' )
+          showcase.fadeIn( 1500 )
+        }
+      } )
+
+      function rendered( carousel ) {
+        title.text( carousel.nearestItem().element.alt )
+
+        // Fade in based on proximity of the item
+        var c = Math.cos((carousel.floatIndex() % 1) * 2 * Math.PI)
+        title.css('opacity', 0.5 + (0.5 * c));
+        title.show(1500);
+      }
+
+    })
+  </script>
+
+    <div class="footer">
+        <div class="senior">
+            <a href="http://www.bdaschool.com/jianadagaozhong.html">加拿大高中</a>
+            <span>|</span>
+            <a href="http://www.bdaschool.com/meiguogaozhong.html">美国高中</a>
+        </div>
+        <div>
+            <p><span style="color: rgb(191, 191, 191);"><span id="_baidu_bookmark_start_0" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_2" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_start_2" style="display: none; line-height: 0px;"></span></span>
+            </p>
+            <p style="text-align: center;"><span style="color: rgb(191, 191, 191);"><span id="_baidu_bookmark_start_0" style="display: none; line-height: 0px;">‍</span></span><span id="_baidu_bookmark_start_2" style="display: none; line-height: 0px;">‍</span><span style="color: rgb(89, 89, 89);">联系地址：北京经济技术开发区天宝北街甲2号 邮箱：100176 电话 010-67872277 传真 010-67871129</span></p>
+            <p style="text-align: center;"><span style="color: rgb(89, 89, 89);">ICP: 京 ICP 备 09047312 号 -1 &nbsp;</span><span id="_baidu_bookmark_end_3" style="display: none; line-height: 0px;">‍</span><span style="color: rgb(191, 191, 191);"><span id="_baidu_bookmark_end_1" style="display: none; line-height: 0px;">‍</span></span>
+            </p>
+            <p><span id="_baidu_bookmark_end_3" style="display: none; line-height: 0px;">‍</span><span id="_baidu_bookmark_end_1" style="display: none; line-height: 0px;">‍</span></p>
+        </div>
+        <div class="lzx">技术支持：<a href="http://www.lezhixing.com.cn" target="_blank">北京乐知行软件有限公司</a></div>
+    </div>
+    <script>
+    function AddFavorite(sURL, sTitle) {
+        try {
+            window.external.addFavorite(sURL, sTitle);
+        } catch (e) {
+            try {
+                window.sidebar.addPanel(sTitle, sURL, "");
+            } catch (e) {
+                alert("加入收藏失败，请使用Ctrl+D进行添加");
+            }
+        }
+    }
+
+    function SetHome(obj, vrl) {
+        try {
+            obj.style.behavior = 'url(#default#homepage)';
+            obj.setHomePage(vrl);
+        } catch (e) {
+            if (window.netscape) {
+                try {
+                    netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+                } catch (e) {
+                    alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。");
+                }
+                var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+                prefs.setCharPref('browser.startup.homepage', vrl);
+            }
+        }
+    }
+    </script>
+</body>
+
+</html>
