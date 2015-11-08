@@ -1,50 +1,67 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-CN">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>1111</title>
-    <style type="text/css">
-    .container {
-    	width: 1280px;
-    	margin: 0 auto;
-    	height:740px;
-    	position: relative;
-    	left: 0;
-    	top: 0;
-    }
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
     body {
-        background: url(4444.jpg) top center no-repeat;
-        color: #ccc;
-        font: normal 12px 'Open Sans', sans-serif;
-        margin-top: 20px;
+        background: url(img/back.png) top center no-repeat;
         overflow-x: hidden;
     }
 
-    ul.countdown {
-    	position: absolute;
-    	bottom: 105px;
-    	left: 200px;
-        list-style: none;
-        padding: 0;
-        display: block;
+    .header {
+        margin: 20px 0;
+    }
+
+    .subheader {
         text-align: center;
+        margin: 40px 0;
+    }
+
+    .logo {
+        margin-left: -50px;
+        margin-top: 15px;
+    }
+
+    .row {
+        padding-bottom: 60px;
+    }
+
+    .countdown {
+        background: url(img/time.png) top center no-repeat;
+        background-size: cover;
+        width: 1017px;
+        height: 315px;
         white-space: nowrap;
+        padding: 0;
     }
 
     ul.countdown li {
         display: inline-block;
         *display: inline;
         *zoom: 1;
-        margin: 0px 26px 0 24px
+        line-height: 300px;
+        margin-right: 17px;
     }
 
     ul.countdown li span {
         font-size: 240px;
         font-weight: 300;
-        line-height: 80px;
+
         color: #333;
-        letter-spacing:20px;
+        letter-spacing: 34px;
         font-family: arial;
     }
 
@@ -58,70 +75,31 @@
         color: #a7abb1;
         font-size: 14px;
     }
-
-    a {
-        color: #76949F;
-        text-decoration: none;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-
-    .source {
-        width: 405px;
-        margin: 0 auto;
-        background: #4f5861;
-        color: #a7abb1;
-        font-weight: bold;
-        display: block;
-        white-space: pre;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        border-radius: 3px;
-    }
-
-    .btn {
-        background: #f56c4c;
-        margin: 40px auto;
-        padding: 12px;
-        display: block;
-        width: 100px;
-        color: white;
-        text-align: center;
-        text-transform: uppercase;
-        font-weight: bold;
-        text-decoration: none;
-        -webkit-border-radius: 2px;
-        -moz-border-radius: 2px;
-        border-radius: 2px;
-    }
-
-    .btn:hover {
-        text-decoration: none;
-        opacity: .7;
+    .memeda {
+        position: relative;
+        left: 50px;
     }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <ul class="countdown">
-            <!-- <li> <span class="days">00</span> -->
-            <!-- <p class="days_ref">days</p> -->
-            <!--   </li>
-  <li class="seperator">天</li> -->
-            <li> <span class="hours">00</span>
-                <!-- <p class="hours_ref">hours</p> -->
-            </li>
-            <li> <span class="minutes">00</span>
-                <!-- <p class="minutes_ref">minutes</p> -->
-            </li>
-            <li> <span class="seconds">00</span>
-                <!-- <p class="seconds_ref">秒</p> -->
-            </li>
-        </ul>
-    </div>
+    <div class="contaniner">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 memeda">
+                <div class="logo"><img src="img/logo.png" alt="" class="logo"></div>
+                <div class="header"><img src="img/h1.png" alt="" class=""></div>
+                <div class="subheader"><img src="img/h2.png" alt="" class=""></div>
+                <ul class="countdown">
+                    <li> <span class="hours">00</span>
+                    </li>
+                    <li> <span class="minutes">00</span>
+                    </li>
+                    <li> <span class="seconds">00</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.downCount.js"></script>
     <script>

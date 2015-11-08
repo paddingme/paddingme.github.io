@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>1111</title>
+    <style type="text/css">
+    .container {
+    	width: 1280px;
+    	margin: 0 auto;
+    	height:740px;
+    	position: relative;
+    	left: 0;
+    	top: 0;
+    }
+    body {
+        background: url(4444.jpg) top center no-repeat;
+        color: #ccc;
+        font: normal 12px 'Open Sans', sans-serif;
+        margin-top: 20px;
+        overflow-x: hidden;
+    }
+
+    ul.countdown {
+    	position: absolute;
+    	bottom: 105px;
+    	left: 200px;
+        list-style: none;
+        padding: 0;
+        display: block;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    ul.countdown li {
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        margin: 0px 26px 0 24px
+    }
+
+    ul.countdown li span {
+        font-size: 240px;
+        font-weight: 300;
+        line-height: 80px;
+        color: #333;
+        letter-spacing:20px;
+        font-family: arial;
+    }
+
+    ul.countdown li.seperator {
+        font-size: 80px;
+        line-height: 70px;
+        vertical-align: top;
+    }
+
+    ul.countdown li p {
+        color: #a7abb1;
+        font-size: 14px;
+    }
+
+    a {
+        color: #76949F;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .source {
+        width: 405px;
+        margin: 0 auto;
+        background: #4f5861;
+        color: #a7abb1;
+        font-weight: bold;
+        display: block;
+        white-space: pre;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+    }
+
+    .btn {
+        background: #f56c4c;
+        margin: 40px auto;
+        padding: 12px;
+        display: block;
+        width: 100px;
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-decoration: none;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+    }
+
+    .btn:hover {
+        text-decoration: none;
+        opacity: .7;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <ul class="countdown">
+            <!-- <li> <span class="days">00</span> -->
+            <!-- <p class="days_ref">days</p> -->
+            <!--   </li>
+  <li class="seperator">天</li> -->
+            <li> <span class="hours">00</span>
+                <!-- <p class="hours_ref">hours</p> -->
+            </li>
+            <li> <span class="minutes">00</span>
+                <!-- <p class="minutes_ref">minutes</p> -->
+            </li>
+            <li> <span class="seconds">00</span>
+                <!-- <p class="seconds_ref">秒</p> -->
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.downCount.js"></script>
+    <script>
+    $('.countdown').downCount({
+        date: '11/11/2015 00:00:00',
+        offset: +10
+    }, function() {
+        alert('倒计时结束!');
+    });
+    </script>
+</body>
+
+</html>
