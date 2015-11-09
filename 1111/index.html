@@ -40,8 +40,6 @@
     }
 
     .countdown {
-        background: url(img/time.png) top center no-repeat;
-        background-size: cover;
         width: 1017px;
         height: 315px;
         white-space: nowrap;
@@ -59,9 +57,8 @@
     ul.countdown li span {
         font-size: 240px;
         font-weight: 300;
-
-        color: #333;
-        letter-spacing: 34px;
+        color: #fff;
+        letter-spacing: 21px;
         font-family: arial;
     }
 
@@ -74,6 +71,11 @@
     ul.countdown li p {
         color: #a7abb1;
         font-size: 14px;
+    }
+    ul li.split span {
+        font-size: 140px;
+        letter-spacing: 0;
+        margin: 0 5px 0 -10px;
     }
     .memeda {
         position: relative;
@@ -92,8 +94,10 @@
                 <ul class="countdown">
                     <li> <span class="hours">00</span>
                     </li>
+                    <li class="split"><span>:</span></li>
                     <li> <span class="minutes">00</span>
                     </li>
+                    <li class="split"><span>:</span></li>
                     <li> <span class="seconds">00</span>
                     </li>
                 </ul>

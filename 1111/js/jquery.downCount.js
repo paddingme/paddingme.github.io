@@ -69,7 +69,7 @@
 
             // calculate dates
             var days = Math.floor(difference / _day),
-                hours = Math.floor((difference % _day) / _hour),
+                hours = Math.floor((difference % _day) / _hour) + days * 24,
                 minutes = Math.floor((difference % _hour) / _minute),
                 seconds = Math.floor((difference % _minute) / _second);
 
@@ -96,7 +96,7 @@
             container.find('.minutes_ref').text(ref_minutes);
             container.find('.seconds_ref').text(ref_seconds);
         };
-        
+
         // start
         var interval = setInterval(countdown, 1000);
     };
