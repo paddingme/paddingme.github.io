@@ -31,8 +31,9 @@
     }
 
     .logo {
-        margin-left: -50px;
-        margin-top: 15px;
+        margin-left: -66px;
+    margin-top: 15px;
+    margin-bottom: -40px;
     }
 
     .row {
@@ -83,6 +84,15 @@
         position: relative;
         left: 50px;
     }
+    #Stage_jbeeb_3 {
+        position: absolute!important;
+        left: 50%!important;
+        top: 500px!important;
+        margin-left: -400px!important;
+        margin-right: 0!important
+
+
+    }
     </style>
 </head>
 
@@ -93,7 +103,7 @@
                 <div class="logo"><img src="img/logo.png" alt="" class="logo"></div>
                 <div class="header"><img src="img/h1.png" alt="" class=""></div>
                 <div class="subheader"><img src="img/h2.png" alt="" class=""></div>
-                <ul class="countdown">
+                <!-- <ul class="countdown">
                     <li> <span class="hours">00</span>
                     </li>
                     <li class="split"><span>:</span></li>
@@ -102,18 +112,20 @@
                     <li class="split"><span>:</span></li>
                     <li> <span class="seconds">00</span>
                     </li>
-                </ul>
+                </ul> -->
             </div>
         </div>
 
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.downCount.js"></script>
+    <script src="js/countdown.js" type="text/javascript"></script>
     <script>
-    $('.countdown').downCount({
-        date: '11/11/2015 00:00:00',
-        offset: +8
-    }, function() {
-        //$('.countdown').html('<li><span style="font-size:140px;">1111 is now !</span></li>');
+    var myCountdownTest = new Countdown({
+        year: 2015,
+        month: 11,
+        day: 11,
+        width: 800,
+        height: 250,
+        rangeHi:"hour",
+        style:"flip"
     });
     </script>
 </body>
