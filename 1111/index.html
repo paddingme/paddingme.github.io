@@ -76,6 +76,8 @@
         font-size: 140px;
         letter-spacing: 0;
         margin: 0 5px 0 -10px;
+        position: relative;
+        top: -44px;
     }
     .memeda {
         position: relative;
@@ -108,10 +110,10 @@
     <script type="text/javascript" src="js/jquery.downCount.js"></script>
     <script>
     $('.countdown').downCount({
-        date: '11/11/2015 00:00:00',
+        date: '11/09/2015 20:45:00',
         offset: +8
     }, function() {
-        alert('倒计时结束!');
+        //$('.countdown').html('<li><span style="font-size:140px;">1111 is now !</span></li>');
     });
     </script>
 </body>
