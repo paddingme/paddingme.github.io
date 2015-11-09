@@ -90,8 +90,26 @@
         left: 50%!important;
         top: 430px!important;
         margin-left: -400px!important;
-        margin-right: 0!important
+        margin-right: 0!important;
+        outline: 1px solid red;
 
+    }
+    
+    ul {
+         position: absolute!important;
+        left: 50%!important;
+        top: 430px!important;
+        margin-left: -400px!important;
+        margin-right: 0!important;
+        outline: 1px solid red;
+    }
+    
+    li {
+        display:inline-block;
+        *display: inline;
+        *zoom: 1;
+        outline: 1px solid;
+        font-size: 100px;
     }
     </style>
 </head>
@@ -113,6 +131,11 @@
                     <li> <span class="seconds">00</span>
                     </li>
                 </ul> -->
+                
+                <ul>
+                    <li>:</li>
+                    <li>:</li>
+                </ul>
             </div>
         </div>
     
@@ -140,8 +163,7 @@
     color: #fff;
         }
         #Box_jbeeb_174:after,
-        #Box_jbeeb_61:after,
-        #Box_jbeeb_138:after{
+        #Box_jbeeb_61:after{
            content: ':';
     display: block;
     font-size: 120px;
