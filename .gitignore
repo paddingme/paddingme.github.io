@@ -2,3 +2,4 @@ _site
 _drafts
 .idea/
 .settings/
+.DS_Store
