@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -86,17 +85,17 @@
         position: relative;
         left: 50px;
     }
-    #Stage_jbeeb_3 {
-        position: absolute!important;
-        left: 50%!important;
-        top: 430px!important;
-        margin-left: -400px!important;
-        margin-right: 0!important;
+#Stage_jbeeb_3 {
+    position: absolute!important;
+    left: 50%!important;
+    top: 430px!important;
+    margin-right: 0!important;
+    width: 800px;
+    margin-top: -10px;
+    margin-left: -438px!important;
+}
 
-
-    }
-
-    ul {
+    ul.fuck {
          position: absolute!important;
         left: 50%!important;
         top: 430px!important;
@@ -107,7 +106,7 @@
         height: 250px;
     }
 
-    li {
+    .fuck li {
         display:inline-block;
         *display: inline;
         *zoom: 1;
@@ -141,7 +140,13 @@
         margin-right: 119px;
         font-size: 30px;
     }
+
     </style>
+    <link rel="stylesheet" href="compiled/flipclock.css">
+
+
+
+
 </head>
 
 <body>
@@ -161,12 +166,14 @@
                     <li> <span class="seconds">00</span>
                     </li>
                 </ul> -->
-
-                <ul>
+                <div class="clock " id="Stage_jbeeb_3">
+                <!-- <ul class="fuck">
                     <li class="xx">:</li>
                     <li class="oo">:</li>
-                </ul>
+                </ul> -->
 
+
+                </div>
                 <div class="time">
                     <span class="hours">Hours</span>
                     <span class="minutes">Minutes</span>
@@ -175,17 +182,29 @@
             </div>
         </div>
 
-    <script src="js/countdown.js" type="text/javascript"></script>
-    <script>
-    var myCountdownTest = new Countdown({
-        year: 2015,
-        month: 11,
-        day: 12,
-        width: 800,
-        height: 250,
-        rangeHi:"hour",
-        style:"flip"
-    });
+
+    <script src="js/jquery.min.js"></script>
+    <script src="compiled/flipclock.js"></script>
+        <script>
+        var clock;
+
+            $(document).ready(function() {
+                clock = $('.clock').FlipClock({
+                     clockFace: 'TwentyFourHourClock',
+                     size:"lg"
+                });
+            });
+
+            setInterval(function(){
+                if(new Date().getDay()=='4') clock.stop();
+            },1000)
+
+// callbacks: {
+//                     stop: function() {
+//                         $('.message').html('The clock has stopped!');
+//                     }
+//                 }
+
     </script>
 
 
