@@ -78,6 +78,66 @@ nodejs ---》 建立中间层 数据分发
 
 
 
+## client 客户端
+
+### 单个子任务
+
+- `gulp html`: 压缩指定 html 文件；
+- `gulp css`: 压缩指定 css 文件；
+- `gulp js`: 压缩指定 js 文件；
+- `gulp js`: 压缩指定 js 文件；
+- `gulp img`: 压缩指定 图片；
+
+
+### 批量子任务：
+
+- `gulp partials`: 批量压缩模板页 html；
+- `gulp tc`: 批量将模板 html 转化为 js 存入缓存；
+- `gulp imgs`: 批量压缩 /img 文件下所有图片；
+- `gulp move`: 批量迁移所有未修改文件到 /dist目录下；
+- `gulp clean`: 批量清空 dist 下所有文件；
+
+
+
+### 批零多任务：
+
+- `gulp build`: 重写 index.html 合并、压缩、重命名 index.html 中指定 css,js 文件。
+- `gulp watch`： 检测所有的文件夹变动，根据相应文件夹变动**增量**执行相应任务；启动实时刷新服务区器；
+- `gulp`: 顺序执行 clean 任务, 并行执行 move,imgs,partials,build 任务，再执行 watch 任务；
+- `gulp push`: 将 dist 文件夹发送到 219 version 指定目录下，需要ssh 秘钥；
+
+
+
+## server
+
+-  `node server`: 启动测试服务器；
+-  `gulp doc`: 生成 API 文档；
+-  `gulp push`: 发送 API 文档到 219指定目录（需要 ssh 秘钥）；
+-  `gulp`: 发送 API 文档到 219，并且启动服务器
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
