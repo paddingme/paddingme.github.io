@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>前后端分离挖坑指南</title>
+    <meta name="author" content="PaddingMe" />
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/presentation.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <head/>
+
+    <body class="impress-not-supported">
+        <div class="fallback-message">
+            <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+            <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+        </div>
+        <div id="impress">
+            <div id="1" class="step slide" data-x="0" data-y="0">
+                <div class="presentation_title">
+                    <span class="bytecode">Front-end</span>
+                    <span class="bytecode">Back-end</span>
+                    <span class="manipulation">s<span class="aletter">e</span>pa<span class="lletter">ra</span>tio<span class="nletter">n</span></span>
+                </div>
+                <div class="right">
+                    <span>前后端分离挖坑指南</span>
+                </div>
+                <div class="title_author"><span class="date">01.07.2014</span><span class="slash">/</span><span class="author">PaddingMe</span></div>
+            </div>
+            <div id="2" class="step slide" data-x="0" data-y="-1000">
+                <div class="slide-header" style="margin-bottom: 60px">why?</div>
+                <div class="slide-content">
+                    <div>long long ago...</div>
+                    <img src="img/Snip20160107_6.png" alt="" width="1100" style="margin-top:30px;">
+
+                </div>
+            </div>
+
+
+            <div id="3" class="step slide" data-x="0" data-y="-1000">
+                <div class="slide-header" style="margin-bottom: 50px">why?</div>
+                <div class="slide-content">
+
+                    <ul class="lv0_indent">
+                        <li style="margin-top:20px">前端---> html/js/css 《====》 jsp(freemarker,juicer)
+                            <-- 后端 </li>
+                                <li style="margin-top:40px;margin-bottom:30px;">前端--->html/js/css
+                                    <====> API
+                                        <====> java
+                                            <--- 后端</li>
+                    </ul>
+                    <div style="text-align:center"><img src="img/14217459148527.jpg" alt=""></div>
+                </div>
+            </div>
+            <div id="4" class="step slide" data-x="0" data-y="-2000">
+                <div class="slide-header" style="margin-bottom: 100px">前后端分离流程</div>
+                <div class="slide-content">
+                    <ul class="lv0_indent">
+                        <li style="margin-top:40px">前端后端约定 API ---》 API 文档: <a href="http://192.168.0.219/lzx/doc/xsczda/" target="_blank">学生成长档案/班主任/学生端 API</a></li>
+                        <li style="margin-top:40px">
+                            <ul>
+                                <li>前端根据API 文档 Mock 数据 编写前端代码</li>
+                                <li>后端根据 API 文档 编写 API 接口 (postman 测试 API 接口)</li>
+                            </ul>
+                        </li>
+                        <li style="margin-top:40px">前后端联调</li>
+                        <li style="margin-top:40px">提测/fix bug/出库</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="5" class="step slide" data-x="0" data-y="-2000">
+                <div class="slide-header" style="margin-bottom: 100px"> 那些年前端挖的坑。。。。</div>
+                <div style="text-align:center"><img src="img/Digging-this-hole.jpeg" alt=""></div>
+            </div>
+            <div id="6" class="step overlay" data-x="0" data-y="-3000">
+                <div class="slide-header" style=""> 我们发现我们填不了了。。。</div>
+                <div class="ex-title"> 让我想起了一个古老的传说。。。。</div>
+            </div>
+
+            <div id="7" class="step overlay" data-x="0" data-y="-4000">
+                 <div style="text-align:center;"><img src="img/001_66180_big.jpg" width="600">
+                </div>
+            </div>
+            <div id="8" class="step overlay" data-x="0" data-y="-4000">
+                 <div style="text-align:center;"><img src="img/002_66180_big.jpg" width="600">
+                </div>
+            </div>
+            <div id="9" class="step overlay" data-x="0" data-y="-6000">
+                 <div style="text-align:center;"><img src="img/003_66180_big.jpg" width="600">
+                </div>
+            </div>
+            <div id="10" class="step overlay" data-x="0" data-y="-7000">
+                 <div style="text-align:center;"><img src="img/004_66180_big.jpg" height="700">
+                </div>
+            </div>
+
+
+            <div id="11" class="step overlay" data-x="0" data-y="-8000">
+                <div class="slide-header" style="margin-bottom: 100px"> one more thing</div>
+                <div style="text-align:center"><img src="img/Snip20160107_1.png" alt=""> </div>
+            </div>
+            <div id="12" class="step overlay" data-x="-1250" data-y="-2000">
+                <div class="slide-header">我们一起来学 <code>AngularJS</code>吧！</div>
+                <div style="position:absolute;left:0;top:100px;">
+                    <a href="http://padding.me/slide/angularjs/" style="color:#268bd2;font-size:32px;" target="_blank"><img src="img/Snip20160107_3.png" alt=""></a>
+                </div>
+                <img src="img/11.png" alt="" style="position:absolute;left:900px;top:100px;">
+            </div>
+            <div id="13" class="step slide" data-x="0" data-y="-3000">
+                <div class="slide-header">
+                    <p><code>AngularJS</code>学会了吧？！</p>
+
+                </div>
+                <img src="img/11.png" alt="" style="position:absolute;right:10%;bottom:20px;">
+                <div style="position:absolute;left:0;top:250px;text-align:center">
+                    那么我们如何开发一个 Angular webapp?
+                </div>
+            </div>
+            <div id="14" class="step slide" data-x="0" data-y="-4000">
+                <div class="ex-title"> 给我 5 分钟!</div>
+            </div>
+            <div id="15" class="step slide" data-x="0" data-y="-4000">
+                <div class="slide-header">
+                    More...
+                </div>
+                <div class="slide-content">
+                    <ul>
+                        <li>svn://192.168.0.219/project/framework/frontend/demo</li>
+                        <li>svn://192.168.0.219/project/products/front/xsczda</li>
+                        <li>http://192.168.0.219/lzx/e2e.html</li>
+                        <li>http://spmjs.io/package/lzx-button</li>
+                        <li>http://spmjs.io/package/lzx-iconfont</li>
+                        <li>http://spmjs.io/package/lzx-table</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="16" class="step slide" data-x="0" data-y="-6000">
+                <div class="ex-title">questions?</div>
+            </div>
+            <div id="17" class="step slide" data-x="0" data-y="-7000">
+                <div class="ex-title">thanks!</div>
+            </div>
+        </div>
+        <div class="hint">
+            <p>Use a spacebar or arrow keys to navigate</p>
+        </div>
+        <script>
+        if ("ontouchstart" in document.documentElement) {
+            document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+        }
+        </script>
+        <script src="js/impress.js"></script>
+        <script>
+        impress().init();
+        </script>
+        <script src="js/main.js"></script>
+    </body>
+
+</html>
