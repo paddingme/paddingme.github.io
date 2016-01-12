@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>云课堂V3.0.0</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="head">
+    	<img class="w" src="img/cloud_head.png" alt="云课堂介绍顶部图">
+    	<a href="http://www.4ye.cc/app/105/index" class="head-btn"><img src="img/head_btn.png" alt="马上下载图片"></a>
+    </div>
+	<div class="section1 sec">
+		<img class="w" src="img/cloud1.png" alt="云课堂介绍图">
+	</div>
+	<div class="section2 sec">
+		<img class="w" src="img/cloud2.png" alt="云课堂介绍图">
+	</div>
+	<div class="section3 sec">
+		<img class="w" src="img/cloud3.png" alt="云课堂介绍图">
+	</div>
+	<div class="section4 sec">
+		<img class="w" src="img/cloud4.png" alt="云课堂介绍图">
+		<div class="code-link-float">
+		    <img class="code-link fr" src="img/code_link.png">
+		    <img class="yun-qr-code" src="img/yun_qr_code.png" alt="下载二维码">
+			
+		</div>
+	</div>
+	<div class="section5 sec">
+		<img class="w" src="img/cloud5.png" alt="云课堂介绍图">
+    	<a href="http://www.4ye.cc/app/105/index" class="sec-btn"><img src="img/foot_btn.png" alt="一键安装图片"></a>
+	</div>
+	<div class="foot sec">
+		<img class="w" src="img/cloud_foot.png" alt="云课堂介绍底部图">
+	</div>
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script>
+	$(function(){
+		$(".code-link").toggle(function() {
+			$(".yun-qr-code").show('slow');
+		}, function() {
+			$(".yun-qr-code").hide('slow');
+		});
+		
+	})
+	</script>
+</body>
+</html>

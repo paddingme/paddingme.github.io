@@ -9,6 +9,8 @@
 
 <body ng-app="ezstuff">
     <ez-clock></ez-clock>
+    <div ez-clock></div>
+
 
     <script>
     /**
@@ -19,7 +21,7 @@
     angular.module('ezstuff', [])
         .directive('ezClock', function() {
             return {
-                restrict: 'E',
+                restrict: 'EA',
                 template: '<div></div>',
                 link: function(scope, element, attrs) {
                     setInterval(function() {

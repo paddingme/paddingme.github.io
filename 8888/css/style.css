@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+
+body {
+	margin: 0;
+    padding: 0;
+	background-color: #FFE558;
+}
+body,button {
+    font: 14px/1.5 Helvetica, Tahoma, Arial,"Microsoft YaHei", "微软雅黑", STXihei,"华文细黑", SimSun, "\5b8b\4f53", Heiti, "黑体",sans-serif;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+}
+img {
+  display:block;
+  border: 0;
+}
+button {
+    font-size: 100%;
+}
+.w {
+   max-width: 100%;
+   margin: 0 auto;
+}
+.head {
+	position: relative;
+	width: 100%;
+}
+.head-btn {
+	position: absolute;
+	bottom: 30%;
+	right: 22%;
+}
+.head-btn img {
+	width: 150px;
+	height: 50px;
+}
+.head-btn:hover {
+	text-decoration: none;
+}
+.sec {
+	position: relative;
+	width: 100%;
+}
+.code-link-float {
+
+	position: fixed;
+	right: 0;
+	top: 50%;
+	z-index: 999;
+	cursor: pointer;
+}
+.code-link {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.yun-qr-code {
+	display: none;
+	position: absolute;
+	right: 0;
+	top: 48px;
+}
+.foot {
+	position: relative;
+	width: 100%;
+	background-color: #FF6A43;
+}
+.sec-btn {
+	position: absolute;
+	bottom: 207px;
+	left: 22%;
+}
+.sec-btn img {
+	width: 230px;
+	height: 80px;
+}
+@media screen and (max-width: 1024px){
+	.head-btn img {
+		width: auto;
+		height: 20px;
+    }
+    .sec-btn img {
+		width: auto;
+		height: 30px;
+    }
+    .sec-btn {
+		bottom: 30%;
+    }
+}
+@media screen and (max-width: 768px){
+}
