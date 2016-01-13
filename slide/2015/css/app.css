@@ -1,60 +1,64 @@
 .impress-supported .fallback-message {
-        display: none;
-    }
+    display: none;
+}
 
-    .step {
-        width: 1280px;
-        /*outline: 1px solid red;*/
-    }
+.step {
+    width: 1280px;
+    /*outline: 1px solid red;*/
+}
 
-    a {
-        text-decoration: none;
-    }
+a {
+    text-decoration: none;
+}
 
-    .center {
-        text-align: center;
-    }
+.center {
+    text-align: center;
+}
 
-    .markdown-body {
-        box-sizing: border-box;
-        min-width: 200px;
-        max-width: 980px;
-        margin: 0 auto;
-        padding: 45px;
-        font-size: 32px;
-        line-height: 1.8;
-    }
+.markdown-body {
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 45px;
+    font-size: 32px;
+    line-height: 1.8;
+}
 
-    .fl {
-        float: left;
-    }
+.fl {
+    float: left;
+}
 
-    .tl {
-        text-align: left;
-    }
+.tl {
+    text-align: left;
+}
 
-    .pr {
-        position: relative;
-    }
+.pr {
+    position: relative;
+}
 
-    img.ml400 {
-        margin-left: 400px;
-    }
+img.ml400 {
+    margin-left: 400px;
+}
 
-    .mb-5 {
-        margin-bottom: -5px;
-    }
+.mb-5 {
+    margin-bottom: -5px;
+}
 
-    .pro-thumb {
-        position: absolute;
-        bottom: 0px;
-        left: 80px
-    }
-    .tl {
-        text-align: left;
-    }
+.pro-thumb {
+    position: absolute;
+    bottom: 0px;
+    left: 80px
+}
 
+.tl {
+    text-align: left;
+}
 
-    .yue table {
-        font-size: 16px;
-    }
+.yue table {
+    font-size: 16px;
+}
+
+.title {
+    -webkit-box-reflect: below -50px -webkit-linear-gradient(transparent, transparent 50%, rgba(255, 255, 255, .2));
+}
