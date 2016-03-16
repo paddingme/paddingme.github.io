@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/github.css">
+</head>
+
+<body ng-app="demoApp" ng-controller="demoCtrl">
+
+    <pre>
+        <code class="html">
+&lt;input class="Wdate" type="text" readOnly="true" wdate-picker ng-model="date1"&gt;
+        </code>
+    </pre>
+
+    <div>
+        <input class="Wdate" type="text" readOnly="true" wdate-picker ng-model="date1">
+    </div>
+
+    <pre>
+        <code class="html">
+&lt;input class="Wdate" type="text" dateFmt="yyyy/MM/dd" readOnly="true" wdate-picker ng-model="date2"&gt;
+        </code>
+    </pre>
+
+    <div>
+        <input class="Wdate" type="text" dateFmt="yyyy/MM/dd" readOnly="true" wdate-picker ng-model="date2">
+    </div>
+
+    <pre>
+        <code class="html">
+&lt;input class="Wdate" type="text" maxdate="2017-01-01" readOnly="true" wdate-picker ng-model="date3"&gt;
+        </code>
+    </pre>
+
+
+    <div>
+        <input class="Wdate" type="text" maxdate="2017-01-01" readOnly="true" wdate-picker ng-model="date3">
+    </div>
+
+    <pre>
+        <code class="html">
+&lt;input class="Wdate" type="text" wdate-picker readOnly="true" ng-model="oneDate" maxdate="{{anotherDate}}" /&gt;
+&lt;input class="Wdate" type="text" wdate-picker readOnly="true" ng-model="anotherDate" mindate="{{oneDate}}" /&gt;
+        </code>
+    </pre>
+
+    <div>
+        <input class="Wdate" type="text" wdate-picker readOnly="true" ng-model="oneDate" maxdate="{{anotherDate}}" />
+        <input class="Wdate" type="text" wdate-picker readOnly="true" ng-model="anotherDate" mindate="{{oneDate}}" />
+    </div>
+
+
+    <script src="WdatePicker.js"></script>
+    <script src="http://libs.useso.com/js/angular.js/1.2.9/angular.min.js"></script>
+    <script src="ng-WdatePicker.js"></script>
+    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+    <script>
+    (function() {
+        var demoApp = angular.module('demoApp', ['ng-WdatePicker']);
+        demoApp.controller('demoCtrl', function($scope) {
+            $scope.oneDate = "2016-03-11 12:55:55";
+            $scope.anotherDate = "2016-03-23 12:55:55";
+        })
+        hljs.initHighlightingOnLoad();
+    })();
+    </script>
+</body>
+
+</html>
