@@ -6,8 +6,8 @@ tags:
 ---
 
 
- 文章取自我的 Github  repos: [Learning-JavaScript](https://github.com/paddingme/Learning-JavaScript), 作者：[@paddingme](http://padding.me/about.html) 。
-原文链接：[https://github.com/paddingme/Learning-JavaScript/issues/26](https://github.com/paddingme/Learning-JavaScript/issues/26)
+ 文章取自我的 Github  repos: [Learning-JavaScript](https://github.com/paddingme/Learning-JavaScript)， 作者：[@paddingme](http://padding.me/about.html) 。
+  原文链接：[https://github.com/paddingme/Learning-JavaScript/issues/26](https://github.com/paddingme/Learning-JavaScript/issues/26)
 
 - http://blog.jobbole.com/66135/
 

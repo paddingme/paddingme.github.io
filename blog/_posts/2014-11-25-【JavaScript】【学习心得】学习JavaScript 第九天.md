@@ -6,8 +6,8 @@ tags:
 ---
 
 
- 文章取自我的 Github  repos: [Learning-JavaScript](https://github.com/paddingme/Learning-JavaScript), 作者：[@paddingme](http://padding.me/about.html) 。
-原文链接：[https://github.com/paddingme/Learning-JavaScript/issues/13](https://github.com/paddingme/Learning-JavaScript/issues/13)
+ 文章取自我的 Github  repos: [Learning-JavaScript](https://github.com/paddingme/Learning-JavaScript)， 作者：[@paddingme](http://padding.me/about.html) 。
+  原文链接：[https://github.com/paddingme/Learning-JavaScript/issues/13](https://github.com/paddingme/Learning-JavaScript/issues/13)
 
 # 用 JavaScript 实现动画效果
 

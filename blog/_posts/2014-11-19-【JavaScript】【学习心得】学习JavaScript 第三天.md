@@ -6,8 +6,8 @@ tags:
 ---
 
 
- 文章取自我的 Github  repos: [Learning-JavaScript](https://github.com/paddingme/Learning-JavaScript), 作者：[@paddingme](http://padding.me/about.html) 。
-原文链接：[https://github.com/paddingme/Learning-JavaScript/issues/6](https://github.com/paddingme/Learning-JavaScript/issues/6)
+ 文章取自我的 Github  repos: [Learning-JavaScript](https://github.com/paddingme/Learning-JavaScript)， 作者：[@paddingme](http://padding.me/about.html) 。
+  原文链接：[https://github.com/paddingme/Learning-JavaScript/issues/6](https://github.com/paddingme/Learning-JavaScript/issues/6)
 
 艾玛，昨天的 [【JavaScript】【学习心得】学习 JavaScript 第三天](http://www.imooc.com/wenda/detail/235873)被运营同学推荐置顶了，并且推荐编辑器支持 markdown 语法也注意到了，imooc 超棒的。好的，咱们继续学习 JavaScript 吧。
 
