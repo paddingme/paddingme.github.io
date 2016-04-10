@@ -6,8 +6,8 @@ tags:
 ---
 
 
- 文章取自我的 Github  repos: [Learning-JavaScript](https://github.com/paddingme/Learning-JavaScript)， 作者：[@paddingme](http://padding.me/about.html) 。 
- &nbsp;原文链接：[https://github.com/paddingme/Learning-JavaScript/issues/11](https://github.com/paddingme/Learning-JavaScript/issues/11)
+ 文章取自我的 Github  repos: [Learning-JavaScript](https://github.com/paddingme/Learning-JavaScript)， 作者：[@paddingme](http://padding.me/about.html) 。  
+原文链接：[https://github.com/paddingme/Learning-JavaScript/issues/11](https://github.com/paddingme/Learning-JavaScript/issues/11)
 
 眼看着七天马上就要结束。这个周末你有没有好好休息，有没有 get 什么新技能呢？
 如果没有的话，我们快来抓紧时间学点有用的吧。

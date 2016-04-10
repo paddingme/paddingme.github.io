@@ -6,8 +6,8 @@ tags:
 ---
 
 
- 文章取自我的 Github  repos: [Learning-JavaScript](https://github.com/paddingme/Learning-JavaScript)， 作者：[@paddingme](http://padding.me/about.html) 。 
- &nbsp;原文链接：[https://github.com/paddingme/Learning-JavaScript/issues/24](https://github.com/paddingme/Learning-JavaScript/issues/24)
+ 文章取自我的 Github  repos: [Learning-JavaScript](https://github.com/paddingme/Learning-JavaScript)， 作者：[@paddingme](http://padding.me/about.html) 。  
+原文链接：[https://github.com/paddingme/Learning-JavaScript/issues/24](https://github.com/paddingme/Learning-JavaScript/issues/24)
 
 ### 1. 空白
   空白用来间隔字符序列，这个很好理解。另Javascript 采取两种注释方法块注释/\* \*/和行注释//我们使用//，因为/\* \*/中会偶尔遇到正则表达式的注释会导致错误。

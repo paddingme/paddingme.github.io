@@ -6,8 +6,8 @@ tags:
 ---
 
 
- 文章取自我的 Github  repos: [DailyReading](https://github.com/paddingme/DailyReading)， 作者：[@paddingme](http://padding.me/about.html) 。 
- &nbsp;原文链接：[https://github.com/paddingme/DailyReading/issues/5](https://github.com/paddingme/DailyReading/issues/5)
+ 文章取自我的 Github  repos: [DailyReading](https://github.com/paddingme/DailyReading)， 作者：[@paddingme](http://padding.me/about.html) 。  
+原文链接：[https://github.com/paddingme/DailyReading/issues/5](https://github.com/paddingme/DailyReading/issues/5)
 
 ## [inline-block 前世今生](http://ued.taobao.org/blog/2012/08/inline-block/)
 
