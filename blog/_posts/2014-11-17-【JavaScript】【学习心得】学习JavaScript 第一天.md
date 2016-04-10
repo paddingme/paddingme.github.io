@@ -7,7 +7,7 @@ tags:
 
 
  文章取自我的 Github  repos: [Learning-JavaScript](https://github.com/paddingme/Learning-JavaScript)， 作者：[@paddingme](http://padding.me/about.html) 。 
-  原文链接：[https://github.com/paddingme/Learning-JavaScript/issues/1](https://github.com/paddingme/Learning-JavaScript/issues/1)
+ &nbsp;原文链接：[https://github.com/paddingme/Learning-JavaScript/issues/1](https://github.com/paddingme/Learning-JavaScript/issues/1)
 
 【写在前面】多少次咬牙坚持决心将 JavaScript 进行到底，却又半途而废。古语有云，只想做一个安静的切图仔不是一个好的前端汪。前端一直或多或少被人弊病，甚至被后端鄙视，前端入门易，上手快，在整个生态环境中前端的分量常被忽视，后端同学随手 google 下也能写出可以用的页面，前端存在的意义在哪儿？幸好 HTML5 来了， NodeJS 来了，前端的意义也越来越被多数公司认可重视，这是一个最好的时代，前端的春天仿佛真的来了。那么我们还要安心的做一个安静的美（cut）男子(boy)吗?答案显然是 NO！咳咳，安静还是必须的，我们可以志存高远，向着全栈工程师的党项努力，另一方面更要脚踏实地，夯实基础，这样才能精通各种奇淫技巧，不论是 nodejs 还是 fibjs 都能为我所用，才能做到手中无刀，心中有刀，无刀胜有刀。感谢 [90 天慕女神助力计划](http://www.imooc.com/wenda/detail/234205),让我们找到了学习的欲望和借口，大奖在哪儿,大奖在哪儿？？？90 天，你能坚持下去吗，90天你会收获什么吗？大浪淘沙，优胜劣汰，这个看脸的世界，还好，还有进化论这样伟大的意义存在。
 

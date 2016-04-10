@@ -7,7 +7,7 @@ tags:
 
 
  文章取自我的 Github  repos: [Learning-JavaScript](https://github.com/paddingme/Learning-JavaScript)， 作者：[@paddingme](http://padding.me/about.html) 。 
-  原文链接：[https://github.com/paddingme/Learning-JavaScript/issues/7](https://github.com/paddingme/Learning-JavaScript/issues/7)
+ &nbsp;原文链接：[https://github.com/paddingme/Learning-JavaScript/issues/7](https://github.com/paddingme/Learning-JavaScript/issues/7)
 
 经过了三天的持续学习，咱们的第一个 js 网页你有没有做出来呢？这个简单的 [JavaScript 图片库](http://codepen.io/paddingme/pen/qCuDo) 它是否完美？今天我们来学习一些最佳实践，来完善我们的这个 JavaScript 图片库。
 

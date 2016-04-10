@@ -7,7 +7,7 @@ tags:
 
 
  文章取自我的 Github  repos: [Learning-JavaScript](https://github.com/paddingme/Learning-JavaScript)， 作者：[@paddingme](http://padding.me/about.html) 。 
-  原文链接：[https://github.com/paddingme/Learning-JavaScript/issues/25](https://github.com/paddingme/Learning-JavaScript/issues/25)
+ &nbsp;原文链接：[https://github.com/paddingme/Learning-JavaScript/issues/25](https://github.com/paddingme/Learning-JavaScript/issues/25)
 
 昨天主要学习JavaScript的语法,先列出觉得重要的地方：
 
