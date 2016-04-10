@@ -6,7 +6,7 @@ tags:
 ---
 
 
- 文章取自我的 Github  repos: [Learning-JavaScript](https://github.com/paddingme/Learning-JavaScript)， 作者：[@paddingme](http://padding.me/about.html) 。  
+ 文章取自我的 Github  repos: [Learning-JavaScript](https://github.com/paddingme/Learning-JavaScript)， 作者：[@paddingme](http://padding.me/about.html)    
 原文链接：[https://github.com/paddingme/Learning-JavaScript/issues/16](https://github.com/paddingme/Learning-JavaScript/issues/16)
 
 今天学习了下 第十一章 HTML5 只是对 HTML5 做了些介绍，很快就看完了，这里就不做笔记了。刚好有时间可以来研究下 JavaScript 中 `typeof` 和 `instanceOf` 的区别，在之前的文章我们多次用 `typeof` 进行类型判断。那么 `typeof` 和 `instanceOf` 有什么区别呢？
