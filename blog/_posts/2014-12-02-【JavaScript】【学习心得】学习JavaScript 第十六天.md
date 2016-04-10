@@ -6,7 +6,8 @@ tags:
 ---
 
 
- 文章取自我的 Github  repos: [Learning-JavaScript](https://github.com/paddingme/Learning-JavaScript), 作者：@paddingme 。原文链接：https://github.com/paddingme/Learning-JavaScript/issues/20
+ 文章取自我的 Github  repos: [Learning-JavaScript](https://github.com/paddingme/Learning-JavaScript), 作者：[@paddingme](http://padding.me/about.html) 。
+原文链接：[https://github.com/paddingme/Learning-JavaScript/issues/20](https://github.com/paddingme/Learning-JavaScript/issues/20)
 
 ## JavaScript 简介
 JavaScript 的兴起，主要目的是处理以前由服务器端语言负责的一些输入验证操作，如今，JavaScript 已不再局限于简单的数据验证，而是具备了与浏览器窗口及其内容等几乎所有方面交互的能力。今天JavaScript 已经成为一门功能全面的编程语言，能够处理复杂的计算和交互，拥有了 **闭包**、**匿名函数**、甚至 **元编程**等特性。

@@ -6,7 +6,8 @@ tags:
 ---
 
 
- 文章取自我的 Github  repos: [Learning-JavaScript](https://github.com/paddingme/Learning-JavaScript), 作者：@paddingme 。原文链接：https://github.com/paddingme/Learning-JavaScript/issues/12
+ 文章取自我的 Github  repos: [Learning-JavaScript](https://github.com/paddingme/Learning-JavaScript), 作者：[@paddingme](http://padding.me/about.html) 。
+原文链接：[https://github.com/paddingme/Learning-JavaScript/issues/12](https://github.com/paddingme/Learning-JavaScript/issues/12)
 
 已经坚持了一周的学习，学到了不少 DOM 的基础知识，对一些基本概念也有了深入里概念，今天主要学习如何利用 DOM 技术去获取（读）和设置（写）CSS 信息。
 

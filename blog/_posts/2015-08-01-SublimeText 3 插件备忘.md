@@ -6,7 +6,8 @@ tags:
 ---
 
 
- 文章取自我的 Github  repos: [Learning-HTML-CSS](https://github.com/paddingme/Learning-HTML-CSS), 作者：@paddingme 。原文链接：https://github.com/paddingme/Learning-HTML-CSS/issues/39
+ 文章取自我的 Github  repos: [Learning-HTML-CSS](https://github.com/paddingme/Learning-HTML-CSS), 作者：[@paddingme](http://padding.me/about.html) 。
+原文链接：[https://github.com/paddingme/Learning-HTML-CSS/issues/39](https://github.com/paddingme/Learning-HTML-CSS/issues/39)
 
 记录下 我的 Sublime Text 3 使用的插件以及安装，以备后用。
 

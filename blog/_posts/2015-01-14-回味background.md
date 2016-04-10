@@ -6,7 +6,8 @@ tags:
 ---
 
 
- 文章取自我的 Github  repos: [DailyReading](https://github.com/paddingme/DailyReading), 作者：@paddingme 。原文链接：https://github.com/paddingme/DailyReading/issues/2
+ 文章取自我的 Github  repos: [DailyReading](https://github.com/paddingme/DailyReading), 作者：[@paddingme](http://padding.me/about.html) 。
+原文链接：[https://github.com/paddingme/DailyReading/issues/2](https://github.com/paddingme/DailyReading/issues/2)
 
 # [回味background](http://segmentfault.com/blog/linxz/1190000002481921)
 
