@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-home">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>【前端】【学习心得】第十九天 模式与标准 | Hexo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="Mu-Help-Plan," />
+  
+
+  <meta name="description" content="文章取自我的 Github  repos: Learning-JavaScript， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-JavaScript/issues/23
+最近在工作中经常遇到浏览器兼容性的问题，让我焦头烂额，这里总结下浏览器的严格模式和怪异模式以及IE浏览下的文档模式和浏览器模式等内容。
+严格模式和怪异模式现代">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【前端】【学习心得】第十九天 模式与标准">
+<meta property="og:url" content="http://yoursite.com/blog/2014/12/05/【前端】【学习心得】第十九天 模式与标准/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="文章取自我的 Github  repos: Learning-JavaScript， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-JavaScript/issues/23
+最近在工作中经常遇到浏览器兼容性的问题，让我焦头烂额，这里总结下浏览器的严格模式和怪异模式以及IE浏览下的文档模式和浏览器模式等内容。
+严格模式和怪异模式现代">
+<meta property="og:image" content="http://paddingme.qiniudn.com/ie9-2ge-moshi.png">
+<meta property="og:image" content="http://paddingme.qiniudn.com/ie9-2ge-moshi.png">
+<meta property="og:updated_time" content="2016-04-10T16:12:43.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【前端】【学习心得】第十九天 模式与标准">
+<meta name="twitter:description" content="文章取自我的 Github  repos: Learning-JavaScript， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-JavaScript/issues/23
+最近在工作中经常遇到浏览器兼容性的问题，让我焦头烂额，这里总结下浏览器的严格模式和怪异模式以及IE浏览下的文档模式和浏览器模式等内容。
+严格模式和怪异模式现代">
+<meta name="twitter:image" content="http://paddingme.qiniudn.com/ie9-2ge-moshi.png">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=32204ee7" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-50048801-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">目录</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/blog/"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#严格模式和怪异模式"><span class="toc-text">严格模式和怪异模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IE的文档模式和浏览器模式"><span class="toc-text">IE的文档模式和浏览器模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DOCTYPE"><span class="toc-text">DOCTYPE</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IE兼容模式"><span class="toc-text">IE兼容模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#内核控制Meta标签：让360浏览器默认使用极速模式打开网页"><span class="toc-text">内核控制Meta标签：让360浏览器默认使用极速模式打开网页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总结"><span class="toc-text">总结</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考文章"><span class="toc-text">参考文章</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-【前端】【学习心得】第十九天 模式与标准" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">【前端】【学习心得】第十九天 模式与标准</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2014.12.05</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>John Doe</span>
+        </span>
+      
+
+      
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://padding.me/blog/2014/12/05/【前端】【学习心得】第十九天 模式与标准/#disqus_thread"></a>
+        </span>
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p> 文章取自我的 Github  repos: <a href="https://github.com/paddingme/Learning-JavaScript" target="_blank" rel="external">Learning-JavaScript</a>， 作者：<a href="http://padding.me/about.html" target="_blank" rel="external">@paddingme</a><br>原文链接：<a href="https://github.com/paddingme/Learning-JavaScript/issues/23" target="_blank" rel="external">https://github.com/paddingme/Learning-JavaScript/issues/23</a></p>
+<p>最近在工作中经常遇到浏览器兼容性的问题，让我焦头烂额，这里总结下浏览器的严格模式和怪异模式以及IE浏览下的文档模式和浏览器模式等内容。</p>
+<h3 id="严格模式和怪异模式"><a href="#严格模式和怪异模式" class="headerlink" title="严格模式和怪异模式"></a>严格模式和怪异模式</h3><p>现代浏览器一般具有多种渲染模式：</p>
+<p> 在“标准模式”(standards mode) 页面按照 HTML 与 CSS 的定义渲染，而在“怪异模式(quirks mode) 模式”中则尝试模拟更旧的浏览器的行为。 一些浏览器（例如，那些基于 Mozilla 的 Gecko 渲染引擎的，或者 Internet Explorer 8 在 strict mode 下）也使用一种尝试于这两者之间妥协的“近乎标准”(almost standards) 模式，实施了一种表单元格尺寸的怪异行为，除此之外符合标准定义。</p>
+<p>通常，浏览器基于页面中文件类型描述的存在以决定采用哪种渲染模式；如果存在一个完整的 DOCTYPE 则浏览器将会采用标准模式，而如果它缺失则浏览器将会采用怪异模式。<br>例如，一个以如下 DOCTYPE 开始的网页将会触发标准模式：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN""http://www.w3.org/TR/html4/strict.dtd"&gt;</span></span><br></pre></td></tr></table></figure>
+<p>如下 DOCTYPE 语法上是无效的，因为它包含公共标识符关键字 PUBLIC 却没有公共标识符（指示所用 HTML 版本的名称），也没有 HTML 文档类型定义的系统标识符 URL。这将会触发怪异模式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html PUBLIC&gt;</span><br></pre></td></tr></table></figure>
+<p>此外，一个不含任何 DOCTYPE 的网页将会以 quirks 模式渲染。<br>对此一个值得一提的例外是微软的 Internet Explorer 6 浏览器，如果 DOCTYPE 之前有一个 XML 声明，不管是否指定完整的 DOCTYPE，它就会以 quirks 模式渲染一个页面。因此以如下代码开始的 XHTML 页面会被 IE 6 渲染为 quirks 模式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>在一定程度上，上述代码是有用的，然而它仅仅会对 IE 6 触发怪异模式。如果 DOCTYPE 之前有任何语句，quirks 模式在任何版本的 IE 中（截至 IE 9）同样会被触发。<br>例如，如果一个超文本文件在 DOCTYPE 前包含一个注释或者任何标签，IE (截至 9) 会使用 quirks 模式：</p>
+<h3 id="IE的文档模式和浏览器模式"><a href="#IE的文档模式和浏览器模式" class="headerlink" title="IE的文档模式和浏览器模式"></a>IE的文档模式和浏览器模式</h3><p>IE从IE8引入了文档兼容性开始有了浏览器模式和文档模式(按F12可见)</p>
+<blockquote>
+<p>“浏览器模式”:用于切换IE针对该网页的默认文档模式、对不同版本浏览器的条件备注解析、发送给网站服务器的用户代理（User-Agent）字符串的值。网站可以根据浏览器返回的不同用户代理字符串判断浏览器的版本和安装的功能，这样就可以向不同的浏览器返回不同的页面内容。</p>
+</blockquote>
+<figure><img src="http://paddingme.qiniudn.com/ie9-2ge-moshi.png" alt="IE8的浏览器模式"><figcaption>IE8的浏览器模式</figcaption></figure>
+
+<blockquote>
+<p>“文档模式”用于指定IE的页面排版引擎（Trident）以哪个版本的方式来解析并渲染网页代码。切换文档模式会导致网页被刷新，但不会更改用户代理字符串中的版本号，也不会从服务器重新下载网页。切换浏览器模式的同时，浏览器也会自动切换到相应的文档模式。</p>
+</blockquote>
+<figure><img src="http://paddingme.qiniudn.com/ie9-2ge-moshi.png" alt="IE下的文档模式"><figcaption>IE9下的文档模式</figcaption></figure>
+
+<p>我的理解就是浏览器模式是指IE浏览器 向服务器发送请求时，告诉服务器自己是哪个浏览器哪个版本，这里是指告诉服务器我是IE7还是IE8或者9,然后浏览器根据收到的用户代理字段返回IE7或者IE8或者IE9的页面内容。</p>
+<p>而文档模式则是指浏览器将服务器端发送过来的内容按照某种特定的浏览器（IE7，IE8，IE9等）来渲染页面。</p>
+<p>这里还涉及到怪异模式（Quirks Mode），IE旧的怪异模式现在被称为IE5怪异模式,一般不予考虑。</p>
+<h3 id="DOCTYPE"><a href="#DOCTYPE" class="headerlink" title="DOCTYPE"></a>DOCTYPE</h3><p>为什么要研究这些呢，是为了强调按照标准写html语言的重要性，近来在工作中遇到的各种诡异的IEbug，花费了巨大精力调试，最后都是因为没有按照标准来写，没有doctyle头，标签没有闭合，导致各浏览器渲染不同诡异。</p>
+<p>DOCTYPE是document type(文档类型)的简写，用来说明你用的XHTML或者HTML是什么版本。<br>其中的DTD(document type definition)叫文档类型定义，里面包含了文档的规则，浏览器就根据你定义的DTD来解释你页面的标识，并展现出来。<br>要建立符合标准的网页，DOCTYPE声明是必不可少的关键组成部分；除非你的XHTML确定了一个正确的DOCTYPE，否则你的标识和CSS都不会生效。</p>
+<p>HTML5 (向后兼容，推荐使用):</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br></pre></td></tr></table></figure>
+<p>HTML 4.01 Strict</p>
+<p>This DTD contains all HTML elements and attributes, but does NOT INCLUDE presentational or deprecated elements (like font). Framesets are not allowed.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot; &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>HTML 4.01 Transitional</p>
+<p>This DTD contains all HTML elements and attributes, INCLUDING presentational and deprecated elements (like font). Framesets are not allowed.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>HTML 4.01 Frameset</p>
+<p>This DTD is equal to HTML 4.01 Transitional, but allows the use of frameset content.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Frameset//EN&quot; &quot;http://www.w3.org/TR/html4/frameset.dtd&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>XHTML 1.0 Strict</p>
+<p>This DTD contains all HTML elements and attributes, but does NOT INCLUDE presentational or deprecated elements (like font). Framesets are not allowed. The markup must also be written as well-formed XML.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>XHTML 1.0 Transitional</p>
+<p>This DTD contains all HTML elements and attributes, INCLUDING presentational and deprecated elements (like font). Framesets are not allowed. The markup must also be written as well-formed XML.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>XHTML 1.0 Frameset</p>
+<p>This DTD is equal to XHTML 1.0 Transitional, but allows the use of frameset content.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Frameset//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>XHTML 1.1</p>
+<p>This DTD is equal to XHTML 1.0 Strict, but allows you to add modules (for example to provide ruby support for East-Asian languages).</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.1//EN&quot; &quot;http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd&quot;&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="IE兼容模式"><a href="#IE兼容模式" class="headerlink" title="IE兼容模式"></a>IE兼容模式</h3><p>IE 支持通过特定的 <meta> 标签来确定绘制当前页面所应该采用的 IE 版本。除非有强烈的特殊需求，否则最好是设置为 edge mode，从而通知 IE 采用其所支持的最新的模式。</p>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+<h3 id="内核控制Meta标签：让360浏览器默认使用极速模式打开网页"><a href="#内核控制Meta标签：让360浏览器默认使用极速模式打开网页" class="headerlink" title="内核控制Meta标签：让360浏览器默认使用极速模式打开网页"></a>内核控制Meta标签：让360浏览器默认使用极速模式打开网页</h3><p>进来调试一个网页在IE、Chrome、Firefox下均表现正常，但是在360浏览器兼容模式下表现诡异。（国产的各种shell，我就呵呵了。）查查了内核控制Meta标签：让360浏览器默认使用极速模式打开网页，方法如下：</p>
+<ol>
+<li>网页头部加入</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;renderer&quot; content=&quot;webkit&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>360浏览器就会在读取到这个标签后，立即切换对应的极速核。</p>
+<ol>
+<li>另外为了保险起见再加入</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=Edge,chrome=1&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>这样写可以达到的效果是如果安装了Google chrome frame，则使用GCF来渲染页面，如果没有安装GCF，则使用最高版本的IE内核进行渲染。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>作为前端，浏览器各种状况频发，诡异之处无所不在。最重要的是按照标准来规范自己的代码，另一方面了解各浏览器的特性，好规避bug,再者，不断debug，从坑里爬起来。</p>
+<h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><ol>
+<li><a href="http://codeguide.bootcss.com/" target="_blank" rel="external">编码规范 by @mdo（墙裂推荐）</a></li>
+<li><a href="https://www.imququ.com/post/browser-mode-and-document-mode-in-ie.html" target="_blank" rel="external">关于浏览器模式和文本模式的困惑</a></li>
+<li><a href="https://www.imququ.com/post/browser-mode-and-document-mode-in-ie-2.html" target="_blank" rel="external">IE 的浏览器模式和文本模式（二）</a></li>
+<li><a href="http://msdn.microsoft.com/zh-cn/library/cc288325\(v=vs.85\" target="_blank" rel="external">定义文档兼容性</a>.aspx)</li>
+<li><a href="http://zh.wikipedia.org/wiki/%E6%80%AA%E5%BC%82%E6%A8%A1%E5%BC%8F" target="_blank" rel="external">怪异模式</a></li>
+<li><a href="http://www.iefans.net/shanchu-ie9-wenjianjia/" target="_blank" rel="external">IE “浏览器模式”和“文档模式”的区别（IEfans）</a></li>
+<li><a href="http://se.360.cn/v6/help/meta.html" target="_blank" rel="external">浏览器内核控制Meta标签说明文档浏览器内核控制Meta标签说明文档</a></li>
+</ol>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/blog/"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'PaddingMe';
+    
+    var disqus_url = 'http://yoursite.com/blog/2014/12/05/【前端】【学习心得】第十九天 模式与标准/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//PaddingMe.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235687', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

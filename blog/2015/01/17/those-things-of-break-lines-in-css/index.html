@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-home">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>css 换行的那些事儿 | Hexo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="css," />
+  
+
+  <meta name="description" content="一个导航栏引发的血案周五做一个二级导航栏，需要的效果如图所示，
+写的代码是：
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;htm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css 换行的那些事儿">
+<meta property="og:url" content="http://yoursite.com/blog/2015/01/17/those-things-of-break-lines-in-css/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一个导航栏引发的血案周五做一个二级导航栏，需要的效果如图所示，
+写的代码是：
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;htm">
+<meta property="og:image" content="http://paddingme.qiniudn.com/whitespace.png">
+<meta property="og:updated_time" content="2015-07-08T06:52:18.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="css 换行的那些事儿">
+<meta name="twitter:description" content="一个导航栏引发的血案周五做一个二级导航栏，需要的效果如图所示，
+写的代码是：
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;htm">
+<meta name="twitter:image" content="http://paddingme.qiniudn.com/whitespace.png">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=32204ee7" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-50048801-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">目录</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/blog/"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一个导航栏引发的血案"><span class="toc-text">一个导航栏引发的血案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#white-space"><span class="toc-text">white-space</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#word-wrap-amp-word-break"><span class="toc-text">word-wrap & word-break</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#css-实现省略号"><span class="toc-text">css 实现省略号</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-those-things-of-break-lines-in-css" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">css 换行的那些事儿</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2015.01.17</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>John Doe</span>
+        </span>
+      
+
+      
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://padding.me/blog/2015/01/17/those-things-of-break-lines-in-css/#disqus_thread"></a>
+        </span>
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h2 id="一个导航栏引发的血案"><a href="#一个导航栏引发的血案" class="headerlink" title="一个导航栏引发的血案"></a>一个导航栏引发的血案</h2><p>周五做一个二级导航栏，需要的效果如图所示，</p>
+<p>写的代码是：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"zh-cmn-Hans"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Navbar<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span><br><span class="line">        ul &#123;</span><br><span class="line">            list-style: none;</span><br><span class="line">        &#125;</span><br><span class="line">        a &#123;</span><br><span class="line">            text-decoration: none;</span><br><span class="line">        &#125;</span><br><span class="line">        .nav li a:hover &#123;</span><br><span class="line">            background: lightsteelblue;</span><br><span class="line">        &#125;</span><br><span class="line">        .nav li &#123;</span><br><span class="line">            display: inline-block;</span><br><span class="line">            *display: inline;</span><br><span class="line">            *zoom: 1;</span><br><span class="line">            position: relative;</span><br><span class="line">            padding-bottom: 20px;</span><br><span class="line">            border: 1px solid red;</span><br><span class="line">        &#125;</span><br><span class="line">        .nav li a &#123;</span><br><span class="line">            padding: 10px;</span><br><span class="line">            background: aliceblue ;</span><br><span class="line">            margin-right: -8px;</span><br><span class="line">            border-right: 1px solid #fff;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        .nav li:hover .second-column &#123;</span><br><span class="line">            visibility: visible;</span><br><span class="line">            border: 1px solid blue;</span><br><span class="line">        &#125;</span><br><span class="line">        .second-column &#123;</span><br><span class="line">            visibility: hidden;</span><br><span class="line">            position: absolute;</span><br><span class="line">            top: 37px;</span><br><span class="line">            left: 0;</span><br><span class="line">        &#125;</span><br><span class="line">        .nav .second-column a &#123;</span><br><span class="line">            padding: 0;</span><br><span class="line">            margin: 0;</span><br><span class="line">        &#125;</span><br><span class="line">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"nav"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>一级栏目<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>一级栏目<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"second-column"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>二级栏目<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>二级栏目<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>二级栏目<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>二级栏目<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>一级栏目<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"second-column"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>二级栏目二级栏目二级栏目<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>二级栏目<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>二级栏目二级栏目二级栏目<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>二级栏目<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>一级栏目<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>得到的效果是：</p>
+<p>在线 DEMO: <a href="http://codepen.io/paddingme/pen/QwvLBO" target="_blank" rel="external">http://codepen.io/paddingme/pen/QwvLBO</a></p>
+<p>发现二级导航栏所在的区域和一级导航栏 <code>li</code> 区域宽度一样，无法全部水平拜访。</p>
+<p>折腾了半天，研究了半天，差点于屏幕前吐血身亡。最后发现加了句 <code>white-space: nowrap;</code> 就轻松搞定了。</p>
+<p>在线 DEMO: <a href="http://codepen.io/paddingme/pen/RNVbBr" target="_blank" rel="external">http://codepen.io/paddingme/pen/RNVbBr</a></p>
+<p>猜测是 绝对定位的元素根据其定位的父元素进行定位，默认情况下不限制宽度的情况下，绝对定位元素会自动折行，不超过其定位的父元素的宽度区域。</p>
+<p>这里我们使用 <code>white-space: nowrap</code> 强制不换行得到所需要效果。</p>
+<h2 id="white-space"><a href="#white-space" class="headerlink" title="white-space"></a>white-space</h2><p>实现强制不换行</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">    white-space：nowrap;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>语法： <code>white-space</code>：normal | pre | nowrap | pre-wrap | pre-line</p>
+<p>查看了 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/white-space" target="_blank" rel="external">MDN</a>（还翻译了下，感觉翻译得好差，见笑=.=）和 <a href="http://css.doyoe.com/" target="_blank" rel="external">CSS参考手册</a>。<br>总结下各个取值的用法是：</p>
+<ul>
+<li><code>normal</code> : 浏览器默认情况下 <code>white-space</code> 即为 <code>normal</code>, 表现为连续的空白符会被合并为一个空格，制表符、换行符都是空白符。当遇到盒子边界或者 <code>&lt;br&gt;</code> 就会换行。</li>
+<li><code>pre</code>: 连续的空白符不会被合并。</li>
+<li><code>nowrap</code>: 强制文本不换行，除非遇到<code>&lt;br&gt;</code>。</li>
+<li><code>pre-wrap</code>: 连续的空白符不会被合并, 遇到盒子边界或者 <code>&lt;br&gt;</code> 就会换行。</li>
+<li><code>pre-line</code>: 连续的空白符不会被合并,保持文本的换行,遇到盒子边界或者 <code>&lt;br&gt;</code> 就会换行。</li>
+</ul>
+<p><img src="http://paddingme.qiniudn.com/whitespace.png" alt=""></p>
+<p>注：IE7及更早浏览器不支持 CSS2.1 新增的 pre-wrap | pre-line。</p>
+<h2 id="word-wrap-amp-word-break"><a href="#word-wrap-amp-word-break" class="headerlink" title="word-wrap &amp; word-break"></a>word-wrap &amp; word-break</h2><p>CSS 自动换行</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">word-wrap</span>: break-word;</span><br><span class="line">    <span class="attribute">word-break</span>: normal;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>word-wrap：normal | break-word</p>
+<ul>
+<li>normal： 允许内容顶开或溢出指定的容器边界。</li>
+<li>break-word： 内容将在边界内换行。如果需要，单词内部允许断行。</li>
+</ul>
+<p>设置或检索当内容超过指定容器的边界时是否断行。<br>作为 IE 的私有属性之一，IE5.5 率先实现了 <code>word-wrap</code> ，后期被 w3c 采纳成标准属性；<br>CSS3 中将 <code>word-wrap</code> 改名为 <code>overflow-wrap</code>；<br>对应的脚本特性为 <code>wordWrap</code>。</p>
+<p><code>word-break</code> 是用来在单词内断行。</p>
+<p>word-break：normal | keep-all | break-all</p>
+<ul>
+<li>normal： 依照亚洲语言和非亚洲语言的文本规则，允许在字内换行。</li>
+<li>keep-all： 与所有非亚洲语言的 normal 相同。对于中文，韩文，日文，不允许字断开。适合包含少量亚洲文本的非亚洲文本。</li>
+<li>break-all： 该行为与亚洲语言的 normal 相同。也允许非亚洲语言文本行的任意字内断开。该值适合包含一些非亚洲文本的亚洲文本，比如使连续的英文字母间断行。</li>
+</ul>
+<p>设置或检索对象内文本的字内换行行为。注意 FireFox 早起版本不识别 word-break，需要 hack。<br>对于解决防止页面中出现连续无意义的长字符打破布局，应该使用 <code>break-all</code>；<br>作为 IE 的私有属性之一，IE5.5 率先实现了 <code>word-break</code> ，后期被w3c采纳成标准属性；<br>对应的脚本特性为 <code>wordBreak</code>。</p>
+<p>参考：</p>
+<ul>
+<li><a href="http://www.hicss.net/solve-change-line-in-css/" target="_blank" rel="external">http://www.hicss.net/solve-change-line-in-css/</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/white-space" target="_blank" rel="external">https://developer.mozilla.org/zh-CN/docs/Web/CSS/white-space</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/word-break" target="_blank" rel="external">https://developer.mozilla.org/zh-CN/docs/Web/CSS/word-break</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/word-wrap" target="_blank" rel="external">https://developer.mozilla.org/zh-CN/docs/Web/CSS/word-wrap</a></li>
+<li><a href="http://css.doyoe.com/" target="_blank" rel="external">http://css.doyoe.com/</a></li>
+</ul>
+<h2 id="css-实现省略号"><a href="#css-实现省略号" class="headerlink" title="css 实现省略号"></a>css 实现省略号</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">27em</span>;</span><br><span class="line">    <span class="attribute">white-space</span>: nowrap;</span><br><span class="line">    <span class="attribute">text-overflow</span>:ellipsis;</span><br><span class="line">    <span class="attribute">overflow</span>:hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注意 <code>text-overflow: ellipsis</code> 在 Firefox 下无效，可以用其他方法 hack，例如</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* FF 下的样式 */</span></span><br><span class="line"><span class="selector-tag">p</span> &#123;<span class="attribute">clear</span>:both;&#125;</span><br><span class="line"><span class="selector-tag">p</span> <span class="selector-tag">span</span> &#123;</span><br><span class="line"><span class="attribute">float</span>:left;</span><br><span class="line">    <span class="attribute">max-width</span>:<span class="number">175px</span>;   <span class="comment">/*IE不能解释该属性，而FF可以*/</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">p</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>:<span class="string">"..."</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>参考：</p>
+<ul>
+<li><a href="http://www.zhangxinxu.com/wordpress/2009/09/%E5%85%B3%E4%BA%8E%E6%96%87%E5%AD%97%E5%86%85%E5%AE%B9%E6%BA%A2%E5%87%BA%E7%94%A8%E7%82%B9%E7%82%B9%E7%82%B9-%E7%9C%81%E7%95%A5%E5%8F%B7%E8%A1%A8%E7%A4%BA/" target="_blank" rel="external">关于文字内容溢出用点点点(…)省略号表示</a></li>
+<li><a href="http://www.cnblogs.com/hlz789456123/archive/2009/02/18/1392972.html" target="_blank" rel="external">CSS 单行溢出文本显示省略号…的方法（兼容IE FF）
+</a></li>
+</ul>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/blog/"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'PaddingMe';
+    
+    var disqus_url = 'http://yoursite.com/blog/2015/01/17/those-things-of-break-lines-in-css/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//PaddingMe.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235687', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

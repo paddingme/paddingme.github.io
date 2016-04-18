@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-home">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>如何实现“回到顶部”的按钮效果 | Hexo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="javascript,css," />
+  
+
+  <meta name="description" content="很多页面太长，需要通过拖动滚动条才能回到顶部，这个用户体验并不好，所以很多网站会在窗口右下角出现一个回到回到顶部的按钮，点击它便会回到顶部。怎么制作回到顶部这个效果呢，可以通过两种方法。
+
+使用锚连接，使用&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;标签默认返回顶部。这种使用锚链接回到顶部效果:
+优点：简单快速，没有任何兼容性问题;
+缺点：视觉上不够直观（会突然快速">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何实现“回到顶部”的按钮效果">
+<meta property="og:url" content="http://yoursite.com/blog/2014/05/12/scroll-to-top/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="很多页面太长，需要通过拖动滚动条才能回到顶部，这个用户体验并不好，所以很多网站会在窗口右下角出现一个回到回到顶部的按钮，点击它便会回到顶部。怎么制作回到顶部这个效果呢，可以通过两种方法。
+
+使用锚连接，使用&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;标签默认返回顶部。这种使用锚链接回到顶部效果:
+优点：简单快速，没有任何兼容性问题;
+缺点：视觉上不够直观（会突然快速">
+<meta property="og:updated_time" content="2015-07-08T06:52:18.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何实现“回到顶部”的按钮效果">
+<meta name="twitter:description" content="很多页面太长，需要通过拖动滚动条才能回到顶部，这个用户体验并不好，所以很多网站会在窗口右下角出现一个回到回到顶部的按钮，点击它便会回到顶部。怎么制作回到顶部这个效果呢，可以通过两种方法。
+
+使用锚连接，使用&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;标签默认返回顶部。这种使用锚链接回到顶部效果:
+优点：简单快速，没有任何兼容性问题;
+缺点：视觉上不够直观（会突然快速">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=32204ee7" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-50048801-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">目录</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/blog/"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-scroll-to-top" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">如何实现“回到顶部”的按钮效果</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2014.05.12</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>John Doe</span>
+        </span>
+      
+
+      
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://padding.me/blog/2014/05/12/scroll-to-top/#disqus_thread"></a>
+        </span>
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>很多页面太长，需要通过拖动滚动条才能回到顶部，这个用户体验并不好，所以很多网站会在窗口右下角出现一个回到<strong>回到顶部</strong>的按钮，点击它便会回到顶部。怎么制作回到顶部这个效果呢，可以通过两种方法。</p>
+<ul>
+<li>使用<strong>锚连接</strong>，使用<code>&lt;a href=&quot;#&quot;&gt;&lt;/a&gt;</code>标签默认返回顶部。这种使用锚链接回到顶部效果:<ul>
+<li>优点：简单快速，没有任何兼容性问题;</li>
+<li>缺点：视觉上不够直观（会突然快速回到页面顶部），用户体验不好。</li>
+</ul>
+</li>
+<li>用JavaScript来实现</li>
+</ul>
+<p>我们主要来学习如何使用JavaScript实现。如何实现呢，我们在脑海里演绎这个场景：当我们打开一个页面，鼠标向下滚动到一定程度，会出现“回到顶部”这个按钮，我们点击按钮，页面会由快到慢滚动到顶部，最后停留在顶部。这里涉及到的知识点有：</p>
+<ul>
+<li>DOM操作：<ul>
+<li><code>document.getElementById</code>  根据ID获取标签元素</li>
+<li><code>document.documentElement.scrollTop</code> 滚动条的数值，可读写</li>
+</ul>
+</li>
+<li>事件运用：<ul>
+<li><code>window.onload</code> 页面加载完毕后触发</li>
+<li><code>onclick</code> 鼠标点击后触发</li>
+<li><code>window.onscroll</code> 滚动条滚动触发</li>
+</ul>
+</li>
+<li>定时器<ul>
+<li><code>setInterval()</code> 设置定时器，需传2个参数</li>
+<li><code>clearInterval()</code> 关闭定时器，需传一个参数</li>
+</ul>
+</li>
+</ul>
+<p>好了，根据以上知识点，首先在html中增加按钮</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"javascript:;"</span> <span class="attr">id</span>=<span class="string">"btn"</span> <span class="attr">title</span>=<span class="string">"回到顶部"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>然后在层叠样式表里添加</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#btn</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>:<span class="number">38px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">38px</span>;<span class="comment">/*按钮大片大小*/</span></span><br><span class="line">  <span class="attribute">display</span>: none;</span><br><span class="line">  <span class="comment">/*在一个屏幕的可见范围内没必要显示“回到顶部”按钮，所以默认不显示*/</span></span><br><span class="line">  <span class="comment">/*再通过当滚动条滚动超过一个屏幕时再用JavaScript显示按钮*/</span></span><br><span class="line">  <span class="attribute">position</span>: fixed;</span><br><span class="line">  <span class="attribute">left</span>:<span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">bottom</span>:<span class="number">30px</span>;<span class="comment">/*固定定位，相对于屏幕的可见范围位置*/</span></span><br><span class="line">  <span class="attribute">background</span>:<span class="built_in">url</span>(http://paddingme.qiniudn.com/top.png) no-repeat;<span class="attribute">margin-left</span>: <span class="number">25%</span>;</span><br><span class="line">  <span class="comment">/*按钮背景图片，这里我用的是bootstrap官网的scrolltop图片*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>好了重点是JavaScript可以这样写：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onload=<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> obtn=<span class="built_in">document</span>.getElementById(<span class="string">"btn"</span>); <span class="comment">//取得标签元素</span></span><br><span class="line">	<span class="keyword">var</span> clientHeight=<span class="built_in">document</span>.documentElement.clientHeight;</span><br><span class="line">	<span class="comment">//获得一个屏幕的高度即可视区域高度</span></span><br><span class="line">	<span class="keyword">var</span> timer=<span class="literal">null</span>;<span class="comment">//设置计时器</span></span><br><span class="line">	<span class="keyword">var</span> isTop=<span class="literal">true</span>;<span class="comment">//见最后注释</span></span><br><span class="line"></span><br><span class="line">	<span class="built_in">window</span>.onscroll=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="comment">//滚动条滚动时触发</span></span><br><span class="line">		<span class="keyword">var</span> osTop=<span class="built_in">document</span>.documentElement.scrollTop||<span class="built_in">document</span>.body.scrollTop;</span><br><span class="line">		<span class="comment">//获得滚动条到顶部的高度，document.documentElement.scrollTop取得IE高度，</span></span><br><span class="line">		<span class="comment">//document.body.scrollTop取得chrome高度</span></span><br><span class="line">		<span class="keyword">if</span>(osTop&gt;=clientHeight)&#123;</span><br><span class="line">		<span class="comment">//滚动条到顶部的高度大于等于一个屏幕高度时，显示“回到顶部”按钮</span></span><br><span class="line">			obtn.style.display=<span class="string">"block"</span>;</span><br><span class="line">		&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">			obtn.style.display=<span class="string">"none"</span>;<span class="comment">//否则隐藏按钮</span></span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">//下面为了实现当回到顶部的时候，用户想要停下来观看页面，</span></span><br><span class="line">		<span class="comment">//滚动滚动条可以停下来中断回到顶部的效果。</span></span><br><span class="line">		<span class="keyword">if</span>(!isTop) clearInterval(timer);</span><br><span class="line">		<span class="comment">//如果没有到顶部，滚动条滚动，则关闭计时器，见最后注释</span></span><br><span class="line">			isTop=<span class="literal">false</span>; <span class="comment">//置未到顶部，见最后注释</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	obtn.onclick= <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		timer = setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;<span class="comment">//setInterval，30ms执行一次函数</span></span><br><span class="line">			<span class="keyword">var</span> osTop=<span class="built_in">document</span>.documentElement.scrollTop||<span class="built_in">document</span>.body.scrollTop;</span><br><span class="line">			<span class="comment">//获得滚动条到顶部的高度</span></span><br><span class="line">			<span class="keyword">var</span> ispeed=<span class="built_in">Math</span>.floor(-osTop/<span class="number">5</span>);<span class="comment">//速度</span></span><br><span class="line">			<span class="built_in">document</span>.documentElement.scrollTop=<span class="built_in">document</span>.body.scrollTop=osTop+ispeed;</span><br><span class="line">			<span class="comment">//越来越小，写滚动条到顶部的高度，实现回到顶部由快到慢的效果。</span></span><br><span class="line"></span><br><span class="line">			isTop=<span class="literal">true</span>;<span class="comment">//见最后注释</span></span><br><span class="line"></span><br><span class="line">			<span class="keyword">if</span>(osTop==<span class="number">0</span>)<span class="comment">//到达顶部关闭计时器</span></span><br><span class="line">				clearInterval(timer);</span><br><span class="line">		&#125;,<span class="number">30</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//如何实现当回到顶部时候，想突然中断呢？首先设置全局变量var isTop=true;</span></span><br><span class="line"><span class="comment">//则obtn.onclick事件中置isTop为true,</span></span><br><span class="line"><span class="comment">//当点击按钮，则滚动条开始想顶部滚动，触发window.onscroll事件，</span></span><br><span class="line"><span class="comment">//这里!istop为false不执行clearInterval(timer);</span></span><br><span class="line"><span class="comment">//但是下面的isTop=false;再将isTop置为false。</span></span><br><span class="line"><span class="comment">//这时候你人为滚动鼠标，则再次触发window.onscroll 事件，</span></span><br><span class="line"><span class="comment">//此时！istop为true 执行clearInterval(timer);则滚动条停下来。</span></span><br></pre></td></tr></table></figure>
+<p>看看效果，请轻轻点击本文旁边的“回到顶部”按钮，啧啧啧，用户体验灰常到位，想停就停，不想停则由快到慢回到顶部，让用户有一个适应的心理预期，还可能看到想看的风景停下来驻足欣赏。</p>
+<p>更详细的教程，请见<a href="http://www.imooc.com/learn/65" target="_blank" rel="external">慕课网</a>。</p>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/blog/"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'PaddingMe';
+    
+    var disqus_url = 'http://yoursite.com/blog/2014/05/12/scroll-to-top/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//PaddingMe.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235687', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

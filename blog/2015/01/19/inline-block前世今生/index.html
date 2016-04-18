@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-home">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>inline-block前世今生 | Hexo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="CSS," />
+  
+
+  <meta name="description" content="文章取自我的 Github  repos: DailyReading， 作者：@paddingme原文链接：https://github.com/paddingme/DailyReading/issues/5
+inline-block 前世今生
+IE6、7 真的不支持 display:inline-block 吗？
+IE 从 5.5 开始就已经支持display:inline-block了，只是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="inline-block前世今生">
+<meta property="og:url" content="http://yoursite.com/blog/2015/01/19/inline-block前世今生/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="文章取自我的 Github  repos: DailyReading， 作者：@paddingme原文链接：https://github.com/paddingme/DailyReading/issues/5
+inline-block 前世今生
+IE6、7 真的不支持 display:inline-block 吗？
+IE 从 5.5 开始就已经支持display:inline-block了，只是">
+<meta property="og:updated_time" content="2016-04-10T16:12:34.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="inline-block前世今生">
+<meta name="twitter:description" content="文章取自我的 Github  repos: DailyReading， 作者：@paddingme原文链接：https://github.com/paddingme/DailyReading/issues/5
+inline-block 前世今生
+IE6、7 真的不支持 display:inline-block 吗？
+IE 从 5.5 开始就已经支持display:inline-block了，只是">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=32204ee7" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-50048801-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">目录</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/blog/"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#inline-block-前世今生"><span class="toc-text">inline-block 前世今生</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-inline-block前世今生" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">inline-block前世今生</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2015.01.19</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>John Doe</span>
+        </span>
+      
+
+      
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://padding.me/blog/2015/01/19/inline-block前世今生/#disqus_thread"></a>
+        </span>
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p> 文章取自我的 Github  repos: <a href="https://github.com/paddingme/DailyReading" target="_blank" rel="external">DailyReading</a>， 作者：<a href="http://padding.me/about.html" target="_blank" rel="external">@paddingme</a><br>原文链接：<a href="https://github.com/paddingme/DailyReading/issues/5" target="_blank" rel="external">https://github.com/paddingme/DailyReading/issues/5</a></p>
+<h2 id="inline-block-前世今生"><a href="#inline-block-前世今生" class="headerlink" title="inline-block 前世今生"></a><a href="http://ued.taobao.org/blog/2012/08/inline-block/" target="_blank" rel="external">inline-block 前世今生</a></h2><ol>
+<li><p>IE6、7 真的不支持 <code>display:inline-block</code> 吗？</p>
+<p>IE 从 5.5 开始就已经支持<code>display:inline-block</code>了，只是支持的并不是那么完善。</p>
+<p>IE6 中 block 元素即使触发了 hasLayout 也不具有 inline-block 元素不换行的特性。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">display</span><span class="selector-pseudo">:inline-block</span>; <span class="comment">/* 现代浏览器 +IE6、7 inline 元素 */</span></span><br><span class="line">*<span class="selector-tag">display</span><span class="selector-pseudo">:inline</span>; <span class="comment">/* IE6、7 block 元素 */</span></span><br><span class="line">*<span class="selector-tag">zoom</span><span class="selector-pseudo">:1</span>; <span class="comment">/* 触发haslayout*/</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>到底什么是 inline-block</p>
+<p>inline-block 后的元素创建了一个行级的块容器，该元素内部（内容）被格式化成一个块元素，同时元素本身则被格式化成一个行内元素。</p>
+<p>即：inline-block 的元素既具有 block 元素可以设置宽高的特性，同时又具有 inline 元素默认不换行的特性。当然不仅仅是这些特性，比如 inline-block 元素也可以设置 vertical-align 属性。简而言之：</p>
+<p><strong>inline-block 后的元素就是一个格式化为行内元素的块容器( Block container )。</strong></p>
+<p>总结：</p>
+<ul>
+<li>IE5.5 后开始支持 inline-block， 但是它所支持的 inline-block 不能等同于 CSS2.1 中的 inline-block，因为 IE5.5 比 CSS2.1 更早提出 inline-block 的概念并作为所谓的「私有属性值」使用，所以二者表现出来的效果是不完全一致。</li>
+<li>IE 5.5、6、7 、8（Q）中 block 元素对 inline-block 支持不完整，如果要达到类似的效果，需要先设置为 display:inline，然后使用 zoom:1 等触发 hasLayout。</li>
+<li>IE 5.5、6、7 、8（Q）中 inline 元素欲达到 inline-block 的效果只需直接设置此属性值或使用 zoom:1 等均可。</li>
+</ul>
+</li>
+<li><p>去除 inline-block 空隙终极解决方案。</p>
+ <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">.dib-wrap &#123;</span><br><span class="line">    font-size:0;/* 所有浏览器 */</span><br><span class="line">    *word-spacing:-1px;/* IE6、7 */</span><br><span class="line">&#125;</span><br><span class="line">.dib-wrap .dib &#123;</span><br><span class="line">    font-size: 12px;</span><br><span class="line">    letter-spacing: normal;</span><br><span class="line">    word-spacing: normal;</span><br><span class="line">    vertical-align:top;</span><br><span class="line">&#125;</span><br><span class="line">@media screen and (-webkit-min-device-pixel-ratio:0)&#123;</span><br><span class="line">/* firefox 中 letter-spacing 会导致脱离普通流的元素水平位移 */</span><br><span class="line">    .dib-wrap&#123;</span><br><span class="line">        letter-spacing:-5px;/* Safari 等不支持字体大小为 0 的浏览器, N 根据父级字体调节*/</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">.dib &#123;</span><br><span class="line">    display: inline-block;</span><br><span class="line">    *display:inline;</span><br><span class="line">    *zoom:1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> 总结：</p>
+<ul>
+<li>IE5.5 后开始支持 inline-block， 比 CSS2.1 更早提出 inline-block 的概念并作为所谓的「私有属性值」使用。但是它所支持的 inline-block 不能等同于 CSS2.1 中的 inline-block，IE 5.5、6、7 、8（Q）中 block 元素对 inline-block 支持不完整，因此二者表现出来的效果是不完全一致。</li>
+<li>产生 inline-block 空隙的根本性原因是：HTML 中的换行符、空格符、制表符等合并为空白符，字体大小不为 0 的情况下，空白符自然占据一定的宽度，因此产生了元素间的空隙。</li>
+<li>慎用 -webkit-text-size-adjust:none，它将会导致页面无法通过缩放来改变字体大小。</li>
+</ul>
+</li>
+<li><p>W3C 9.1 White space 中规定以下元素属于空白符（white space）：</p>
+<ul>
+<li>ASCII 空格 ( )</li>
+<li>ASCII 制表符 ( )</li>
+<li>ASCII 换页符 (\&#x000C;)</li>
+<li>零宽度空格 (​)「这个在闭合浮动中也有运用到」</li>
+</ul>
+</li>
+</ol>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/blog/"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'PaddingMe';
+    
+    var disqus_url = 'http://yoursite.com/blog/2015/01/19/inline-block前世今生/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//PaddingMe.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235687', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

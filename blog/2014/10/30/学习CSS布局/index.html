@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-home">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>学习CSS布局 | Hexo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="CSS,article,edit," />
+  
+
+  <meta name="description" content="文章取自我的 Github  repos: Learning-HTML-CSS， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-HTML-CSS/issues/3
+这是偶尔看到的一篇学习CSS布局的文章，对于我这个菜鸟来说真是受益匪浅，对CSS布局一下子拨云见雾的感觉。你可以到这里仔细研究阅读，相信你会和我一样兴奋和豁然开朗。而下">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习CSS布局">
+<meta property="og:url" content="http://yoursite.com/blog/2014/10/30/学习CSS布局/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="文章取自我的 Github  repos: Learning-HTML-CSS， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-HTML-CSS/issues/3
+这是偶尔看到的一篇学习CSS布局的文章，对于我这个菜鸟来说真是受益匪浅，对CSS布局一下子拨云见雾的感觉。你可以到这里仔细研究阅读，相信你会和我一样兴奋和豁然开朗。而下">
+<meta property="og:updated_time" content="2016-04-10T16:12:39.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="学习CSS布局">
+<meta name="twitter:description" content="文章取自我的 Github  repos: Learning-HTML-CSS， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-HTML-CSS/issues/3
+这是偶尔看到的一篇学习CSS布局的文章，对于我这个菜鸟来说真是受益匪浅，对CSS布局一下子拨云见雾的感觉。你可以到这里仔细研究阅读，相信你会和我一样兴奋和豁然开朗。而下">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=32204ee7" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-50048801-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">目录</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/blog/"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-学习CSS布局" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">学习CSS布局</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2014.10.30</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>John Doe</span>
+        </span>
+      
+
+      
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://padding.me/blog/2014/10/30/学习CSS布局/#disqus_thread"></a>
+        </span>
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p> 文章取自我的 Github  repos: <a href="https://github.com/paddingme/Learning-HTML-CSS" target="_blank" rel="external">Learning-HTML-CSS</a>， 作者：<a href="http://padding.me/about.html" target="_blank" rel="external">@paddingme</a><br>原文链接：<a href="https://github.com/paddingme/Learning-HTML-CSS/issues/3" target="_blank" rel="external">https://github.com/paddingme/Learning-HTML-CSS/issues/3</a></p>
+<p>这是偶尔看到的一篇学习CSS布局的文章，对于我这个菜鸟来说真是受益匪浅，对CSS布局一下子拨云见雾的感觉。你可以到<a href="http://zh.learnlayout.com/" target="_blank" rel="external">这里</a>仔细研究阅读，相信你会和我一样兴奋和豁然开朗。而下面是我在此基础上总结的内容，以便后来查阅使用。</p>
+<ul>
+<li><p><strong>“display”属性</strong></p>
+<p>每个元素都有默认的display属性，一般是block或者inline,block表示块级元素，而inline表示行内元素。block元素（如<code>div</code>、<code>table</code>、<code>p</code>、<code>form</code>等）会新开始一行并尽可能撑满容器。而inline元素（如<code>span</code>、<code>a</code>等）即行内元素不会打破包裹它的容器的布局。另一个常用的display值为<code>none</code>，<code>display:none</code>通常是被JavaScript用来在不删除元素的情况下隐藏或显示该元素。<br>其他的display值还有list-item和table等，详情可以参见<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display" target="_blank" rel="external">这里</a>,你可以随时随地人工改变一个元素的display值。常见的是：把<code>li</code>改为<code>display:inline</code>制作水平菜单。</p>
+</li>
+<li><p><strong>marigin:auto</strong></p>
+<p>如何使一个元素居中，并且不用担心小屏幕会显示出滚动条：(max-width 支持IE7+)<br><code><pre><br>  #main{<br>  max-width:600px;<br>  margin:0 auto;<br>}</pre></code></p>
+</li>
+<li><p><strong>盒模型</strong></p>
+<p>盒模型的宽度高度我们知道要通过计算（真正的宽度=width+2<em>padding+2</em>border）我们使用<code>box-sizing</code>来改进它，当设置一个元素为<code>box-sizing:border-box</code>时，此元素的内边距和边框不会增加该元素的宽度。支持IE8+，如果要在所有浏览器中使用该属性，则可以利用下面的代码：<br><code><pre><br>  *{<br>  -webkit-box-sizing:border-box;<br>  -moz-box-sizing:border-box;</pre></code></p>
+<pre><code>box-sizing:border-box;
+</code></pre><p>}<br></p>
+</li>
+<li><p><strong>position</strong></p>
+<p><code>position</code>主要由static、absolute、relative、fixed等值。 </p>
+<blockquote>
+<ol>
+<li>static 是默认值，表示没有被定位。</li>
+<li>relative 相对定位，相对于它在正常文档流中，通过top、right、bottom、left作用值产生偏移。而其他元素不会调整位置来弥补它偏离后剩下的间隙。</li>
+<li>fixed 固定定位，相对于浏览器窗口，意味着即使页面滚动，它还是会停留在相同的位置。（移动浏览器对fixed支持很差，解决方案参考[这里]（<a href="http://bradfrostweb.com/blog/mobile/fixed-position/）。" target="_blank" rel="external">http://bradfrostweb.com/blog/mobile/fixed-position/）。</a></li>
+<li>absolute 是相对于最近的被定位的祖先元素产生的偏移，如果没有，它是相对文档的body元素，并且它会随着页面滚动而移动。</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li><p><strong>float</strong></p>
+<p>如前篇所述，最开始产生float的作用就是使文字环绕图片，其本质就是包裹和破坏，它脱离了正常的文档流，可能会导致溢出，所以要clearfix hack（清除浮动），清除浮动的方法有很多种，可以参考<a href="http://padding.me/blog/2014/04/19/float-label-in-css/" target="_blank" rel="external">上篇文章</a>张鑫旭写的，<a href="http://stackoverflow.com/questions/211383/which-method-of-clearfix-is-best" target="_blank" rel="external">这里</a>有更多的讨论</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>媒体查询</strong></p>
+<p>针对响应式设计，，让网站针对不同浏览器和设备相应。</p>
+<p><code><pre><br>@media screen and (min-width:600px) {<br>nav {<br>  float: left;<br>  width: 25%;<br>}<br>section {<br>  margin-left: 25%;<br>}<br>}<br>@media screen and (max-width:599px) {<br>nav li {<br>  display: inline;<br>}<br>}<br></pre></code></p>
+</li>
+</ul>
+<p>在<a href="https://developer.mozilla.org/en-US/docs/CSS/Media_queries" target="_blank" rel="external">MDN文档</a>中有更多关于媒体查询的知识。使用 <a href="http://dev.opera.com/articles/view/an-introduction-to-meta-viewport-and-viewport/" target="_blank" rel="external">meta viewport</a> 之后可以让你的布局在移动浏览器上显示的更好。</p>
+<ul>
+<li><p><strong>inline-block</strong></p>
+<p>使用行内联。IE6和IE7支持看<a href="http://blog.mozilla.org/webdev/2009/02/20/cross-browser-inline-block/" target="_blank" rel="external">这里</a><br>使用inline-box要注意以下：</p>
+<ul>
+<li>vertical-align 属性会影响到 inline-block 元素，你可能会把它的值设置为 top </li>
+<li>需要设置每一列的宽度</li>
+<li>如果HTML源代码中元素之间有空格，那么列与列之间会产生空隙</li>
+</ul>
+</li>
+<li><p><strong>column</strong><br><code><pre><br>.three-column {<br>padding: 1em;<br>-moz-column-count: 3;<br>-moz-column-gap: 1em;<br>-webkit-column-count: 3;<br>-webkit-column-gap: 1em;<br>column-count: 3;<br>column-gap: 1em;<br>}<br></pre></code><br>CSS columns是很新的标准，所以你需要使用前缀，并且它不被IE9及以下和Opera Mini支持。还有许多和 cloumn 相关的属性，点击<a href="http://quirksmode.org/css/columns/" target="_blank" rel="external">这里</a>了解更多</p>
+</li>
+<li><p><strong>flexbox</strong></p>
+</li>
+</ul>
+<p>新的 flexbox 布局模式被用来重新定义CSS中的布局方式。很遗憾的是最近规范变动过多，导致各个浏览器对它的实现也有所不同。具体例子可以参考<a href="http://zh.learnlayout.com/flexbox.html" target="_blank" rel="external">这里</a></p>
+<ul>
+<li><p><strong>其他框架</strong></p>
+<p>例如bootstrap的12格流式布局等等。</p>
+</li>
+</ul>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/blog/"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'PaddingMe';
+    
+    var disqus_url = 'http://yoursite.com/blog/2014/10/30/学习CSS布局/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//PaddingMe.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235687', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

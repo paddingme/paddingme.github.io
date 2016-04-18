@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-home">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>【JavaScript】【学习心得】学习JavaScript 第七天 | Hexo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="Mu-Help-Plan," />
+  
+
+  <meta name="description" content="文章取自我的 Github  repos: Learning-JavaScript， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-JavaScript/issues/11
+眼看着七天马上就要结束。这个周末你有没有好好休息，有没有 get 什么新技能呢？如果没有的话，我们快来抓紧时间学点有用的吧。
+在上一章中我们已经学习了如何动态">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【JavaScript】【学习心得】学习JavaScript 第七天">
+<meta property="og:url" content="http://yoursite.com/blog/2014/11/23/【JavaScript】【学习心得】学习JavaScript 第七天/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="文章取自我的 Github  repos: Learning-JavaScript， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-JavaScript/issues/11
+眼看着七天马上就要结束。这个周末你有没有好好休息，有没有 get 什么新技能呢？如果没有的话，我们快来抓紧时间学点有用的吧。
+在上一章中我们已经学习了如何动态">
+<meta property="og:updated_time" content="2016-04-10T16:12:43.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【JavaScript】【学习心得】学习JavaScript 第七天">
+<meta name="twitter:description" content="文章取自我的 Github  repos: Learning-JavaScript， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-JavaScript/issues/11
+眼看着七天马上就要结束。这个周末你有没有好好休息，有没有 get 什么新技能呢？如果没有的话，我们快来抓紧时间学点有用的吧。
+在上一章中我们已经学习了如何动态">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=32204ee7" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-50048801-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">目录</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/blog/"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#充实文档的内容"><span class="toc-text">充实文档的内容</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#不应该做什么"><span class="toc-text">不应该做什么</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#渐进增强（progressive-enhancement）"><span class="toc-text">渐进增强（progressive enhancement）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#平稳退化（graceful-degradation）"><span class="toc-text">平稳退化（graceful degradation）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#把“不可见”变为“可见”"><span class="toc-text">把“不可见”变为“可见”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#内容"><span class="toc-text">内容</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML-XHTML-HTML5"><span class="toc-text">HTML?XHTML?HTML5</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS"><span class="toc-text">CSS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JavaScript"><span class="toc-text">JavaScript</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#显示-“缩略语列表”"><span class="toc-text">显示 “缩略语列表”</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建标记"><span class="toc-text">创建标记</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#一个浏览器“地雷”"><span class="toc-text">一个浏览器“地雷”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#显示“文献来源连接表”"><span class="toc-text">显示“文献来源连接表”</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#显示快捷键菜单"><span class="toc-text">显示快捷键菜单</span></a></li></ol></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-【JavaScript】【学习心得】学习JavaScript 第七天" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">【JavaScript】【学习心得】学习JavaScript 第七天</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2014.11.23</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>John Doe</span>
+        </span>
+      
+
+      
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://padding.me/blog/2014/11/23/【JavaScript】【学习心得】学习JavaScript 第七天/#disqus_thread"></a>
+        </span>
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p> 文章取自我的 Github  repos: <a href="https://github.com/paddingme/Learning-JavaScript" target="_blank" rel="external">Learning-JavaScript</a>， 作者：<a href="http://padding.me/about.html" target="_blank" rel="external">@paddingme</a><br>原文链接：<a href="https://github.com/paddingme/Learning-JavaScript/issues/11" target="_blank" rel="external">https://github.com/paddingme/Learning-JavaScript/issues/11</a></p>
+<p>眼看着七天马上就要结束。这个周末你有没有好好休息，有没有 get 什么新技能呢？<br>如果没有的话，我们快来抓紧时间学点有用的吧。</p>
+<p>在上一章中我们已经学习了如何动态的创建标记，今天我们来学习如何充实文档的内容。</p>
+<h1 id="充实文档的内容"><a href="#充实文档的内容" class="headerlink" title="充实文档的内容"></a>充实文档的内容</h1><h2 id="不应该做什么"><a href="#不应该做什么" class="headerlink" title="不应该做什么"></a>不应该做什么</h2><h3 id="渐进增强（progressive-enhancement）"><a href="#渐进增强（progressive-enhancement）" class="headerlink" title="渐进增强（progressive enhancement）"></a>渐进增强（progressive enhancement）</h3><p>从核心的部分开始，即从内容开始。根据内容实现良好的结构，再逐步增强这些内容。<br>可以通过 CSS 改进呈现效果，通过 DOM 添加各种行为。核心内容应该在刚开始时<br>编写文档时就成为文档的组成部分。</p>
+<h3 id="平稳退化（graceful-degradation）"><a href="#平稳退化（graceful-degradation）" class="headerlink" title="平稳退化（graceful degradation）"></a>平稳退化（graceful degradation）</h3><p>渐进增强的实现必然支持平稳退化。如果你按照渐进增强的原则去充实内容，你为内容添加的样式和行为就自然支持平稳退化，那些缺乏必要的 CSS 和 DOM 支持的访问者可以访问到你的核心内容。</p>
+<h2 id="把“不可见”变为“可见”"><a href="#把“不可见”变为“可见”" class="headerlink" title="把“不可见”变为“可见”"></a>把“不可见”变为“可见”</h2><p>alt 属性原本的作用是：在图片不可用（无法显示）时用一段描述文字来解释这个位置的图片。</p>
+<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>What is the Document Object Model<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">    The <span class="tag">&lt;<span class="name">abbr</span> <span class="attr">title</span>=<span class="string">"World Wide Web Consortium"</span>&gt;</span>W3C<span class="tag">&lt;/<span class="name">abbr</span>&gt;</span> defines the <span class="tag">&lt;<span class="name">abbr</span> <span class="attr">title</span>=<span class="string">"Document Object Model"</span>&gt;</span>DOM<span class="tag">&lt;/<span class="name">abbr</span>&gt;</span> as:</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">blockquote</span> <span class="attr">cite</span>=<span class="string">"http://www.w3.org/DOM"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        A platform- and language-neutral interface that will allow programs and scripts to dynamically access and update the content,structure and style of documents.</span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">blockquote</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>It is an <span class="tag">&lt;<span class="name">abbr</span> <span class="attr">title</span>=<span class="string">"Application Programming Interface"</span>&gt;</span>API<span class="tag">&lt;/<span class="name">abbr</span>&gt;</span></span><br><span class="line">that cam be used to navigate <span class="tag">&lt;<span class="name">abbr</span> <span class="attr">title</span>=<span class="string">"HyperText Markup Language"</span>&gt;</span>HTML<span class="tag">&lt;/<span class="name">abbr</span>&gt;</span> and <span class="tag">&lt;<span class="name">abbr</span> <span class="attr">title</span>=<span class="string">"eXtensible Markup Language"</span>&gt;</span>XML<span class="tag">&lt;/<span class="name">abbr</span>&gt;</span> documents.</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><code>&lt;abbr&gt;</code> 标签的含义是“缩略语(abbreviation)”，它是对单词或短语的简写形式的统称。<br><code>&lt;acronym&gt;</code> 标签的含义是被当成一个单词来读的“首字母缩写词”。为避免混淆，在 HTML5中 <code>&lt;acronym&gt;</code> 已被 <code>&lt;abbr&gt;</code> 取代。</p>
+<h3 id="HTML-XHTML-HTML5"><a href="#HTML-XHTML-HTML5" class="headerlink" title="HTML?XHTML?HTML5"></a>HTML?XHTML?HTML5</h3><p>XHTML 语法更严格，标签字母必须全小写，不可以省略结束标签，所有的标签都必须闭合。</p>
+<h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: <span class="string">"Helvetica"</span>,<span class="string">"Arial"</span>,sans-serif;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">10pt</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">abbr</span> &#123;</span><br><span class="line">    <span class="attribute">text-decoration</span>: none;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">font-style</span>: normal;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h3><p>可以用 DOM 改变浏览器的默认行为。</p>
+<h2 id="显示-“缩略语列表”"><a href="#显示-“缩略语列表”" class="headerlink" title="显示 “缩略语列表”"></a>显示 “缩略语列表”</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">displayAbbreviations</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> abbreviations = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"abbr"</span>);</span><br><span class="line">    <span class="keyword">if</span> (abbreviations.length &lt; <span class="number">1</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">var</span> defs = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;abbreviations.length; i++) &#123;</span><br><span class="line">        <span class="keyword">var</span> current_abbr =  abbreviations[i];</span><br><span class="line">        <span class="keyword">var</span> definition = current_abbr.getAttribute(<span class="string">"title"</span>);</span><br><span class="line">        <span class="keyword">var</span> key = current_abbr.lastChild.nodeValue;</span><br><span class="line">        defs[key] = definition;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="创建标记"><a href="#创建标记" class="headerlink" title="创建标记"></a>创建标记</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dl</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dt</span>&gt;</span>Title 1<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>Description1<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dt</span>&gt;</span>Title 2<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>Description2<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> dlist = <span class="built_in">document</span>.createElement(<span class="string">"dl"</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (key <span class="keyword">in</span> defs) &#123;</span><br><span class="line">    <span class="keyword">var</span> definition = defs[key];</span><br><span class="line">    <span class="keyword">var</span> dtitle = <span class="built_in">document</span>.createElement(<span class="string">"dt"</span>);</span><br><span class="line">    <span class="keyword">var</span> dtitle_text = <span class="built_in">document</span>.createTextNode(key);</span><br><span class="line">    dtitle.appendChild(dtitle_text);</span><br><span class="line">    <span class="keyword">var</span> ddesc = <span class="built_in">document</span>.createElement(<span class="string">"dd"</span>);</span><br><span class="line">    <span class="keyword">var</span> ddesc_text = <span class="built_in">document</span>.createTextNode(definition);</span><br><span class="line">    ddesc.appendChild(ddesc_text);</span><br><span class="line">    dlist.appendChild(dtitle);</span><br><span class="line">    dlist.appendChild(ddesc);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> header = <span class="built_in">document</span>.createElement(<span class="string">"h2"</span>);</span><br><span class="line"><span class="keyword">var</span> headerText = <span class="built_in">document</span>.createTextNode(<span class="string">"Abbreviations"</span>);</span><br><span class="line">header.appendChild(headerText);</span><br></pre></td></tr></table></figure>
+<p>引用 DOM 标签：</p>
+<ul>
+<li><p>DOM Core</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.getElementsByTagName(&quot;body&quot;)[0]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>HTML-DOM</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.body</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.body.appendChild(dlist);</span><br></pre></td></tr></table></figure>
+<p><code>displayAbbreviations</code> 函数：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">displayAbbreviations</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> abbreviations = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"abbr"</span>);</span><br><span class="line">        <span class="keyword">if</span> (abbreviations.length &lt; <span class="number">1</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">var</span> defs = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;abbreviations.length; i++) &#123;</span><br><span class="line">            <span class="keyword">var</span> current_abbr =  abbreviations[i];</span><br><span class="line">            <span class="keyword">var</span> definition = current_abbr.getAttribute(<span class="string">"title"</span>);</span><br><span class="line">            <span class="keyword">var</span> key = current_abbr.lastChild.nodeValue;</span><br><span class="line">            defs[key] = definition;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">var</span> dlist = <span class="built_in">document</span>.createElement(<span class="string">"dl"</span>);</span><br><span class="line">        <span class="keyword">for</span> (key <span class="keyword">in</span> defs) &#123;</span><br><span class="line">            <span class="keyword">var</span> definition = defs[key];</span><br><span class="line">            <span class="keyword">var</span> dtitle = <span class="built_in">document</span>.createElement(<span class="string">"dt"</span>);</span><br><span class="line">            <span class="keyword">var</span> dtitle_text = <span class="built_in">document</span>.createTextNode(key);</span><br><span class="line">            dtitle.appendChild(dtitle_text);</span><br><span class="line">            <span class="keyword">var</span> ddesc = <span class="built_in">document</span>.createElement(<span class="string">"dd"</span>);</span><br><span class="line">            <span class="keyword">var</span> ddesc_text = <span class="built_in">document</span>.createTextNode(definition);</span><br><span class="line">            ddesc.appendChild(ddesc_text);</span><br><span class="line">            dlist.appendChild(dtitle);</span><br><span class="line">            dlist.appendChild(ddesc);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> header = <span class="built_in">document</span>.createElement(<span class="string">"h2"</span>);</span><br><span class="line">        <span class="keyword">var</span> headerText = <span class="built_in">document</span>.createTextNode(<span class="string">"Abbreviations"</span>);</span><br><span class="line">        header.appendChild(headerText);</span><br><span class="line">        <span class="built_in">document</span>.body.appendChild(header);</span><br><span class="line">        <span class="built_in">document</span>.body.appendChild(dlist);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="一个浏览器“地雷”"><a href="#一个浏览器“地雷”" class="headerlink" title="一个浏览器“地雷”"></a>一个浏览器“地雷”</h3><p>IE 浏览器直到 IE7 才支持 <code>abbr</code>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; abbreviations.length; i++) &#123;</span><br><span class="line">    <span class="keyword">var</span> current_abbr = abbreviations[i];</span><br><span class="line">    <span class="comment">//如果当前元素没有子节点，就立刻开始下一次循环。</span></span><br><span class="line">    <span class="keyword">if</span> (current_abbr.childNodes.length &lt; <span class="number">1</span>) <span class="keyword">continue</span>;</span><br><span class="line">    <span class="keyword">var</span> definition = current_abbr.getAttribute(<span class="string">"title"</span>);</span><br><span class="line">    <span class="keyword">var</span> key = current_abbr.lastChild.nodeValue;</span><br><span class="line">    defs[key] = definition;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建定义列表</span></span><br><span class="line"><span class="keyword">var</span> dlist = <span class="built_in">document</span>.createElement(<span class="string">"dl"</span>);</span><br><span class="line"><span class="comment">//遍历定义</span></span><br><span class="line"><span class="keyword">for</span> (key <span class="keyword">in</span> defs) &#123;</span><br><span class="line">    <span class="keyword">var</span> definition = defs[key];</span><br><span class="line">    <span class="comment">//创建定义标题</span></span><br><span class="line">    <span class="keyword">var</span> dtitle = <span class="built_in">document</span>.createElement(<span class="string">"dt"</span>);</span><br><span class="line">    <span class="keyword">var</span> dtitle_text = <span class="built_in">document</span>.createTextNode(key);</span><br><span class="line">    dtitle.appendChild(dtitle_text);</span><br><span class="line">    <span class="comment">//创建定义描述</span></span><br><span class="line">    <span class="keyword">var</span> ddesc = <span class="built_in">document</span>.createElement(<span class="string">"dd"</span>);</span><br><span class="line">    <span class="keyword">var</span> ddesc_text = <span class="built_in">document</span>.createTextNode(definition);</span><br><span class="line">    ddesc.appendChild(ddesc_text);</span><br><span class="line">    <span class="comment">//把它们添加到定义列表</span></span><br><span class="line">    dlist.appendChild(dtitle);</span><br><span class="line">    dlist.appendChild(ddesc);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//对于 dl 没有任何子节点，则立即退出 displayAbbreviations。</span></span><br><span class="line"><span class="keyword">if</span> (dlist.childNodes.length &lt; <span class="number">1</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="显示“文献来源连接表”"><a href="#显示“文献来源连接表”" class="headerlink" title="显示“文献来源连接表”"></a>显示“文献来源连接表”</h3><p>如上只能处理让不识别 <code>abbr</code> 的低版本 IE 浏览器 不报错，却不显示我们的自定义列表，肿么办呢？<br>我们让文献以链接形式显示出来。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">displayCitations</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!<span class="built_in">document</span>.getElementsByTagName || !<span class="built_in">document</span>.createElement || !<span class="built_in">document</span>.createTextNode) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//取得所有引用</span></span><br><span class="line">    <span class="keyword">var</span> quotes = <span class="built_in">document</span>.getElementById(<span class="string">"blockquote"</span>);</span><br><span class="line">    <span class="comment">//遍历所有引用</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;quotes.length; i++) &#123;</span><br><span class="line">        <span class="comment">//如果没有 cite 属性，继续循环</span></span><br><span class="line">        <span class="keyword">if</span>(!qutotes[i].getAttribute(<span class="string">"cite"</span>)) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="comment">//保存 cite  属性</span></span><br><span class="line">        <span class="keyword">var</span> url = quotes[i].getAttribute(<span class="string">"cite"</span>);</span><br><span class="line">        <span class="comment">//取得引用中的所有元素节点</span></span><br><span class="line">        <span class="keyword">var</span> quoteElements = quotes[i].getElementsByTagName(<span class="string">"*"</span>);</span><br><span class="line">        <span class="comment">//如果没有元素节点，继续循环</span></span><br><span class="line">        <span class="keyword">if</span> (quoteElements.length &lt; <span class="number">1</span>) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="comment">//取得引用中最后一个元素节点</span></span><br><span class="line">        <span class="keyword">var</span> elem = quoteElements[quoteElements.length<span class="number">-1</span>];</span><br><span class="line">        <span class="comment">//创建标记</span></span><br><span class="line">        <span class="keyword">var</span> link = <span class="built_in">document</span>.createElement(<span class="string">"a"</span>);</span><br><span class="line">        <span class="keyword">var</span> link_text = <span class="built_in">document</span>.createTextNode(<span class="string">"source"</span>);</span><br><span class="line">        link.appendChild(link_text);</span><br><span class="line">        link.setAttribute(<span class="string">"href"</span>,url);</span><br><span class="line">        <span class="keyword">var</span> siperscript = <span class="built_in">document</span>.createElement(<span class="string">"sup"</span>);</span><br><span class="line">        siperscript.appendChild(link);</span><br><span class="line">        <span class="comment">//把标记添加到引用中的最后一个元素节点</span></span><br><span class="line">        elem.appendChild(siperscript);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="显示快捷键菜单"><a href="#显示快捷键菜单" class="headerlink" title="显示快捷键菜单"></a>显示快捷键菜单</h2><p>access 属性可以把一个元素(如链接)与肩哦按上的某个特定按键关联在一起，一般来说，在适应于 Winodws 的系统的浏览器里，快捷键的用法是在键盘上同时按下 Alt 键和特定按键，在适用于 Mac 系统的浏览器里，快捷键的用法是同时按下 Ctrl 键和特定按键。</p>
+<blockquote>
+<p>设置太多的快捷键会适得其反，他们会与浏览器内建的快捷方式发生冲突</p>
+</blockquote>
+<p>一些基本的快捷键都有约定俗成的设置方法，详细的可参考: <a href="http://www.clagnut.com/blog/193/" target="_blank" rel="external">http://www.clagnut.com/blog/193/</a></p>
+<ul>
+<li>accesskey=”1”对应着一个 “返回到本网站主页” 的链接；</li>
+<li>accesskey=”2”对应着一个 “后退到前一个页面” 的链接；</li>
+<li>accesskey=”4”对应着一个 “打开本网站的搜索表单/页面” 的链接；</li>
+<li>accesskey=”9”对应着一个 “本网站联系方法” 的链接；</li>
+<li>accesskey=”0”对应着一个 “查看本网站的快捷键清单” 的链接；</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"navigation"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"index.html"</span> <span class="attr">accesskey</span>=<span class="string">"1"</span>&gt;</span>Home<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"search.html"</span> <span class="attr">accesskey</span>=<span class="string">"4"</span>&gt;</span>Search<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"contact.html"</span> <span class="attr">accesskey</span>=<span class="string">"9"</span>&gt;</span>Contact<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>来创建一份快捷键清单</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">displayAccesskeys</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!<span class="built_in">document</span>.getElementsByTagName || !<span class="built_in">document</span>.createTextNode || !<span class="built_in">document</span>.createElement) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="comment">//取得文章当中的所有链接</span></span><br><span class="line">    <span class="keyword">var</span> links = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"a"</span>);</span><br><span class="line">    <span class="comment">//创建一个数组，保存快捷键</span></span><br><span class="line">    <span class="keyword">var</span> akeys = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line">    <span class="comment">//遍历链接</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;links.length; i++) &#123;</span><br><span class="line">        <span class="keyword">var</span> current_link = links[i];</span><br><span class="line">        <span class="comment">//如果没有 accesskey 属性，继续循环</span></span><br><span class="line">        <span class="keyword">if</span> (!links[i].getAttribute(<span class="string">"accesskey"</span>)) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="comment">//取得 accesskey 的值</span></span><br><span class="line">        <span class="keyword">var</span> key = current_link.getAttribute(<span class="string">"accesskey"</span>);</span><br><span class="line">        <span class="comment">// 取得链接文本</span></span><br><span class="line">        <span class="keyword">var</span> text = current_link.lastChild.nodeValue;</span><br><span class="line">        <span class="comment">//添加到数组</span></span><br><span class="line">        akeys[key] = text;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//创建列表</span></span><br><span class="line">    <span class="keyword">var</span> list = <span class="built_in">document</span>.createElement(<span class="string">"ul"</span>);</span><br><span class="line">    <span class="comment">//遍历快捷键</span></span><br><span class="line">    <span class="keyword">for</span> ( key <span class="keyword">in</span> akeys) &#123;</span><br><span class="line">        <span class="keyword">var</span> text = akeys[key];</span><br><span class="line">        <span class="comment">//创建放到列表中的字符串</span></span><br><span class="line">        <span class="keyword">var</span> str = key + <span class="string">":"</span> +text;</span><br><span class="line">        <span class="comment">//创建列表象</span></span><br><span class="line">        <span class="keyword">var</span> item = <span class="built_in">document</span>.createElement(<span class="string">"li"</span>);</span><br><span class="line">        <span class="keyword">var</span> item_text = <span class="built_in">document</span>.createTextNode(str);</span><br><span class="line">        item.appendChild(item_text);</span><br><span class="line">        <span class="comment">//把列表创建到列表中</span></span><br><span class="line">        list.appendChild(item);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//创建标题</span></span><br><span class="line">    <span class="keyword">var</span> header = <span class="built_in">document</span>.createElement(<span class="string">"h1"</span>);</span><br><span class="line">    <span class="keyword">var</span> header_text = <span class="built_in">document</span>.createTextNode(<span class="string">"Acceskeys"</span>);</span><br><span class="line">    header.appendChild(header_text);</span><br><span class="line">    <span class="comment">//把标题添加到主体上</span></span><br><span class="line">    <span class="built_in">document</span>.body.appendChild(header);</span><br><span class="line">    <span class="comment">//把列表放到主体上</span></span><br><span class="line">    <span class="built_in">document</span>.body.appendChild(list);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">addLoadEvent(displayAccesskeys);</span><br></pre></td></tr></table></figure>
+<p>在线 DEMO 地址：<a href="http://codepen.io/paddingme/pen/XJJGjv" target="_blank" rel="external">codepen</a> or <a href="https://github.com/paddingme/Learning-JavaScript/blob/master/Demo/1-8.html" target="_blank" rel="external">github</a>。</p>
+<p>好了，今天的学习就到了，明天周一了，请记得定闹钟！</p>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/blog/"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'PaddingMe';
+    
+    var disqus_url = 'http://yoursite.com/blog/2014/11/23/【JavaScript】【学习心得】学习JavaScript 第七天/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//PaddingMe.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235687', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-home">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>闭包 | Hexo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="undefined," />
+  
+
+  <meta name="description" content="文章取自我的 Github  repos: Learning-JavaScript， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-JavaScript/issues/29
+闭包的两个特点：
+
+闭包作为与函数成对的数据，在函数执行过程中处于激活（即可访问）状态；
+闭包在函数运行结束后，保持运行过程的最终数据状态。
+
+总的来说，函数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="闭包">
+<meta property="og:url" content="http://yoursite.com/blog/2015/08/22/闭包/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="文章取自我的 Github  repos: Learning-JavaScript， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-JavaScript/issues/29
+闭包的两个特点：
+
+闭包作为与函数成对的数据，在函数执行过程中处于激活（即可访问）状态；
+闭包在函数运行结束后，保持运行过程的最终数据状态。
+
+总的来说，函数">
+<meta property="og:updated_time" content="2016-04-10T16:12:43.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="闭包">
+<meta name="twitter:description" content="文章取自我的 Github  repos: Learning-JavaScript， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-JavaScript/issues/29
+闭包的两个特点：
+
+闭包作为与函数成对的数据，在函数执行过程中处于激活（即可访问）状态；
+闭包在函数运行结束后，保持运行过程的最终数据状态。
+
+总的来说，函数">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=32204ee7" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-50048801-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">目录</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/blog/"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-闭包" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">闭包</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2015.08.22</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>John Doe</span>
+        </span>
+      
+
+      
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://padding.me/blog/2015/08/22/闭包/#disqus_thread"></a>
+        </span>
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p> 文章取自我的 Github  repos: <a href="https://github.com/paddingme/Learning-JavaScript" target="_blank" rel="external">Learning-JavaScript</a>， 作者：<a href="http://padding.me/about.html" target="_blank" rel="external">@paddingme</a><br>原文链接：<a href="https://github.com/paddingme/Learning-JavaScript/issues/29" target="_blank" rel="external">https://github.com/paddingme/Learning-JavaScript/issues/29</a></p>
+<p>闭包的两个特点：</p>
+<ol>
+<li>闭包作为与函数成对的数据，在函数执行过程中处于激活（即可访问）状态；</li>
+<li>闭包在函数运行结束后，保持运行过程的最终数据状态。</li>
+</ol>
+<p>总的来说，函数闭包决定了：闭包所对应的函数代码如何访问数据，以及闭包内的数据何时销毁。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 没有函数实例产生</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunc</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> f1 = myFunc;</span><br><span class="line"><span class="keyword">var</span> f2 = myFunc;</span><br><span class="line"></span><br><span class="line">alert(f1 === f2)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">MyObject</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">MyObject.prototype.method = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj1 = <span class="keyword">new</span> MyObject();</span><br><span class="line"><span class="keyword">var</span> obj2 = <span class="keyword">new</span> MyObject();</span><br><span class="line"></span><br><span class="line">alert( obj1.method === obj2.method)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 对象的实例只持有原型中的方法的一个引用，因为也不产生（方法）函数的实例。</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">MyObject</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.method = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj1 = <span class="keyword">new</span> MyObject;</span><br><span class="line"><span class="keyword">var</span> obj2 = <span class="keyword">new</span> MyObject;</span><br><span class="line">alert( obj1.method === obj2.method)</span><br><span class="line"><span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//构造器函数</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">MyObject</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> instance_data = <span class="number">100</span>;</span><br><span class="line">    <span class="keyword">this</span>.getInstanceData = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> instance_data;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.setInstanceData = <span class="function"><span class="keyword">function</span>(<span class="params">v</span>) </span>&#123;</span><br><span class="line">        instance_data = v;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用一个额匿名函数去修改构造器的原型 MyObject.prototype，以访问该匿名函数中的 upvalue</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> class_data = <span class="number">5</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.getClassData = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> class_data;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.setClassData = <span class="function"><span class="keyword">function</span>(<span class="params">v</span>)</span>&#123;</span><br><span class="line">        class_data = v;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;.call(MyObject.prototype);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj1 = <span class="keyword">new</span> MyObject();</span><br><span class="line"><span class="keyword">var</span> obj2 = <span class="keyword">new</span> MyObject();</span><br><span class="line"></span><br><span class="line"><span class="comment">// obj1 与 obj2 的 getInstance 是不同函数实例，因此访问的是不同闭包的 upvalue</span></span><br><span class="line">obj1.setInstanceData(<span class="number">10</span>);</span><br><span class="line"><span class="built_in">console</span>.log(obj2.getInstanceData());</span><br><span class="line"></span><br><span class="line"><span class="comment">// obj1 与 obj2 的 getClassData 是同一个函数实例，因此在访问相同 的 upvalue. </span></span><br><span class="line">obj1.setClassData(<span class="number">20</span>);</span><br><span class="line"><span class="built_in">console</span>.log(obj2.getClassData());</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">aFunc</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">MyFunc</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">    <span class="keyword">return</span> myFunc;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> f1 = <span class="keyword">new</span> aFunc();</span><br><span class="line"><span class="keyword">var</span> f2 = <span class="keyword">new</span> aFunc();</span><br><span class="line"><span class="built_in">console</span>.log(f1===f2)</span><br><span class="line"><span class="comment">//FALSE</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//foo &amp; bar 产生函数实例</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span>  MyFunc = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">    <span class="keyword">return</span> MyFunc;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//返回同一个实例</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> aFun3 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> foo = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="number">111</span>)</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> foo;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;()</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> f3 = aFun3();</span><br><span class="line"><span class="keyword">var</span> f4 = aFun3();</span><br><span class="line"><span class="built_in">console</span>.log(f3 === f4)</span><br></pre></td></tr></table></figure>
+<p>调用对象：</p>
+<ol>
+<li>对象属性与变量没有本质属性；</li>
+<li>全局变量其实是“全局对象”的属性；</li>
+<li>局部变量其实是“调用对象”的属性</li>
+</ol>
+<p>“调用对象”的局部变量维护规则</p>
+<ol>
+<li>在函数开始执行时，varDecls 中所有值将被置为 undefined。 因此我们无论如何访问函数，变量初始值总为 undefined。</li>
+<li>函数执行结束并退出时，varDecls 不会被重置，即有了函数能够提供“在函数内保存数据”。</li>
+<li>函数内部数据持续的生存周期，取决于该函数实例是否存在活动引用——如果没有，则调用对象被销毁。</li>
+</ol>
+<p>“全局对象”的变量维护规则</p>
+<ol>
+<li>由于该函数从来不被再次进入，因此不会被重新初始化；</li>
+<li>由于该函数仅有一个个被系统持有的实例，因此他自身和内部数据总不被销毁。</li>
+</ol>
+<p>函数闭包 与 “调用对象”的生存周期</p>
+<p>在运行期改函数实例有一个函数闭包，在执行时，引擎会：</p>
+<ul>
+<li>创建一个函数实例；</li>
+<li>为该函数实例创建一个闭包；</li>
+<li>为改函数实例（及其闭包）的运行环境从 ScriptObject(调用对象) 复制一个调用对象。</li>
+</ul>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/blog/"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'PaddingMe';
+    
+    var disqus_url = 'http://yoursite.com/blog/2015/08/22/闭包/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//PaddingMe.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235687', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

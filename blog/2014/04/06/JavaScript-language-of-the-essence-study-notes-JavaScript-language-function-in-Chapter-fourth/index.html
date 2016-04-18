@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-home">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>JavaScript语言精粹之第四章 函数（中） | Hexo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="JavaScript," />
+  
+
+  <meta name="description" content="##上半章回顾##上半章介绍了函数对象，函数的字面量定义，函数的四种调用模式。重点回顾下这四种调用模式。
+
+方法调用模式：当函数被保存为一个对象的属性时，此时调用即为方法调用（函数为对象属性，调用为方法调用）。这时this被绑定到该对象。如果一个调用表达式包含一个属性存取式，那么它被当做方法来调用（属性被调用，当做方法调用）；
+函数调用模式：当函数不是对象的属性时，为函数调用，此时this被绑定到">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript语言精粹之第四章 函数（中）">
+<meta property="og:url" content="http://yoursite.com/blog/2014/04/06/JavaScript-language-of-the-essence-study-notes-JavaScript-language-function-in-Chapter-fourth/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="##上半章回顾##上半章介绍了函数对象，函数的字面量定义，函数的四种调用模式。重点回顾下这四种调用模式。
+
+方法调用模式：当函数被保存为一个对象的属性时，此时调用即为方法调用（函数为对象属性，调用为方法调用）。这时this被绑定到该对象。如果一个调用表达式包含一个属性存取式，那么它被当做方法来调用（属性被调用，当做方法调用）；
+函数调用模式：当函数不是对象的属性时，为函数调用，此时this被绑定到">
+<meta property="og:updated_time" content="2015-07-08T06:52:18.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript语言精粹之第四章 函数（中）">
+<meta name="twitter:description" content="##上半章回顾##上半章介绍了函数对象，函数的字面量定义，函数的四种调用模式。重点回顾下这四种调用模式。
+
+方法调用模式：当函数被保存为一个对象的属性时，此时调用即为方法调用（函数为对象属性，调用为方法调用）。这时this被绑定到该对象。如果一个调用表达式包含一个属性存取式，那么它被当做方法来调用（属性被调用，当做方法调用）；
+函数调用模式：当函数不是对象的属性时，为函数调用，此时this被绑定到">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=32204ee7" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-50048801-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">目录</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/blog/"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-JavaScript-language-of-the-essence-study-notes-JavaScript-language-function-in-Chapter-fourth" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">JavaScript语言精粹之第四章 函数（中）</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2014.04.06</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>John Doe</span>
+        </span>
+      
+
+      
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://padding.me/blog/2014/04/06/JavaScript-language-of-the-essence-study-notes-JavaScript-language-function-in-Chapter-fourth/#disqus_thread"></a>
+        </span>
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>##上半章回顾##<br>上半章介绍了函数对象，函数的字面量定义，函数的四种调用模式。重点回顾下这四种调用模式。</p>
+<ul>
+<li>方法调用模式：当函数被保存为一个对象的属性时，此时调用即为方法调用（函数为对象属性，调用为方法调用）。这时this被绑定到该对象。如果一个调用表达式包含一个属性存取式，那么它被当做方法来调用（属性被调用，当做方法调用）；</li>
+<li>函数调用模式：当函数不是对象的属性时，为函数调用，此时this被绑定到全局对象，而非绑定到这个函数的外部函数的this变量。</li>
+<li>构造器调用（new）：this绑定到这个新new的对象。</li>
+<li>Apply调用：函数是对象，所以也有方法。apply方法让我们构件一个参数数组并用其调用函数，也允许我们选择this的值，apply方法接受2个参数第一个是赋给this的值，第二个是参数数组。</li>
+</ul>
+<hr>
+<p>##第四章 函数（中）##</p>
+<p>###4.4  参数###<br>当一个函数调用时，会得到一个arguments数组，通过arguments函数可访问它被调用时传递给它的参数列表，包括哪些未被分配给函数声明时定义的形参的多余参数。</p>
+<pre><code>var sum = function () {
+    var i, sum=0;
+    for (var i = 0; i &lt; arguments.length; i++) {
+         sum += arguments[i];
+    }
+    return sum;
+};
+document.writeln(sum(4,8,12,13));//37
+</code></pre><p>注意arguments只是一个array-like对象，其拥有一个length属性，但缺少所有的数组方法。</p>
+<p>###4.5  返回###<br>当一个函数被调用时，return语句被执行时函数立即返回而不再执行余下的部分。一个函数总是返回一个值，如果没指定则为undefined。如果函数以前加上new出来的，且返回值不是一个对象，则返回<br>this(该新对象)。</p>
+<p>###4.6 异常###<br>异常是干扰程序的正常流程的非正常（但并未完全出乎意料的）事故。当查出这样的事故时，程序抛出异常。</p>
+<pre><code>var add = function (a,b){
+    if (typeof a !== &apos;number&apos;||typeof b !== &apos;number&apos;){
+        throw {
+            name: &apos;TypeError&apos;,
+            message: &apos;add needs numbers&apos;
+         };
+     }
+     return a + b;
+  }
+</code></pre><p>throw语句中断函数执行，应该抛出一个exception对象，该对象包含可识别异常类型的name属性和一个描述性的message属性。也可添加其他属性。<br>该exception对象将被传递给一个try语句的catch语句。</p>
+<pre><code>var add = function (a,b) {
+    if (typeof a !== &apos;number&apos;||typeof b !== &apos;number&apos;){
+       throw {
+           name: &apos;TypeError&apos;,
+           message: &apos;add needs numbers&apos;
+       };
+   }
+   return a + b;
+ }
+var try_it = function () {
+    try {
+        add(&quot;seven&quot;);
+   } catch (e) {
+       document.writeln(e.name + &quot;:&quot; + e.message);
+   }
+}
+try_it();
+</code></pre><p>###4.7  给类型增加方法###<br>JavaScript允许给语言的基本类型增加方法。如第三章，我们通过Object.prototype添加方法是的该方法对所有对象可用。这样的方法对函数、数组、字符串、数字和正则表达式和布尔值同样适用。</p>
+<p>例如我们可通过给Fundation.prototype增加方法使得所有函数都有这个方法。</p>
+<pre><code>Function.prototype.method = funtion (name,func) {
+    this.prototype[name] = func;
+    return this;
+ }
+</code></pre><p>通过给Fundation.prototype增加一个method方法，我们就不必键入prototype这个属性名了。</p>
+<p>我们还可以用过给Number.prototype添加一个integer方法来重写JavaScript中的取整方法。它会根据数字的正负来判断使用Math.floor（向下取整）或者Math.ceiling（向上取整）。</p>
+<pre><code>Number.method(&apos;integer&apos;,function(){
+    return Math[this&lt;0?&apos;ceiling&apos;:&apos;floor&apos;](this);
+});
+document.writeln((-10/3).integer());//-3
+ //报错 Number里无method方法 待查
+
+ //移除字符串末端空白的方法
+ String.method(&apos;trim&apos;,function() {
+     return this.replace(/^\s+|\s+$/g,&apos;&apos;);
+  });
+  document.writeln(&apos;&quot;&apos; + &quot;     neat   &quot;.trim() + &apos;&quot;&apos;);
+</code></pre><p>通过给基本类型增加方法，可大大提高语言表现力。基于JS原型继承的动态本质，新的方法立刻被赋予到所有的值（对象实例）上，哪怕值（对象实例）是在创建之前就创建好了。</p>
+<p>基本类型的原型是公共的机构，在类库混用时应小心。一个保险的做法是指在确定没有该方法时才添加他。</p>
+<pre><code>//有条件的增加一个方法
+Function.prototype.method = function (name,fun) {
+if (!this.prototype[name]) {
+     this.prototupe[name] = func;
+     }
+ };
+</code></pre><p>另外要注意for in语句在原型上表现很糟糕可参考第三章的解决办法。</p>
+<p>###4. 8 递归###<br>递归函数是一种会直接或间接的调用自身的函数。</p>
+<p>//Hanoi问题</p>
+<p>递归函数可以非常高效的操作树形结构，比如浏览器的DOM。每次递归调用时处理给定树的一小段。</p>
+<p><pre><code><br>//walk_the_DOM函数，它从某个给定结点开始，按HTML源码中顺序访问该树的每个节点。<br>//它会调用一个函数，并依此传递每个节点给它，walk_the_DOM调用自身去处理每一个子节点。<br>var walk_the_DOM = function walk(node,func){<br>    func(node);<br>    node=node.firstChild;<br>    while (node) {<br>        walk (node, func){<br>            node=node.nextSibling;<br>        }<br>    }<br>};</code></pre></p>
+<p>//getElementByAttribute取得属性名字符串和一个可选的匹配值<br>//他调用walk_the_DOM 传递一个用来查找节点属性名的函数<br>//匹配的节点会累积到一个结果数组。<br>var getElementByAttribute = function (att, value) {<br>    var results = [];<br>    walk_the_DOM(document.body, function (node) {<br>        var actual = node.nodeType === 1&amp;&amp; node.getAttribute(att);<br>        if(typeof actual === ‘string’ &amp;&amp; (actual === value || typeof value !== ‘string’)) {<br>            results.push(node);<br>        }<br>    });<br>    return results;<br>}<br>//太高深，蒙逼的节奏，后面回来再看。<br><br>尾递归优化，即如果一个函数返回自身递归调用的结果，那么调用的过程会被替换为一个循环。可惜JS不提供，深度递归的函数可能会因为返回堆栈溢出而运行失败。</p>
+<pre><code>var factorial = function factorial (i, a) {
+   a = a || 1;
+    if (i &lt;2) {
+        return a;
+    }
+    return factorial(i-1, a*i);
+}
+ document.writeln(factorial(4));//24
+</code></pre><p>###4.9  作用域###<br><strong>JS并不是支持块作用域！</strong> JS具有函数作用域！因为缺乏快作用域，最好在函数体顶部声明所有需要用到的变量。（这里涉及到函数提升和变量提升。）</p>
+<p><hr><br>每天更新前回顾下昨天的文章，发现又get了很多新技能，而且对于前面的一些坑或者不懂的地方突然就明白了，这难道是传说中的 <code>温故而知新，可以为**湿**！</code></p>
+<p>近期考试所以更的慢.</p>
+<p>too tired to learn,未来无限可能。</p>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/blog/"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'PaddingMe';
+    
+    var disqus_url = 'http://yoursite.com/blog/2014/04/06/JavaScript-language-of-the-essence-study-notes-JavaScript-language-function-in-Chapter-fourth/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//PaddingMe.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235687', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

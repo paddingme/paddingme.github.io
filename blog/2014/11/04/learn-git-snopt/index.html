@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-home">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>学习git拾遗 | Hexo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="git,github," />
+  
+
+  <meta name="description" content="在这里记录下学习git遇到的问题 以及常用的命令1. 遇到的问题Q1  如何克隆一个github上自己建立的私有仓库到本地命令行输入:
+1git clone https://github.com/username/repo
+之会出现: Cloning into &amp;quot;yourrepo&amp;quot;...  之后会提示输入你的Username 和PassWord 输入正确之后就会把私有仓库复制到">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习git拾遗">
+<meta property="og:url" content="http://yoursite.com/blog/2014/11/04/learn-git-snopt/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="在这里记录下学习git遇到的问题 以及常用的命令1. 遇到的问题Q1  如何克隆一个github上自己建立的私有仓库到本地命令行输入:
+1git clone https://github.com/username/repo
+之会出现: Cloning into &amp;quot;yourrepo&amp;quot;...  之后会提示输入你的Username 和PassWord 输入正确之后就会把私有仓库复制到">
+<meta property="og:image" content="http://paddingme.qiniudn.com/ssh1.png">
+<meta property="og:image" content="http://paddingme.qiniudn.com/ssh2.PNG">
+<meta property="og:image" content="http://paddingme.qiniudn.com/ssh3.PNG">
+<meta property="og:updated_time" content="2015-07-08T06:52:18.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="学习git拾遗">
+<meta name="twitter:description" content="在这里记录下学习git遇到的问题 以及常用的命令1. 遇到的问题Q1  如何克隆一个github上自己建立的私有仓库到本地命令行输入:
+1git clone https://github.com/username/repo
+之会出现: Cloning into &amp;quot;yourrepo&amp;quot;...  之后会提示输入你的Username 和PassWord 输入正确之后就会把私有仓库复制到">
+<meta name="twitter:image" content="http://paddingme.qiniudn.com/ssh1.png">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=32204ee7" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-50048801-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">目录</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/blog/"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#在这里记录下学习git遇到的问题-以及常用的命令"><span class="toc-text">在这里记录下学习git遇到的问题 以及常用的命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-遇到的问题"><span class="toc-text">1. 遇到的问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Q1-如何克隆一个github上自己建立的私有仓库到本地"><span class="toc-text">Q1  如何克隆一个github上自己建立的私有仓库到本地</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Q2-如何强制把远程仓库覆盖到本地仓库"><span class="toc-text">Q2  如何强制把远程仓库覆盖到本地仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Q3-github-Contributions-Calendar不记录"><span class="toc-text">Q3  github Contributions Calendar不记录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Q4-初始化本地仓库后添加到远程仓库，远程仓库地址写错了"><span class="toc-text">Q4  初始化本地仓库后添加到远程仓库，远程仓库地址写错了</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Q5-git-添加多个ssh-key"><span class="toc-text">Q5 git 添加多个ssh key</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Q6-如何将-blog-同时托管到-gitcafe-和-github-上？"><span class="toc-text">Q6 如何将 blog 同时托管到 gitcafe 和 github 上？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Q7-为什么配置了-SSH，每次-push-还是需要输入用户名和密码呢？"><span class="toc-text">Q7 为什么配置了 SSH，每次 push 还是需要输入用户名和密码呢？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Q8-恢复仓库到上一次的提交状态：-git-reset-hard"><span class="toc-text">Q8 恢复仓库到上一次的提交状态：$ git reset --hard</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Q9-修改最后的提交日志：-git-commit-amend"><span class="toc-text">Q9 修改最后的提交日志：$ git commit --amend</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-学习git-参考资料"><span class="toc-text">2. 学习git 参考资料</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-learn-git-snopt" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">学习git拾遗</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2014.11.04</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>John Doe</span>
+        </span>
+      
+
+      
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://padding.me/blog/2014/11/04/learn-git-snopt/#disqus_thread"></a>
+        </span>
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h2 id="在这里记录下学习git遇到的问题-以及常用的命令"><a href="#在这里记录下学习git遇到的问题-以及常用的命令" class="headerlink" title="在这里记录下学习git遇到的问题 以及常用的命令"></a>在这里记录下学习git遇到的问题 以及常用的命令</h2><h2 id="1-遇到的问题"><a href="#1-遇到的问题" class="headerlink" title="1. 遇到的问题"></a>1. 遇到的问题</h2><h3 id="Q1-如何克隆一个github上自己建立的私有仓库到本地"><a href="#Q1-如何克隆一个github上自己建立的私有仓库到本地" class="headerlink" title="Q1  如何克隆一个github上自己建立的私有仓库到本地"></a>Q1  如何克隆一个github上自己建立的私有仓库到本地</h3><p>命令行输入:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/username/repo</span><br></pre></td></tr></table></figure>
+<p>之会出现: <code>Cloning into &quot;yourrepo&quot;...</code>  之后会提示输入你的Username 和PassWord 输入正确之后就会把私有仓库复制到本地 注意这里输入的是</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/username/repo</span><br></pre></td></tr></table></figure>
+<p>不是</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:username/repo.git</span><br></pre></td></tr></table></figure>
+<p>也不是</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git://github.com/myusername/reponame.git</span><br></pre></td></tr></table></figure>
+<h3 id="Q2-如何强制把远程仓库覆盖到本地仓库"><a href="#Q2-如何强制把远程仓库覆盖到本地仓库" class="headerlink" title="Q2  如何强制把远程仓库覆盖到本地仓库"></a>Q2  如何强制把远程仓库覆盖到本地仓库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git fetch --all</span><br><span class="line">git reset --hard origin/master</span><br></pre></td></tr></table></figure>
+<h3 id="Q3-github-Contributions-Calendar不记录"><a href="#Q3-github-Contributions-Calendar不记录" class="headerlink" title="Q3  github Contributions Calendar不记录"></a>Q3  github Contributions Calendar不记录</h3><p>查看本地git邮箱：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config user.email</span><br></pre></td></tr></table></figure>
+<p>然后在github里的accout settings &gt; email里看看你的primary github email  是不是你本地那个邮箱。更改为一样的邮箱：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email &quot;xx@oo.com&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="Q4-初始化本地仓库后添加到远程仓库，远程仓库地址写错了"><a href="#Q4-初始化本地仓库后添加到远程仓库，远程仓库地址写错了" class="headerlink" title="Q4  初始化本地仓库后添加到远程仓库，远程仓库地址写错了"></a>Q4  初始化本地仓库后添加到远程仓库，远程仓库地址写错了</h3><p>添加到远程仓库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add remote [name/origin] [https://github.com/your-name/your-repo]`</span><br></pre></td></tr></table></figure>
+<p>修改远程仓库：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote set-url --push [name/origin] [https://github.com/your-name/your-new-repo]</span><br></pre></td></tr></table></figure>
+<h3 id="Q5-git-添加多个ssh-key"><a href="#Q5-git-添加多个ssh-key" class="headerlink" title="Q5 git 添加多个ssh key"></a>Q5 git 添加多个ssh key</h3><p>问题描述：我的博客托管在gitcafe 和 github 上，每次 push 都要多次输入用户名密码 灰常麻烦，那么如何添加多个 ssh key 呢。一直没有弄好，在 <a href="http://xuyuan923.github.io/" target="_blank" rel="external">Cassie</a> 的 <a href="http://xuyuan923.github.io/2014/11/04/github-gitlab-ssh/" target="_blank" rel="external">github/gitlab 同时管理多个 ssh key</a>启发下，经过 N 多试错，终于大功告成。下面记录下配置配置过程。请注意：我的环境是 windows7 MINGW32 shell<br>。</p>
+<p>1.首先生成一个 SSH keys 供 github 使用：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd ~/.ssh</span><br><span class="line">$ ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</span><br></pre></td></tr></table></figure>
+<p>  执行会让你重命名 key 咱们将其命名为 id_rsa_github<br>  之后会让你输入密码，再次输入密码确认，ok，完成上述步骤就生成了公钥和私钥了。<br>  截图如下：</p>
+<p>  <img src="http://paddingme.qiniudn.com/ssh1.png" alt=""></p>
+<p>2.再根据上述步骤生成另一个 SSH keys（根据你自己在两个远程仓库的邮箱命输入邮箱地址），我们将其命名为 id_rsa_gitcafe</p>
+<p>3.接着 咱们添加生成的私钥，再这之前执行</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-agent -s</span><br><span class="line">$ ssh-add ~/.ssh/id_rsa_github</span><br></pre></td></tr></table></figure>
+<p>  这时候会出现错误”Could not open a connection to your authentication agent”,参考<a href="http://stackoverflow.com/questions/17846529/could-not-open-a-connection-to-your-authentication-agent" target="_blank" rel="external">Could not open a connection to your authentication agent</a></p>
+<p>  我们执行:</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ eval `ssh-agent -s`</span><br></pre></td></tr></table></figure>
+<p>  继续添加 key:</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-add ~/.ssh/id_rsa_github</span><br><span class="line"> ssh-add ~/.ssh/id_rsa_gitcafe</span><br></pre></td></tr></table></figure>
+<p>  <img src="http://paddingme.qiniudn.com/ssh2.PNG" alt=""></p>
+<p>4.Ok,私钥添加上了，咱们把公钥放到 github/gitcafe。打开你的 github 账号，找到设置，找到 SSH keys 点击 ADD SSH key。随便取个 Title，什么你不知道如何添加公钥?!</p>
+<p>  在你的.ssh 目录下 用 Notepad 或 sublime 打开 id_rsa_github.pub，然后复制粘贴保存。</p>
+<p>  gitcafe 添加 ssh 公钥同理。</p>
+<p>5.胜利尽在眼前，我们 try try 下。</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<p>  然后出现了奇怪的东东，布拉布拉，yes/no，不管它 输入yes。接着会看见您的大名，OK，连接成功，gitcafe 同理请将 <code>$ ssh -T git@gitcafe.com</code>。 来上图，感受下:</p>
+<p>  <img src="http://paddingme.qiniudn.com/ssh3.PNG" alt=""></p>
+<h3 id="Q6-如何将-blog-同时托管到-gitcafe-和-github-上？"><a href="#Q6-如何将-blog-同时托管到-gitcafe-和-github-上？" class="headerlink" title="Q6 如何将 blog 同时托管到 gitcafe 和 github 上？"></a>Q6 如何将 blog 同时托管到 gitcafe 和 github 上？</h3><p>这个网上教程很多，待我有时间了，我再手把手教同学们，晒下配置文件，感受下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[remote &quot;github&quot;]</span><br><span class="line">    url = https://github.com/yourname/yourname</span><br><span class="line">    fetch = +refs/heads/*:refs/remotes/origin/*</span><br><span class="line">[branch &quot;master&quot;]</span><br><span class="line">    remote = gitcafe</span><br><span class="line">    merge = refs/heads/gitcafe-pages</span><br><span class="line">[remote &quot;gitcafe&quot;]</span><br><span class="line">    url = https://gitcafe.com/yourname/yourname</span><br><span class="line">    fetch = +refs/heads/*:refs/remotes/orig/*</span><br><span class="line">[alias]</span><br><span class="line">publish=!sh -c \&quot;git push github master &amp;&amp; git push gitcafe master:gitcafe-pages\&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="Q7-为什么配置了-SSH，每次-push-还是需要输入用户名和密码呢？"><a href="#Q7-为什么配置了-SSH，每次-push-还是需要输入用户名和密码呢？" class="headerlink" title="Q7 为什么配置了 SSH，每次 push 还是需要输入用户名和密码呢？"></a>Q7 为什么配置了 SSH，每次 push 还是需要输入用户名和密码呢？</h3><p>参考这里<a href="http://segmentfault.com/q/1010000000599327" target="_blank" rel="external">http://segmentfault.com/q/1010000000599327</a></p>
+<p>因为你用的是 https 而不是 ssh。<br>可以更新一下 origin:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote remove origin</span><br><span class="line">git remote add origin git@github.com:Username/Your_Repo_Name.git</span><br></pre></td></tr></table></figure>
+<p>注意：如果你的仓库没有add ssh 只是在.ssh上添加了，在你的仓库里还要添加一次这样才会生效。添加步骤同上。可能要等一分钟左右才会生效。</p>
+<p>之后你还需要重新设置track branch，比如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br><span class="line">git branch --set-upstream-to=origin/master master</span><br></pre></td></tr></table></figure>
+<p>对于HTTPS方式，你可以在~/.netrc文件里设定用户名密码，不过这样的风险在于密码是明文存放在这个文件里的，比较容易泄露</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">machine github.com</span><br><span class="line">login Username</span><br><span class="line">password Password</span><br></pre></td></tr></table></figure>
+<h3 id="Q8-恢复仓库到上一次的提交状态：-git-reset-hard"><a href="#Q8-恢复仓库到上一次的提交状态：-git-reset-hard" class="headerlink" title="Q8 恢复仓库到上一次的提交状态：$ git reset --hard"></a>Q8 恢复仓库到上一次的提交状态：<code>$ git reset --hard</code></h3><h3 id="Q9-修改最后的提交日志：-git-commit-amend"><a href="#Q9-修改最后的提交日志：-git-commit-amend" class="headerlink" title="Q9 修改最后的提交日志：$ git commit --amend"></a>Q9 修改最后的提交日志：<code>$ git commit --amend</code></h3><h2 id="2-学习git-参考资料"><a href="#2-学习git-参考资料" class="headerlink" title="2. 学习git 参考资料"></a>2. 学习git 参考资料</h2><ul>
+<li><a href="http://www.bootcss.com/p/git-guide/" target="_blank" rel="external">git - 简易指南</a></li>
+<li><a href="http://www.html-js.com/article/1534" target="_blank" rel="external">Git 初级读本–上</a></li>
+<li><a href="http://www.html-js.com/article/1535" target="_blank" rel="external">Git 初级读本–下</a></li>
+<li><a href="http://www.html-js.com/article/2023" target="_blank" rel="external">GitHub常用命令详解</a></li>
+<li><a href="http://www.yangzhiping.com/tech/github.html" target="_blank" rel="external">如何高效利用GitHub</a></li>
+<li><a href="http://www.html-js.com/article/2023" target="_blank" rel="external">GitHub常用命令详解</a></li>
+<li><a href="http://www.html-js.com/article/2021" target="_blank" rel="external">Git速成班: git rebase</a></li>
+<li><a href="http://www.html-js.com/article/2064" target="_blank" rel="external">Git进阶命令讲解：squash,fixup,stash</a></li>
+<li><a href="http://www.html-js.com/article/2024" target="_blank" rel="external">GitHub分支系列教程（1）</a></li>
+<li><a href="http://www.html-js.com/article/2025" target="_blank" rel="external">GitHub分支系列教程（2）</a></li>
+<li><a href="http://www.html-js.com/article/2026" target="_blank" rel="external">GitHub分支系列教程（3）</a></li>
+<li><a href="http://www.html-js.com/article/2027" target="_blank" rel="external">GitHub分支系列教程（4）</a></li>
+<li><a href="http://www.html-js.com/article/2028" target="_blank" rel="external">GitHub分支系列教程（5）</a></li>
+<li><a href="http://www.html-js.com/article/2029" target="_blank" rel="external">GitHub分支系列教程（6）</a></li>
+<li><a href="http://www.html-js.com/article/2030" target="_blank" rel="external">.gitignore详解</a></li>
+<li><a href="https://github.com/numbbbbb/progit-zh-pdf-epub-mobi" target="_blank" rel="external">progit book</a></li>
+<li><a href="https://github.com/blynn/gitmagic/tree/master/zh_cn" target="_blank" rel="external">gitmagic book</a></li>
+<li><a href="http://yuehu.io/padding-me/425" target="_blank" rel="external">Git常用操作命令</a></li>
+</ul>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/blog/"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'PaddingMe';
+    
+    var disqus_url = 'http://yoursite.com/blog/2014/11/04/learn-git-snopt/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//PaddingMe.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235687', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

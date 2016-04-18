@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-home">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>【前端】【学习心得】初识HTML5 第十五天 | Hexo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="Mu-Help-Plan," />
+  
+
+  <meta name="description" content="文章取自我的 Github  repos: Learning-JavaScript， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-JavaScript/issues/19
+HTML5前段时间 HTML5 规范已经定稿，不知道是颠覆还是昙花一现。不管怎样，建立起规范总是好事，接下来让市场来决定。
+HTML5 带来了哪些新的变化
+在">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【前端】【学习心得】初识HTML5 第十五天">
+<meta property="og:url" content="http://yoursite.com/blog/2014/12/01/【前端】【学习心得】初识HTML5 第十五天/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="文章取自我的 Github  repos: Learning-JavaScript， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-JavaScript/issues/19
+HTML5前段时间 HTML5 规范已经定稿，不知道是颠覆还是昙花一现。不管怎样，建立起规范总是好事，接下来让市场来决定。
+HTML5 带来了哪些新的变化
+在">
+<meta property="og:updated_time" content="2016-04-10T16:12:43.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【前端】【学习心得】初识HTML5 第十五天">
+<meta name="twitter:description" content="文章取自我的 Github  repos: Learning-JavaScript， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-JavaScript/issues/19
+HTML5前段时间 HTML5 规范已经定稿，不知道是颠覆还是昙花一现。不管怎样，建立起规范总是好事，接下来让市场来决定。
+HTML5 带来了哪些新的变化
+在">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=32204ee7" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-50048801-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">目录</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/blog/"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML5"><span class="toc-text">HTML5</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML5-带来了哪些新的变化"><span class="toc-text">HTML5 带来了哪些新的变化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Modernizr"><span class="toc-text">Modernizr</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Canvas"><span class="toc-text">Canvas</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-【前端】【学习心得】初识HTML5 第十五天" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">【前端】【学习心得】初识HTML5 第十五天</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2014.12.01</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>John Doe</span>
+        </span>
+      
+
+      
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://padding.me/blog/2014/12/01/【前端】【学习心得】初识HTML5 第十五天/#disqus_thread"></a>
+        </span>
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p> 文章取自我的 Github  repos: <a href="https://github.com/paddingme/Learning-JavaScript" target="_blank" rel="external">Learning-JavaScript</a>， 作者：<a href="http://padding.me/about.html" target="_blank" rel="external">@paddingme</a><br>原文链接：<a href="https://github.com/paddingme/Learning-JavaScript/issues/19" target="_blank" rel="external">https://github.com/paddingme/Learning-JavaScript/issues/19</a></p>
+<h2 id="HTML5"><a href="#HTML5" class="headerlink" title="HTML5"></a>HTML5</h2><p>前段时间 HTML5 规范已经定稿，不知道是颠覆还是昙花一现。不管怎样，建立起规范总是好事，接下来让市场来决定。</p>
+<h2 id="HTML5-带来了哪些新的变化"><a href="#HTML5-带来了哪些新的变化" class="headerlink" title="HTML5 带来了哪些新的变化"></a>HTML5 带来了哪些新的变化</h2><ul>
+<li>在结构层中， HTML5 添加了新的标记元素，如<code>&lt;section&gt;</code>、<code>&lt;nav&gt;</code>、<code>&lt;menu&gt;</code>、<code>&lt;header&gt;</code>、<code>&lt;footer&gt;</code>、<code>&lt;article&gt;</code>等，更加语义化，利于SEO；</li>
+<li>HTML5 还提供了更多交互与媒体元素，如 <code>&lt;canvas&gt;</code>、<code>&lt;audio&gt;</code>、<code>&lt;video&gt;</code>。</li>
+<li>表单得到了增强，新增了颜色拾取器、数据选择器、滑动条和进度条等。</li>
+<li>还有很多新元素带着自己的 JavaScript 和 DOM API。</li>
+<li>在行为层，HTML5 规定了 DOM 中每个新元素的交互方式、以及新的 API。</li>
+<li>表现层，CSS3的多个模块囊括了高级选择器、渐变、变换，还有动画。</li>
+<li>新 JavaScript 模块还包括其他模块：Geolocation、Storage、Drap-and-Drop、Socket以及多线程。</li>
+</ul>
+<h2 id="Modernizr"><a href="#Modernizr" class="headerlink" title="Modernizr"></a>Modernizr</h2><p>HTML5 尚未普及，有很多浏览器不支持，我们可以使用 Modernizr, Modernizr 是一个开源的 JavaScript 库，利用其富特性检测功能。可对 HTML5 文档进行更好的控制。</p>
+<p>Modernizr 不会给浏览器添加不支持的特性，能做的是为你提供一些不同的 CSS 类名以及特性检测（feature-detection）属性。</p>
+<p>添加 Modernizr 之后，它会修改 <code>&lt;html&gt;</code> 的 class 属性，基于可用的 html5 特性添加额外的类名。要使用 Modernizr 编写文档，通常都要给<code>&lt;html&gt;</code> 添加一个 no-js 类，利用这个类可以在浏览器不支持 JavaScript 的情况下应用 CSS 样式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.no-js selector &#123;</span><br><span class="line">    style porperties</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后， Modernizr 会检测浏览器可能支持的各种特性，并相应地添加类名 feature 或 no-feature，例如：<code>&lt;html class=&quot;canvas&quot;&gt;</code>或<code>&lt;html class=&quot;no-canvas&quot;&gt;</code>。根据这些类名， 可在 CSS 中 定义相应的增强和退化版本，改善用户体验。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.multiplebgs article p &#123;</span><br><span class="line">/* 为支持多背景浏览器编写的样式*/</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.no-multiplebgs article p &#123;</span><br><span class="line">/* 为不支持多背景浏览器编写的后备样式*/</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Modernizr 库还提供了 JavaScript 特性检测对象，可在 DOM 脚本中直接使用：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (!Modernizr.inputtypes.date) &#123;</span><br><span class="line">    createDatePicker(<span class="built_in">document</span>.getElementById(<span class="string">'birthday'</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Modernizr 还可以帮助旧式浏览器处理 HTML5 新元素 如 <code>&lt;section&gt;</code>、<code>&lt;nav&gt;</code>、<code>&lt;menu&gt;</code>、<code>&lt;header&gt;</code>、<code>&lt;footer&gt;</code>、<code>&lt;article&gt;</code> 等。为使用这些新元素，只需要指定它们为块状元素:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">article</span>,<span class="selector-tag">aside</span>,<span class="selector-tag">footer</span>,<span class="selector-tag">header</span>,<span class="selector-tag">hgroup</span>,<span class="selector-tag">nav</span>,<span class="selector-tag">section</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>唯一的特例是 IE 必须用 JavaScript 创建未知元素：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.createElement(<span class="string">"article"</span>);</span><br></pre></td></tr></table></figure>
+<p>Modernizr.js 可在 <a href="http://modernizr.com/" target="_blank" rel="external">http://modernizr.com/</a> 下载。记住一定要把此脚本放在<code>&lt;head&gt;</code> 元素中。这样可以在加载其他标记之前先加载它，以便它在文档呈现之前能够创建好新的 HTML5 元素.</p>
+<h2 id="Canvas"><a href="#Canvas" class="headerlink" title="Canvas"></a>Canvas</h2><p><code>&lt;Canvas&gt;</code>  元素可动态创建和操作图形推向。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">"draw-in-me"</span> <span class="attr">width</span>=<span class="string">"120"</span> <span class="attr">height</span>=<span class="string">"40"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>Powerd By HTML5 canvas<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>使用 <code>&lt;Canvas&gt;</code> 画一个圆角小黑盒子，带有2像素宽的白色描边<br>效果。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">draw</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">"draw-in-me"</span>);</span><br><span class="line">    <span class="keyword">if</span> (canvas.getContext) &#123;</span><br><span class="line">        <span class="keyword">var</span> ctx = canvas.getContent(<span class="string">'2d'</span>);</span><br><span class="line">        ctx.beginPath();</span><br><span class="line">        ctx.moveTo(<span class="number">120.0</span>,<span class="number">32.0</span>);</span><br><span class="line">        ctx.bezierCurveTo(<span class="number">120.0</span>,<span class="number">36.4</span>,<span class="number">116.4</span>,<span class="number">40.0</span>,<span class="number">112.0</span>,<span class="number">40.0</span>);</span><br><span class="line">        ctx.lineTo(<span class="number">8.0</span>,<span class="number">40.0</span>);</span><br><span class="line">        ctx.bezierCurveTo(<span class="number">3.6</span>,<span class="number">40.0</span>,<span class="number">0.0</span>,<span class="number">36.4</span>,<span class="number">0.0</span>,<span class="number">32.0</span>);</span><br><span class="line">        ctx.lineTo(<span class="number">0.0</span>,<span class="number">8.0</span>);</span><br><span class="line">        ctx.bezierCurveTo(<span class="number">0.0</span>,<span class="number">3.6</span>,<span class="number">3.6</span>,<span class="number">0.0</span>,<span class="number">8.0</span>,<span class="number">0.0</span>);</span><br><span class="line">        ctx.lineTo(<span class="number">120.0</span>,<span class="number">32.0</span>);</span><br><span class="line">        ctx.closePath();</span><br><span class="line">        ctx.fill();</span><br><span class="line">        ctx.lineWidth = <span class="number">2.0</span>;</span><br><span class="line">        ctx.strokeStyle = <span class="string">"rgb(255,255,255)"</span>;</span><br><span class="line">        ctx.stroke();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">window</span>.onload = draw;</span><br></pre></td></tr></table></figure>
+<p>todo 缺个彩色图像变为灰色图像的例子。</p>
+<p>有了 <code>&lt;Canvas&gt;</code> ,就可以在浏览器窗口绘制任何对象、任何像素了。当然，还能通过它来操作图像，或者创建令人眼花缭乱的界面元素。值得注意的<code>&lt;Canvas&gt;</code>和 Flash 不具备可访问性。</p>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/blog/"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'PaddingMe';
+    
+    var disqus_url = 'http://yoursite.com/blog/2014/12/01/【前端】【学习心得】初识HTML5 第十五天/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//PaddingMe.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235687', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

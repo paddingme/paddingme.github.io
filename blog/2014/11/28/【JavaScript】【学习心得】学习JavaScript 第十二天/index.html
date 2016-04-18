@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-home">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>【JavaScript】【学习心得】学习JavaScript 第十二天 | Hexo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="Mu-Help-Plan," />
+  
+
+  <meta name="description" content="文章取自我的 Github  repos: Learning-JavaScript， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-JavaScript/issues/16
+今天学习了下 第十一章 HTML5 只是对 HTML5 做了些介绍，很快就看完了，这里就不做笔记了。刚好有时间可以来研究下 JavaScript 中 type">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【JavaScript】【学习心得】学习JavaScript 第十二天">
+<meta property="og:url" content="http://yoursite.com/blog/2014/11/28/【JavaScript】【学习心得】学习JavaScript 第十二天/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="文章取自我的 Github  repos: Learning-JavaScript， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-JavaScript/issues/16
+今天学习了下 第十一章 HTML5 只是对 HTML5 做了些介绍，很快就看完了，这里就不做笔记了。刚好有时间可以来研究下 JavaScript 中 type">
+<meta property="og:updated_time" content="2016-04-10T16:12:43.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【JavaScript】【学习心得】学习JavaScript 第十二天">
+<meta name="twitter:description" content="文章取自我的 Github  repos: Learning-JavaScript， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-JavaScript/issues/16
+今天学习了下 第十一章 HTML5 只是对 HTML5 做了些介绍，很快就看完了，这里就不做笔记了。刚好有时间可以来研究下 JavaScript 中 type">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=32204ee7" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-50048801-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">目录</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/blog/"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#关于typeof"><span class="toc-text">关于typeof</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于instanceof"><span class="toc-text">关于instanceof</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-【JavaScript】【学习心得】学习JavaScript 第十二天" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">【JavaScript】【学习心得】学习JavaScript 第十二天</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2014.11.28</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>John Doe</span>
+        </span>
+      
+
+      
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://padding.me/blog/2014/11/28/【JavaScript】【学习心得】学习JavaScript 第十二天/#disqus_thread"></a>
+        </span>
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p> 文章取自我的 Github  repos: <a href="https://github.com/paddingme/Learning-JavaScript" target="_blank" rel="external">Learning-JavaScript</a>， 作者：<a href="http://padding.me/about.html" target="_blank" rel="external">@paddingme</a><br>原文链接：<a href="https://github.com/paddingme/Learning-JavaScript/issues/16" target="_blank" rel="external">https://github.com/paddingme/Learning-JavaScript/issues/16</a></p>
+<p>今天学习了下 第十一章 HTML5 只是对 HTML5 做了些介绍，很快就看完了，这里就不做笔记了。刚好有时间可以来研究下 JavaScript 中 <code>typeof</code> 和 <code>instanceOf</code> 的区别，在之前的文章我们多次用 <code>typeof</code> 进行类型判断。那么 <code>typeof</code> 和 <code>instanceOf</code> 有什么区别呢？</p>
+<h2 id="关于typeof"><a href="#关于typeof" class="headerlink" title="关于typeof"></a>关于typeof</h2><p><code>typeof</code>一元运算符，用来返回操作数类型的<strong>字符串</strong>。</p>
+<p><code>typeof</code>几乎不可能得到它们想要的结果。<code>typeof</code>只有一个实际应用场景，就是<strong>用来检测一个对象是否已经定义或者是否已经赋值</strong>。而这个应用却不是来检查对象的类型。</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Class</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>“foo”</td>
+<td>String</td>
+<td>string</td>
+</tr>
+<tr>
+<td>new String(“foo”)</td>
+<td>String</td>
+<td>object</td>
+</tr>
+<tr>
+<td>1.2</td>
+<td>Number</td>
+<td>number</td>
+</tr>
+<tr>
+<td>new Number(1.2)</td>
+<td>Number</td>
+<td>object</td>
+</tr>
+<tr>
+<td>true</td>
+<td>Boolean</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>new Boolean(true)</td>
+<td>Boolean</td>
+<td>object</td>
+</tr>
+<tr>
+<td>new Date()</td>
+<td>Date</td>
+<td>object</td>
+</tr>
+<tr>
+<td>new Error()</td>
+<td>Error</td>
+<td>object</td>
+</tr>
+<tr>
+<td>[1,2,3]</td>
+<td>Array</td>
+<td>object</td>
+</tr>
+<tr>
+<td>new Array(1, 2, 3)</td>
+<td>Array</td>
+<td>object</td>
+</tr>
+<tr>
+<td>new Function(“”)</td>
+<td>Function</td>
+<td>function</td>
+</tr>
+<tr>
+<td>/abc/g</td>
+<td>RegExp</td>
+<td>object (function in Nitro/V8)</td>
+</tr>
+<tr>
+<td>new RegExp(“meow”)</td>
+<td>RegExp</td>
+<td>object (function in Nitro/V8)</td>
+</tr>
+<tr>
+<td>{}</td>
+<td>Object</td>
+<td>object</td>
+</tr>
+<tr>
+<td>new Object()</td>
+<td>Object</td>
+<td>object</td>
+</tr>
+</tbody>
+</table>
+<p>上面表格中，Type 一列表示 typeof 操作符的运算结果。可以看到，这个值在大多数情况下都返回 “object”。</p>
+<p>Class 一列表示对象的内部属性 [[Class]] 的值。</p>
+<p>JavaScript 标准文档中定义: [[Class]] 的值只可能是下面字符串中的一个： Arguments, Array, Boolean, Date, Error, Function, JSON, Math, Number, Object, RegExp, String.<br>为了获取对象的 [[Class]]，我们需要使用定义在 Object.prototype 上的方法 toString。</p>
+<p>JavaScript 标准文档只给出了一种获取 [[Class]] 值的方法，那就是使用 Object.prototype.toString。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">is</span>(<span class="params">type, obj</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> clas = <span class="built_in">Object</span>.prototype.toString.call(obj).slice(<span class="number">8</span>, <span class="number">-1</span>);</span><br><span class="line">    <span class="keyword">return</span> obj !== <span class="literal">undefined</span> &amp;&amp; obj !== <span class="literal">null</span> &amp;&amp; clas === type;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">is(<span class="string">'String'</span>, <span class="string">'test'</span>); <span class="comment">// true</span></span><br><span class="line">is(<span class="string">'String'</span>, <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">'test'</span>)); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>上面例子中，Object.prototype.toString 方法被调用，this 被设置为了需要获取 [[Class]] 值的对象。</p>
+<p>注：Object.prototype.toString 返回一种标准格式字符串，所以上例可以通过 slice 截取指定位置的字符串，如下所示：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.prototype.toString.call([])    <span class="comment">// "[object Array]"</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(&#123;&#125;)    <span class="comment">// "[object Object]"</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="number">2</span>)    <span class="comment">// "[object Number]"</span></span><br></pre></td></tr></table></figure>
+<p>注：这种变化可以从 IE8 和 Firefox 4 中看出区别，如下所示：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// IE8</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="literal">null</span>)    <span class="comment">// "[object Object]"</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="literal">undefined</span>)    <span class="comment">// "[object Object]"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Firefox 4</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="literal">null</span>)    <span class="comment">// "[object Null]"</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="literal">undefined</span>)    <span class="comment">// "[object Undefined]"</span></span><br></pre></td></tr></table></figure>
+<p>测试为定义变量</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> foo !== <span class="string">'undefined'</span></span><br></pre></td></tr></table></figure>
+<p>上面代码会检测 foo 是否已经定义；如果没有定义而直接使用会导致 ReferenceError 的异常。 这是 typeof 唯一有用的地方。</p>
+<p><strong>结论</strong>: 为了检测一个对象的类型，强烈推荐使用 Object.prototype.toString 方法； 因为这是唯一一个可依赖的方式。正如上面表格所示，typeof 的一些返回值在标准文档中并未定义， 因此不同的引擎实现可能不同。</p>
+<p>除非为了检测一个变量是否已经定义，我们应尽量避免使用 <code>typeof</code> 操作符。</p>
+<table>
+<thead>
+<tr>
+<th>x</th>
+<th>typeof x</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>undefined</td>
+<td>“undefined”</td>
+</tr>
+<tr>
+<td>true 或false</td>
+<td>“boolean”</td>
+</tr>
+<tr>
+<td>任意数字或者NaN</td>
+<td>“number”</td>
+</tr>
+<tr>
+<td>任意字符串</td>
+<td>“string”</td>
+</tr>
+<tr>
+<td>函数对象(在ECMA-262术语中,指的是实现了[[Call]] 的对象)</td>
+<td>“function”</td>
+</tr>
+<tr>
+<td>任意内置对象（非函数）</td>
+<td>“object”  </td>
+</tr>
+<tr>
+<td>数组</td>
+<td>“obeject”</td>
+</tr>
+<tr>
+<td>null</td>
+<td>“object” </td>
+</tr>
+<tr>
+<td>宿主对象(JS引擎内置对象,而不是DOM或者其他提供的)</td>
+<td>由编译器各自实现的字符串，但不是”undefined”,”number”,”boolean”,”number”,”string”。 </td>
+</tr>
+<tr>
+<td>正则表达式</td>
+<td>各浏览器表现不一</td>
+</tr>
+</tbody>
+</table>
+<p>如果想将null和对象区分开，则必须针对特殊值显式检测。如：<code>my_value===null</code>。对于宿主对象来说，typeof 有可能并不返回 ‘object’,而返回字符串。但实际上客户端  js 中的大多数宿主对象都是 ‘object’ 类型。对于所有内置可执行对象进行 typeof 运算都将返回 “function”。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Numbers</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="number">37</span> === <span class="string">'number'</span>;</span><br><span class="line"><span class="keyword">typeof</span> <span class="number">3.14</span> === <span class="string">'number'</span>;</span><br><span class="line"><span class="keyword">typeof</span> <span class="built_in">Math</span>.LN2 === <span class="string">'number'</span>;</span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">Infinity</span> === <span class="string">'number'</span>;</span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">NaN</span> === <span class="string">'number'</span>; <span class="comment">// 尽管NaN是"Not-A-Number"的缩写,意思是"不是一个数字"</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="built_in">Number</span>(<span class="number">1</span>) === <span class="string">'number'</span>; <span class="comment">// 不要这样使用!</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Strings</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="string">""</span> === <span class="string">'string'</span>;</span><br><span class="line"><span class="keyword">typeof</span> <span class="string">"bla"</span> === <span class="string">'string'</span>;</span><br><span class="line"><span class="keyword">typeof</span> (<span class="keyword">typeof</span> <span class="number">1</span>) === <span class="string">'string'</span>; <span class="comment">// typeof返回的肯定是一个字符串</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="built_in">String</span>(<span class="string">"abc"</span>) === <span class="string">'string'</span>; <span class="comment">// 不要这样使用!</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Booleans</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">true</span> === <span class="string">'boolean'</span>;</span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">false</span> === <span class="string">'boolean'</span>;</span><br><span class="line"><span class="keyword">typeof</span> <span class="built_in">Boolean</span>(<span class="literal">true</span>) === <span class="string">'boolean'</span>; <span class="comment">// 不要这样使用!</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Undefined</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">undefined</span> === <span class="string">'undefined'</span>;</span><br><span class="line"><span class="keyword">typeof</span> blabla === <span class="string">'undefined'</span>; <span class="comment">// 一个未定义的变量,或者一个定义了却未赋初值的变量</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Objects</span></span><br><span class="line"><span class="keyword">typeof</span> &#123;a:<span class="number">1</span>&#125; === <span class="string">'object'</span>;</span><br><span class="line"><span class="keyword">typeof</span> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>] === <span class="string">'object'</span>; </span><br><span class="line"><span class="comment">// 使用Array.isArray或者Object.prototype.toString.call方法</span></span><br><span class="line"><span class="comment">//可以分辨出一个数组和真实的对象</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="keyword">new</span> <span class="built_in">Date</span>() === <span class="string">'object'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typeof</span> <span class="keyword">new</span> <span class="built_in">Boolean</span>(<span class="literal">true</span>) === <span class="string">'object'</span> <span class="comment">// 令人困惑.不要这样使用</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="keyword">new</span> <span class="built_in">Number</span>(<span class="number">1</span>) === <span class="string">'object'</span> <span class="comment">// 令人困惑.不要这样使用</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">"abc"</span>) === <span class="string">'object'</span>;  <span class="comment">// 令人困惑.不要这样使用</span></span><br><span class="line"><span class="comment">// Functions</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125; === <span class="string">'function'</span>;</span><br><span class="line"><span class="keyword">typeof</span> <span class="built_in">Math</span>.sin === <span class="string">'function'</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="关于instanceof"><a href="#关于instanceof" class="headerlink" title="关于instanceof"></a>关于instanceof</h2><p>instanceof 左操作数是一个类，右操作数是标识对象的类。如果左侧的对象是右侧类的实例，则返回true.而js中对象的类是通过初始化它们的构造函数来定义的。即 instanceof 的右操作数应当是一个函数。所有的对象都是 object 的实例。如果左操作数不是对象，则返回 false ,如果右操作数不是函数，则抛出 typeError。 </p>
+<p>instanceof 运算符是用来测试一个对象是否在其原型链原型构造函数的属性。其语法是<code>object instanceof constructor</code></p>
+<p>instanceof 操作符用来比较两个操作数的构造函数。只有在比较自定义的对象时才有意义。 如果用来比较内置类型，将会和 typeof 操作符 一样用处不大。</p>
+<p>比较自定义对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Bar</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">Bar.prototype = <span class="keyword">new</span> Foo();</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Bar() <span class="keyword">instanceof</span> Bar; <span class="comment">// true</span></span><br><span class="line"><span class="keyword">new</span> Bar() <span class="keyword">instanceof</span> Foo; <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 如果仅仅设置 Bar.prototype 为函数 Foo 本身，而不是 Foo 构造函数的一个实例</span></span><br><span class="line">Bar.prototype = Foo;</span><br><span class="line"><span class="keyword">new</span> Bar() <span class="keyword">instanceof</span> Foo; <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<p>instanceof 比较内置类型</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">'foo'</span>) <span class="keyword">instanceof</span> <span class="built_in">String</span>; <span class="comment">// true</span></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">'foo'</span>) <span class="keyword">instanceof</span> <span class="built_in">Object</span>; <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="string">'foo'</span> <span class="keyword">instanceof</span> <span class="built_in">String</span>; <span class="comment">// false</span></span><br><span class="line"><span class="string">'foo'</span> <span class="keyword">instanceof</span> <span class="built_in">Object</span>; <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<p>有一点需要注意，instanceof 用来比较属于不同 JavaScript 上下文的对象（比如，浏览器中不同的文档结构）时将会出错， 因为它们的构造函数不会是同一个对象。</p>
+<p>结论:instanceof 操作符应该仅仅用来比较来自同一个 JavaScript 上下文的自定义对象。 正如 typeof 操作符一样，任何其它的用法都应该是避免的。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">C</span>(<span class="params"></span>)</span>&#123;&#125; <span class="comment">// 定义一个构造函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">D</span>(<span class="params"></span>)</span>&#123;&#125; <span class="comment">// 定义另一个构造函数</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> o = <span class="keyword">new</span> C();</span><br><span class="line">o <span class="keyword">instanceof</span> C; <span class="comment">// true, 因为Object.getPrototypeOf(o) === C.prototype</span></span><br><span class="line">o <span class="keyword">instanceof</span> D; <span class="comment">// false, D的原型不在o 的原型链上</span></span><br><span class="line">o <span class="keyword">instanceof</span> <span class="built_in">Object</span>; <span class="comment">// true, because:</span></span><br><span class="line">C.prototype <span class="keyword">instanceof</span> <span class="built_in">Object</span> <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">C.prototype = &#123;&#125;;</span><br><span class="line"><span class="keyword">var</span> o2 = <span class="keyword">new</span> C();</span><br><span class="line">o2 <span class="keyword">instanceof</span> C; <span class="comment">// true</span></span><br><span class="line">o <span class="keyword">instanceof</span> C; <span class="comment">// false, C的原型不在o 的原型链上</span></span><br><span class="line"></span><br><span class="line">D.prototype = <span class="keyword">new</span> C(); <span class="comment">//</span></span><br><span class="line"><span class="keyword">var</span> o3 = <span class="keyword">new</span> D();</span><br><span class="line">o3 <span class="keyword">instanceof</span> D; <span class="comment">// true</span></span><br><span class="line">o3 <span class="keyword">instanceof</span> C; <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myString = <span class="keyword">new</span> <span class="built_in">String</span>();</span><br><span class="line"><span class="keyword">var</span> myDate = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"></span><br><span class="line">myString <span class="keyword">instanceof</span> <span class="built_in">String</span>; <span class="comment">//  true</span></span><br><span class="line">myString <span class="keyword">instanceof</span> <span class="built_in">Object</span>; <span class="comment">//  true</span></span><br><span class="line">myString <span class="keyword">instanceof</span> <span class="built_in">Date</span>;   <span class="comment">//  false</span></span><br><span class="line"></span><br><span class="line">myDate <span class="keyword">instanceof</span> <span class="built_in">Date</span>;     <span class="comment">//  true</span></span><br><span class="line">myDate <span class="keyword">instanceof</span> <span class="built_in">Object</span>;   <span class="comment">//  true</span></span><br><span class="line">myDate <span class="keyword">instanceof</span> <span class="built_in">String</span>;   <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Car</span>(<span class="params">make, model, year</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.make = make;</span><br><span class="line">  <span class="keyword">this</span>.model = model;</span><br><span class="line">  <span class="keyword">this</span>.year = year;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> mycar = <span class="keyword">new</span> Car(<span class="string">"Honda"</span>, <span class="string">"Accord"</span>, <span class="number">1998</span>);</span><br><span class="line"><span class="keyword">var</span> a = mycar <span class="keyword">instanceof</span> Car;    <span class="comment">// returns true</span></span><br><span class="line"><span class="keyword">var</span> b = mycar <span class="keyword">instanceof</span> <span class="built_in">Object</span>; <span class="comment">// returns true</span></span><br></pre></td></tr></table></figure>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/blog/"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'PaddingMe';
+    
+    var disqus_url = 'http://yoursite.com/blog/2014/11/28/【JavaScript】【学习心得】学习JavaScript 第十二天/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//PaddingMe.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235687', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

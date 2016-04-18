@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-home">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>form表单的正确使用 | Hexo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="article,edit,HTML," />
+  
+
+  <meta name="description" content="文章取自我的 Github  repos: Learning-HTML-CSS， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-HTML-CSS/issues/5
+form 表单的正确使用
+
+form提交的几种方法
+form表单
+onsubmit阻止form表单提交与onclick的相关操作
+
+form提交的几种方法方法一：利用f">
+<meta property="og:type" content="article">
+<meta property="og:title" content="form表单的正确使用">
+<meta property="og:url" content="http://yoursite.com/blog/2014/10/30/form表单的正确使用/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="文章取自我的 Github  repos: Learning-HTML-CSS， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-HTML-CSS/issues/5
+form 表单的正确使用
+
+form提交的几种方法
+form表单
+onsubmit阻止form表单提交与onclick的相关操作
+
+form提交的几种方法方法一：利用f">
+<meta property="og:updated_time" content="2016-04-10T16:12:39.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="form表单的正确使用">
+<meta name="twitter:description" content="文章取自我的 Github  repos: Learning-HTML-CSS， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-HTML-CSS/issues/5
+form 表单的正确使用
+
+form提交的几种方法
+form表单
+onsubmit阻止form表单提交与onclick的相关操作
+
+form提交的几种方法方法一：利用f">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=32204ee7" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-50048801-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">目录</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/blog/"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#form提交的几种方法"><span class="toc-text">form提交的几种方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#方法一：利用form的onsubmit-函数"><span class="toc-text">方法一：利用form的onsubmit()函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法二：利用input类型为submit组件的onclick-函数"><span class="toc-text">方法二：利用input类型为submit组件的onclick()函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法三：利用button组件的onclick-函数，手动提交"><span class="toc-text">方法三：利用button组件的onclick()函数，手动提交</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结："><span class="toc-text">总结：</span></a></li></ol></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-form表单的正确使用" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">form表单的正确使用</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2014.10.30</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>John Doe</span>
+        </span>
+      
+
+      
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://padding.me/blog/2014/10/30/form表单的正确使用/#disqus_thread"></a>
+        </span>
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p> 文章取自我的 Github  repos: <a href="https://github.com/paddingme/Learning-HTML-CSS" target="_blank" rel="external">Learning-HTML-CSS</a>， 作者：<a href="http://padding.me/about.html" target="_blank" rel="external">@paddingme</a><br>原文链接：<a href="https://github.com/paddingme/Learning-HTML-CSS/issues/5" target="_blank" rel="external">https://github.com/paddingme/Learning-HTML-CSS/issues/5</a></p>
+<p><code>form</code> 表单的正确使用</p>
+<ul>
+<li><a href="http://suo.iteye.com/blog/493998" target="_blank" rel="external">form提交的几种方法</a></li>
+<li><a href="http://www.w3cplus.com/framework/page/form.php" target="_blank" rel="external">form表单</a></li>
+<li><a href="http://www.jb51.net/article/24709.htm" target="_blank" rel="external">onsubmit阻止form表单提交与onclick的相关操作</a></li>
+</ul>
+<h1 id="form提交的几种方法"><a href="#form提交的几种方法" class="headerlink" title="form提交的几种方法"></a><a href="http://suo.iteye.com/blog/493998" target="_blank" rel="external">form提交的几种方法</a></h1><h2 id="方法一：利用form的onsubmit-函数"><a href="#方法一：利用form的onsubmit-函数" class="headerlink" title="方法一：利用form的onsubmit()函数"></a>方法一：利用form的onsubmit()函数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    function validateForm()&#123;</span><br><span class="line">        if(document.reply.title.value == &quot;&quot;)&#123; //通过form名来获取form</span><br><span class="line">        alert(&quot;please input the title!&quot;);</span><br><span class="line">        document.reply.title.focus();</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    if(document.forms[0].cont.value == &quot;&quot;)&#123; //通过forms数组获取form</span><br><span class="line">        alert(&quot;please input the content!&quot;);</span><br><span class="line">        document.reply.cont.focus();</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">    return true;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;form name=&quot;reply&quot;  method=&quot;post&quot; onsubmit=&quot;return validateForm( );&quot;&gt;</span><br><span class="line">        &lt;input type=&quot;text&quot; name=&quot;title&quot;  size=&quot;80&quot; /&gt;&lt;br /&gt;</span><br><span class="line">        &lt;textarea name=&quot;cont&quot; cols=&quot;80&quot; rows=&quot;12&quot;&gt;&lt;/textarea&gt;&lt;br /&gt;</span><br><span class="line">        &lt;input type=&quot;submit&quot; value=&quot;提交&quot; &gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+<p>注意：<br>1.onsubmit属性内容一定要有return关键字，否则函数会直接执行，不会返回<br>2.validateForm一定要返回一个boolean类型的返回值<br>3.提交按钮要写成submit类型的</p>
+<h2 id="方法二：利用input类型为submit组件的onclick-函数"><a href="#方法二：利用input类型为submit组件的onclick-函数" class="headerlink" title="方法二：利用input类型为submit组件的onclick()函数"></a>方法二：利用input类型为submit组件的onclick()函数</h2><ol>
+<li>将上面form标签中的onsubmit=”return validateForm()”属性，去掉。</li>
+<li><p>为“提交”按钮添加onclick事件，如下：</p>
+<input type="submit" value="提交" onclick="return validateForm();">
+
+</li>
+</ol>
+<h2 id="方法三：利用button组件的onclick-函数，手动提交"><a href="#方法三：利用button组件的onclick-函数，手动提交" class="headerlink" title="方法三：利用button组件的onclick()函数，手动提交"></a>方法三：利用button组件的onclick()函数，手动提交</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    function modifyItem() &#123;</span><br><span class="line">        if (trim(document.getElementById(&quot;itemName&quot;).value) == &quot;&quot;) &#123;</span><br><span class="line">            alert(&quot;物料名称不能为空！&quot;);</span><br><span class="line">            document.getElementById(&quot;itemName&quot;).focus();</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line">        with (document.getElementById(&quot;itemForm&quot;)) &#123;</span><br><span class="line">            method = &quot;post&quot;;</span><br><span class="line">            action = &quot;item.do?command=modify&amp;pageNo=$&#123;itemForm.pageNo&#125;&quot;;</span><br><span class="line">            submit();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    //返回</span><br><span class="line">    function goBack() &#123;</span><br><span class="line">        window.self.location = &quot;item.do?command=list&amp;pageNo=$&#123;itemForm.pageNo&#125;&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;form name=&quot;itemForm&quot; id=&quot;itemForm&quot;&gt;</span><br><span class="line">      &lt;input name=&quot;itemNo&quot; type=&quot;text&quot;   id=&quot;itemNo&quot; value=&quot;$&#123; item.itemNo &#125;&quot; &gt;</span><br><span class="line">      &lt;input name=&quot;itemName&quot; type=&quot;text&quot;   id=&quot;itemName&quot; value=&quot;$&#123; item.itemName &#125;&quot; &gt;</span><br><span class="line">     &lt;input name=&quot;btnModify&quot;  type=&quot;button&quot; id=&quot;btnModify&quot; value=“修改&quot; onclick=&quot;modifyItem()&quot;&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+<p>注意：<br> 1.提交时，设置form的action和methods属性，然后利用form.submit()函数提交。</p>
+<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><ol>
+<li>对form中的组件验证时，前两个使用的是name属性，包括form自身的。</li>
+<li>如果提交表单时没有反应，同时确定提交表单部分代码没有问题，请查看提交表单前面的js代码，有时前面js的错误会引发莫名其妙的问题。</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br><span class="line">353</span><br><span class="line">354</span><br><span class="line">355</span><br><span class="line">356</span><br><span class="line">357</span><br><span class="line">358</span><br><span class="line">359</span><br><span class="line">360</span><br><span class="line">361</span><br><span class="line">362</span><br><span class="line">363</span><br><span class="line">364</span><br><span class="line">365</span><br><span class="line">366</span><br><span class="line">367</span><br><span class="line">368</span><br><span class="line">369</span><br><span class="line">370</span><br><span class="line">371</span><br><span class="line">372</span><br><span class="line">373</span><br><span class="line">374</span><br><span class="line">375</span><br><span class="line">376</span><br><span class="line">377</span><br><span class="line">378</span><br><span class="line">379</span><br><span class="line">380</span><br><span class="line">381</span><br><span class="line">382</span><br><span class="line">383</span><br><span class="line">384</span><br><span class="line">385</span><br><span class="line">386</span><br><span class="line">387</span><br><span class="line">388</span><br><span class="line">389</span><br><span class="line">390</span><br><span class="line">391</span><br><span class="line">392</span><br><span class="line">393</span><br><span class="line">394</span><br><span class="line">395</span><br><span class="line">396</span><br><span class="line">397</span><br><span class="line">398</span><br><span class="line">399</span><br><span class="line">400</span><br><span class="line">401</span><br><span class="line">402</span><br><span class="line">403</span><br><span class="line">404</span><br><span class="line">405</span><br><span class="line">406</span><br><span class="line">407</span><br><span class="line">408</span><br><span class="line">409</span><br><span class="line">410</span><br><span class="line">411</span><br><span class="line">412</span><br><span class="line">413</span><br><span class="line">414</span><br><span class="line">415</span><br><span class="line">416</span><br><span class="line">417</span><br><span class="line">418</span><br><span class="line">419</span><br><span class="line">420</span><br><span class="line">421</span><br><span class="line">422</span><br><span class="line">423</span><br><span class="line">424</span><br><span class="line">425</span><br><span class="line">426</span><br><span class="line">427</span><br><span class="line">428</span><br><span class="line">429</span><br><span class="line">430</span><br><span class="line">431</span><br><span class="line">432</span><br><span class="line">433</span><br><span class="line">434</span><br><span class="line">435</span><br><span class="line">436</span><br><span class="line">437</span><br><span class="line">438</span><br><span class="line">439</span><br><span class="line">440</span><br><span class="line">441</span><br><span class="line">442</span><br><span class="line">443</span><br><span class="line">444</span><br><span class="line">445</span><br><span class="line">446</span><br><span class="line">447</span><br><span class="line">448</span><br><span class="line">449</span><br><span class="line">450</span><br><span class="line">451</span><br><span class="line">452</span><br><span class="line">453</span><br><span class="line">454</span><br><span class="line">455</span><br><span class="line">456</span><br><span class="line">457</span><br><span class="line">458</span><br><span class="line">459</span><br><span class="line">460</span><br><span class="line">461</span><br><span class="line">462</span><br><span class="line">463</span><br><span class="line">464</span><br><span class="line">465</span><br><span class="line">466</span><br><span class="line">467</span><br><span class="line">468</span><br><span class="line">469</span><br><span class="line">470</span><br><span class="line">471</span><br><span class="line">472</span><br><span class="line">473</span><br><span class="line">474</span><br><span class="line">475</span><br><span class="line">476</span><br><span class="line">477</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;zh-cmn-Hans&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        @charset &quot;utf-8&quot;;</span><br><span class="line">/* -------------------------------------------------</span><br><span class="line"> * form</span><br><span class="line"> * -------------------------------------------------</span><br><span class="line">*/</span><br><span class="line">form&#123;</span><br><span class="line">    margin-bottom:18px;</span><br><span class="line">    font-size:13px;</span><br><span class="line">&#125;</span><br><span class="line">textarea &#123;</span><br><span class="line">    resize:none;</span><br><span class="line">    vertical-align:top;</span><br><span class="line">    overflow:auto;</span><br><span class="line">    font:12px/1.5 Helvetica,Arial,sans-serif;</span><br><span class="line">    width:500px;</span><br><span class="line">    height:80px;</span><br><span class="line">&#125;</span><br><span class="line">.form-text&#123;</span><br><span class="line">    margin:0;</span><br><span class="line">    font:12px/1.5 Helvetica,Arial,sans-serif;</span><br><span class="line">    height:18px;</span><br><span class="line">    width:200px;</span><br><span class="line">&#125;</span><br><span class="line">.form-text, textarea, select&#123;</span><br><span class="line">    border: 1px solid #CCCCCC;</span><br><span class="line">    border-radius: 3px 3px 3px 3px;</span><br><span class="line">    padding:4px;</span><br><span class="line">&#125;</span><br><span class="line">.form-text, textarea &#123;</span><br><span class="line">  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;</span><br><span class="line">  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;</span><br><span class="line">  -ms-transition: border linear 0.2s, box-shadow linear 0.2s;</span><br><span class="line">  -o-transition: border linear 0.2s, box-shadow linear 0.2s;</span><br><span class="line">  transition: border linear 0.2s, box-shadow linear 0.2s;</span><br><span class="line">  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);</span><br><span class="line">  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);</span><br><span class="line">  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);</span><br><span class="line">&#125;</span><br><span class="line">.form-text:focus, textarea:focus,select&#123;</span><br><span class="line">    outline: 0 none;</span><br><span class="line">&#125;</span><br><span class="line">.form-text:focus, textarea:focus &#123;</span><br><span class="line">  border-color: rgba(82, 168, 236, 0.8);</span><br><span class="line">  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);</span><br><span class="line">  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);</span><br><span class="line">  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);</span><br><span class="line">&#125;</span><br><span class="line">.form-radio,.form-checkbox&#123;</span><br><span class="line">    margin:0;</span><br><span class="line">    padding:0;</span><br><span class="line">    width:13px;</span><br><span class="line">    height:13px;</span><br><span class="line">    font-size:13px;</span><br><span class="line">&#125;</span><br><span class="line">:-moz-placeholder,</span><br><span class="line">::-webkit-input-placeholder&#123;</span><br><span class="line">  color: #bfbfbf;</span><br><span class="line">&#125;</span><br><span class="line">/* form-item */</span><br><span class="line">.form-item&#123;</span><br><span class="line">    margin-bottom:9px;</span><br><span class="line">&#125;</span><br><span class="line">/* horizontal form label */</span><br><span class="line">.form-horizontal label&#123;</span><br><span class="line">    float: left;</span><br><span class="line">    text-align: right;</span><br><span class="line">    font-weight:500;</span><br><span class="line">    width:100px;</span><br><span class="line">    font-size:12px;</span><br><span class="line">    line-height:19px;</span><br><span class="line">&#125;</span><br><span class="line">.form-horizontal .form-field&#123;</span><br><span class="line">    float:left;</span><br><span class="line">&#125;</span><br><span class="line">.form-horizontal .form-action,</span><br><span class="line">.form-horizontal .item-no-label&#123;</span><br><span class="line">    padding-left:100px;/*label width*/</span><br><span class="line">&#125;</span><br><span class="line">/* vertical form label */</span><br><span class="line">.form-vertical label&#123;</span><br><span class="line">    display:block;</span><br><span class="line">    float:none;</span><br><span class="line">    width:auto;</span><br><span class="line">    text-align:left;</span><br><span class="line">    margin-bottom:5px;</span><br><span class="line">&#125;</span><br><span class="line">.form-vertical .form-field&#123;</span><br><span class="line">    float:none;</span><br><span class="line">&#125;</span><br><span class="line">.form-vertical .form-action,</span><br><span class="line">.form-vertical .item-no-label&#123;</span><br><span class="line">    padding-left:0;</span><br><span class="line">&#125;</span><br><span class="line">/* field-list */</span><br><span class="line">.form-radio-checkbox-wrap .form-field label&#123;</span><br><span class="line">    text-align: left;</span><br><span class="line">    width: auto;</span><br><span class="line">    font-weight:normal;</span><br><span class="line">    margin:0 10px 0 0;</span><br><span class="line">    float:left;</span><br><span class="line">    display:inline;</span><br><span class="line">&#125;</span><br><span class="line">.form-radio-checkbox-wrap .form-field .field-list-block&#123;</span><br><span class="line">    display:block;</span><br><span class="line">    float: none;</span><br><span class="line">    margin-right:0;</span><br><span class="line">    overflow:auto;*zoom:1;</span><br><span class="line">&#125;</span><br><span class="line">.form-radio-checkbox-wrap .form-radio,</span><br><span class="line">.form-radio-checkbox-wrap .form-checkbox,</span><br><span class="line">.form-radio-checkbox-wrap span&#123;</span><br><span class="line">    float:left;</span><br><span class="line">    display:inline;</span><br><span class="line">&#125;</span><br><span class="line">.form-radio-checkbox-wrap .form-radio,</span><br><span class="line">.form-radio-checkbox-wrap .form-checkbox&#123;</span><br><span class="line">    margin-right:5px;</span><br><span class="line">    margin-top:3px;</span><br><span class="line">&#125;</span><br><span class="line">/* form-action */</span><br><span class="line">.form-action&#123;</span><br><span class="line">    clear:both;</span><br><span class="line">&#125;</span><br><span class="line">.submit-wrap&#123;</span><br><span class="line">    -moz-border-radius:5px;</span><br><span class="line">    -webkit-border-radius:5px;</span><br><span class="line">    border-radius:5px;</span><br><span class="line">    display:inline-block;*display:inline;*zoom:1;</span><br><span class="line">&#125;</span><br><span class="line">.submit-btn&#123;</span><br><span class="line">    border: 0 none;</span><br><span class="line">    height:26px;</span><br><span class="line">    margin:0;</span><br><span class="line">    background:none;</span><br><span class="line">    overflow:visible;</span><br><span class="line">    padding:0 10px;</span><br><span class="line">    cursor:pointer;</span><br><span class="line">&#125;</span><br><span class="line">@-moz-document url-prefix()&#123;</span><br><span class="line">    .submit-btn&#123;</span><br><span class="line">        padding-bottom:3px;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">/* description */</span><br><span class="line">.form-des&#123;</span><br><span class="line">    color: #bfbfbf;</span><br><span class="line">    font-size:12px;</span><br><span class="line">    margin-left:5px;</span><br><span class="line">&#125;</span><br><span class="line">p.form-des&#123;</span><br><span class="line">    margin:0;</span><br><span class="line">&#125;</span><br><span class="line">/* codePic */</span><br><span class="line">.code-pic&#123;</span><br><span class="line">    display:inline-block;*display:inline;*zoom:1;</span><br><span class="line">&#125;</span><br><span class="line">.code-pic img&#123;</span><br><span class="line">    height:28px;</span><br><span class="line">    vertical-align:middle;</span><br><span class="line">    margin:0 5px;</span><br><span class="line">&#125;</span><br><span class="line">/* tips messages */</span><br><span class="line">.form-error, .form-alert, .form-notice, .form-success, .form-info &#123;</span><br><span class="line">    border: 2px solid #DDDDDD;</span><br><span class="line">    margin-bottom: 9px;</span><br><span class="line">    padding:8px;</span><br><span class="line">    font-size:12px;</span><br><span class="line">&#125;</span><br><span class="line">/* span inline tips */</span><br><span class="line">span.form-error, span.form-alert, span.form-notice, span.form-success, span.form-info &#123;</span><br><span class="line">    border-width:1px;</span><br><span class="line">    display:inline-block;*display:inline;*zoom:1;</span><br><span class="line">    line-height:26px;</span><br><span class="line">    vertical-align:middle;</span><br><span class="line">    padding:0 5px;</span><br><span class="line">    font-size:12px;</span><br><span class="line">    margin:0 0 0 5px;</span><br><span class="line">&#125;</span><br><span class="line">.form-error, .form-alert &#123;</span><br><span class="line">    background: none repeat scroll 0 0 #FBE3E4;</span><br><span class="line">    border-color: #FBC2C4;</span><br><span class="line">    color: #8A1F11;</span><br><span class="line">&#125;</span><br><span class="line">.form-notice &#123;</span><br><span class="line">    background: none repeat scroll 0 0 #FFF6BF;</span><br><span class="line">    border-color: #FFD324;</span><br><span class="line">    color: #514721;</span><br><span class="line">&#125;</span><br><span class="line">.form-info &#123;</span><br><span class="line">    background: none repeat scroll 0 0 #D5EDF8;</span><br><span class="line">    border-color: #92CAE4;</span><br><span class="line">    color: #205791;</span><br><span class="line">&#125;</span><br><span class="line">.form-success &#123;</span><br><span class="line">    background: none repeat scroll 0 0 #E6EFC2;</span><br><span class="line">    border-color: #C6D880;</span><br><span class="line">    color: #264409;</span><br><span class="line">&#125;</span><br><span class="line">.form-error a, .form-alert a,.form-notice a,.form-info a,.form-success a&#123;</span><br><span class="line">    text-decoration:underline;</span><br><span class="line">&#125;</span><br><span class="line">.form-error a, .form-alert a &#123;</span><br><span class="line">    color: #8A1F11; </span><br><span class="line">&#125;</span><br><span class="line">.form-notice a &#123;</span><br><span class="line">    color: #514721;</span><br><span class="line">&#125;</span><br><span class="line">.form-info a &#123;</span><br><span class="line">    color: #205791;</span><br><span class="line">&#125;</span><br><span class="line">.form-success a &#123;</span><br><span class="line">    color: #264409;</span><br><span class="line">&#125;</span><br><span class="line">/* clear form-item float */</span><br><span class="line">.form-item:before, .form-item:after &#123;</span><br><span class="line">    content:&quot;&quot;;</span><br><span class="line">    display:table;</span><br><span class="line">&#125;</span><br><span class="line">.form-item:after&#123;</span><br><span class="line">    clear:both;</span><br><span class="line">    overflow:hidden;</span><br><span class="line">&#125;</span><br><span class="line">.form-item&#123;</span><br><span class="line">    zoom:1;</span><br><span class="line">    clear:both;</span><br><span class="line">    margin-bottom:9px;</span><br><span class="line">&#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;h3&gt;label同行表单demo&lt;/h3&gt;</span><br><span class="line">    &lt;section class=&quot;demozone&quot;&gt;</span><br><span class="line">        &lt;form class=&quot;demo form-horizontal&quot; id=&quot;demo2&quot; action=&quot;#&quot; method=&quot;post&quot;&gt;</span><br><span class="line">            &lt;div class=&quot;form-item&quot;&gt;</span><br><span class="line">                &lt;label for=&quot;username&quot;&gt;昵称：&lt;/label&gt;</span><br><span class="line"></span><br><span class="line">                &lt;div class=&quot;form-field&quot;&gt;</span><br><span class="line">                    &lt;input type=&quot;text&quot; name=&quot;username&quot; id=&quot;username&quot; class=&quot;form-text&quot; placeholder=&quot;6-32个字符&quot; /&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class=&quot;form-item&quot;&gt;</span><br><span class="line">                &lt;label for=&quot;name&quot;&gt;邮箱：&lt;/label&gt;</span><br><span class="line"></span><br><span class="line">                &lt;div class=&quot;form-field&quot;&gt;</span><br><span class="line">                    &lt;input type=&quot;email&quot; name=&quot;email&quot; id=&quot;email&quot; class=&quot;form-text&quot; /&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class=&quot;form-item&quot;&gt;</span><br><span class="line">                &lt;label for=&quot;pwd&quot;&gt;密码：&lt;/label&gt;</span><br><span class="line"></span><br><span class="line">                &lt;div class=&quot;form-field&quot;&gt;</span><br><span class="line">                    &lt;input type=&quot;password&quot; class=&quot;form-text&quot; id=&quot;pwd&quot; name=&quot;pwd&quot;&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class=&quot;form-item form-radio-checkbox-wrap&quot;&gt;</span><br><span class="line">                &lt;label&gt;性别：&lt;/label&gt;</span><br><span class="line"></span><br><span class="line">                &lt;div class=&quot;form-field&quot;&gt;</span><br><span class="line">                    &lt;label&gt;</span><br><span class="line">                        &lt;input type=&quot;radio&quot; name=&quot;sex&quot; class=&quot;form-radio&quot; value=&quot;man&quot; checked=&quot;checked&quot;&gt;</span><br><span class="line">                        &lt;span&gt;男&lt;/span&gt;</span><br><span class="line">                    &lt;/label&gt;</span><br><span class="line">                    &lt;label&gt;</span><br><span class="line">                        &lt;input type=&quot;radio&quot; name=&quot;sex&quot; class=&quot;form-radio&quot; value=&quot;woman&quot;&gt;</span><br><span class="line">                        &lt;span&gt;女&lt;/span&gt;</span><br><span class="line">                    &lt;/label&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class=&quot;form-item form-radio-checkbox-wrap&quot;&gt;</span><br><span class="line">                &lt;label&gt;Options：&lt;/label&gt;</span><br><span class="line"></span><br><span class="line">                &lt;div class=&quot;form-field&quot;&gt;</span><br><span class="line">                    &lt;label class=&quot;field-list-block&quot;&gt;</span><br><span class="line">                        &lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot; value=&quot;1&quot; class=&quot;form-checkbox&quot; name=&quot;&quot;&gt;</span><br><span class="line">                        &lt;span&gt;Option one is this and that—be sure to include why it’s great&lt;/span&gt;</span><br><span class="line">                    &lt;/label&gt;</span><br><span class="line">                    &lt;label class=&quot;field-list-block&quot;&gt;</span><br><span class="line">                        &lt;input type=&quot;checkbox&quot; value=&quot;2&quot; class=&quot;form-checkbox&quot; name=&quot;&quot;&gt;</span><br><span class="line">                        &lt;span&gt;Option two can also be checked and included in form results&lt;/span&gt;</span><br><span class="line">                    &lt;/label&gt;</span><br><span class="line">                    &lt;label class=&quot;field-list-block&quot;&gt;</span><br><span class="line">                        &lt;input type=&quot;checkbox&quot; value=&quot;3&quot; class=&quot;form-checkbox&quot; name=&quot;&quot;&gt;</span><br><span class="line">                        &lt;span&gt;Option three can—yes, you guessed it—also be checked and included in form results&lt;/span&gt;</span><br><span class="line">                    &lt;/label&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class=&quot;form-item&quot;&gt;</span><br><span class="line">                &lt;label for=&quot;realname&quot;&gt;姓名：&lt;/label&gt;</span><br><span class="line"></span><br><span class="line">                &lt;div class=&quot;form-field&quot;&gt;</span><br><span class="line">                    &lt;input type=&quot;text&quot; name=&quot;realname&quot; id=&quot;realname&quot; class=&quot;form-text&quot; placeholder=&quot;请填入真实姓名&quot; /&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class=&quot;form-item&quot;&gt;</span><br><span class="line">                &lt;label&gt;证件号码：&lt;/label&gt;</span><br><span class="line"></span><br><span class="line">                &lt;div class=&quot;form-field form-id-num-wrap&quot;&gt;</span><br><span class="line">                    &lt;select id=&quot;id_type&quot; size=&quot;1&quot; name=&quot;id_type&quot;&gt;</span><br><span class="line">                        &lt;option value=&quot;1&quot; selected=&quot;selected&quot;&gt;身份证&lt;/option&gt;</span><br><span class="line">                        &lt;option value=&quot;2&quot;&gt;学生证&lt;/option&gt;</span><br><span class="line">                        &lt;option value=&quot;3&quot;&gt;军官证&lt;/option&gt;</span><br><span class="line">                    &lt;/select&gt;</span><br><span class="line">                    &lt;input type=&quot;text&quot; name=&quot;id_text&quot; id=&quot;id_text&quot; class=&quot;form-text&quot; /&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class=&quot;form-item&quot;&gt;</span><br><span class="line">                &lt;label&gt;个人简介：&lt;/label&gt;</span><br><span class="line"></span><br><span class="line">                &lt;div class=&quot;form-field&quot;&gt;</span><br><span class="line">                    &lt;textarea name=&quot;intro&quot; id=&quot;intro&quot;&gt;&lt;/textarea&gt;</span><br><span class="line"></span><br><span class="line">                    &lt;p class=&quot;form-des&quot;&gt;说明注释文字可以放在这里啊&lt;/p&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class=&quot;form-item&quot;&gt;</span><br><span class="line">                &lt;label for=&quot;codetext&quot;&gt;验证码：&lt;/label&gt;</span><br><span class="line"></span><br><span class="line">                &lt;div class=&quot;form-field form-code-text-wrap&quot;&gt;</span><br><span class="line">                    &lt;input type=&quot;text&quot; id=&quot;codetext&quot; name=&quot;codetext&quot; class=&quot;form-text code-text&quot;&gt;</span><br><span class="line"></span><br><span class="line">                    &lt;div class=&quot;code-pic&quot;&gt;</span><br><span class="line">                        &lt;img id=&quot;codePic&quot; alt=&quot;&quot; src=&quot;http://www.w3cplus.com/solution/form/images/code.jpg&quot;&gt;&lt;a id=&quot;change_code&quot; href=&quot;#&quot;&gt;换一个&lt;/a&gt;</span><br><span class="line">                    &lt;/div&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class=&quot;form-item item-no-label form-radio-checkbox-wrap&quot;&gt;</span><br><span class="line">                &lt;div class=&quot;form-field&quot;&gt;</span><br><span class="line">                    &lt;label&gt;</span><br><span class="line">                        &lt;input type=&quot;checkbox&quot; name=&quot;&quot; class=&quot;form-checkbox&quot; value=&quot;1&quot; checked=&quot;checked&quot;&gt;</span><br><span class="line">                        &lt;span&gt;我同意所有条款……&lt;/span&gt;</span><br><span class="line">                    &lt;/label&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class=&quot;form-action&quot;&gt;</span><br><span class="line">                &lt;span class=&quot;submit-wrap greybtn&quot;&gt;</span><br><span class="line">                    &lt;input type=&quot;submit&quot; value=&quot;提交&quot; class=&quot;submit-btn&quot;&gt;</span><br><span class="line">                &lt;/span&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        &lt;/form&gt;</span><br><span class="line">    &lt;/section&gt;</span><br><span class="line">    &lt;h3&gt;label换行表单&lt;/h3&gt;</span><br><span class="line">    &lt;section class=&quot;demozone&quot;&gt;</span><br><span class="line">        &lt;form method=&quot;post&quot; action=&quot;#&quot; id=&quot;demo3&quot; class=&quot;demo form-vertical&quot;&gt;</span><br><span class="line">            &lt;div class=&quot;form-item&quot;&gt;</span><br><span class="line">                &lt;label for=&quot;username&quot;&gt;昵称：&lt;/label&gt;</span><br><span class="line"></span><br><span class="line">                &lt;div class=&quot;form-field&quot;&gt;</span><br><span class="line">                    &lt;input type=&quot;text&quot; placeholder=&quot;6-32个字符&quot; class=&quot;form-text&quot; id=&quot;username&quot; name=&quot;username&quot;&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class=&quot;form-item&quot;&gt;</span><br><span class="line">                &lt;label for=&quot;name&quot;&gt;邮箱：&lt;/label&gt;</span><br><span class="line"></span><br><span class="line">                &lt;div class=&quot;form-field&quot;&gt;</span><br><span class="line">                    &lt;input type=&quot;email&quot; class=&quot;form-text&quot; id=&quot;email&quot; name=&quot;email&quot;&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class=&quot;form-item&quot;&gt;</span><br><span class="line">                &lt;label for=&quot;pwd&quot;&gt;密码：&lt;/label&gt;</span><br><span class="line"></span><br><span class="line">                &lt;div class=&quot;form-field&quot;&gt;</span><br><span class="line">                    &lt;input type=&quot;password&quot; name=&quot;pwd&quot; id=&quot;pwd&quot; class=&quot;form-text&quot;&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class=&quot;form-item form-radio-checkbox-wrap&quot;&gt;</span><br><span class="line">                &lt;label&gt;性别：&lt;/label&gt;</span><br><span class="line"></span><br><span class="line">                &lt;div class=&quot;form-field&quot;&gt;</span><br><span class="line">                    &lt;label&gt;</span><br><span class="line">                        &lt;input type=&quot;radio&quot; checked=&quot;checked&quot; value=&quot;man&quot; class=&quot;form-radio&quot; name=&quot;sex&quot;&gt;</span><br><span class="line">                        &lt;span&gt;男&lt;/span&gt;</span><br><span class="line">                    &lt;/label&gt;</span><br><span class="line">                    &lt;label&gt;</span><br><span class="line">                        &lt;input type=&quot;radio&quot; value=&quot;woman&quot; class=&quot;form-radio&quot; name=&quot;sex&quot;&gt;</span><br><span class="line">                        &lt;span&gt;女&lt;/span&gt;</span><br><span class="line">                    &lt;/label&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class=&quot;form-item form-radio-checkbox-wrap&quot;&gt;</span><br><span class="line">                &lt;label&gt;Options：&lt;/label&gt;</span><br><span class="line"></span><br><span class="line">                &lt;div class=&quot;form-field&quot;&gt;</span><br><span class="line">                    &lt;label class=&quot;field-list-block&quot;&gt;</span><br><span class="line">                        &lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot; value=&quot;1&quot; class=&quot;form-checkbox&quot; name=&quot;&quot;&gt;</span><br><span class="line">                        &lt;span&gt;Option one is this and that—be sure to include why it’s great&lt;/span&gt;</span><br><span class="line">                    &lt;/label&gt;</span><br><span class="line">                    &lt;label class=&quot;field-list-block&quot;&gt;</span><br><span class="line">                        &lt;input type=&quot;checkbox&quot; value=&quot;2&quot; class=&quot;form-checkbox&quot; name=&quot;&quot;&gt;</span><br><span class="line">                        &lt;span&gt;Option two can also be checked and included in form results&lt;/span&gt;</span><br><span class="line">                    &lt;/label&gt;</span><br><span class="line">                    &lt;label class=&quot;field-list-block&quot;&gt;</span><br><span class="line">                        &lt;input type=&quot;checkbox&quot; value=&quot;3&quot; class=&quot;form-checkbox&quot; name=&quot;&quot;&gt;</span><br><span class="line">                        &lt;span&gt;Option three can—yes, you guessed it—also be checked and included in form results&lt;/span&gt;</span><br><span class="line">                    &lt;/label&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class=&quot;form-item&quot;&gt;</span><br><span class="line">                &lt;label for=&quot;realname&quot;&gt;姓名：&lt;/label&gt;</span><br><span class="line"></span><br><span class="line">                &lt;div class=&quot;form-field&quot;&gt;</span><br><span class="line">                    &lt;input type=&quot;text&quot; placeholder=&quot;请填入真实姓名&quot; class=&quot;form-text&quot; id=&quot;realname&quot; name=&quot;realname&quot;&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class=&quot;form-item&quot;&gt;</span><br><span class="line">                &lt;label&gt;证件号码：&lt;/label&gt;</span><br><span class="line"></span><br><span class="line">                &lt;div class=&quot;form-field form-id-num-wrap&quot;&gt;</span><br><span class="line">                    &lt;select name=&quot;id_type&quot; size=&quot;1&quot; id=&quot;id_type&quot;&gt;</span><br><span class="line">                        &lt;option selected=&quot;selected&quot; value=&quot;1&quot;&gt;身份证&lt;/option&gt;</span><br><span class="line">                        &lt;option value=&quot;2&quot;&gt;学生证&lt;/option&gt;</span><br><span class="line">                        &lt;option value=&quot;3&quot;&gt;军官证&lt;/option&gt;</span><br><span class="line">                    &lt;/select&gt;</span><br><span class="line">                    &lt;input type=&quot;text&quot; class=&quot;form-text&quot; id=&quot;id_text&quot; name=&quot;id_text&quot;&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class=&quot;form-item&quot;&gt;</span><br><span class="line">                &lt;label&gt;个人简介：&lt;/label&gt;</span><br><span class="line"></span><br><span class="line">                &lt;div class=&quot;form-field&quot;&gt;</span><br><span class="line">                    &lt;textarea id=&quot;intro&quot; name=&quot;intro&quot;&gt;&lt;/textarea&gt;</span><br><span class="line"></span><br><span class="line">                    &lt;p class=&quot;form-des&quot;&gt;说明注释文字可以放在这里啊&lt;/p&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class=&quot;form-item&quot;&gt;</span><br><span class="line">                &lt;label for=&quot;codetext&quot;&gt;验证码：&lt;/label&gt;</span><br><span class="line"></span><br><span class="line">                &lt;div class=&quot;form-field form-code-text-wrap&quot;&gt;</span><br><span class="line">                    &lt;input type=&quot;text&quot; class=&quot;form-text code-text&quot; name=&quot;codetext&quot; id=&quot;codetext&quot;&gt;</span><br><span class="line"></span><br><span class="line">                    &lt;div class=&quot;code-pic&quot;&gt;</span><br><span class="line">                        &lt;img src=&quot;http://www.w3cplus.com/solution/form/images/code.jpg&quot; alt=&quot;&quot; id=&quot;codePic&quot;&gt;&lt;a href=&quot;#&quot; id=&quot;change_code&quot;&gt;换一个&lt;/a&gt;</span><br><span class="line">                    &lt;/div&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class=&quot;form-item item-no-label form-radio-checkbox-wrap&quot;&gt;</span><br><span class="line">                &lt;div class=&quot;form-field&quot;&gt;</span><br><span class="line">                    &lt;label&gt;</span><br><span class="line">                        &lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot; value=&quot;1&quot; class=&quot;form-checkbox&quot; name=&quot;&quot;&gt;</span><br><span class="line">                        &lt;span&gt;我同意所有条款……&lt;/span&gt;</span><br><span class="line">                    &lt;/label&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class=&quot;form-action&quot;&gt;</span><br><span class="line">                &lt;span class=&quot;submit-wrap greybtn&quot;&gt;</span><br><span class="line">                    &lt;input type=&quot;submit&quot; value=&quot;提交&quot; class=&quot;submit-btn&quot;&gt;</span><br><span class="line">                &lt;/span&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        &lt;/form&gt;</span><br><span class="line">    &lt;/section&gt;</span><br><span class="line">    &lt;h2&gt;附加：状态提示信息的class&lt;/h2&gt;</span><br><span class="line"></span><br><span class="line">    &lt;div class=&quot;demozone&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;form-error&quot;&gt;This is a &amp;lt;div&amp;gt; with the class</span><br><span class="line">            &lt;strong&gt;.form-error&lt;/strong&gt;. &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;.</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;form-notice&quot;&gt;This is a &amp;lt;div&amp;gt; with the class</span><br><span class="line">            &lt;strong&gt;.form-notice&lt;/strong&gt;. &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;.</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;form-info&quot;&gt;This is a &amp;lt;div&amp;gt; with the class</span><br><span class="line">            &lt;strong&gt;.form-info&lt;/strong&gt;. &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;.&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;form-success&quot;&gt;This is a &amp;lt;div&amp;gt; with the class</span><br><span class="line">            &lt;strong&gt;.form-success&lt;/strong&gt;. &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;.</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;/article&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line"></span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/blog/"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'PaddingMe';
+    
+    var disqus_url = 'http://yoursite.com/blog/2014/10/30/form表单的正确使用/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//PaddingMe.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235687', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

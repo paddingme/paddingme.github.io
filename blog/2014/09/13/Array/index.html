@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-home">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>数组 | Hexo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="javascript,Data Structures &amp; Algotithms with JavaScript," />
+  
+
+  <meta name="description" content="JavaScript 中对数组的定义数组的标准定义是：
+
+一个存储元素的线性集合（collection）,元素可以通过索引来任意存取，索引通常是数字，用来计算元素之间存储位置的偏移量。
+
+JavaScript 中的数组是一种特殊的对象，用来表示偏移量的索引是该对象的属性，索引可能是整数。然而，这些数字索引在内部被转换为字符串类型，这是因为JavaScript 对象中的属性名必须是字符串。
+Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数组">
+<meta property="og:url" content="http://yoursite.com/blog/2014/09/13/Array/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="JavaScript 中对数组的定义数组的标准定义是：
+
+一个存储元素的线性集合（collection）,元素可以通过索引来任意存取，索引通常是数字，用来计算元素之间存储位置的偏移量。
+
+JavaScript 中的数组是一种特殊的对象，用来表示偏移量的索引是该对象的属性，索引可能是整数。然而，这些数字索引在内部被转换为字符串类型，这是因为JavaScript 对象中的属性名必须是字符串。
+Java">
+<meta property="og:updated_time" content="2014-10-16T13:07:39.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数组">
+<meta name="twitter:description" content="JavaScript 中对数组的定义数组的标准定义是：
+
+一个存储元素的线性集合（collection）,元素可以通过索引来任意存取，索引通常是数字，用来计算元素之间存储位置的偏移量。
+
+JavaScript 中的数组是一种特殊的对象，用来表示偏移量的索引是该对象的属性，索引可能是整数。然而，这些数字索引在内部被转换为字符串类型，这是因为JavaScript 对象中的属性名必须是字符串。
+Java">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=32204ee7" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-50048801-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">目录</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/blog/"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript-中对数组的定义"><span class="toc-text">JavaScript 中对数组的定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用数组"><span class="toc-text">使用数组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建数组"><span class="toc-text">创建数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#由字符串生成数组"><span class="toc-text">由字符串生成数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#对数组的整体性操作"><span class="toc-text">对数组的整体性操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#存取函数"><span class="toc-text">存取函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#indexOf"><span class="toc-text">indexOf()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数组的字符串表示"><span class="toc-text">数组的字符串表示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#由已有数组创建新数组"><span class="toc-text">由已有数组创建新数组</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#可变数组"><span class="toc-text">可变数组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#为数组添加元素"><span class="toc-text">为数组添加元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#从数组中删除元素"><span class="toc-text">从数组中删除元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#从数组中间位置添加和删除元素"><span class="toc-text">从数组中间位置添加和删除元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#为数组排序"><span class="toc-text">为数组排序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#迭代器方法"><span class="toc-text">迭代器方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#不生成新数组的迭代器方法"><span class="toc-text">不生成新数组的迭代器方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#生成新数组的迭代器方法"><span class="toc-text">生成新数组的迭代器方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二维数组和多维数组"><span class="toc-text">二维数组和多维数组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建二维数组"><span class="toc-text">创建二维数组</span></a></li></ol></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-Array" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">数组</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2014.09.13</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>John Doe</span>
+        </span>
+      
+
+      
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://padding.me/blog/2014/09/13/Array/#disqus_thread"></a>
+        </span>
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h2 id="JavaScript-中对数组的定义"><a href="#JavaScript-中对数组的定义" class="headerlink" title="JavaScript 中对数组的定义"></a>JavaScript 中对数组的定义</h2><p>数组的标准定义是：</p>
+<blockquote>
+<p>一个存储元素的线性集合（collection）,元素可以通过索引来任意存取，索引通常是数字，用来计算元素之间存储位置的偏移量。</p>
+</blockquote>
+<p>JavaScript 中的数组是一种特殊的对象，用来表示偏移量的索引是该对象的属性，索引可能是整数。然而，这些数字索引在内部被转换为字符串类型，这是因为JavaScript 对象中的属性名必须是字符串。</p>
+<p>JavaScript 中的数组，严格来说应该称作对象，是特殊的 JavaScript 对象，在内部被归类为数组。由于 Array 在 JavaScript 中被当作对象， 因此它有许多属性和方法可以在编程使用。</p>
+<h2 id="使用数组"><a href="#使用数组" class="headerlink" title="使用数组"></a>使用数组</h2><h3 id="创建数组"><a href="#创建数组" class="headerlink" title="创建数组"></a>创建数组</h3><pre><code>var numbers = [];//[]操作符声明了一个空的数组，长度为0。
+
+var numbers = new Array();//与上等价
+
+var numbers = [1,2,3,4,5];
+
+var numbers = new Array(1,2,3,4,5);//构造函数传入初始值
+
+var numbers = new Array(5); //只传入一个参数，用来指定数组的长度
+
+var objects = [1,&quot;Joe&quot;,true, null];//在 JavaScript 里数组中的元素不必是同一种数据类型。
+</code></pre><p>推荐使用<code>[]</code>操作符创建数组，这种方式效率更高。</p>
+<h3 id="由字符串生成数组"><a href="#由字符串生成数组" class="headerlink" title="由字符串生成数组"></a>由字符串生成数组</h3><p><code>split()</code> 方法用于把一个字符串分割成字符串数组。</p>
+<pre><code>str.split([separator][, limit])
+</code></pre><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split" target="_blank" rel="external">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split</a></p>
+<h3 id="对数组的整体性操作"><a href="#对数组的整体性操作" class="headerlink" title="对数组的整体性操作"></a>对数组的整体性操作</h3><p>当把一个数组赋给另外一个数组时，只是为被赋值的数组增加了一个新的引用。当你通过原引用修改了数组的值，另外一个引用也会感知这个变化（浅复制）。而深复制是指将原数组中的每一个元素都复制一份到新数组中。</p>
+<h2 id="存取函数"><a href="#存取函数" class="headerlink" title="存取函数"></a>存取函数</h2><h3 id="indexOf"><a href="#indexOf" class="headerlink" title="indexOf()"></a>indexOf()</h3><p><code>indexOf()</code> 用来查找进来的参数在目标数组中是否存在。如果目标数组包含该参数，就返回该元素在数组中的索引；如果不包含，就返回-1。如果数组中包含多个相同的元素，<code>indexOf()</code> 函数总是返回第一个与参数相同的元素的索引。类似，<code>lastIndexOf()</code>，该函数返回相同元素中最后一个元素的索引，如果没找到相同元素，则返回-1。</p>
+<h3 id="数组的字符串表示"><a href="#数组的字符串表示" class="headerlink" title="数组的字符串表示"></a>数组的字符串表示</h3><p><code>join()</code> 和 <code>toString()</code> 方法都返回一个包含数组所有元素的字符串，各元素之间用逗号分开。当直接对一个数组使用 <code>print()</code> 函数时，系统会自动调用数那个数组的<code>tostring()</code>方法。</p>
+<h3 id="由已有数组创建新数组"><a href="#由已有数组创建新数组" class="headerlink" title="由已有数组创建新数组"></a>由已有数组创建新数组</h3><ul>
+<li><code>concat()</code> 方法可以合并多个数组创建一个新数，<code>concat()</code> 方法发起者是一个数组，参数是另一个数组。作为参数的数组，其中的所有元素都被连接到调用 concat() 方法的数组后面；</li>
+<li><code>splice()</code> 方法截取一个数组的子集创建一个新数组；<code>splice()</code> 方法从现有数组里截取一个新数组，该方法的第一个参数是截取的起始索引，第二个参数是截取的长度。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myFish = [<span class="string">'angel'</span>, <span class="string">'clown'</span>, <span class="string">'mandarin'</span>, <span class="string">'surgeon'</span>];</span><br><span class="line"><span class="comment">// removes 0 elements from index 2, and inserts 'drum'</span></span><br><span class="line"><span class="keyword">var</span> removed = myFish.splice(<span class="number">2</span>, <span class="number">0</span>, <span class="string">'drum'</span>);</span><br><span class="line"><span class="comment">// myFish is ['angel', 'clown', 'drum', 'mandarin', 'surgeon']</span></span><br><span class="line"><span class="comment">// removed is [], no elements removed</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// removes 1 element from index 3</span></span><br><span class="line">removed = myFish.splice(<span class="number">3</span>, <span class="number">1</span>);</span><br><span class="line"><span class="comment">// myFish is ['angel', 'clown', 'drum', 'surgeon']</span></span><br><span class="line"><span class="comment">// removed is ['mandarin']</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// removes 1 element from index 2, and inserts 'trumpet'</span></span><br><span class="line">removed = myFish.splice(<span class="number">2</span>, <span class="number">1</span>, <span class="string">'trumpet'</span>);</span><br><span class="line"><span class="comment">// myFish is ['angel', 'clown', 'trumpet', 'surgeon']</span></span><br><span class="line"><span class="comment">// removed is ['drum']</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// removes 2 elements from index 0, and inserts 'parrot', 'anemone' and 'blue'</span></span><br><span class="line">removed = myFish.splice(<span class="number">0</span>, <span class="number">2</span>, <span class="string">'parrot'</span>, <span class="string">'anemone'</span>, <span class="string">'blue'</span>);</span><br><span class="line"><span class="comment">// myFish is ['parrot', 'anemone', 'blue', 'trumpet', 'surgeon']</span></span><br><span class="line"><span class="comment">// removed is ['angel', 'clown']</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// removes 2 elements from index 3</span></span><br><span class="line">removed = myFish.splice(<span class="number">3</span>, <span class="built_in">Number</span>.MAX_VALUE);</span><br><span class="line"><span class="comment">// myFish is ['parrot', 'anemone', 'blue']</span></span><br><span class="line"><span class="comment">// removed is ['trumpet', 'surgeon']</span></span><br></pre></td></tr></table></figure>
+<h2 id="可变数组"><a href="#可变数组" class="headerlink" title="可变数组"></a>可变数组</h2><h3 id="为数组添加元素"><a href="#为数组添加元素" class="headerlink" title="为数组添加元素"></a>为数组添加元素</h3><ul>
+<li><code>push()</code>方法会将一个元素添加到数组末尾，也可以使用数组的length属性为数组添加元素，但<code>push()</code>方法看起来更直观。</li>
+<li><code>unshift()</code> 方法可以将元素添加在数组的开头，也可以通过一次调用，为数组添加多个元素。</li>
+</ul>
+<h3 id="从数组中删除元素"><a href="#从数组中删除元素" class="headerlink" title="从数组中删除元素"></a>从数组中删除元素</h3><ul>
+<li><code>pop()</code> 方法可以删除数组末尾的元素。</li>
+<li><code>shift()</code> 方法可以删除数组的第一个元素。</li>
+</ul>
+<p><code>pop()</code>和<code>shift()</code>都将返回删除的元素。</p>
+<h3 id="从数组中间位置添加和删除元素"><a href="#从数组中间位置添加和删除元素" class="headerlink" title="从数组中间位置添加和删除元素"></a>从数组中间位置添加和删除元素</h3><p><code>splice()</code>方法可以为数组添加元素，需提供如下参数：</p>
+<ul>
+<li>起始索引（亦即你希望添加元素的地方）；</li>
+<li>需要删除的元素个数（添加元素时该参数设为0）；</li>
+<li>想要添加数组的元素。</li>
+</ul>
+<h3 id="为数组排序"><a href="#为数组排序" class="headerlink" title="为数组排序"></a>为数组排序</h3><ul>
+<li><code>reverse()</code>方法将数组中元素的数学怒进行翻转；</li>
+<li><code>sort()</code> 会对数组按照字典顺序进行排序。</li>
+</ul>
+<p>使用<code>sort()</code>对数字排序，需要传入一个大小比较函数：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">compare</span>(<span class="params">num1,num2</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> num1 - num2;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> nums = [<span class="number">3</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">100</span>,<span class="number">4</span>,<span class="number">200</span>];</span><br><span class="line">nums.sort(compare);</span><br><span class="line">print(nums);</span><br></pre></td></tr></table></figure>
+<h2 id="迭代器方法"><a href="#迭代器方法" class="headerlink" title="迭代器方法"></a>迭代器方法</h2><h3 id="不生成新数组的迭代器方法"><a href="#不生成新数组的迭代器方法" class="headerlink" title="不生成新数组的迭代器方法"></a>不生成新数组的迭代器方法</h3><ul>
+<li><code>forEach()</code> 该方法接受一个函数使用参数，对数组中的每个元素使用该函数。</li>
+<li><code>every()</code> 该方法接受一个返回值为布尔类型的函数，对数组中得每个元素使用该函数，如果对于所有的元素，该函数都返回 true, 则该方法返回 true。</li>
+<li><code>some()</code> 该方法也接受一个返回值为布尔类型的函数，只要有一个元素使得该函数返回true，该方法就返回 true。</li>
+<li><code>reduce()</code> 该方法接受一个函数，返回一个值。该方法会从一个累加值开始，不断对累加值和数组中的后续元素调用该函数，直到数组中的最后一个元素，最后返回得到的累加值；也可以用来将数组中的元素连接成一个长的字符串。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">concat</span>(<span class="params">accumulatedString,item</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> accumulatedString+item;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> words = [<span class="string">"the "</span>, <span class="string">"quick "</span>, <span class="string">"brown "</span>, <span class="string">"fox "</span>];</span><br><span class="line"><span class="keyword">var</span> sentence = words.reduce(concat);</span><br><span class="line">print(sentence);</span><br></pre></td></tr></table></figure>
+<p><code>reduceRight()</code> 和 <code>reduce()</code> 一样，不过它是从右到左执行。</p>
+<h3 id="生成新数组的迭代器方法"><a href="#生成新数组的迭代器方法" class="headerlink" title="生成新数组的迭代器方法"></a>生成新数组的迭代器方法</h3><ul>
+<li><code>map()</code> 和<code>forEach()</code>相似，对数组中的每个元素使用某个函数，区别在于返回一个新的数组，该数组的元素是对原有元素应用某个函数得到的结果。</li>
+<li><code>filter()</code> 和 <code>every()</code> 类似，传入一个返回值为布尔类型的函数，不同的是当对数组中红所有元素应用该函数时，结果均为 true 时， 该方法不返回 true，二十返回一个新数组，该数组包含应用该函数后结果为true 的元素。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">passing</span>(<span class="params">num</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> num &gt;= <span class="number">60</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> grades = [];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">20</span>; ++i) &#123;</span><br><span class="line">    grades[i] = <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * <span class="number">101</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> passGrades = grades.filter(passing);</span><br><span class="line">print(<span class="string">"All grades: "</span>);</span><br><span class="line">print(grades);</span><br><span class="line">print(<span class="string">"Passing grades: "</span>);</span><br><span class="line">print(passGrades);</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">afterc</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(str.indexOf(<span class="string">"cie"</span>) &gt; <span class="number">-1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> words = [<span class="string">"recieve"</span>,<span class="string">"device"</span>,<span class="string">"percieve"</span>,<span class="string">"deceit"</span>,<span class="string">"concieve"</span>];</span><br><span class="line"><span class="keyword">var</span> misspelled = words.filter(afterc);</span><br><span class="line">print(misspelled);</span><br></pre></td></tr></table></figure>
+<h2 id="二维数组和多维数组"><a href="#二维数组和多维数组" class="headerlink" title="二维数组和多维数组"></a>二维数组和多维数组</h2><h3 id="创建二维数组"><a href="#创建二维数组" class="headerlink" title="创建二维数组"></a>创建二维数组</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Array</span>.matrix = <span class="function"><span class="keyword">function</span>(<span class="params">numrows,numcols,initial</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> arr = [];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; numrows; ++i) &#123;</span><br><span class="line">        <span class="keyword">var</span> columns = []; </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; numcols; ++j) &#123;</span><br><span class="line">            columns[j] = initial;</span><br><span class="line">        &#125;</span><br><span class="line">    arr[i] = columns;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>第二章 数组 完</p>
+</blockquote>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/blog/"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'PaddingMe';
+    
+    var disqus_url = 'http://yoursite.com/blog/2014/09/13/Array/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//PaddingMe.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235687', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

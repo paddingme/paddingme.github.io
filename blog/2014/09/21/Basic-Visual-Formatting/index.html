@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-home">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>基本视觉格式化 | Hexo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="css," />
+  
+
+  <meta name="description" content="基本框在CSS中每个元素都被认为可生成一个或多个矩形框，这成为元素框。各元素框中心有一个内容区域（content area），内容区周围有可选的内边距（padding）、外边距(margin)、和边框(border),这里可选的是指可设置为0即从元素框内去除了这些为0的项，例如说行内元素没有 margin,没有 padding。外边距通常是透明的，可以看到父元素的背景。内边距不能是负值。边框 若未">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基本视觉格式化">
+<meta property="og:url" content="http://yoursite.com/blog/2014/09/21/Basic-Visual-Formatting/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="基本框在CSS中每个元素都被认为可生成一个或多个矩形框，这成为元素框。各元素框中心有一个内容区域（content area），内容区周围有可选的内边距（padding）、外边距(margin)、和边框(border),这里可选的是指可设置为0即从元素框内去除了这些为0的项，例如说行内元素没有 margin,没有 padding。外边距通常是透明的，可以看到父元素的背景。内边距不能是负值。边框 若未">
+<meta property="og:updated_time" content="2014-10-16T13:07:39.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="基本视觉格式化">
+<meta name="twitter:description" content="基本框在CSS中每个元素都被认为可生成一个或多个矩形框，这成为元素框。各元素框中心有一个内容区域（content area），内容区周围有可选的内边距（padding）、外边距(margin)、和边框(border),这里可选的是指可设置为0即从元素框内去除了这些为0的项，例如说行内元素没有 margin,没有 padding。外边距通常是透明的，可以看到父元素的背景。内边距不能是负值。边框 若未">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=32204ee7" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-50048801-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">目录</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/blog/"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本框"><span class="toc-text">基本框</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#包含块"><span class="toc-text">包含块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常见的术语"><span class="toc-text">常见的术语</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#正常流"><span class="toc-text">正常流</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#非替换元素"><span class="toc-text">非替换元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#替换元素"><span class="toc-text">替换元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#块级元素"><span class="toc-text">块级元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#行内元素"><span class="toc-text">行内元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#根元素"><span class="toc-text">根元素</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#块级元素-1"><span class="toc-text">块级元素</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#负外边距"><span class="toc-text">负外边距</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#替换元素-1"><span class="toc-text">替换元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#auto-高度"><span class="toc-text">auto 高度</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-Basic-Visual-Formatting" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">基本视觉格式化</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2014.09.21</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>John Doe</span>
+        </span>
+      
+
+      
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://padding.me/blog/2014/09/21/Basic-Visual-Formatting/#disqus_thread"></a>
+        </span>
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h2 id="基本框"><a href="#基本框" class="headerlink" title="基本框"></a>基本框</h2><p>在CSS中每个元素都被认为可生成一个或多个矩形框，这成为元素框。各元素框中心有一个内容区域（content area），内容区周围有<strong>可选的</strong>内边距（padding）、外边距(margin)、和边框(border),这里可选的是指可设置为0即从元素框内去除了这些为0的项，例如说行内元素没有 margin,没有 padding。外边距通常是透明的，可以看到父元素的背景。内边距不能是负值。边框 若未设置颜色，则取元素内容的前景色。亦即边框和内容以内边距有相同的背景色。边框的宽度不可以为负。</p>
+<h2 id="包含块"><a href="#包含块" class="headerlink" title="包含块"></a>包含块</h2><p>每个元素都相对于其包含块摆放，亦即包含块就是一个元素的“布局上下文”。而行内元素的摆放方式并不直接依赖于包含块。</p>
+<h2 id="常见的术语"><a href="#常见的术语" class="headerlink" title="常见的术语"></a>常见的术语</h2><ul>
+<li><h4 id="正常流"><a href="#正常流" class="headerlink" title="正常流"></a>正常流</h4><p>这是指西方语言文本从左向右、从上向下显示，即传统的HTML 文档的文本布局。若想要让某元素脱离正常的文档流，让其浮动或改变其定位方式（<code>float:left</code>,<code>float:right</code>,<code>position:fixed</code>,<code>position:absolute</code>）。</p>
+</li>
+<li><h3 id="非替换元素"><a href="#非替换元素" class="headerlink" title="非替换元素"></a>非替换元素</h3><p>若元素的内容包含在文档中，则称之为非替换元素。如某段落的文本内容在该元素本身之内，这个段落就是非替换元素。</p>
+</li>
+<li><h3 id="替换元素"><a href="#替换元素" class="headerlink" title="替换元素"></a>替换元素</h3><p>指用作为其他内容占位符的一个元素。如img 元素，input元素等<code>&lt;input type=&quot;radio&quot;&gt;</code></p>
+</li>
+<li><h3 id="块级元素"><a href="#块级元素" class="headerlink" title="块级元素"></a>块级元素</h3><p>指段落、标题或div之类的元素。这些元素在正常的文档流中，会在其框之前和之后形成换行，故处于正常文档流中的块级元素会垂直摆放。通过声明<code>display:block</code>可使元素变身块级框。</p>
+</li>
+<li><h3 id="行内元素"><a href="#行内元素" class="headerlink" title="行内元素"></a>行内元素</h3><p>指<code>strong</code>或<code>span</code>之类的元素。这些元素不会在之前或之后生成“行分隔符”。</p>
+</li>
+<li><h3 id="根元素"><a href="#根元素" class="headerlink" title="根元素"></a>根元素</h3><p>位于文档树顶端的元素，在HTML文档中，即为<code>html</code></p>
+</li>
+</ul>
+<h2 id="块级元素-1"><a href="#块级元素-1" class="headerlink" title="块级元素"></a>块级元素</h2><p>一般地，一个元素的width 被定义为从左内边界到右内边界的距离，height 则是从上内边界到下内边界的距离。</p>
+<p>正常流中的块级元素框的水平部分综合就等于父元素的width。</p>
+<p>margin-left,border-left,padding-left,width,padding-right,border-right,margin-right 这些属性与块级框的水平布局有关，这7个值加起来必须是元素包含块的宽度。这往往是块级框的width 值。这7个属性中，只有width,margin-left,margin-right 可设置为auto，其余都必须设置为特定的值或者默认为0。</p>
+<p>###使用 auto</p>
+<ul>
+<li><p>如果在margin-left、margin-right、width中设置某一个为auto，另外两个设置为特定的元素，则设置为auto 的属性会确定所需要的长度，从而使元素框的宽度等于父元素的width。</p>
+<p>如果三个属性都设定特定的值，无法撑满父元素的width，则根据从左向右的文档流会自动将margin-right 设置为auto，来填补所有的距离。</p>
+</li>
+<li>如果只设置了<code>margin-left:auto</code>和<code>width:auto</code> 或<code>margin-right:auto</code>和<code>width:auto</code> 则设置为auto 的外边距变为0。</li>
+<li>如果只设置<code>margin-left:auto</code>和<code>margin-right:auto</code>，width　为一确定值，则元素在其父元素中居中，比较常用，另<code>text-align:center</code> 只应用于块级元素的内联内容。</li>
+<li>如果三个属性都设置为auto，则两个外边距都设置为0，而width会尽可能宽。与默认情况相同，即没有设置margin，width 没有显式设置，则外边距默认为0，width 为auto。</li>
+</ul>
+<h3 id="负外边距"><a href="#负外边距" class="headerlink" title="负外边距"></a>负外边距</h3><p>要记住7个水平方向的属性的和一定等于父容器的width。</p>
+<h2 id="替换元素-1"><a href="#替换元素-1" class="headerlink" title="替换元素"></a>替换元素</h2><p>如果width 为auto 则元素的宽度则是内容的固有宽度。</p>
+<p>##垂直格式化<br>如果正常流中一个块元素的margin-top 或margin-bottom 设置为auto，它会自动计算为0。</p>
+<p>如果没有显示声明包含块的height，百分数高度会重置为auto。</p>
+<h2 id="auto-高度"><a href="#auto-高度" class="headerlink" title="auto 高度"></a>auto 高度</h2><p>如果块级正常流元素设置为height:auto，显示时其高度将恰好足以包含其内联内容（包含文本）的行盒。</p>
+<p>如果块级正常硫元素的高度设置为auto，而且只有块级子元素，其默认高度将是从最高块级元素的外边框边界到最低块级子元素外边框边界之间的距离。故子元素的外边距会超出包含这些子元素的元素。</p>
+<p>若块级元素有上内边距或下内边距，或者有上边框或者下边框，其高度则是从其最高子元素的上外边距边界到其最低子元素的下外边距边界之间的距离。</p>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/blog/"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'PaddingMe';
+    
+    var disqus_url = 'http://yoursite.com/blog/2014/09/21/Basic-Visual-Formatting/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//PaddingMe.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235687', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

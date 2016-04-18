@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-home">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>CSS实现三级导航栏 以及 freemarker 逻辑实现 | Hexo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="CSS,article,edit,HTML," />
+  
+
+  <meta name="description" content="文章取自我的 Github  repos: Learning-HTML-CSS， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-HTML-CSS/issues/15
+CSS 实现三级导航栏以及 freemarker 实现做网站经常需要做三级导航栏，这里记录下三级导航栏的实现。
+水平方向的三级导航栏实现效果如下：
+
+HTML 代码结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS实现三级导航栏 以及 freemarker 逻辑实现">
+<meta property="og:url" content="http://yoursite.com/blog/2014/11/03/CSS实现三级导航栏 以及 freemarker 逻辑实现/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="文章取自我的 Github  repos: Learning-HTML-CSS， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-HTML-CSS/issues/15
+CSS 实现三级导航栏以及 freemarker 实现做网站经常需要做三级导航栏，这里记录下三级导航栏的实现。
+水平方向的三级导航栏实现效果如下：
+
+HTML 代码结">
+<meta property="og:image" content="https://cloud.githubusercontent.com/assets/5771087/4879124/3b32ba66-6323-11e4-9277-90ffd299a88a.png">
+<meta property="og:image" content="https://cloud.githubusercontent.com/assets/5771087/4879112/07e79e38-6323-11e4-808b-14549ab511cf.png">
+<meta property="og:updated_time" content="2016-04-10T16:12:39.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS实现三级导航栏 以及 freemarker 逻辑实现">
+<meta name="twitter:description" content="文章取自我的 Github  repos: Learning-HTML-CSS， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-HTML-CSS/issues/15
+CSS 实现三级导航栏以及 freemarker 实现做网站经常需要做三级导航栏，这里记录下三级导航栏的实现。
+水平方向的三级导航栏实现效果如下：
+
+HTML 代码结">
+<meta name="twitter:image" content="https://cloud.githubusercontent.com/assets/5771087/4879124/3b32ba66-6323-11e4-9277-90ffd299a88a.png">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=32204ee7" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-50048801-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">目录</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/blog/"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CSS-实现三级导航栏以及-freemarker-实现"><span class="toc-text">CSS 实现三级导航栏以及 freemarker 实现</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-CSS实现三级导航栏 以及 freemarker 逻辑实现" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">CSS实现三级导航栏 以及 freemarker 逻辑实现</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2014.11.03</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>John Doe</span>
+        </span>
+      
+
+      
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://padding.me/blog/2014/11/03/CSS实现三级导航栏 以及 freemarker 逻辑实现/#disqus_thread"></a>
+        </span>
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p> 文章取自我的 Github  repos: <a href="https://github.com/paddingme/Learning-HTML-CSS" target="_blank" rel="external">Learning-HTML-CSS</a>， 作者：<a href="http://padding.me/about.html" target="_blank" rel="external">@paddingme</a><br>原文链接：<a href="https://github.com/paddingme/Learning-HTML-CSS/issues/15" target="_blank" rel="external">https://github.com/paddingme/Learning-HTML-CSS/issues/15</a></p>
+<h1 id="CSS-实现三级导航栏以及-freemarker-实现"><a href="#CSS-实现三级导航栏以及-freemarker-实现" class="headerlink" title="CSS 实现三级导航栏以及 freemarker 实现"></a>CSS 实现三级导航栏以及 freemarker 实现</h1><p>做网站经常需要做三级导航栏，这里记录下三级导航栏的实现。</p>
+<p>水平方向的三级导航栏实现效果如下：</p>
+<p><img src="https://cloud.githubusercontent.com/assets/5771087/4879124/3b32ba66-6323-11e4-9277-90ffd299a88a.png" alt="nav"></p>
+<p>HTML 代码结构：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"nav"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>一级目录1<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>二级目录11<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>二级目录12<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>三级目录121<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>三级目录122<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>三级目录123<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>二级目录13<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>一级目录2<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>一级目录3<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>二级目录31<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>二级目录32<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>三级目录321<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>二级目录33<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>二级目录34<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>三级目录341<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>三级目录342<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>CSS 代码<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.nav</span> &#123;</span><br><span class="line">  <span class="attribute">float</span>: left;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.nav</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">text-decoration</span>: none;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#333</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">5px</span> <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ccc</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#9A9797</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.nav</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#444</span>;</span><br><span class="line">  <span class="attribute">color</span>: white;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.nav</span> <span class="selector-tag">li</span> &#123;</span><br><span class="line">    <span class="attribute">list-style</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.nav</span> &gt; <span class="selector-tag">li</span> &#123;</span><br><span class="line">  <span class="attribute">float</span>: left;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.nav</span> <span class="selector-tag">ul</span> &#123;</span><br><span class="line">  <span class="attribute">white-space</span>: nowrap;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">visibility</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.nav</span> <span class="selector-tag">ul</span> <span class="selector-tag">li</span> &#123;</span><br><span class="line"><span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.nav</span> <span class="selector-tag">ul</span> <span class="selector-tag">ul</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">float</span>: left;</span><br><span class="line">  <span class="attribute">margin-left</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">visibility</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.nav</span> <span class="selector-tag">li</span><span class="selector-pseudo">:hover</span> &gt; <span class="selector-tag">ul</span> &#123;</span><br><span class="line">  <span class="attribute">visibility</span>: visible;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>demo 地址：<a href="http://codepen.io/paddingme/pen/LneGf" target="_blank" rel="external">CodePen</a></p>
+<p>浏览器兼容性待测试(todo)。</p>
+<iframe id="embed_dom" name="embed_dom" frameborder="0" style="border:1px solid #000;display:block;width:664px; height:929px;" src="http://www.processon.com/embed/5456f6340cf23db8dee41679"></iframe>
+
+
+
+<p>Freemarker 流程图：<br><img src="https://cloud.githubusercontent.com/assets/5771087/4879112/07e79e38-6323-11e4-808b-14549ab511cf.png" alt="nav1"></p>
+<p>Freemarker 代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"nav"</span>&gt;</span></span><br><span class="line">   [@cms_channel_list]</span><br><span class="line">      [#list tag_list as a]</span><br><span class="line">          <span class="comment">&lt;!-- 是否有二级栏目 start --&gt;</span></span><br><span class="line">          [#if a.child?? &amp;&amp; a.child?size&gt;0]</span><br><span class="line">            <span class="comment">&lt;!-- 是否有三级栏目 start --&gt;</span></span><br><span class="line">            [#if a.child[0].child?? &amp;&amp; a.child[0].child?size&gt;0]</span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"$&#123;a.child[0].child[0].url&#125;"</span>&gt;</span>$&#123;a.name&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">            [#else]</span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"$&#123;a.child[0].url&#125;"</span>&gt;</span>$&#123;a.name&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">            [/#if]</span><br><span class="line">            <span class="comment">&lt;!-- 是否有三级栏目 end --&gt;</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">&lt;!-- 遍历所有二级栏目 start --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">              [#list a.child as b]</span><br><span class="line">                <span class="comment">&lt;!-- 是否有三级栏目 start--&gt;</span></span><br><span class="line">                [#if b.child?? &amp;&amp; b.child?size&gt;0]</span><br><span class="line"></span><br><span class="line">                  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"$&#123;b.child[0].url&#125;"</span> &gt;</span>$&#123;b.name&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">                    [#list b.child as c]</span><br><span class="line">                      <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"$&#123;c.url&#125;"</span>&gt;</span>$&#123;c.name&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">                    [/#list]</span><br><span class="line">                    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">                [#else]</span><br><span class="line">                  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"$&#123;b.url&#125;"</span> <span class="attr">class</span>=<span class="string">"scd-a"</span>&gt;</span>$&#123;b.name&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">                [/#if]</span><br><span class="line">                <span class="comment">&lt;!-- 是否有三级栏目 end--&gt;</span></span><br><span class="line">              [/#list]</span><br><span class="line">            <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">             <span class="comment">&lt;!-- 遍历所有二级栏目 end --&gt;</span></span><br><span class="line">          [#else]</span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"$&#123;a.url&#125;"</span>&gt;</span>$&#123;a.name&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">          [/#if]</span><br><span class="line">          <span class="comment">&lt;!-- 是否有二级栏目 end --&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      [/#list]</span><br><span class="line">    [/@cms_channel_list]</span><br><span class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/blog/"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'PaddingMe';
+    
+    var disqus_url = 'http://yoursite.com/blog/2014/11/03/CSS实现三级导航栏 以及 freemarker 逻辑实现/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//PaddingMe.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235687', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-home">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>CSS中的值和单位、字体以及文本属性 | Hexo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="CSS,article,edit," />
+  
+
+  <meta name="description" content="文章取自我的 Github  repos: Learning-HTML-CSS， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-HTML-CSS/issues/10
+这几天在学习CSS权威指南,学习了CSS中的值和单位、字体以及文本属性，这里做一个相关总结，主要总结我认为重要的知识点。
+1. 值和单位CSS里的值和单位，主要分为绝">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS中的值和单位、字体以及文本属性">
+<meta property="og:url" content="http://yoursite.com/blog/2014/10/30/CSS中的值和单位、字体以及文本属性/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="文章取自我的 Github  repos: Learning-HTML-CSS， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-HTML-CSS/issues/10
+这几天在学习CSS权威指南,学习了CSS中的值和单位、字体以及文本属性，这里做一个相关总结，主要总结我认为重要的知识点。
+1. 值和单位CSS里的值和单位，主要分为绝">
+<meta property="og:updated_time" content="2016-04-10T16:12:39.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS中的值和单位、字体以及文本属性">
+<meta name="twitter:description" content="文章取自我的 Github  repos: Learning-HTML-CSS， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-HTML-CSS/issues/10
+这几天在学习CSS权威指南,学习了CSS中的值和单位、字体以及文本属性，这里做一个相关总结，主要总结我认为重要的知识点。
+1. 值和单位CSS里的值和单位，主要分为绝">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=32204ee7" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-50048801-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">目录</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/blog/"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-值和单位"><span class="toc-text">1. 值和单位</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-颜色"><span class="toc-text">2. 颜色</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-字体"><span class="toc-text">3. 字体</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#font-family"><span class="toc-text">font-family</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-文本属性"><span class="toc-text">4. 文本属性</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-CSS中的值和单位、字体以及文本属性" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">CSS中的值和单位、字体以及文本属性</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2014.10.30</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>John Doe</span>
+        </span>
+      
+
+      
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://padding.me/blog/2014/10/30/CSS中的值和单位、字体以及文本属性/#disqus_thread"></a>
+        </span>
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p> 文章取自我的 Github  repos: <a href="https://github.com/paddingme/Learning-HTML-CSS" target="_blank" rel="external">Learning-HTML-CSS</a>， 作者：<a href="http://padding.me/about.html" target="_blank" rel="external">@paddingme</a><br>原文链接：<a href="https://github.com/paddingme/Learning-HTML-CSS/issues/10" target="_blank" rel="external">https://github.com/paddingme/Learning-HTML-CSS/issues/10</a></p>
+<p>这几天在学习<a href="http://www.amazon.cn/CSS%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97-%E8%BF%88%E8%80%B6/dp/B0011F5SIC/ref=sr_1_1?ie=UTF8&amp;qid=1399054787&amp;sr=8-1&amp;keywords=css+%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97" target="_blank" rel="external">CSS权威指南</a>,学习了CSS中的值和单位、字体以及文本属性，这里做一个相关总结，主要总结我认为重要的知识点。</p>
+<h2 id="1-值和单位"><a href="#1-值和单位" class="headerlink" title="1. 值和单位"></a>1. 值和单位</h2><p>CSS里的值和单位，主要分为绝对长度单位：<code>in</code>(英寸)、<code>cm</code>(厘米)<code>mm</code>(毫米)、<code>pt</code>(点，标准印刷度量单位)、<code>pc</code>(派卡，印刷术语),以及相对长度单位：<code>em</code>,<code>ex</code>,<code>px</code>。</p>
+<p>我们主要使用<code>em</code>和<code>px</code>，<code>ex</code>指所用字体中小写x的高度,我们无情得忽视它。“相对”相对“绝对”的好处我们已然了解，例如url链接，我们不用关注外部url地址如何变化，相对路径没问题，我们便可以各种超链接。这里的相对长度单位也是同样的道理。<code>em</code>相对于给定字体的font-size值。现代浏览器字体默认大小为16个像素。如果一个元素的font-size为14px,那么对于该元素，1em=14px。这个值可能会随元素的不同而不同，另在设置字体的大小的时，em的值会相对于父元素的字体大小改变。总得来说，就是<strong>em依赖于最近的字体大小</strong>(不要惯性的以为依赖于原先body设定的或者浏览器默认的值。)</p>
+<p>而<code>px</code>就是像素，对于显示器屏幕分辨率而言。当然<code>%</code>同<code>em</code>。（注意理解:<code>%</code>这个值可以是任意的：可能是同一个元素另一个属性的值，也可以是从父元素继承的一个值，或者是祖先元素的一个值。）</p>
+<p>至于要用<code>px</code>还是<code>em</code>，老版本的IE浏览器不支持像素的缩放，所以用<code>px</code>取代<code>em</code>，另使用em可以省去很多冗余的工作，例如设置了body里的字体大小，后面的元素内的字体大小全部设置为em大小，这样改动的话只需要改动body里的字体大小，而不用每个元素改动px大小，再次提醒<strong>em依赖于最近的字体大小</strong>。将行距(line-height)，和纵向高度的单位都用em。保证缩放时候的整体性。px常使用在图片大小上。</p>
+<p><a href="http://blog.alphatr.com/em-and-px-in-css.html" target="_blank" rel="external">这篇文章</a>也有一定参考意义，可以一看。</p>
+<h2 id="2-颜色"><a href="#2-颜色" class="headerlink" title="2. 颜色"></a>2. 颜色</h2><p>CSS中颜色取值主要由以下几种方法：</p>
+<ul>
+<li>CSS命名颜色。在CSS2.1中，CSS规范定义了17个颜色名。</li>
+<li>用RGB指定颜色。可以使用0~255取值或者0%~100%。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">h1 &#123;color:rgb(100%,50%,50%);&#125;</span><br><span class="line">h2 &#123;color:rgb(255,132,123);&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>十六进制的RGB颜色。将三个介于00-FF的十六进制数连起来，就可以设置一种颜色。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">h1 &#123;</span><br><span class="line">	color:#FF0000;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>可以简写为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">h1&#123;</span><br><span class="line">	color:#F00;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>浏览器会取每一位，并将其复制成两位。</p>
+<ul>
+<li><p>RGBA颜色表示。在RGB的基础上加了一个Alpha通道.它规定了对象的不透明度。lpha 参数是介于 0.0（完全透明）与 1.0（完全不透明）的数字。浏览器支持：IE9+、Firefox 3+、Chrome、Safari 以及 Opera 10+。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p &#123;</span><br><span class="line"> background-color:rgba(255,0,0,0.5);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>HSL颜色和HSLA不做赘述。</p>
+</li>
+</ul>
+<h2 id="3-字体"><a href="#3-字体" class="headerlink" title="3. 字体"></a>3. 字体</h2><p>CSS通常使用<code>font-family</code>定义使用什么字体，<code>font-size</code>定义字体大小，<code>font-style</code>定义斜体字，<br><code>font-variant</code>定义小型的大写字体，<code>font-weight</code>定义字体的粗细，<code>font</code>统一定义字体的所有属性。</p>
+<h4 id="font-family"><a href="#font-family" class="headerlink" title="font-family"></a>font-family</h4><p>   font-family取值: <code>[[ &lt;family-name&gt; | &lt;generic-family&gt; ] [, &lt;family-name&gt;| &lt;generic-family&gt;]* ] | inherit</code></p>
+<p> family-name:指一系列字体名称<br> 而generic-family是指一般性字体名称即以下五种通用字体系列。<br>CSS定义了五种通用字体系列（font-family）：</p>
+<ul>
+<li>Serif字体——这些字体成比例，而且有上下短线,Sefit字体包括Times、Georigia和New Century Schoolbook等。</li>
+<li>Sans-serif字体——字体成比例，但是没有上下短线。Sans-sefit字体包括Geneva,Verdana,Arial和Univers等。</li>
+<li>Monospace字体——不成比例（模拟打印设备打出的文本），每个字符的<strong>宽度</strong>完全相同,上下短线可能有可能无。monospace字体包括Courier、Courier New、Andale Mono 等。</li>
+<li>Cusrive字体——模仿人的手写体。包括Zapf Chancery、Anthou、Comic Sana等。</li>
+<li>Fantasy字体——在上述四种字体之外的，不能用任何特征来定义的字体包括：Wesrern、Woodblock和Kinggong等。</li>
+</ul>
+<p>说明：</p>
+<ul>
+<li>想要显示的字体一定要是你计算机中有的,否则不会按照你期望的显示.上面的第三个示例说明如果有宋体就显示宋体否则显示Arial字体</li>
+<li>[字体名1 , 字体名2 , *],其中的星号*,表示可以继续增加字体名.如果用户计算机没有安装,你定义的字体名1,系统会自动使用字体名2,如果没有字体名2,系统就再查找字体名3,如果都没有,将使用系统的默认字体</li>
+<li>family-name代表系列性字体的名称,比如可以使用逗号分开,的方式取一系列的值(“Times”,”Arial”,”Courier”等)</li>
+<li>generic-family代表一般性字体名称,每个名称都可以代表一系列的字体,比如”serif”, “sans-serif”, “cursive”, “fantasy”, “monospace”</li>
+<li>用逗号来分隔每一个值,最好在最后有一个基本字体(generic-family)</li>
+<li>使用中文字体或者英文名称超过一个单词的字体时要使用”(冒号)扩起来,比如”Times News Roman”,”宋体”</li>
+<li>现代浏览器字体默认的设置为“宋体/simsun字体 16像素”</li>
+</ul>
+<p>(留坑：<a href="http://padding.me" target="_blank" rel="external">paddingme</a>博客字体默认设置为small,而<a href="http://www.zaibc.com/" target="_blank" rel="external">http://www.zaibc.com/</a>的字体设置为<br><code>body {
+font: 13px Tahoma, Helvetica, Arial, &quot;\5b8b\4f53&quot;, sans-serif;
+}</code>) 很奇怪在我电脑上(windows7,chrome33.0.1750.146 )显示正常，而在同学的电脑上(mac，chrome版本未知）我博客的字体竟然比zaibc的字体小)理论上，small为13px，为什么不一样大呢？难道是浏览器渲染的问题？等我入手大MAC再做详细对比研究。当然HTML的big,small标签已经被w3c抛弃)</p>
+<p>另关于默认字体可以查阅<a href="http://saibeixuer.blog.163.com/blog/static/74770377201075111628356/" target="_blank" rel="external">女施主的博文中</a>详细解析了淘宝的字体，可以围观，做深入了解。还有这位<a href="http://www.iyunlu.com/view/css-xhtml/default-web-font-style-1.html" target="_blank" rel="external">男施主的博文</a>和<a href="http://iyunlu.com/view/css-xhtml/default-web-font-style-2html.html" target="_blank" rel="external">这一篇博文</a>,玉伯的文章找不到了很遗憾。张鑫旭的<a href="http://www.zhangxinxu.com/wordpress/?p=874" target="_blank" rel="external">这篇博客</a>也相当有趣，建议观看，提供一个新的视角关于字体设置。还强烈推荐<a href="http://lepture.com/zh/2014/chinese-fonts-and-yue-css" target="_blank" rel="external">这篇博客</a>，博主对中文字体确有研究，所以他的网站<a href="http://yuehu.io" target="_blank" rel="external">阅乎</a>阅读体验非常好。<strong>字体真是一门大学问!</strong></p>
+<h2 id="4-文本属性"><a href="#4-文本属性" class="headerlink" title="4. 文本属性"></a>4. 文本属性</h2><p><br></p>
+<p>参考文章：</p>
+<ul>
+<li><a href="http://www.1z1b.com/one-blog-a-week/px-em-pt/#comment-17058" target="_blank" rel="external">http://www.1z1b.com/one-blog-a-week/px-em-pt/#comment-17058</a></li>
+<li><a href="http://www.dreamdu.com/css/css_colors/" target="_blank" rel="external">http://www.dreamdu.com/css/css_colors/</a></li>
+<li><a href="http://www.w3school.com.cn/cssref/css_colors_legal.asp" target="_blank" rel="external">http://www.w3school.com.cn/cssref/css_colors_legal.asp</a></li>
+</ul>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/blog/"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'PaddingMe';
+    
+    var disqus_url = 'http://yoursite.com/blog/2014/10/30/CSS中的值和单位、字体以及文本属性/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//PaddingMe.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235687', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

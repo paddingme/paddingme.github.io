@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-home">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>HTMLhead 头标签 | Hexo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="article,edit,HTML," />
+  
+
+  <meta name="description" content="文章取自我的 Github  repos: Learning-HTML-CSS， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-HTML-CSS/issues/4
+HTML head 头部分的标签、元素有很多，涉及到浏览器对网页的渲染，SEO 等等，而各个浏览器内核以及各个国内浏览器厂商都有些自己的标签元素,这就造成了很多差异性。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTMLhead 头标签">
+<meta property="og:url" content="http://yoursite.com/blog/2014/10/30/HTMLhead 头标签/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="文章取自我的 Github  repos: Learning-HTML-CSS， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-HTML-CSS/issues/4
+HTML head 头部分的标签、元素有很多，涉及到浏览器对网页的渲染，SEO 等等，而各个浏览器内核以及各个国内浏览器厂商都有些自己的标签元素,这就造成了很多差异性。">
+<meta property="og:updated_time" content="2016-04-10T16:12:39.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTMLhead 头标签">
+<meta name="twitter:description" content="文章取自我的 Github  repos: Learning-HTML-CSS， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-HTML-CSS/issues/4
+HTML head 头部分的标签、元素有很多，涉及到浏览器对网页的渲染，SEO 等等，而各个浏览器内核以及各个国内浏览器厂商都有些自己的标签元素,这就造成了很多差异性。">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=32204ee7" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-50048801-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">目录</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/blog/"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#DOCTYPE"><span class="toc-text">DOCTYPE</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#charset"><span class="toc-text">charset</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#lang属性"><span class="toc-text">lang属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#优先使用-IE-最新版本和-Chrome"><span class="toc-text">优先使用 IE 最新版本和 Chrome</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#360-使用Google-Chrome-Frame"><span class="toc-text">360 使用Google Chrome Frame</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#百度禁止转码"><span class="toc-text">百度禁止转码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SEO-优化部分"><span class="toc-text">SEO 优化部分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#viewport"><span class="toc-text">viewport</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ios-设备"><span class="toc-text">ios 设备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#iOS-图标"><span class="toc-text">iOS 图标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Windows-8"><span class="toc-text">Windows 8</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rss订阅"><span class="toc-text">rss订阅</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#favicon-icon"><span class="toc-text">favicon icon</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#移动端的meta"><span class="toc-text">移动端的meta</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-HTMLhead 头标签" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">HTMLhead 头标签</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2014.10.30</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>John Doe</span>
+        </span>
+      
+
+      
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://padding.me/blog/2014/10/30/HTMLhead 头标签/#disqus_thread"></a>
+        </span>
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p> 文章取自我的 Github  repos: <a href="https://github.com/paddingme/Learning-HTML-CSS" target="_blank" rel="external">Learning-HTML-CSS</a>， 作者：<a href="http://padding.me/about.html" target="_blank" rel="external">@paddingme</a><br>原文链接：<a href="https://github.com/paddingme/Learning-HTML-CSS/issues/4" target="_blank" rel="external">https://github.com/paddingme/Learning-HTML-CSS/issues/4</a></p>
+<p>HTML head 头部分的标签、元素有很多，涉及到浏览器对网页的渲染，SEO 等等，而各个浏览器内核以及各个国内浏览器厂商都有些自己的标签元素,这就造成了很多差异性。移动互联网时代，head 头部结构，移动端的 meta 元素，显得更为重要。了解每个标签的意义，写出满足自己需求的 head  头标签，是本文的目的。本篇以<a href="https://github.com/yisibl/blog/issues/1" target="_blank" rel="external">一丝的文章</a>为基础，进行扩展总结介绍常用的 head 中各个标签、元素的意义以及使用场景。</p>
+<h3 id="DOCTYPE"><a href="#DOCTYPE" class="headerlink" title="DOCTYPE"></a>DOCTYPE</h3><p>DOCTYPE(Document Type)，该声明位于文档中最前面的位置，处于 <code>html</code> 标签之前，此标签告知浏览器文档使用哪种 HTML 或者 XHTML 规范。</p>
+<p>DTD(Document Type Definition) 声明以 <code>&lt;!DOCTYPE&gt;</code> 开始，不区分大小写，前面没有任何内容，如果有其他内容(空格除外)会使浏览器在 IE 下开启怪异模式(quirks mode)渲染网页。公共 DTD，名称格式为<code>注册//组织//类型 标签//语言</code>,<code>注册</code>指组织是否由国际标准化组织(ISO)注册，<code>+</code>表示是，<code>-</code>表示不是。<code>组织</code>即组织名称，如：W3C。<code>类型</code>一般是 DTD。<code>标签</code>是指定公开文本描述，即对所引用的公开文本的唯一描述性名称，后面可附带版本号。最后<code>语言</code>是 DTD 语言的 ISO 639 语言标识符，如：EN 表示英文，ZH 表示中文。XHTML 1.0 可声明三种 DTD 类型。分别表示严格版本，过渡版本，以及基于框架的 HTML 文档。</p>
+<ul>
+<li><p>HTML 4.01 strict</p>
+<pre><code>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot; &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;
+</code></pre></li>
+<li><p>HTML 4.01 Transitional</p>
+<pre><code>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;
+</code></pre></li>
+<li><p>HTML 4.01 Frameset</p>
+<pre><code>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Frameset//EN&quot; &quot;http://www.w3.org/TR/html4/frameset.dtd&quot;&gt;
+</code></pre></li>
+<li><p>最新 HTML5 推出更加简洁的书写，它向前向后兼容，推荐使用。</p>
+<pre><code>&lt;!doctype html&gt;
+</code></pre></li>
+</ul>
+<p>在 HTML中 <code>doctype</code> 有两个主要目的。</p>
+<ul>
+<li><p>对文档进行有效性验证。</p>
+<p> 它告诉用户代理和校验器这个文档是按照什么 DTD 写的。这个动作是被动的，每次页面加载时，浏览器并不会下载 DTD 并检查合法性，只有当手动校验页面时才启用。</p>
+</li>
+<li><p>决定浏览器的呈现模式</p>
+<p>  对于实际操作，通知浏览器读取文档时用哪种解析算法。如果没有写，则浏览器则根据自身的规则对代码进行解析，可能会严重影响 html 排版布局。浏览器有三种方式解析 HTML 文档。</p>
+<ul>
+<li>非怪异（标准）模式</li>
+<li>怪异模式</li>
+<li>部分怪异（近乎标准）模式<br>关于IE浏览器的文档模式，浏览器模式，严格模式，怪异模式，DOCTYPE 标签，可详细阅读<a href="http://padding.me/blog/2014/07/04/mode-or-standard/" target="_blank" rel="external">模式？标准！</a>的内容。</li>
+</ul>
+</li>
+</ul>
+<h3 id="charset"><a href="#charset" class="headerlink" title="charset"></a>charset</h3><p>声明文档使用的字符编码，</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>html5 之前网页中会这样写：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Type"</span> <span class="attr">content</span>=<span class="string">"text/html; charset=utf-8"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这两个是等效的，具体可移步阅读：<a href="http://stackoverflow.com/questions/4696499/meta-charset-utf-8-vs-meta-http-equiv-content-type" target="_blank" rel="external"><code>&lt;meta charset=&#39;utf-8&#39;&gt;</code> vs <code>&lt;meta http-equiv=&#39;Content-Type&#39;&gt;</code></a>，所以建议使用较短的，易于记忆。</p>
+<h3 id="lang属性"><a href="#lang属性" class="headerlink" title="lang属性"></a>lang属性</h3><p>简体中文</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"zh-cmn-Hans"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>繁体中文</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"zh-cmn-Hant"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>为什么 <code>lang=&quot;zh-cmn-Hans&quot;</code> 而不是我们通常写的 <code>lang=&quot;zh-CN&quot;</code> 呢，请移步阅读: <a href="http://zhi.hu/XyIa" target="_blank" rel="external">页头部的声明应该是用 lang=”zh” 还是 lang=”zh-cn”</a>。</p>
+<h3 id="优先使用-IE-最新版本和-Chrome"><a href="#优先使用-IE-最新版本和-Chrome" class="headerlink" title="优先使用 IE 最新版本和 Chrome"></a>优先使用 IE 最新版本和 Chrome</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=edge,chrome=1"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="360-使用Google-Chrome-Frame"><a href="#360-使用Google-Chrome-Frame" class="headerlink" title="360 使用Google Chrome Frame"></a>360 使用Google Chrome Frame</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"renderer"</span> <span class="attr">content</span>=<span class="string">"webkit"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>360 浏览器就会在读取到这个标签后，立即切换对应的极速核。<br>另外为了保险起见再加入</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=Edge,chrome=1"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这样写可以达到的效果是如果安装了 Google Chrome Frame，则使用 GCF 来渲染页面，如果没有安装 GCF，则使用最高版本的 IE 内核进行渲染。</p>
+<p>相关链接：<a href="http://se.360.cn/v6/help/meta.html" target="_blank" rel="external">浏览器内核控制 Meta 标签说明文档</a></p>
+<h3 id="百度禁止转码"><a href="#百度禁止转码" class="headerlink" title="百度禁止转码"></a>百度禁止转码</h3><p>通过百度手机打开网页时，百度可能会对你的网页进行转码，脱下你的衣服，往你的身上贴狗皮膏药的广告，为此可在 head 内添加</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Cache-Control"</span> <span class="attr">content</span>=<span class="string">"no-siteapp"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<p>相关链接：<a href="http://m.baidu.com/pub/help.php?pn=22&amp;ssid=0&amp;from=844b&amp;bd_page_type=1" target="_blank" rel="external">SiteApp 转码声明</a></p>
+<h3 id="SEO-优化部分"><a href="#SEO-优化部分" class="headerlink" title="SEO 优化部分"></a>SEO 优化部分</h3><ul>
+<li><p>页面标题<code>&lt;title&gt;</code>标签(head 头部必须)</p>
+<pre><code>&lt;title&gt;your title&lt;/title&gt;
+</code></pre></li>
+<li><p>页面关键词 keywords</p>
+<pre><code>&lt;meta name=&quot;keywords&quot; content=&quot;your keywords&quot;&gt;
+</code></pre></li>
+<li><p>页面描述内容 description</p>
+<pre><code>&lt;meta name=&quot;description&quot; content=&quot;your description&quot;&gt;
+</code></pre></li>
+<li><p>定义网页作者 author</p>
+<pre><code>&lt;meta name=&quot;author&quot; content=&quot;author,email address&quot;&gt;
+</code></pre></li>
+<li><p>定义网页搜索引擎索引方式，robotterms 是一组使用英文逗号「,」分割的值，通常有如下几种取值：none，noindex，nofollow，all，index和follow。</p>
+<pre><code>&lt;meta name=&quot;robots&quot; content=&quot;index,follow&quot;&gt;
+</code></pre></li>
+</ul>
+<p>相关链接：<a href="http://msdn.microsoft.com/zh-cn/library/ff724037\(v=expression.40\" target="_blank" rel="external">WEB1038 - <meta name="robots"> 标记包含无效的值</a>.aspx)</p>
+<h3 id="viewport"><a href="#viewport" class="headerlink" title="viewport"></a>viewport</h3><p><code>viewport</code> 可以让布局在移动浏览器上显示的更好。<br>通常会写</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><code>width=device-width</code> 会导致 iPhone 5 添加到主屏后以 WebApp 全屏模式打开页面时出现黑边(<a href="http://bigc.at/ios-webapp-viewport-meta.orz" target="_blank" rel="external">http://bigc.at/ios-webapp-viewport-meta.orz</a>)</p>
+<p>content 参数：</p>
+<ul>
+<li>width viewport 宽度(数值/device-width)</li>
+<li>height viewport 高度(数值/device-height)</li>
+<li>initial-scale 初始缩放比例</li>
+<li>maximum-scale 最大缩放比例</li>
+<li>minimum-scale 最小缩放比例</li>
+<li>user-scalable 是否允许用户缩放(yes/no)</li>
+<li><p>minimal-ui iOS 7.1 beta 2 中新增属性，可以在页面加载时最小化上下状态栏。这是一个布尔值，可以直接这样写：</p>
+<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, minimal-ui&quot;&gt;
+</code></pre></li>
+</ul>
+<p>而如果你的网站不是响应式的，请不要使用 initial-scale 或者禁用缩放。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width,user-scalable=yes"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>相关链接：<a href="http://www.qianduan.net/non-responsive-design-viewport.html" target="_blank" rel="external">非响应式设计的viewport</a></p>
+<p>适配 iPhone 6 和 iPhone 6plus 则需要写：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=375"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=414"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>大部分 4.7~5 寸的安卓设备的 viewport 宽设为 360px，iPhone 6 上却是 375px，大部分 5.5 寸安卓机器（比如说三星 Note）的 viewport 宽为 400，iPhone 6 plus 上是 414px。</p>
+<h3 id="ios-设备"><a href="#ios-设备" class="headerlink" title="ios 设备"></a>ios 设备</h3><p>添加到主屏后的标题（iOS 6 新增）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"apple-mobile-web-app-title"</span> <span class="attr">content</span>=<span class="string">"标题"</span>&gt;</span> <span class="comment">&lt;!-- 添加到主屏后的标题（iOS 6 新增） --&gt;</span></span><br></pre></td></tr></table></figure>
+<p>是否启用 WebApp 全屏模式</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"apple-mobile-web-app-capable"</span> <span class="attr">content</span>=<span class="string">"yes"</span> /&gt;</span> <span class="comment">&lt;!-- 是否启用 WebApp 全屏模式 --&gt;</span></span><br></pre></td></tr></table></figure>
+<p>设置状态栏的背景颜色</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"apple-mobile-web-app-status-bar-style"</span> <span class="attr">content</span>=<span class="string">"black-translucent"</span> /&gt;</span> <span class="comment">&lt;!-- 设置状态栏的背景颜色，只有在 `"apple-mobile-web-app-capable" content="yes"` 时生效 --&gt;</span></span><br></pre></td></tr></table></figure>
+<p>只有在 “apple-mobile-web-app-capable” content=”yes” 时生效</p>
+<p>content 参数：</p>
+<ul>
+<li>default 默认值。</li>
+<li>black 状态栏背景是黑色。</li>
+<li>black-translucent 状态栏背景是黑色半透明。<br>如果设置为 default 或 black ,网页内容从状态栏底部开始。<br>如果设置为 black-translucent ,网页内容充满整个屏幕，顶部会被状态栏遮挡。</li>
+</ul>
+<p>禁止数字识自动别为电话号码</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"format-detection"</span> <span class="attr">content</span>=<span class="string">"telephone=no"</span> /&gt;</span> <span class="comment">&lt;!-- 禁止数字识自动别为电话号码 --&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="iOS-图标"><a href="#iOS-图标" class="headerlink" title="iOS 图标"></a>iOS 图标</h3><p>rel 参数：<br>apple-touch-icon 图片自动处理成圆角和高光等效果。<br>apple-touch-icon-precomposed 禁止系统自动添加效果，直接显示设计原图。<br>iPhone 和 iTouch，默认 57x57 像素，必须有</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"apple-touch-icon-precomposed"</span> <span class="attr">href</span>=<span class="string">"/apple-touch-icon-57x57-precomposed.png"</span> /&gt;</span> <span class="comment">&lt;!-- iPhone 和 iTouch，默认 57x57 像素，必须有 --&gt;</span></span><br></pre></td></tr></table></figure>
+<p>iPad，72x72 像素，可以没有，但推荐有</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"apple-touch-icon-precomposed"</span> <span class="attr">sizes</span>=<span class="string">"72x72"</span> <span class="attr">href</span>=<span class="string">"/apple-touch-icon-72x72-precomposed.png"</span> /&gt;</span> <span class="comment">&lt;!-- iPad，72x72 像素，可以没有，但推荐有 --&gt;</span></span><br></pre></td></tr></table></figure>
+<p>Retina iPhone 和 Retina iTouch，114x114 像素，可以没有，但推荐有</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"apple-touch-icon-precomposed"</span> <span class="attr">sizes</span>=<span class="string">"114x114"</span> <span class="attr">href</span>=<span class="string">"/apple-touch-icon-114x114-precomposed.png"</span> /&gt;</span> <span class="comment">&lt;!-- Retina iPhone 和 Retina iTouch，114x114 像素，可以没有，但推荐有 --&gt;</span></span><br></pre></td></tr></table></figure>
+<p>Retina iPad，144x144 像素，可以没有，但推荐有</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"apple-touch-icon-precomposed"</span> <span class="attr">sizes</span>=<span class="string">"144x144"</span> <span class="attr">href</span>=<span class="string">"/apple-touch-icon-144x144-precomposed.png"</span> /&gt;</span> <span class="comment">&lt;!-- Retina iPad，144x144 像素，可以没有，但推荐有 --&gt;</span></span><br></pre></td></tr></table></figure>
+<p>IOS 图标大小在iPhone 6 plus上是180×180，iPhone 6 是120x120。<br>适配iPhone 6 plus，则需要在<head>中加上这段</head></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"apple-touch-icon-precomposed"</span> <span class="attr">sizes</span>=<span class="string">"180x180"</span> <span class="attr">href</span>=<span class="string">"retinahd_icon.png"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>###iOS 启动画面</p>
+<p>官方文档：<a href="https://developer.apple.com/library/ios/qa/qa1686/_index.html" target="_blank" rel="external">https://developer.apple.com/library/ios/qa/qa1686/_index.html</a><br>参考文章：<a href="http://wxd.ctrip.com/blog/2013/09/ios7-hig-24/" target="_blank" rel="external">http://wxd.ctrip.com/blog/2013/09/ios7-hig-24/</a></p>
+<p>iPad 的启动画面是不包括状态栏区域的。</p>
+<p>iPad 竖屏 768 x 1004（标准分辨率）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"apple-touch-startup-image"</span> <span class="attr">sizes</span>=<span class="string">"768x1004"</span> <span class="attr">href</span>=<span class="string">"/splash-screen-768x1004.png"</span> /&gt;</span> <span class="comment">&lt;!-- iPad 竖屏 768 x 1004（标准分辨率） --&gt;</span></span><br></pre></td></tr></table></figure>
+<p>iPad 竖屏 1536x2008（Retina）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"apple-touch-startup-image"</span> <span class="attr">sizes</span>=<span class="string">"1536x2008"</span> <span class="attr">href</span>=<span class="string">"/splash-screen-1536x2008.png"</span> /&gt;</span> <span class="comment">&lt;!-- iPad 竖屏 1536x2008（Retina） --&gt;</span></span><br></pre></td></tr></table></figure>
+<p>iPad 横屏 1024x748（标准分辨率）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"apple-touch-startup-image"</span> <span class="attr">sizes</span>=<span class="string">"1024x748"</span> <span class="attr">href</span>=<span class="string">"/Default-Portrait-1024x748.png"</span> /&gt;</span> <span class="comment">&lt;!-- iPad 横屏 1024x748（标准分辨率） --&gt;</span></span><br></pre></td></tr></table></figure>
+<p>iPad 横屏 2048x1496（Retina）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"apple-touch-startup-image"</span> <span class="attr">sizes</span>=<span class="string">"2048x1496"</span> <span class="attr">href</span>=<span class="string">"/splash-screen-2048x1496.png"</span> /&gt;</span> <span class="comment">&lt;!-- iPad 横屏 2048x1496（Retina） --&gt;</span></span><br></pre></td></tr></table></figure>
+<p>iPhone 和 iPod touch 的启动画面是包含状态栏区域的。</p>
+<p>iPhone/iPod Touch 竖屏 320x480 (标准分辨率)</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"apple-touch-startup-image"</span> <span class="attr">href</span>=<span class="string">"/splash-screen-320x480.png"</span> /&gt;</span> <span class="comment">&lt;!-- iPhone/iPod Touch 竖屏 320x480 (标准分辨率) --&gt;</span></span><br></pre></td></tr></table></figure>
+<p>iPhone/iPod Touch 竖屏 640x960 (Retina)</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"apple-touch-startup-image"</span> <span class="attr">sizes</span>=<span class="string">"640x960"</span> <span class="attr">href</span>=<span class="string">"/splash-screen-640x960.png"</span> /&gt;</span> <span class="comment">&lt;!-- iPhone/iPod Touch 竖屏 640x960 (Retina) --&gt;</span></span><br></pre></td></tr></table></figure>
+<p>iPhone 5/iPod Touch 5 竖屏 640x1136 (Retina)</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"apple-touch-startup-image"</span> <span class="attr">sizes</span>=<span class="string">"640x1136"</span> <span class="attr">href</span>=<span class="string">"/splash-screen-640x1136.png"</span> /&gt;</span> <span class="comment">&lt;!-- iPhone 5/iPod Touch 5 竖屏 640x1136 (Retina) --&gt;</span></span><br></pre></td></tr></table></figure>
+<p>添加智能 App 广告条 Smart App Banner（iOS 6+ Safari）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"apple-itunes-app"</span> <span class="attr">content</span>=<span class="string">"app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL"</span>&gt;</span> <span class="comment">&lt;!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） --&gt;</span></span><br></pre></td></tr></table></figure>
+<p>iPhone 6对应的图片大小是750×1294，iPhone 6 Plus 对应的是1242×2148 。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"apple-touch-startup-image"</span> <span class="attr">href</span>=<span class="string">"launch6.png"</span> <span class="attr">media</span>=<span class="string">"(device-width: 375px)"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"apple-touch-startup-image"</span> <span class="attr">href</span>=<span class="string">"launch6plus.png"</span> <span class="attr">media</span>=<span class="string">"(device-width: 414px)"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="Windows-8"><a href="#Windows-8" class="headerlink" title="Windows 8"></a>Windows 8</h3><p>Windows 8 磁贴颜色</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"msapplication-TileColor"</span> <span class="attr">content</span>=<span class="string">"#000"</span>/&gt;</span> <span class="comment">&lt;!-- Windows 8 磁贴颜色 --&gt;</span></span><br></pre></td></tr></table></figure>
+<p>Windows 8 磁贴图标</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"msapplication-TileImage"</span> <span class="attr">content</span>=<span class="string">"icon.png"</span>/&gt;</span> <span class="comment">&lt;!-- Windows 8 磁贴图标 --&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="rss订阅"><a href="#rss订阅" class="headerlink" title="rss订阅"></a>rss订阅</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"alternate"</span> <span class="attr">type</span>=<span class="string">"application/rss+xml"</span> <span class="attr">title</span>=<span class="string">"RSS"</span> <span class="attr">href</span>=<span class="string">"/rss.xml"</span> /&gt;</span> <span class="comment">&lt;!-- 添加 RSS 订阅 --&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="favicon-icon"><a href="#favicon-icon" class="headerlink" title="favicon icon"></a>favicon icon</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"shortcut icon"</span> <span class="attr">type</span>=<span class="string">"image/ico"</span> <span class="attr">href</span>=<span class="string">"/favicon.ico"</span> /&gt;</span> <span class="comment">&lt;!-- 添加 favicon icon --&gt;</span></span><br></pre></td></tr></table></figure>
+<p>比较详细的 favicon 介绍可参考<a href="https://github.com/audreyr/favicon-cheat-sheet" target="_blank" rel="external">https://github.com/audreyr/favicon-cheat-sheet</a></p>
+<h3 id="移动端的meta"><a href="#移动端的meta" class="headerlink" title="移动端的meta"></a>移动端的meta</h3><pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, user-scalable=no&quot; /&gt;
+&lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot; /&gt;
+&lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;black&quot; /&gt;
+&lt;meta name=&quot;format-detection&quot;content=&quot;telephone=no, email=no&quot; /&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, user-scalable=no&quot; /&gt;
+&lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot; /&gt;&lt;!-- 删除苹果默认的工具栏和菜单栏 --&gt;
+&lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;black&quot; /&gt;&lt;!-- 设置苹果工具栏颜色 --&gt;
+&lt;meta name=&quot;format-detection&quot; content=&quot;telphone=no, email=no&quot; /&gt;&lt;!-- 忽略页面中的数字识别为电话，忽略email识别 --&gt;
+&lt;!-- 启用360浏览器的极速模式(webkit) --&gt;
+&lt;meta name=&quot;renderer&quot; content=&quot;webkit&quot;&gt;
+&lt;!-- 避免IE使用兼容模式 --&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+&lt;!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 --&gt;
+&lt;meta name=&quot;HandheldFriendly&quot; content=&quot;true&quot;&gt;
+&lt;!-- 微软的老式浏览器 --&gt;
+&lt;meta name=&quot;MobileOptimized&quot; content=&quot;320&quot;&gt;
+&lt;!-- uc强制竖屏 --&gt;
+&lt;meta name=&quot;screen-orientation&quot; content=&quot;portrait&quot;&gt;
+&lt;!-- QQ强制竖屏 --&gt;
+&lt;meta name=&quot;x5-orientation&quot; content=&quot;portrait&quot;&gt;
+&lt;!-- UC强制全屏 --&gt;
+&lt;meta name=&quot;full-screen&quot; content=&quot;yes&quot;&gt;
+&lt;!-- QQ强制全屏 --&gt;
+&lt;meta name=&quot;x5-fullscreen&quot; content=&quot;true&quot;&gt;
+&lt;!-- UC应用模式 --&gt;
+&lt;meta name=&quot;browsermode&quot; content=&quot;application&quot;&gt;
+&lt;!-- QQ应用模式 --&gt;
+&lt;meta name=&quot;x5-page-mode&quot; content=&quot;app&quot;&gt;
+&lt;!-- windows phone 点击无高光 --&gt;
+&lt;meta name=&quot;msapplication-tap-highlight&quot; content=&quot;no&quot;&gt;
+&lt;!-- 适应移动端end --&gt;
+</code></pre><p>这是来自 <a href="http://weibo.com/toooobug" target="_blank" rel="external">toobug</a> 的分享总结。</p>
+<p>更多的 meta 标签参考</p>
+<ul>
+<li><a href="http://code.lancepollard.com/complete-list-of-html-meta-tags/" target="_blank" rel="external">COMPLETE LIST OF HTML META TAGS</a></li>
+<li><a href="http://www.iacquire.com/blog/18-meta-tags-every-webpage-should-have-in-2013" target="_blank" rel="external">18 Meta Tags Every Webpage Should Have in 2013</a></li>
+</ul>
+<p>参考文章：</p>
+<ul>
+<li><a href="https://github.com/yisibl/blog/issues/1" target="_blank" rel="external">常用的 HTML 头部标签</a></li>
+<li><a href="https://gist.github.com/paddingme/6182708733917ae36331" target="_blank" rel="external">html5_header</a></li>
+<li><a href="http://amazeui.org/css/" target="_blank" rel="external">amazeui css</a></li>
+<li><a href="http://www.douban.com/note/170560091/" target="_blank" rel="external">DOCTYPE</a></li>
+<li><a href="http://www.uisdc.com/ios8-ten-new-feature" target="_blank" rel="external">WEB 工程师和设计师必学的 10 个 IOS 8 新鲜改变</a></li>
+</ul>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/blog/"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'PaddingMe';
+    
+    var disqus_url = 'http://yoursite.com/blog/2014/10/30/HTMLhead 头标签/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//PaddingMe.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235687', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

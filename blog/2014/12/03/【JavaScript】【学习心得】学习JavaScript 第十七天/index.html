@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-home">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>【JavaScript】【学习心得】学习JavaScript 第十七天 | Hexo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="Mu-Help-Plan," />
+  
+
+  <meta name="description" content="文章取自我的 Github  repos: Learning-JavaScript， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-JavaScript/issues/21
+objectECMAScript 中的对象其实就是一组数据和功能的集合。对象可以通过 new 操作符后跟要创建的对象类型的名称来创建。而创建 Object 类">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【JavaScript】【学习心得】学习JavaScript 第十七天">
+<meta property="og:url" content="http://yoursite.com/blog/2014/12/03/【JavaScript】【学习心得】学习JavaScript 第十七天/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="文章取自我的 Github  repos: Learning-JavaScript， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-JavaScript/issues/21
+objectECMAScript 中的对象其实就是一组数据和功能的集合。对象可以通过 new 操作符后跟要创建的对象类型的名称来创建。而创建 Object 类">
+<meta property="og:updated_time" content="2016-04-10T16:12:43.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【JavaScript】【学习心得】学习JavaScript 第十七天">
+<meta name="twitter:description" content="文章取自我的 Github  repos: Learning-JavaScript， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-JavaScript/issues/21
+objectECMAScript 中的对象其实就是一组数据和功能的集合。对象可以通过 new 操作符后跟要创建的对象类型的名称来创建。而创建 Object 类">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=32204ee7" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-50048801-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">目录</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/blog/"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#object"><span class="toc-text">object</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#位操作符"><span class="toc-text">位操作符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#布尔操作符"><span class="toc-text">布尔操作符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#逻辑与"><span class="toc-text">逻辑与</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#逻辑或"><span class="toc-text">逻辑或</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#乘性操作符"><span class="toc-text">乘性操作符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#乘法"><span class="toc-text">乘法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#除法"><span class="toc-text">除法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#加性操作符"><span class="toc-text">加性操作符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#加法"><span class="toc-text">加法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#减法"><span class="toc-text">减法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关系操作符"><span class="toc-text">关系操作符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#相等操作符"><span class="toc-text">相等操作符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#相等操作符-1"><span class="toc-text">相等操作符</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#逗号操作符"><span class="toc-text">逗号操作符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#for-in-语句"><span class="toc-text">for-in 语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#break-和-continue"><span class="toc-text">break 和 continue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#switch-语句"><span class="toc-text">switch 语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数"><span class="toc-text">函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#理解参数"><span class="toc-text">理解参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#没有重载"><span class="toc-text">没有重载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#小结"><span class="toc-text">小结</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-【JavaScript】【学习心得】学习JavaScript 第十七天" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">【JavaScript】【学习心得】学习JavaScript 第十七天</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2014.12.03</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>John Doe</span>
+        </span>
+      
+
+      
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://padding.me/blog/2014/12/03/【JavaScript】【学习心得】学习JavaScript 第十七天/#disqus_thread"></a>
+        </span>
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p> 文章取自我的 Github  repos: <a href="https://github.com/paddingme/Learning-JavaScript" target="_blank" rel="external">Learning-JavaScript</a>， 作者：<a href="http://padding.me/about.html" target="_blank" rel="external">@paddingme</a><br>原文链接：<a href="https://github.com/paddingme/Learning-JavaScript/issues/21" target="_blank" rel="external">https://github.com/paddingme/Learning-JavaScript/issues/21</a></p>
+<h2 id="object"><a href="#object" class="headerlink" title="object"></a>object</h2><p>ECMAScript 中的对象其实就是一组数据和功能的集合。对象可以通过 <code>new</code> 操作符后跟要创建的对象类型的名称来创建。而创建 Object 类型的实例并为其添加属性和（或）方法，就可以创建自定义对象。</p>
+<p>和 Java 中的 java.lang.object 对象一样，Object 类型是所有它的实例的基础。亦即 Object 类型所具有的任何属性和方法也同样存在于更具体的对象中。</p>
+<p>Object 的每个实例都具有下列属性：</p>
+<ul>
+<li>constructor: 保存这用于创建当前对象的函数；</li>
+<li>hasOwnProperty(propertyName)：用于检查给定的属性在当前对象实例中（而不是在实例的原型中）是否存在，propertyName 必须以字符串形式指定充当参数；</li>
+<li>isPrototypeOf(object): 用于检查传入的对象是否是传入对象的原型</li>
+<li>propertyIsEnumerable(propertyName): 用于检查给定的属性是否能够使用for-in语句来枚举；</li>
+<li>toLocaleString(): 返回对象的字符串表示，该字符串与执行环境的地区对应；</li>
+<li>toString(): 返回对象的字符串表示；</li>
+<li>valueOf(): 返回对象的字符串、数值或布尔值表示，通常与 toString() 返回相同。</li>
+</ul>
+<h2 id="位操作符"><a href="#位操作符" class="headerlink" title="位操作符"></a>位操作符</h2><p>ECMAScirpt 中的所有数值都以IEEE-754 64 位格式存储，但位操作符并不直接操作 64 位值。而是先将 64 位的值转换成 32 位的整数，然后执行操作，最后将结果转换回64位。对于开发人员来说，由于 64 位存储格式是透明的，因此整个过程就像是只存在 32 位的整数一样。</p>
+<p>对于有符号的整数来说，32 位中的前 31 位用于表示数值。第 32 位表示数值符号。负数同样以二进制码存储，但使用二进制补码。</p>
+<p>位操作符有如下几种</p>
+<ul>
+<li>按位非： <code>~</code></li>
+<li>按位与： <code>&amp;</code></li>
+<li>按位或： <code>|</code></li>
+<li>按位异或： <code>^</code></li>
+<li>左移：<code>&lt;&lt;</code></li>
+<li>右移：<code>&gt;&gt;</code></li>
+<li>无符号左移：<code>&lt;&lt;&lt;</code></li>
+<li>无符号右移：<code>&gt;&gt;&gt;</code></li>
+</ul>
+<h2 id="布尔操作符"><a href="#布尔操作符" class="headerlink" title="布尔操作符"></a>布尔操作符</h2><h3 id="逻辑与"><a href="#逻辑与" class="headerlink" title="逻辑与"></a>逻辑与</h3><p>在有一个操作数不是布尔值的情况下，逻辑与操作就不一定返回布尔值，此时，它遵循下列规则：</p>
+<ul>
+<li>若第一个操作数是对象，则返回第二个操作数；</li>
+<li>若第二个操作数是对象，则只有在第一个操作数的求值结果为 true 时才返回该对象；</li>
+<li>若两个操作数都是对象，则返回第二个操作数；</li>
+<li>若有一个操作数是 null, 则返回 null；</li>
+<li>若有一个操作数是 NaN, 则返回 NaN；</li>
+<li>若有一个操作数是 undefined, 则返回 undefined；</li>
+</ul>
+<p>不能在逻辑与操作中使用未定义的值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> found = <span class="literal">true</span>；</span><br><span class="line"><span class="keyword">var</span> result = (found &amp;&amp; someUndefinedVariable)；<span class="comment">//这里会发生错误</span></span><br><span class="line">alert (result)； <span class="comment">//这一行不会执行</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> found = <span class="literal">false</span>；</span><br><span class="line"><span class="keyword">var</span> result = (found &amp;&amp; someUndefinedVariable)<span class="comment">//不会发生错误</span></span><br><span class="line">alert (result)； <span class="comment">// 执行("false")</span></span><br></pre></td></tr></table></figure>
+<h3 id="逻辑或"><a href="#逻辑或" class="headerlink" title="逻辑或"></a>逻辑或</h3><p>操作规则如下：</p>
+<ul>
+<li>如果第一个操作是对象，则返回第一个操作数；</li>
+<li>如果第一个操作数的求值结果为false, 则返回第二个操作数；</li>
+<li>如果两个操作数都是对象，则返回第二个操作对象；</li>
+<li>如果两个操作数都是 null,则返回 null；</li>
+<li>如果两个操作数都是 NaN,则返回 NaN；</li>
+<li>如果两个操作数都是 undefined,则返回 undefined；</li>
+</ul>
+<p>我们可以使用逻辑或的短路行为来避免为变量赋 null 或者 undefined 值，例如</p>
+<pre><code>var myObject =  preferredObject || backupObject；
+</code></pre><p>在这个例子中，myObject 将被赋予等号后面两个值中的一个。变量 preferredObject 中包含优先赋给变量 myObject 的值， 变量 backupObject 负责在 preferredObject 中不包含有效值情况下提供后备值。</p>
+<h2 id="乘性操作符"><a href="#乘性操作符" class="headerlink" title="乘性操作符"></a>乘性操作符</h2><h3 id="乘法"><a href="#乘法" class="headerlink" title="乘法"></a>乘法</h3><p>在处理特殊值的情况下，乘法操作符遵循下列特殊的规则：</p>
+<ul>
+<li>若操作数是数值，执行常规的乘法计算，即如果两正数或两负数相乘结果是正数，而如果只有一个操作数有符号，那结果是负数，超过表示范围返回 Infinity 或 -Infinity；</li>
+<li>若一操作数是 NaN, 结果为 NaN；</li>
+<li>若 Infinity 与 0 相乘，结果为 NaN；</li>
+<li>若 Infinity与非 0 相乘，则结果为 Infinity 或 -Infinity；</li>
+<li>若 Infinity 与 Infinity 相乘，则结果为 Infinity；</li>
+<li>若一操作数不是数值，则在后台调用 Number() 转换，再根据上述规则计算。</li>
+</ul>
+<h3 id="除法"><a href="#除法" class="headerlink" title="除法"></a>除法</h3><p>除法的特殊计算规则如下：</p>
+<ul>
+<li>若操作数是数值，执行常规的除法计算，即如果两正数或两负数相乘结果是正数，而如果只有一个操作数有符号，那结果是负数，超过表示范围返回 Infinity或-Infinity；</li>
+<li>若一操作数是 NaN,则结果是 NaN；</li>
+<li>若 Infinity 被 Infinity 除，结果是 NaN；</li>
+<li>若 0 被 0 除，返回 NaN；</li>
+<li>若非 0 的有限数被 0 除，结果是 Infinity 或 -Infinity；</li>
+<li>若 Infinity 被任何非0 除， 则结果是 Infinity 或 -Infinity。</li>
+<li>若一操作数不是数值，则在后台调用 Number() 转换，再根据上述规则计算。</li>
+</ul>
+<h2 id="加性操作符"><a href="#加性操作符" class="headerlink" title="加性操作符"></a>加性操作符</h2><h3 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h3><p>如果两个操作符都是数值，则执行常规的加法计算，然后根据下列规则返回结果：</p>
+<ul>
+<li>如果有一个操作数是 NaN，则结果是 NaN；</li>
+<li>如果是 Infinity 加 Infinity，则结果是 Infinity；</li>
+<li>如果是 -Infinity 加 -Infinity，则结果是 -Infinity；</li>
+<li>如果是 Infinity 加 -Infinity，则结果是 NaN；</li>
+<li>如果是 +0 加 +0 ，则结果是 +0；</li>
+<li>如果是 -0 加 -0 ，则结果是 -0；</li>
+<li>如果是 +0 加 -0 ，则结果是 +0；<br>如果有一个操作数是字符，则按照如下规则进行运算：</li>
+<li>如果两个操作数都是字符串，则将第二个操作数与第一个操作数拼接起来；</li>
+<li>如果只有一个操作数是字符串，则将另一个操作数转换为字符串，然后再将两个字符串拼接起来。</li>
+<li>如果有一个操作数是对象、数值或者布尔值，则调用他们的 toString() 方法取得它们 相应的字符串，然后再根据前面的规则进行相加。对于 undefined 和 null 则分别调用 String() 并取得字符串 “undefined” 和 “null”。</li>
+</ul>
+<h3 id="减法"><a href="#减法" class="headerlink" title="减法"></a>减法</h3><p>加法的运算规则如下：</p>
+<ul>
+<li>若两个数都是数值，则执行常规的算术减法并返回结果数值；</li>
+<li>若有一个操作数是 NaN ，则返回 NaN ；</li>
+<li>若 Infinity - Infinity ，则返回 NaN ；</li>
+<li>若 Infinity - -Infinity ，则返回 NaN ；</li>
+<li>若 -Infinity - Infinity ，则返回 -Infinity ；</li>
+<li>若 +0 - +0 则返回 +0 ；</li>
+<li>若 +0 - -0 则返回 -0 ；</li>
+<li>若 -0 - -0 则返回 +0 ；</li>
+<li>若一个操作数是字符串、布尔值、Null、Undifined，则先在后台调用 Nmuber() 将其转换为数值，再执行减法运算;</li>
+<li>若有一个操作数是对象，则调用 valueOf() 将其转换为对象的数值，若没有 valueOf()，则调用 toString() 再继续减法运算。</li>
+</ul>
+<h2 id="关系操作符"><a href="#关系操作符" class="headerlink" title="关系操作符"></a>关系操作符</h2><p>关系操作符运算规则如下：</p>
+<ul>
+<li>若两操作数都是数值，则执行数值比较；</li>
+<li>若两个操作数都是字符串，则比较两个字符串相应的字符编码值；</li>
+<li>若一个操作数是数值，则将两一个操作数转换为数值；</li>
+<li>若一个操作数是对象，则调用这个对象的 valueOf() 方法，用得到的结果按照前面的规则进行比较，如果没有 valueOf() 方法，则调用 toString() 方法进行比较；</li>
+<li>若一个操作数是布尔值，则将其转换为数值，再进行比较。</li>
+</ul>
+<p>注意在进行字符串比较时，实际比较的是两个字符串中对应位置的每个字符的字符编码值。经过一番比较之后，再返回一个布尔值。记住大写字母的编码值全部小于小写字母的字符编码。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> result = <span class="string">"Brick"</span> &lt; <span class="string">"alphabet"</span>; <span class="comment">//true</span></span><br><span class="line"><span class="keyword">var</span> result = <span class="string">"Brick"</span>.toLowerCase() &lt; <span class="string">"alphabet"</span>.toLowerCase(); <span class="comment">//false</span></span><br><span class="line"><span class="keyword">var</span> result = <span class="string">"23"</span> &lt; <span class="string">"3"</span>; <span class="comment">//true</span></span><br><span class="line"><span class="keyword">var</span> result = <span class="string">"23"</span> &lt; <span class="number">3</span>:<span class="comment">//false</span></span><br><span class="line"><span class="keyword">var</span> reslut = <span class="string">"a"</span> &lt; <span class="number">3</span>; <span class="comment">//false "a"被转换为 NaN</span></span><br><span class="line"><span class="keyword">var</span> result = <span class="literal">NaN</span> &lt; <span class="number">3</span>; <span class="comment">//false</span></span><br><span class="line"><span class="keyword">var</span> result = <span class="literal">NaN</span> &gt;= <span class="number">3</span>; <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+<h2 id="相等操作符"><a href="#相等操作符" class="headerlink" title="相等操作符"></a>相等操作符</h2><h3 id="相等操作符-1"><a href="#相等操作符-1" class="headerlink" title="相等操作符"></a>相等操作符</h3><p>这两个操作符都会先转换操作数（通常称为强制转型），然后再比较它们的相等性。</p>
+<p>在转换不同的数据类型时，相等和不相等操作符遵循下列基本规则：</p>
+<ul>
+<li>如果有一个操作数是布尔值，则在比较相等性先将其转换为数值——false 为 0, true 为 1；</li>
+<li>如果一个操作数是字符串，另一个操作数是数值，在比较相等性先将字符串转换为数值；</li>
+<li><p>若一个操作数是对象，另一个不是，则调用 valueOf() 用得到的基本类型值按照前面的规则进行比较。这两个操作符在进行比较时要遵循下列<br>规则：</p>
+<ul>
+<li>null 和 underfined 是相等的；</li>
+<li>要比较相等性之前，不能将 null 和 undefined 转换成其他任何值；</li>
+<li>若一操作数是 NaN ，相等操作符返回 false ,即使两个操作符都是 NaN ，相等操作符也是返回 false 的；</li>
+<li>若两个操作数都是对象， 则比较它们是不是同一对象，若两操作数都指向同一对象，则相等操作符返回 true。</li>
+</ul>
+<p>|表达式|值|<br>|—————–|—————|<br>|null == undefined|           true|<br>|”NaN” == NaN     |           false|<br>|NaN == NaN|          flase|<br>|5 == NaN         |           false|<br>|false == 0|           true|<br>|true == 1|           true|<br>|true == 2|           false|<br>|undefined == 0 |           false|<br>|null == 0 |           false|<br>|”5” == 5 |           true|</p>
+</li>
+</ul>
+<p>至于全等和不全等，相对于相等和不相等的区别就是未经类型转换判断相等与否</p>
+<pre><code>null == undefined //true
+null === undefined //false
+</code></pre><p>由于相等和不相等操作符存在类型转换问题，而为了保持代码中数据类型的完整性，推荐使用全等和不全等操作符。</p>
+<h2 id="逗号操作符"><a href="#逗号操作符" class="headerlink" title="逗号操作符"></a>逗号操作符</h2><p>使用逗号操作符可以在一条语句中执行多个操作，初次之外也可以用于赋值。逗号操作符总会返回表达式中的最后一项。</p>
+<h2 id="for-in-语句"><a href="#for-in-语句" class="headerlink" title="for-in 语句"></a>for-in 语句</h2><p>for-in　语句是一种精确的迭代语句，可以用来枚举对象的属性。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (property <span class="keyword">in</span> expression) statement</span><br></pre></td></tr></table></figure>
+<p>ECMAScript 对象的属性没有顺序。因此，通过 for-in 循环输出的属性名的顺序是不可预测的。具体来讲，所有属性都会被返回一次，但返回的先后次序可能会因浏览器而异。若表示要迭代的对象的变量值为 null 或者 undefined ，for-in 语句会抛出错误。ECMAScript5 更正此行为，对于此种情况不抛出错误而是不再执行循环体。所以建议使用 for-in 循环前，先检测确认对象是不是 null  或者 undefined。</p>
+<h2 id="break-和-continue"><a href="#break-和-continue" class="headerlink" title="break 和 continue"></a>break 和 continue</h2><p>break 和 continue 语句运行在循环中用于精确的控制代码的执行。 其中， break 语句会立即退出循环，强制继续执行循环后面的语句。而 continue 语句虽然也是立即退出循环，但退出循环后从循环的顶部继续执行。</p>
+<h2 id="switch-语句"><a href="#switch-语句" class="headerlink" title="switch 语句"></a>switch 语句</h2><p>switch 语句在比较值时，使用全等操作符，不会产生类型转换。</p>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p>函数会在执行 return 语句之后停止并立即退出。return 语句也不可以不带有任何返回值，在这种情况下，函数在停止执行后将返回 underfined 值。这种用法一般用在需要提前停止函数执行而又不需要返回值的情况下。</p>
+<h2 id="理解参数"><a href="#理解参数" class="headerlink" title="理解参数"></a>理解参数</h2><p>ECMAScript 不介意传进函数的参数是多少个，也不在乎传进来的参数是什么数据类型。<br>ECMAScript 中的参数在内部时用一个数组来表示的额。函数接收的始终是这个数组，而不关心数组中包含哪些参数（如果有参数的额话）。实际上，函数体内通过 arguments 对象来访问这个参数数组，从而获取传递给函数的每一个参数。通过访问 arguments 对象的 length 属性可以获知有多少个参数传递给了函数。没有传递至的命令参数将自动被赋予 undefined 值。 ECMAScript 中的所有参数传递的都是值，不可能通过引用传递参数。</p>
+<h2 id="没有重载"><a href="#没有重载" class="headerlink" title="没有重载"></a>没有重载</h2><p>如果在 ECMAScript 中定义了两个名字相同的函数，则该名字只属于后定义的函数。</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul>
+<li>ECMASript 中基本数据类型包括 Underfined、Null、Number、String、Boolean；</li>
+<li>无需指定函数的返回值，因为任何 ECMAScript 函数都可在任何时候返回任何值；</li>
+<li>未指定返回值的函数返回的是一个特殊的 undefined 值；</li>
+<li>ECMAScript 中没有函数签名的概念，因为其函数参数是以一个包含零或多个值的数组的形式传递的，</li>
+<li>可以想ECMAScript 函数传递任意数量的参数，并且可以通过 arguments 对象来访问这些参数</li>
+<li>由于不存在函数签名的特性，ECMAScript 函数不能重载。</li>
+</ul>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/blog/"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'PaddingMe';
+    
+    var disqus_url = 'http://yoursite.com/blog/2014/12/03/【JavaScript】【学习心得】学习JavaScript 第十七天/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//PaddingMe.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235687', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

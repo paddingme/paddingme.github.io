@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-home">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>前端学习第十四天 浅谈 BR 标签[2] | Hexo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="Mu-Help-Plan," />
+  
+
+  <meta name="description" content="文章取自我的 Github  repos: Learning-JavaScript， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-JavaScript/issues/18
+前端学习 第十四天 浅谈 BR 标签[2]
+昨天了解了 &amp;lt;br&amp;gt; 的语义和正确使用场景，今天咱们来了解下  &amp;lt;br&amp;gt;在各浏览器的表现，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端学习第十四天 浅谈 BR 标签[2]">
+<meta property="og:url" content="http://yoursite.com/blog/2014/11/30/前端学习第十四天 浅谈 BR 标签[2]/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="文章取自我的 Github  repos: Learning-JavaScript， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-JavaScript/issues/18
+前端学习 第十四天 浅谈 BR 标签[2]
+昨天了解了 &amp;lt;br&amp;gt; 的语义和正确使用场景，今天咱们来了解下  &amp;lt;br&amp;gt;在各浏览器的表现，">
+<meta property="og:image" content="http://paddingme.qiniudn.com/chrome.PNG">
+<meta property="og:image" content="http://paddingme.qiniudn.com/firefox.PNG">
+<meta property="og:image" content="http://paddingme.qiniudn.com/IE6.PNG">
+<meta property="og:image" content="http://paddingme.qiniudn.com/ie7.PNG">
+<meta property="og:image" content="http://paddingme.qiniudn.com/ie8.PNG">
+<meta property="og:image" content="http://paddingme.qiniudn.com/IE9.PNG">
+<meta property="og:image" content="http://paddingme.qiniudn.com/ie11.PNG">
+<meta property="og:updated_time" content="2016-04-10T16:12:43.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端学习第十四天 浅谈 BR 标签[2]">
+<meta name="twitter:description" content="文章取自我的 Github  repos: Learning-JavaScript， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-JavaScript/issues/18
+前端学习 第十四天 浅谈 BR 标签[2]
+昨天了解了 &amp;lt;br&amp;gt; 的语义和正确使用场景，今天咱们来了解下  &amp;lt;br&amp;gt;在各浏览器的表现，">
+<meta name="twitter:image" content="http://paddingme.qiniudn.com/chrome.PNG">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=32204ee7" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-50048801-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">目录</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/blog/"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#lt-br-gt-在各浏览器的表现"><span class="toc-text"><br>在各浏览器的表现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#能否使用-CSS-样式来改变其表现"><span class="toc-text">能否使用 CSS 样式来改变其表现</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-前端学习第十四天 浅谈 BR 标签[2]" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">前端学习第十四天 浅谈 BR 标签[2]</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2014.11.30</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>John Doe</span>
+        </span>
+      
+
+      
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://padding.me/blog/2014/11/30/前端学习第十四天 浅谈 BR 标签[2]/#disqus_thread"></a>
+        </span>
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p> 文章取自我的 Github  repos: <a href="https://github.com/paddingme/Learning-JavaScript" target="_blank" rel="external">Learning-JavaScript</a>， 作者：<a href="http://padding.me/about.html" target="_blank" rel="external">@paddingme</a><br>原文链接：<a href="https://github.com/paddingme/Learning-JavaScript/issues/18" target="_blank" rel="external">https://github.com/paddingme/Learning-JavaScript/issues/18</a></p>
+<p>前端学习 第十四天 浅谈 BR 标签[2]</p>
+<p>昨天了解了 <code>&lt;br&gt;</code> 的语义和正确使用场景，今天咱们来了解下  <code>&lt;br&gt;</code>在各浏览器的表现，能不能使用 CSS 样式来改变其表现，能改变哪些样式，以及为什么只能改变这些样式，以及如何改变等问题。</p>
+<h2 id="lt-br-gt-在各浏览器的表现"><a href="#lt-br-gt-在各浏览器的表现" class="headerlink" title="&lt;br&gt;在各浏览器的表现"></a><code>&lt;br&gt;</code>在各浏览器的表现</h2><p>测试代码：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"zh-cmn-Hans"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>BR DEMO<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span><br><span class="line">    * &#123;</span><br><span class="line">        <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">        <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>我是一段测试文字</span><br><span class="line">        <span class="tag">&lt;<span class="name">br</span>&gt;</span> 我来测试下 br 标签各浏览器表现</span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>chrome 34.0.1847.131 m<br><img src="http://paddingme.qiniudn.com/chrome.PNG" alt=""></p>
+<p>firefox 33.1.1<br><img src="http://paddingme.qiniudn.com/firefox.PNG" alt=""></p>
+<p>IE6<br><img src="http://paddingme.qiniudn.com/IE6.PNG" alt=""><br>IE7<br><img src="http://paddingme.qiniudn.com/ie7.PNG" alt=""><br>IE8<br><img src="http://paddingme.qiniudn.com/ie8.PNG" alt=""><br>IE9<br><img src="http://paddingme.qiniudn.com/IE9.PNG" alt=""></p>
+<p>IE 11<br><img src="http://paddingme.qiniudn.com/ie11.PNG" alt=""></p>
+<p>综上我们可以得出结论：除了在 Firefox 下 <code>&lt;br&gt;</code> 宽度为0 高度为20px,其余各浏览器均为 宽高auto。</p>
+<h2 id="能否使用-CSS-样式来改变其表现"><a href="#能否使用-CSS-样式来改变其表现" class="headerlink" title="能否使用 CSS 样式来改变其表现"></a>能否使用 CSS 样式来改变其表现</h2><p><a href="http://stackoverflow.com/questions/899252/can-you-target-br-with-css" target="_blank" rel="external">http://stackoverflow.com/questions/899252/can-you-target-br-with-css</a></p>
+<p>BR generates a line-break and it is only a line-break. As this element has no content, there are only few styles that make sense to apply on it, like clear or position. You can set BR’s border but you won’t see it as it has no visual dimension.</p>
+<p>由于 <code>&lt;br&gt;</code> 是个空元素，没有内容，只有少数的样式可以使用 如 <code>clear</code> 和<code>position</code>。当然可以为 <code>&lt;br&gt;</code> 设置 border, 但是你看不见。</p>
+<p>If you like to visually separate two sentences, then you probably want to use the horizontal ruler which is intended for this goal. Since you cannot change the markup, I’m afraid using only CSS you cannot achieve this.</p>
+<p>It seems, it has been already discussed on other forums. Extract from Re: Setting the height of a BR element using CSS:</p>
+<p>[T]his leads to a somewhat odd status for BR in that on the one hand it is not being treated as a normal element, but instead as an instance of \A in generated content, but on the other hand it is being treated as a normal element in that (a limited subset of) CSS properties are being allowed on it.</p>
+<blockquote>
+<p>br  的奇怪在于：一方面它没有被当作一个正常的元素,而是作为生成内容的实例,但另一方面它被视为正常的元素(有限的子集)的CSS属性被允许。</p>
+</blockquote>
+<p>I also found a clarification in the CSS 1 specification (no higher level spec mentions it):</p>
+<p>在 CSS 1 specification 中也有描述：</p>
+<p>The current CSS1 properties and values cannot describe the behavior of the ‘BR’ element. In HTML, the ‘BR’ element specifies a line break between words. In effect, the element is replaced by a line break. Future versions of CSS may handle added and replaced content, but CSS1-based formatters must treat ‘BR’ specially.<br>当前CSS1属性和值不能描述的BR元素的行为。 在HTML中,词与词之间的BR元素指定一个换行符。 实际上,取而代之的元素是一个换行符。 CSS的未来版本可能处理添加和替换内容,但CSS1-based格式器必须BR的特别对待。 </p>
+<blockquote>
+<p>现在的 CSS1 属性和值不能描述 BR 元素的值。HTML中， 在词与词之间 BR 指定一个折行。实际上其作用被一个换行符取代。CSS的未来版本可能处理添加和替换内容,但CSS1-based格式器必须对 BR 特别对待<br>Grant Wagner’s tests show that there is no way to style BR as you can do with other elements. There is also a site online where you can test the results in your browser.</p>
+</blockquote>
+<p>In theory, HTML BR elements should also be fully styleable. In other words, anything you can apply to EM should also work on BR elements!</p>
+<p>.ba { width: 32px; height: 32px; border: 10px solid lime; background: fuchsia; }</p>
+<p>Before<br>After</p>
+<p>.bb { display: none; } /<em> So should not break line! </em>/<br>Before After</p>
+<p>Note. The UA stylesheet should use something along the lines of the following to support this element.</p>
+<p>   BR:before { content: “\A” }</p>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/blog/"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'PaddingMe';
+    
+    var disqus_url = 'http://yoursite.com/blog/2014/11/30/前端学习第十四天 浅谈 BR 标签[2]/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//PaddingMe.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235687', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

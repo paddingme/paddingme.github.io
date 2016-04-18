@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-home">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>《写给大家看的设计书》读书笔记 | Hexo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="article," />
+  
+
+  <meta name="description" content="文章取自我的 Github  repos: Learning-HTML-CSS， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-HTML-CSS/issues/40
+第一部分 设计原则约书亚树
+一旦你能够说出什么东西的名字，就会很容易注意到它。你就会掌握它，拥有它，使它在你的控制中。
+
+优秀的设计就这么简单：
+
+学习 4 大基本原">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《写给大家看的设计书》读书笔记">
+<meta property="og:url" content="http://yoursite.com/blog/2015/08/02/《写给大家看的设计书》读书笔记/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="文章取自我的 Github  repos: Learning-HTML-CSS， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-HTML-CSS/issues/40
+第一部分 设计原则约书亚树
+一旦你能够说出什么东西的名字，就会很容易注意到它。你就会掌握它，拥有它，使它在你的控制中。
+
+优秀的设计就这么简单：
+
+学习 4 大基本原">
+<meta property="og:updated_time" content="2016-04-10T16:12:39.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="《写给大家看的设计书》读书笔记">
+<meta name="twitter:description" content="文章取自我的 Github  repos: Learning-HTML-CSS， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-HTML-CSS/issues/40
+第一部分 设计原则约书亚树
+一旦你能够说出什么东西的名字，就会很容易注意到它。你就会掌握它，拥有它，使它在你的控制中。
+
+优秀的设计就这么简单：
+
+学习 4 大基本原">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=32204ee7" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-50048801-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">目录</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/blog/"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#第一部分-设计原则"><span class="toc-text">第一部分 设计原则</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#约书亚树"><span class="toc-text">约书亚树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#亲密性-Proximity"><span class="toc-text">亲密性 (Proximity)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对齐（Contrast）"><span class="toc-text">对齐（Contrast）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#重复-Repetition"><span class="toc-text">重复 (Repetition)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对比-Alignment"><span class="toc-text">对比 (Alignment)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#复习"><span class="toc-text">复习</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#颜色运用"><span class="toc-text">颜色运用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#更多提示和技巧"><span class="toc-text">更多提示和技巧</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第二部分-字体设计"><span class="toc-text">第二部分 字体设计</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#字体"><span class="toc-text">字体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字体类别"><span class="toc-text">字体类别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字体对比"><span class="toc-text">字体对比</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#其他"><span class="toc-text">其他</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-《写给大家看的设计书》读书笔记" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">《写给大家看的设计书》读书笔记</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2015.08.02</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>John Doe</span>
+        </span>
+      
+
+      
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://padding.me/blog/2015/08/02/《写给大家看的设计书》读书笔记/#disqus_thread"></a>
+        </span>
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p> 文章取自我的 Github  repos: <a href="https://github.com/paddingme/Learning-HTML-CSS" target="_blank" rel="external">Learning-HTML-CSS</a>， 作者：<a href="http://padding.me/about.html" target="_blank" rel="external">@paddingme</a><br>原文链接：<a href="https://github.com/paddingme/Learning-HTML-CSS/issues/40" target="_blank" rel="external">https://github.com/paddingme/Learning-HTML-CSS/issues/40</a></p>
+<h1 id="第一部分-设计原则"><a href="#第一部分-设计原则" class="headerlink" title="第一部分 设计原则"></a>第一部分 设计原则</h1><h2 id="约书亚树"><a href="#约书亚树" class="headerlink" title="约书亚树"></a>约书亚树</h2><blockquote>
+<p>一旦你能够说出什么东西的名字，就会很容易注意到它。你就会掌握它，拥有它，使它在你的控制中。</p>
+</blockquote>
+<p>优秀的设计就这么简单：</p>
+<ol>
+<li>学习 4 大基本原则。</li>
+<li>认识到自己没有运用这些原则。</li>
+<li>应用基本原则。</li>
+</ol>
+<p>4 大基本原则:</p>
+<ul>
+<li>对比（Contrast）<br> 对比的基本思想是，要避免页面上的元素太过相似。如果元素（字体、颜色、大小、线宽、形状、空间等）不相同，那就干脆让它们<strong>截然不同</strong>。</li>
+<li>重复（Repetition）<br>让设计中的视觉要去在整个作品中重复出现。可以重复颜色、形状、材质 、空间关系、线宽、字体、大小和图片，等等。 增加条理性，加强统一性。</li>
+<li>对其  (Alignment)<br>任何东西都不能在页面上随意安放。 每个元素都应当与页面上的另一个元素有某种视觉联系。建立一种清晰、精巧而且清爽的外观。</li>
+<li>亲密性 (Proximity)<br>彼此相关的项应当靠近，归组在一起。如果多个项相互之间存在很近的亲密性，它们就会成为一个视觉单元，而不是多个孤立的元素。这有助于组织信息，减少混乱，为读者提供清晰的结构。</li>
+</ul>
+<h2 id="亲密性-Proximity"><a href="#亲密性-Proximity" class="headerlink" title="亲密性 (Proximity)"></a>亲密性 (Proximity)</h2><p>亲密性原则是指： <strong>将相关的项组织在一起</strong>，移动这些项，使它们的物理位置相互靠近，这样一来，相关的项将被看做凝聚为一体的一个组，将不再是彼此无关的片段。<strong>物理位置的接近就意味存在着关联</strong>。亲密性的根本目的是实现<strong>组织性</strong>。</p>
+<p>要有意识地注意你是怎样阅读的，你的视线怎样移动： 从哪里开始；沿着怎样的路径；到哪里结束；读完之后，接下来看哪里？整个过程应当是一个合理的过程，有确定的开始，而且要有确定的结束。</p>
+<ul>
+<li><p>如何实现</p>
+<p>微微眯起眼睛，统计你的眼睛停顿的次数来数一数页面上有多少个元素。如果页面上的项超过 3~5 个（当然这取决于具体情况），就要看看哪些孤立的元素可以归在一组建立更近的亲密性，使之成为一个视觉单元。</p>
+</li>
+<li><p>要避免的问题</p>
+<ul>
+<li>不要仅仅因为有空白就把元素放在角落或者中央；</li>
+<li>避免一个页面上有太多鼓励的元素；</li>
+<li>不要在元素之间留出同样大小的空白，除非各组同属于一个子集。</li>
+<li>标题、子标题、图标标题、图片能否归入其相关材料？在这个问题上一定要非常清楚（哪怕有一点含糊都要尽量避免）。在有很近亲密性的元素之间建立关系。</li>
+<li>不同属一组的元素之间不要建立关系！如果元素彼此无关，要把它们分开。</li>
+</ul>
+</li>
+</ul>
+<h2 id="对齐（Contrast）"><a href="#对齐（Contrast）" class="headerlink" title="对齐（Contrast）"></a>对齐（Contrast）</h2><p>对齐原则是指：<strong>任何元素都不能在页面上随意安放。每一项都应当与页面上的某个内容存在某种视觉联系</strong>。</p>
+<p>居中对其会创建一种更正式、更稳重的外观。这种外观显得更为中规中矩，但通常也很乏味。大多数看起来精巧的设计都没有采用居中对齐。</p>
+<p>页面上只使用一种文本对齐，所有文本都左对齐，或右对齐，或者全部居中。</p>
+<p>有时，你可能喜欢在同一个页面上同时使用右对齐或者左对齐文本，不过一定要确保让这些文本以某种方式对齐！</p>
+<p><strong>找到一条明确的对齐线，并坚持以它为基准。 </strong></p>
+<p>如果设计中的对齐很明确，那么可以有意识地打破对齐，而且一定要表现出这是有意的，技巧就在于，打破常规对齐时不要怯弱，一定要干脆一些。要么全部采用一种方式，要么全部不采用这种方式。千万不要保守。<strong>在打破规则之前必须清楚规则是什么</strong>。</p>
+<p>对齐的根本目的设计使页面<strong>统一且有条理</strong>。</p>
+<h2 id="重复-Repetition"><a href="#重复-Repetition" class="headerlink" title="重复 (Repetition)"></a>重复 (Repetition)</h2><p>重复原则：设计的某些方面需要在整个作品中重复。读者能看到的任何方面都可以作为重复元素。</p>
+<p>新手要把重复的概念更进一步，把无意的重复变为有意，利用重复将一系列出版物从视觉上系为一体。</p>
+<p>重复不知识自然的一致，这是一种统一设计各个部分的有意识的行为。</p>
+<p>设计中视觉原速度额重复可以将作品中的各部分连在一起，从而统一并增强整个作品,否则这些部分知识彼此孤立的单元。重复不仅对只有一页的作品很有用，对于多页文档的设计更显重要（一致性）。</p>
+<p>重复的目的就是统一，并增强视觉效果。</p>
+<p>如何做呢，需要把现有的一致性更向前推进一步。</p>
+<p>要避免太多地重复一个元素，重复太多会让人讨厌。要注意对比的价值。</p>
+<h2 id="对比-Alignment"><a href="#对比-Alignment" class="headerlink" title="对比 (Alignment)"></a>对比 (Alignment)</h2><p>要想实现有效的对比，对比就必须强烈，千万不要畏畏缩缩。</p>
+<p><strong>如果两个项不完全相同，就应当使之不同，而且应当是截然不同。</strong></p>
+<p>对比的根本目的一是增强页面的效果，另一个有助于信息的组织。不要犹豫，如果你想形成对比，就加大力度。不要将一种粗线与一种更粗的线进行对比。不要讲棕色文本与黑色标题建立对比。要避免使用两种或多种类似的字体。如果各个项不完全一样，<strong>干脆让它截然相反！</strong></p>
+<h2 id="复习"><a href="#复习" class="headerlink" title="复习"></a>复习</h2><p>有关设计（同时也是有关生活）的一个更一般的指导原则是<strong>不要畏畏缩缩</strong>。</p>
+<ul>
+<li>不要害怕在设计（或生活）留有空白，这能让你的眼睛（以及心灵）稍作休息。</li>
+<li>不要害怕设计是不对称的，使用非居中的格式，不居中往往能使效果更强烈。尽管不建议使用居中，不过有意这么做也无不可。</li>
+<li>不要害怕把单词设置得非常大或者非常小，不用担心说话声太大或者太小，在合适的场合这些都是可以的。</li>
+<li>只要最后的结果能支持或者强调你的设计或观点，不要害怕让图片太大或者太小。</li>
+</ul>
+<p><strong>提高视觉敏感度</strong></p>
+<h2 id="颜色运用"><a href="#颜色运用" class="headerlink" title="颜色运用"></a>颜色运用</h2><h2 id="更多提示和技巧"><a href="#更多提示和技巧" class="headerlink" title="更多提示和技巧"></a>更多提示和技巧</h2><h1 id="第二部分-字体设计"><a href="#第二部分-字体设计" class="headerlink" title="第二部分 字体设计"></a>第二部分 字体设计</h1><h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><h2 id="字体类别"><a href="#字体类别" class="headerlink" title="字体类别"></a>字体类别</h2><h2 id="字体对比"><a href="#字体对比" class="headerlink" title="字体对比"></a>字体对比</h2><h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1>
+    
+  </div>
+</article>
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/blog/"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'PaddingMe';
+    
+    var disqus_url = 'http://yoursite.com/blog/2015/08/02/《写给大家看的设计书》读书笔记/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//PaddingMe.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235687', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

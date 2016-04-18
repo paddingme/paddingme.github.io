@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-home">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>JavaScript高级程序设计学习笔记(1) | Hexo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="javascript," />
+  
+
+  <meta name="description" content="JavaScript 简介JavaScript 的兴起，主要目的是处理以前由服务器端语言负责的一些输入验证操作，如今，JavaScript 已不再局限于简单的数据验证，而是具备了与浏览器窗口及其内容等几乎所有方面交互的能力。今天JavaScript 已经成为一门功能全面的编程语言，能够处理复杂的计算和交互，拥有了 闭包、匿名函数、甚至 元编程等特性。
+一个完整的JavaScript 实现通常有三部">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript高级程序设计学习笔记(1)">
+<meta property="og:url" content="http://yoursite.com/blog/2014/09/02/Professional-Javascript-for-Web-Deveopers-learning-notes-1/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="JavaScript 简介JavaScript 的兴起，主要目的是处理以前由服务器端语言负责的一些输入验证操作，如今，JavaScript 已不再局限于简单的数据验证，而是具备了与浏览器窗口及其内容等几乎所有方面交互的能力。今天JavaScript 已经成为一门功能全面的编程语言，能够处理复杂的计算和交互，拥有了 闭包、匿名函数、甚至 元编程等特性。
+一个完整的JavaScript 实现通常有三部">
+<meta property="og:updated_time" content="2014-10-16T13:07:38.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript高级程序设计学习笔记(1)">
+<meta name="twitter:description" content="JavaScript 简介JavaScript 的兴起，主要目的是处理以前由服务器端语言负责的一些输入验证操作，如今，JavaScript 已不再局限于简单的数据验证，而是具备了与浏览器窗口及其内容等几乎所有方面交互的能力。今天JavaScript 已经成为一门功能全面的编程语言，能够处理复杂的计算和交互，拥有了 闭包、匿名函数、甚至 元编程等特性。
+一个完整的JavaScript 实现通常有三部">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=32204ee7" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-50048801-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">目录</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/blog/"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#JavaScript-简介"><span class="toc-text">JavaScript 简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在HTML-中使用JavaScript"><span class="toc-text">在HTML 中使用JavaScript</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-Professional-Javascript-for-Web-Deveopers-learning-notes-1" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">JavaScript高级程序设计学习笔记(1)</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2014.09.02</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>John Doe</span>
+        </span>
+      
+
+      
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://padding.me/blog/2014/09/02/Professional-Javascript-for-Web-Deveopers-learning-notes-1/#disqus_thread"></a>
+        </span>
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h3 id="JavaScript-简介"><a href="#JavaScript-简介" class="headerlink" title="JavaScript 简介"></a>JavaScript 简介</h3><p>JavaScript 的兴起，主要目的是处理以前由服务器端语言负责的一些输入验证操作，如今，JavaScript 已不再局限于简单的数据验证，而是具备了与浏览器窗口及其内容等几乎所有方面交互的能力。今天JavaScript 已经成为一门功能全面的编程语言，能够处理复杂的计算和交互，拥有了 <strong>闭包</strong>、<strong>匿名函数</strong>、甚至 <strong>元编程</strong>等特性。</p>
+<p>一个完整的JavaScript 实现通常有三部分组成：</p>
+<ul>
+<li>核心(ECMAScript)，由ECMA-262 定义，提供核心语言功能；</li>
+<li>文档浏览器模型(DOM)，提供访问和操作网页内容的方法和接口；</li>
+<li>浏览器对象模型(BOM)，提供与浏览器交互的方法和接口。<br>我们常见的Web 浏览器只是ECMAScript实现可能的 <em>宿主环境</em>之一。而Web 浏览器对DOM的支持，对于IE来说，IE5.5 支持DOM1 级。在随后的IE6、IE7中没有引入新的DOM 功能，知道IE8 才对以前DOM实现中的bug 进行修复。</li>
+</ul>
+<h3 id="在HTML-中使用JavaScript"><a href="#在HTML-中使用JavaScript" class="headerlink" title="在HTML 中使用JavaScript"></a>在HTML 中使用JavaScript</h3><p>HTML4.01为<code>&lt;script&gt;</code>定义了6个属性(废弃的这里不再给出)：</p>
+<ul>
+<li>async: 可选，表示应该立即下载脚本，但不应妨碍页面中得去他操作；</li>
+<li>defer: 可选，表示脚本可以延迟到文档完全被解析和显示之后再执行，只对外部脚本有效；</li>
+<li>src: 可选，外部脚本文件；</li>
+<li>type: 可选，表示编写代码使用的脚本语言的内容类型（MIME），通常为 text/javascript ,默认也为 text/javascript。</li>
+</ul>
+<p>使用<code>&lt;javascript&gt;</code>元素有两种方式:</p>
+<ul>
+<li>直接在页面嵌入 JavaScript 代码；</li>
+<li>包含外部 JavaScript 文件。</li>
+</ul>
+<p>包含在<code>&lt;script&gt;</code>元素内部的JavaScript 代码将从上至下依次解释。在解释器 <code>&lt;script&gt;</code> 元素内部的所有的代码求值完毕以前，页面中的其余内容将不会被浏览器加载或显示。</p>
+<p>在使用<code>&lt;script&gt;</code>嵌入 Javascript 代码时，记住不要再代码的任何地方出现 <code>&quot;&lt;/script&gt;&quot;</code>字符串，浏览器会认为这是结束的<code>&lt;/script&gt;</code>标签。</p>
+<p>无论如何包含代码，只要不存在<code>defer</code>或者<code>async</code>属性，浏览器都会按照<code>&lt;script&gt;</code>元素所在页面中出现的先后顺序对它们依次进行解析。</p>
+<p><code>defer</code>属性只适用于外部脚本文件，现实中，延迟脚本并不一定会按照顺序进行(第一个延迟脚本先于第二个延迟脚本执行)，也不一定会在 DOMContentLoaded 事件触发前执行，因为最好只包含一个延迟脚本。</p>
+<p>异步脚本同样只适用于外部脚本文件，并告诉浏览器立即下载文件，异步脚本并不保证按照它们的先后顺序执行。 异步脚本一定会在页面的load 事件前执行，但可能会在 DOMContentLoaded 事件触发之前或之后执行。</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;zh-cn&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;script type=&quot;text/javascript&quot; defer=&quot;defer&quot; src=&quot;example.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/javascript&quot; async src=&quot;example.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;noscript&gt;
+     &lt;p&gt;本页面需要浏览器支持 JavaScript!&lt;/p&gt;
+    &lt;/noscript&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>适用外部脚本文件通常会有如下优点：</p>
+<ul>
+<li>易于维护</li>
+<li>可缓存</li>
+<li>适应未来(不需要hack)</li>
+</ul>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/blog/"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'PaddingMe';
+    
+    var disqus_url = 'http://yoursite.com/blog/2014/09/02/Professional-Javascript-for-Web-Deveopers-learning-notes-1/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//PaddingMe.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235687', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

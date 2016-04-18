@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-home">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>JavaScript 中 call、apply、bind、caller、callee 详解 | Hexo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="JavaScript," />
+  
+
+  <meta name="description" content="call() 方法 和 apply() 方法我们可以将 call() 和 apply() 看作是某个对象的方法，通过调用方法的形式来间接调用函数。call() 和 apply() 的第一个实参是要调用函数的母对象，它是调用上下文，在函数体内通过 this 来获得对它的引用。在 ECMAScript 5 严格模式中， call() 和 apply() 的第一个实参都会变为 this 的值，哪怕传入的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript 中 call、apply、bind、caller、callee 详解">
+<meta property="og:url" content="http://yoursite.com/blog/2015/03/15/call-apply-bind-caller-callee-in-javascript/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="call() 方法 和 apply() 方法我们可以将 call() 和 apply() 看作是某个对象的方法，通过调用方法的形式来间接调用函数。call() 和 apply() 的第一个实参是要调用函数的母对象，它是调用上下文，在函数体内通过 this 来获得对它的引用。在 ECMAScript 5 严格模式中， call() 和 apply() 的第一个实参都会变为 this 的值，哪怕传入的">
+<meta property="og:updated_time" content="2015-07-08T06:52:18.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript 中 call、apply、bind、caller、callee 详解">
+<meta name="twitter:description" content="call() 方法 和 apply() 方法我们可以将 call() 和 apply() 看作是某个对象的方法，通过调用方法的形式来间接调用函数。call() 和 apply() 的第一个实参是要调用函数的母对象，它是调用上下文，在函数体内通过 this 来获得对它的引用。在 ECMAScript 5 严格模式中， call() 和 apply() 的第一个实参都会变为 this 的值，哪怕传入的">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=32204ee7" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-50048801-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">目录</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/blog/"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#call-方法-和-apply-方法"><span class="toc-text">call() 方法 和 apply() 方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bind-方法"><span class="toc-text">bind() 方法</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-call-apply-bind-caller-callee-in-javascript" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">JavaScript 中 call、apply、bind、caller、callee 详解</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2015.03.15</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>John Doe</span>
+        </span>
+      
+
+      
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://padding.me/blog/2015/03/15/call-apply-bind-caller-callee-in-javascript/#disqus_thread"></a>
+        </span>
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h2 id="call-方法-和-apply-方法"><a href="#call-方法-和-apply-方法" class="headerlink" title="call() 方法 和 apply() 方法"></a>call() 方法 和 apply() 方法</h2><p>我们可以将 call() 和 apply() 看作是某个对象的方法，通过调用方法的形式来间接调用函数。<br>call() 和 apply() 的第一个实参是要调用函数的母对象，它是调用上下文，在函数体内通过 this 来获得对它的引用。在 ECMAScript 5 严格模式中， call() 和 apply() 的第一个实参都会变为 this 的值，哪怕<br>传入的实参是原始值甚至是 null 或 undefined 。在 ECMAScript 3 和非严格模式中，传入的 null 和 underfined 都会被全局对象代替。而其他原始值则会被相应的包装对象（wrapper object）所代替。</p>
+<p>对于 call() 来说，第一个调用上下文实参之后的所有实参就是要传入待调用函数的值。<br>apply() 的实参都放入一个数组中。注意，传入 apply() 的参数数组可以是类数组对象也可以是真实数组。实际上，可以将当前函数的 arguments 数组直接传入（另一个函数的）apply() 来调用另一个函数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">trace</span>(<span class="params">o,m</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> original = o[m];</span><br><span class="line">    o[m] = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">new</span> <span class="built_in">Date</span>(),<span class="string">"Entering:"</span>,m);</span><br><span class="line">        <span class="keyword">var</span> result = original.apply(<span class="keyword">this</span>,<span class="built_in">arguments</span>);</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">new</span> <span class="built_in">Date</span>(),<span class="string">"Exitng:"</span>,m);</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="bind-方法"><a href="#bind-方法" class="headerlink" title="bind() 方法"></a>bind() 方法</h2><p>bind() 为 ECMAScript 5 新增方法。此方法主要作用为将函数绑定至某个对象。当在函数 f() 上调用 bind() 方法并传入一个对象 o 作为参数，此方法将返回一个新的函数。（以函数调用的方式）调用新的函数将会把原始的函数 f() 当作 o 的方法来调用。传入新函数的任何实参都将传入原始函数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">y</span>) </span>&#123; <span class="keyword">return</span>  <span class="keyword">this</span>.x+y;&#125; <span class="comment">//这个是待绑定的函数</span></span><br><span class="line"><span class="keyword">var</span> o = &#123; x：<span class="number">1</span>&#125;; <span class="comment">//将要绑定的对象</span></span><br><span class="line"><span class="keyword">var</span> g = f.bind(o); <span class="comment">//通过调用 g(x) 来调用 o.f(x)</span></span><br><span class="line">g(<span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 返回一个函数，通过调用它来调用 o 中的方法 f(),传递它所有的实参</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">bind</span>(<span class="params">f,o</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(b.bind) <span class="keyword">return</span> f.bind(o); <span class="comment">// 如果 bind() 方法参在</span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> f.apply(o,<span class="built_in">arguments</span>);</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>ECMAScript 5 的 bind() 不仅仅是将函数绑定一个对象，而且除了第一个实参之外，传入 bind() 的实参也会绑定至 this，即 柯里化（currying）。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sum = <span class="function"><span class="keyword">function</span>(<span class="params">x,y</span>) </span>&#123;<span class="keyword">return</span> x+y;&#125;</span><br><span class="line"><span class="keyword">var</span> succ = sum.bind(<span class="literal">null</span>,<span class="number">1</span>);</span><br><span class="line">succ(<span class="number">2</span>);<span class="comment">//3</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">y,z</span>) </span>&#123;<span class="keyword">return</span> <span class="keyword">this</span>.x+y+z&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> g = f.bind(&#123;x:<span class="number">1</span>&#125;,<span class="number">2</span>);</span><br><span class="line">g(<span class="number">3</span>);<span class="comment">//6</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ECMAScirpt 3 模拟 bind()</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(!<span class="built_in">Function</span>.prototype.bind) &#123;</span><br><span class="line">    <span class="built_in">Function</span>.prototype.bind = <span class="function"><span class="keyword">function</span>(<span class="params">o <span class="comment">/*,args*/</span></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> self= <span class="keyword">this</span>, boundArgs = <span class="built_in">arguments</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> args = [], i;</span><br><span class="line">            <span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;boundArgs.length;i++) args.push(boundArgs[i]);</span><br><span class="line">            <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="built_in">arguments</span>.length;i++) args.push(<span class="built_in">arguments</span>[i]);</span><br><span class="line">            <span class="keyword">return</span> self.apply(o,args);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>ECMAScirpt 5 中的 bind() 方法有一些特性是上述无法模拟的。</p>
+<ul>
+<li>真正的 bind() 方法返回一个函数对象，这个函数对象的 length 属性是绑定函数的形参个数减去实参的个数。</li>
+<li><p>bind() 可顺带用作构造函数。将忽略传入 bind() 中的 this，原始函数就会以构造函数的形式调用，其实参也将绑定。<strong>在运行时将 bind() 所返回的函数用作构造函数时，所传入实参会原封不动的传入原始函数。</strong></p>
+<p>由于 bind() 方法所返回的函数并不包含 prototype 属性（普通函数的 prototype 属性是不能被删除的），并且将这些绑定的函数用作构造函数时所创建的对象从原始的未绑定的构造函数中继承 prototype。</p>
+</li>
+</ul>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/blog/"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'PaddingMe';
+    
+    var disqus_url = 'http://yoursite.com/blog/2015/03/15/call-apply-bind-caller-callee-in-javascript/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//PaddingMe.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235687', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

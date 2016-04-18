@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-home">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>【JavaScript】【学习心得】学习JavaScript 第五天 | Hexo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="Mu-Help-Plan," />
+  
+
+  <meta name="description" content="文章取自我的 Github  repos: Learning-JavaScript， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-JavaScript/issues/9
+经过昨天的学习，我们掌握了 JavaScript 的一些最佳实践，还记得之前我们所作的那个简单的 JavaScript 图片库吗，DEMO 地址请戳这里,什么？">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【JavaScript】【学习心得】学习JavaScript 第五天">
+<meta property="og:url" content="http://yoursite.com/blog/2014/11/21/【JavaScript】【学习心得】学习JavaScript 第五天/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="文章取自我的 Github  repos: Learning-JavaScript， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-JavaScript/issues/9
+经过昨天的学习，我们掌握了 JavaScript 的一些最佳实践，还记得之前我们所作的那个简单的 JavaScript 图片库吗，DEMO 地址请戳这里,什么？">
+<meta property="og:updated_time" content="2016-04-10T16:12:43.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【JavaScript】【学习心得】学习JavaScript 第五天">
+<meta name="twitter:description" content="文章取自我的 Github  repos: Learning-JavaScript， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-JavaScript/issues/9
+经过昨天的学习，我们掌握了 JavaScript 的一些最佳实践，还记得之前我们所作的那个简单的 JavaScript 图片库吗，DEMO 地址请戳这里,什么？">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=32204ee7" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-50048801-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">目录</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/blog/"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#它支持平稳退化吗？"><span class="toc-text">它支持平稳退化吗？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#它的-JavaScript-与-HTML-标记是否分离？"><span class="toc-text">它的 JavaScript 与 HTML 标记是否分离？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#共享-onload-事件"><span class="toc-text">共享 onload 事件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#不要做太多的假设"><span class="toc-text">不要做太多的假设</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#优化"><span class="toc-text">优化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#键盘访问"><span class="toc-text">键盘访问</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-【JavaScript】【学习心得】学习JavaScript 第五天" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">【JavaScript】【学习心得】学习JavaScript 第五天</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2014.11.21</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>John Doe</span>
+        </span>
+      
+
+      
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://padding.me/blog/2014/11/21/【JavaScript】【学习心得】学习JavaScript 第五天/#disqus_thread"></a>
+        </span>
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p> 文章取自我的 Github  repos: <a href="https://github.com/paddingme/Learning-JavaScript" target="_blank" rel="external">Learning-JavaScript</a>， 作者：<a href="http://padding.me/about.html" target="_blank" rel="external">@paddingme</a><br>原文链接：<a href="https://github.com/paddingme/Learning-JavaScript/issues/9" target="_blank" rel="external">https://github.com/paddingme/Learning-JavaScript/issues/9</a></p>
+<p>经过昨天的学习，我们掌握了 JavaScript 的一些最佳实践，还记得之前我们所作的<br>那个简单的 JavaScript 图片库吗，DEMO 地址请戳<a href="http://codepen.io/paddingme/pen/qCuDo" target="_blank" rel="external">这里</a>,什么？ DEMO 都懒的戳，好吧我给贴出来吧。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"images/codercat.jpg"</span>  <span class="attr">title</span>=<span class="string">"This is codercat.jpg."</span> <span class="attr">onclick</span>=<span class="string">"showPic(this);return false;"</span>&gt;</span>codercat<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"images/inspectocat.jpg"</span> <span class="attr">title</span>=<span class="string">"This is inspectocat.jpg."</span> <span class="attr">onclick</span>=<span class="string">"showPic(this);return false;"</span>&gt;</span>inspectocat<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"images/maxtocat.gif"</span> <span class="attr">title</span>=<span class="string">"This is maxtocat.gif."</span> <span class="attr">onclick</span>=<span class="string">"showPic(this);return false;"</span>&gt;</span>maxtocat<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"images/yaktocat.png"</span> <span class="attr">title</span>=<span class="string">"This is yaktocat.png."</span> <span class="attr">onclick</span>=<span class="string">"showPic(this);return false;"</span>&gt;</span>yaktocat<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"images/octobiwan.jpg"</span> <span class="attr">title</span>=<span class="string">"This isoctobiwan.jpg."</span> <span class="attr">onclick</span>=<span class="string">"showPic(this);return false;"</span>&gt;</span>octobiwan<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">id</span>=<span class="string">"placeholder"</span>  <span class="attr">src</span>=<span class="string">"images/codercat.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"decription"</span>&gt;</span>请选择一张图片<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">showPic</span>(<span class="params">whichpic</span>)</span>&#123;</span><br><span class="line">     <span class="keyword">var</span> source = whichpic.getAttribute(<span class="string">'href'</span>);</span><br><span class="line">     <span class="keyword">var</span> placeholder = <span class="built_in">document</span>.getElementById(<span class="string">'placeholder'</span>);</span><br><span class="line">     placeholder.setAttribute(<span class="string">'src'</span>,source);</span><br><span class="line">     <span class="keyword">var</span> text = whichpic.getAttribute(<span class="string">'title'</span>);</span><br><span class="line">     <span class="keyword">var</span> decription = <span class="built_in">document</span>.getElementById(<span class="string">'decription'</span>);</span><br><span class="line">     decription.firstChild.nodeValue = text;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<p>下面我们来根据昨天学的最佳实践考虑以下问题：</p>
+<h2 id="它支持平稳退化吗？"><a href="#它支持平稳退化吗？" class="headerlink" title="它支持平稳退化吗？"></a>它支持平稳退化吗？</h2><p>如果用户浏览器不支持 JavaScript 会怎么样？</p>
+<h2 id="它的-JavaScript-与-HTML-标记是否分离？"><a href="#它的-JavaScript-与-HTML-标记是否分离？" class="headerlink" title="它的 JavaScript 与 HTML 标记是否分离？"></a>它的 JavaScript 与 HTML 标记是否分离？</h2><p><strong>如果你想用 JavaScript 给某个网页添加一些行为，就不应该让  JavaScript 代码对这个网页的结构有任何依赖。</strong></p>
+<p>不符合， <code>a</code> 标签嵌入了大量的 click 事件, HTML 应该改写为：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul id="image-gallery"&gt;</span><br><span class="line">    &lt;li&gt;</span><br><span class="line">        &lt;a href="images/codercat.jpg"  title="This is codercat.jpg."&gt;codercat&lt;/a&gt;</span><br><span class="line">    &lt;/li&gt;</span><br><span class="line">    &lt;li&gt;</span><br><span class="line">        &lt;a href="images/inspectocat.jpg" title="This is inspectocat.jpg."&gt;inspectocat&lt;/a&gt;</span><br><span class="line">    &lt;/li&gt;</span><br><span class="line">    &lt;li&gt;</span><br><span class="line">        &lt;a href="images/maxtocat.gif" title="This is maxtocat.gif."maxtocat&lt;/a&gt;</span><br><span class="line">    &lt;/li&gt;</span><br><span class="line">    &lt;li&gt;</span><br><span class="line">        &lt;a href="images/yaktocat.png" title="This is yaktocat.png."&gt;yaktocat&lt;/a&gt;</span><br><span class="line">    &lt;/li&gt;</span><br><span class="line">    &lt;li&gt;</span><br><span class="line">        &lt;a href="images/octobiwan.jpg" title="This isoctobiwan.jpg."&gt;octobiwan&lt;/a&gt;</span><br><span class="line">    &lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br><span class="line"></span><br><span class="line">&lt;img id="placeholder"  src="images/codercat.jpg" alt=""&gt;</span><br><span class="line"></span><br><span class="line">&lt;p id="decription"&gt;请选择一张图片&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<p>JavaScript 则改写为：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">prepareGallery</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!<span class="built_in">document</span>.getElementsByTagName) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">if</span>(!<span class="built_in">document</span>.getElementById) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">if</span>(!<span class="built_in">document</span>.getElementsById(<span class="string">"image-gallery"</span>)) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">var</span> gallery = <span class="built_in">document</span>.getElementsById(<span class="string">"image-gallery"</span>);</span><br><span class="line">    <span class="keyword">var</span> links = gallery.getElementsByTagName(<span class="string">"a"</span>);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i &lt; links.length;i++) &#123;</span><br><span class="line">        links[i].onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            showPic(<span class="keyword">this</span>);</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="共享-onload-事件"><a href="#共享-onload-事件" class="headerlink" title="共享 onload 事件"></a>共享 onload 事件</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onload = firstFunction;</span><br><span class="line"><span class="built_in">window</span>.onload = secondFunction;</span><br></pre></td></tr></table></figure>
+<p>这里只会执行 <code>secondFunction</code>。如果想要在网页加载完毕同时执行这两个函数可以写：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    firstFunction();</span><br><span class="line">    secondFunction();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>还有一种 方法 <code>addLoadEvent</code>:</p>
+<ul>
+<li>把现有的 window.onload 事件处理函数的值存入变量 oldonload；</li>
+<li>若在这个处理函数上还没有绑定任何函数，就像平时那样把新函数添加给它；</li>
+<li>若在这个处理函数上已经绑定了一些函数，就把新函数追加到现有指令的末尾。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addLoadEvent</span>(<span class="params">func</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> oldonload = <span class="built_in">window</span>.onload;</span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">typeof</span> <span class="built_in">window</span>.onload != <span class="string">'function'</span>) &#123;</span><br><span class="line">        <span class="built_in">window</span>.onload = func;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            oldonload();</span><br><span class="line">            func();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">addLoadEvent(firstFunction);</span><br><span class="line">addLoadEvent(secondFunction);</span><br></pre></td></tr></table></figure>
+<p>对于图片库，咱们可以使用 <code>addLoadEvent(prepareGallery)</code>。</p>
+<h2 id="不要做太多的假设"><a href="#不要做太多的假设" class="headerlink" title="不要做太多的假设"></a>不要做太多的假设</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">prepareGallery</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!<span class="built_in">document</span>.getElementsByTagName) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">if</span>(!<span class="built_in">document</span>.getElementById) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">if</span>(!<span class="built_in">document</span>.getElementById(<span class="string">"image-gallery"</span>)) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">var</span> gallery = <span class="built_in">document</span>.getElementsById(<span class="string">"image-gallery"</span>);</span><br><span class="line">    <span class="keyword">var</span> links = gallery.getElementsByTagName(<span class="string">"a"</span>);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i &lt; links.length;i++) &#123;</span><br><span class="line">        links[i].onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> !showPic(<span class="keyword">this</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">showPic</span>(<span class="params">whichpic</span>) </span>&#123;</span><br><span class="line">     <span class="keyword">if</span>(!<span class="built_in">document</span>.getElementById(<span class="string">'placeholder'</span>)) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">     <span class="keyword">var</span> placeholder = <span class="built_in">document</span>.getElementById(<span class="string">'placeholder'</span>);</span><br><span class="line">     <span class="keyword">var</span> source = whichpic.getAttribute(<span class="string">'href'</span>);</span><br><span class="line">     placeholder.setAttribute(<span class="string">'src'</span>,source);</span><br><span class="line">     <span class="keyword">if</span>(<span class="built_in">document</span>.getElementById(<span class="string">'decription'</span>))&#123;</span><br><span class="line">         <span class="keyword">var</span> text = whichpic.getAttribute(<span class="string">'title'</span>);</span><br><span class="line">         <span class="keyword">var</span> decription = <span class="built_in">document</span>.getElementById(<span class="string">'decription'</span>);</span><br><span class="line">         decription.firstChild.nodeValue = text;</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">showPic</span>(<span class="params">whichpic</span>) </span>&#123;</span><br><span class="line">     <span class="keyword">if</span>(!<span class="built_in">document</span>.getElementById(<span class="string">'placeholder'</span>)) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">     <span class="keyword">var</span> source = whichpic.getAttribute(<span class="string">'href'</span>);</span><br><span class="line">     <span class="keyword">var</span> placeholder = <span class="built_in">document</span>.getElementById(<span class="string">'placeholder'</span>);</span><br><span class="line">     <span class="keyword">if</span>(placeholder.nodeName != <span class="string">"IMG"</span>) <span class="keyword">return</span> <span class="literal">false</span>; <span class="comment">//nodeName 属性总返回大写字母的值</span></span><br><span class="line">     placeholder.setAttribute(<span class="string">'src'</span>,source);</span><br><span class="line">     <span class="keyword">if</span>(<span class="built_in">document</span>.getElementById(<span class="string">'decription'</span>))&#123;</span><br><span class="line">         <span class="keyword">var</span> text = whichpic.getAttribute(<span class="string">'title'</span>) ? whichpic.getAttribute(<span class="string">'title'</span>) : <span class="string">""</span>;</span><br><span class="line">         <span class="keyword">var</span> decription = <span class="built_in">document</span>.getElementById(<span class="string">'decription'</span>);</span><br><span class="line">         <span class="keyword">if</span>(decription.firstChild.nodeValue == <span class="number">3</span>) &#123;</span><br><span class="line">          decription.firstChild.nodeValue= text;</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="键盘访问"><a href="#键盘访问" class="headerlink" title="键盘访问"></a>键盘访问</h2><p><code>onkeypress</code> 事件会在键盘按键被按下并释放一个键时发生。最好不要使用 <code>onkeypress</code> 处理函数，因为在几乎所有的浏览器里，用 tab 键移动到某个链接然后按下回车键的动作也会触发 <code>onclick</code>事件。</p>
+<p>综上，咱们的改进版的 JavaScript 图片库就出来了, 在线 DEMO 地址：<a href="http://codepen.io/paddingme/pen/MYYzWZ" target="_blank" rel="external">http://codepen.io/paddingme/pen/MYYzWZ</a></p>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/blog/"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'PaddingMe';
+    
+    var disqus_url = 'http://yoursite.com/blog/2014/11/21/【JavaScript】【学习心得】学习JavaScript 第五天/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//PaddingMe.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235687', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

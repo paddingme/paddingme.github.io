@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-home">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>SVN工作流 | Hexo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="share," />
+  
+
+  <meta name="description" content="文章取自我的 Github  repos: fex-dream， 作者：@paddingme原文链接：https://github.com/fex-dream/fex-dream/issues/87
+为了内网文件和外网文件同步，
+首先本地pull（覆盖） 下 svn 上 最新信息，然后 把外网文件（如果有svn信息 全部删除）覆盖内网文件。
+然后再push 到svn 上。
+这样内网和外网就同步了">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SVN工作流">
+<meta property="og:url" content="http://yoursite.com/blog/2015/01/23/SVN工作流/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="文章取自我的 Github  repos: fex-dream， 作者：@paddingme原文链接：https://github.com/fex-dream/fex-dream/issues/87
+为了内网文件和外网文件同步，
+首先本地pull（覆盖） 下 svn 上 最新信息，然后 把外网文件（如果有svn信息 全部删除）覆盖内网文件。
+然后再push 到svn 上。
+这样内网和外网就同步了">
+<meta property="og:updated_time" content="2016-04-12T15:36:52.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SVN工作流">
+<meta name="twitter:description" content="文章取自我的 Github  repos: fex-dream， 作者：@paddingme原文链接：https://github.com/fex-dream/fex-dream/issues/87
+为了内网文件和外网文件同步，
+首先本地pull（覆盖） 下 svn 上 最新信息，然后 把外网文件（如果有svn信息 全部删除）覆盖内网文件。
+然后再push 到svn 上。
+这样内网和外网就同步了">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=32204ee7" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-50048801-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">目录</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/blog/"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#为什么会出现本地和-SVN-不一样？"><span class="toc-text">为什么会出现本地和 SVN 不一样？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#为什么内网和外网又不一样？"><span class="toc-text">为什么内网和外网又不一样？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#为什么外网会有-svn-信息？"><span class="toc-text">为什么外网会有 svn 信息？</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-SVN工作流" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">SVN工作流</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2015.01.23</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>John Doe</span>
+        </span>
+      
+
+      
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://padding.me/blog/2015/01/23/SVN工作流/#disqus_thread"></a>
+        </span>
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p> 文章取自我的 Github  repos: <a href="https://github.com/paddingme/fex-dream" target="_blank" rel="external">fex-dream</a>， 作者：<a href="http://padding.me/about.html" target="_blank" rel="external">@paddingme</a><br>原文链接：<a href="https://github.com/fex-dream/fex-dream/issues/87" target="_blank" rel="external">https://github.com/fex-dream/fex-dream/issues/87</a></p>
+<p>为了内网文件和外网文件同步，</p>
+<p>首先本地pull（覆盖） 下 svn 上 最新信息，然后 把外网文件（如果有svn信息 全部删除）覆盖内网文件。</p>
+<p>然后再push 到svn 上。</p>
+<p>这样内网和外网就同步了。</p>
+<h2 id="为什么会出现本地和-SVN-不一样？"><a href="#为什么会出现本地和-SVN-不一样？" class="headerlink" title="为什么会出现本地和 SVN 不一样？"></a>为什么会出现本地和 SVN 不一样？</h2><ol>
+<li><p>开发懒，无意识，通常一个网站都是一个人来维护，所以不会去push 代码；</p>
+</li>
+<li><p>由 1 开发也很少会 pull 别人的代码，除非要维护被人的代码。</p>
+</li>
+</ol>
+<h2 id="为什么内网和外网又不一样？"><a href="#为什么内网和外网又不一样？" class="headerlink" title="为什么内网和外网又不一样？"></a>为什么内网和外网又不一样？</h2><ol>
+<li>遇到着急的改动或者 bug, 开发直接就在外网后台改了。之后又忘记在本地更新；</li>
+<li>开发懒，因为外网改进或者debug 流程是： 开发-&gt;提测-&gt;内网部署-&gt;测试验证-&gt;出库-&gt;实施打补丁。<br>这之间不可控的因素太多，例如有新 bug 产生， 例如需要和测试去沟通改了什么 等等。。</li>
+</ol>
+<p>而且在外网直接改，很可能就是灭顶之灾，已经有好几个同事因为在外网直接操作，导致产生bug 或者 网站瘫痪，但是还是会有同事在外网改。</p>
+<h2 id="为什么外网会有-svn-信息？"><a href="#为什么外网会有-svn-信息？" class="headerlink" title="为什么外网会有 svn 信息？"></a>为什么外网会有 svn 信息？</h2><p>开发人员 出补丁大意，将 svn 信息也出了，测试人员 出库也直接出了。</p>
+<p>综上 制度和流程问题。</p>
+<p>应该权衡下找到一个相对折中的方法，在每一种情况下 应该怎么做。建立制度，强制执行。 </p>
+<p><strong>不能靠人自觉，应该靠工具来强制。</strong></p>
+<p>最后 自动化工具， fis, bower, gulp , 还活在古代的感觉….</p>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/blog/"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'PaddingMe';
+    
+    var disqus_url = 'http://yoursite.com/blog/2015/01/23/SVN工作流/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//PaddingMe.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235687', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

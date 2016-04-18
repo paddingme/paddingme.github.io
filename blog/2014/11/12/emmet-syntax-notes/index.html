@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-home">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>Emmet 语法笔记 | Hexo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="tools,emmet," />
+  
+
+  <meta name="description" content="Emmet 是高效、快速编写 HTML 和 CSS 代码的一种插件，如果还不了解，请戳 Emmet — the essential toolkit for web-developers, 再根据你使用的编辑器（sublime 或 vim 等）下载对应的 Emmet 插件，让你的代码快步如飞吧。下面我记录下常用的 Emmet 语法和快捷键。代码区里的均指在编辑器里输入的字符，然后按 “Tab” 键便">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Emmet 语法笔记">
+<meta property="og:url" content="http://yoursite.com/blog/2014/11/12/emmet-syntax-notes/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Emmet 是高效、快速编写 HTML 和 CSS 代码的一种插件，如果还不了解，请戳 Emmet — the essential toolkit for web-developers, 再根据你使用的编辑器（sublime 或 vim 等）下载对应的 Emmet 插件，让你的代码快步如飞吧。下面我记录下常用的 Emmet 语法和快捷键。代码区里的均指在编辑器里输入的字符，然后按 “Tab” 键便">
+<meta property="og:image" content="http://paddingme.qiniudn.com/emmet.gif">
+<meta property="og:updated_time" content="2015-07-08T06:52:18.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Emmet 语法笔记">
+<meta name="twitter:description" content="Emmet 是高效、快速编写 HTML 和 CSS 代码的一种插件，如果还不了解，请戳 Emmet — the essential toolkit for web-developers, 再根据你使用的编辑器（sublime 或 vim 等）下载对应的 Emmet 插件，让你的代码快步如飞吧。下面我记录下常用的 Emmet 语法和快捷键。代码区里的均指在编辑器里输入的字符，然后按 “Tab” 键便">
+<meta name="twitter:image" content="http://paddingme.qiniudn.com/emmet.gif">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=32204ee7" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-50048801-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">目录</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/blog/"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML-编写"><span class="toc-text">HTML 编写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS-编写"><span class="toc-text">CSS 编写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#定制"><span class="toc-text">定制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#快捷键"><span class="toc-text">快捷键</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-emmet-syntax-notes" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">Emmet 语法笔记</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2014.11.12</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>John Doe</span>
+        </span>
+      
+
+      
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://padding.me/blog/2014/11/12/emmet-syntax-notes/#disqus_thread"></a>
+        </span>
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>Emmet 是高效、快速编写 HTML 和 CSS 代码的一种插件，如果还不了解，请戳 <a href="http://docs.emmet.io/" target="_blank" rel="external">Emmet — the essential toolkit for web-developers</a>, 再根据你使用的编辑器（sublime 或 vim 等）下载对应的 Emmet 插件，让你的代码快步如飞吧。下面我记录下常用的 Emmet 语法和快捷键。代码区里的均指在编辑器里输入的字符，然后按 “Tab” 键便会生成代码。<br>例如 输入<code>!</code> 然后按 “tab” 会得到如下所示的HTML文档初始机构，再也不用一个字母一个字母敲了，是不是很简单呢？</p>
+<p><img src="http://paddingme.qiniudn.com/emmet.gif" title="图片来自http://www.smashingmagazine.com/2013/03/26/goodbye-zen-coding-hello-emmet/"></p>
+<h2 id="HTML-编写"><a href="#HTML-编写" class="headerlink" title="HTML 编写"></a>HTML 编写</h2><ol>
+<li><p>生成HTML文档初始机构</p>
+<ul>
+<li><p><code>html:5</code> 或者 <code>!</code> 生成 HTML5 结构</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;zh-CN&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>html:xt</code> 生成 HTML4 过渡型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</span><br><span class="line">&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;zh-cmn-Hans&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>html:4s</code> 生成 HTML4 严格型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot; &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;</span><br><span class="line">&lt;html lang=&quot;zh-cmn-Hans&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>任意一个 html 标签输入都会生成完整的闭合标签。<br>例如输入 <code>p</code> 按 <code>tab</code> 则 生成：<code>&lt;p&gt;&lt;/p&gt;</code></p>
+</li>
+<li><p>生成带有 id 、class 的 HTML 标签: <code>#</code>为 id，<code>.</code> 为 class。<br>例如输入 <code>div#header.section</code> 则生成 <code>&lt;div id=&quot;header&quot; class=&quot;section&quot;&gt;&lt;/div&gt;</code></p>
+</li>
+<li><p>生成后代：<code>&gt;</code><br>例如输入<code>p&gt;span</code> 则生成 <code>&lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;</code></p>
+</li>
+<li><p>生成兄弟标签：<code>+</code><br>例如输入<code>p+div</code> 则生成 <code>&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;/div&gt;</code></p>
+</li>
+<li><p>生成上级标签： <code>^</code><br>例如输入<code>ul&gt;li&gt;a^div</code> 则生成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">  &lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">  &lt;div&gt;&lt;/div&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+<p>也可以使用多个 <code>^</code>,<br>例如输入<code>ul&gt;li&gt;a^^div</code> 则生成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br><span class="line">&lt;div&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重复生成多个标签 <code>*</code><br>例如输入<code>ul&gt;li*5</code> 则生成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;li&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>生成分组的标签: <code>()</code><br>例如输入<code>ul&gt;(li&gt;a)*5</code> 则生成</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+<p>  注意和<code>ul&gt;li&gt;a*5</code> 生成是不一样的</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;li&gt;</span><br><span class="line">        &lt;a href=&quot;&quot;&gt;&lt;/a&gt;</span><br><span class="line">        &lt;a href=&quot;&quot;&gt;&lt;/a&gt;</span><br><span class="line">        &lt;a href=&quot;&quot;&gt;&lt;/a&gt;</span><br><span class="line">        &lt;a href=&quot;&quot;&gt;&lt;/a&gt;</span><br><span class="line">        &lt;a href=&quot;&quot;&gt;&lt;/a&gt;</span><br><span class="line">    &lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>生成自定义属性：<code>[]</code><br>例如输入<code>img[https://octodex.github.com/images/codercat.jpg][alt=octcat]</code> 则生成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;https://octodex.github.com/images/codercat.jpg&quot; alt=&quot;octcat&quot; /&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>生成递增的属性标签等: <code>$</code><br>例如输入<code>ul&gt;li.item$*5</code> 则生成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;li class=&quot;item1&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item2&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item3&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item4&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item5&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>生成多位递增的呢：<code>$$$</code><br>例如输入<code>ul&gt;li.item$$$*5</code> 则生成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;li class=&quot;item001&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item002&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item003&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item004&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item005&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+<p>想生成几位输入几个<code>$</code></p>
+</li>
+<li><p>要生成递减的呢：<code>@-</code><br>例如输入<code>ul&gt;li.item$@-*5</code> 则生成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;li class=&quot;item5&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item4&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item3&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item2&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item1&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>想要从某个特定的顺序开始呢：<code>@N</code><br>例如输入<code>ul&gt;li.item$@10*5</code> 则生成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;li class=&quot;item10&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item11&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item12&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item13&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item14&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>逆序生成到某个数：<code>@-</code><br>例如输入<code>ul&gt;li.item$@-10*5</code> 则生成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;li class=&quot;item14&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item13&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item12&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item11&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item10&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>生成文本内容：<code>{}</code><br>例如输入<code>p{我是paddingme}</code> 则生成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;我是paddingme&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>缺省元素:</p>
+<ul>
+<li><p>声明一个带class的div 可以不用输入div；<br><code>.header+.footer</code> 则生成:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;header&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;footer&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Emmet 还会根据父标签进行判定<br>例如输入<code>ul&gt;.item*3</code> 则生成：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">   &lt;li class=&quot;item&quot;&gt;&lt;/li&gt;</span><br><span class="line">   &lt;li class=&quot;item&quot;&gt;&lt;/li&gt;</span><br><span class="line">   &lt;li class=&quot;item&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+<p>下面是所有的隐式标签名称：</p>
+<ul>
+<li>li：用于 ul 和 ol 中</li>
+<li>tr：用于 table、tbody、thead 和 tfoot 中</li>
+<li>td：用于 tr 中</li>
+<li>option：用于 select 和 optgroup 中</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="CSS-编写"><a href="#CSS-编写" class="headerlink" title="CSS 编写"></a>CSS 编写</h2><p>首先，Sublime Text3 已经提供了比较强大的 CSS 样式所写方法来提高 CSS 编写效率。例如编写 <code>position: absolute</code>; 这一个属性，我们只需要输入 posa 这四个字母即可。可以在平时书写过程中，留意一下 ST3 提供了哪些属性的缩写方法，这样就可以提高一定的效率了。但是 Emmet 提供了更多的功能，请往下看。</p>
+<ol>
+<li><p>简写属性和属性值<br>比如要定义元素的宽度，只需输入w100，即可生成：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">width: 100px;</span><br></pre></td></tr></table></figure>
+<p> Emmet 的默认设置 w 是 width 的缩写，后面紧跟的数字就是属性值。默认的属性值单位是 px ，你可以在值的后面紧跟字符生成单位，可以是任意字符。例如，<code>w100foo</code> 会生成：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">width:100foo;</span><br></pre></td></tr></table></figure>
+<p> 同样也可以简写属性单位，如果你紧跟属性值后面的字符是<code>p</code>，那么将会生成：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">width:100%;</span><br></pre></td></tr></table></figure>
+<p> 下面是单位别名列表：</p>
+<ul>
+<li>p 表示%</li>
+<li>e 表示 em</li>
+<li><p>x 表示 ex</p>
+<p>像 margin 这样的属性，可能并不是一个属性值，生成多个属性值需要用横杠（-）连接两个属性值，因为 Emmet 的指令中是不允许空格的。例如使用 <code>m10-20</code> 可以生成：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">margin: 10px 20px;</span><br></pre></td></tr></table></figure>
+<p>如果你想生成负值，多加一条横杠即可。例如：<code>m10--20</code> 可以生成：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">margin: 10px -20px;</span><br></pre></td></tr></table></figure>
+<p>需要注意的是，如果你对每个属性都指定了单位，那么不需要使用横杠分割。例如使用  m10e20e 可以生成：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">margin: 10em 20em;</span><br></pre></td></tr></table></figure>
+<p>如果使用了横杠分割，那么属性值就变成负值了。例如使用 <code>m10e-20e</code> 就生成：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">margin: 10em -20em;</span><br></pre></td></tr></table></figure>
+<p>如果你想一次生成多条语句，可以使用 “+” 连接两条语句，例如使用 h10p+m5e  可以生成：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">height: 10%;</span><br><span class="line">margin: 5em;</span><br></pre></td></tr></table></figure>
+<p>颜色值也是可以快速生成的，例如 <code>c#3</code> 生成<code>color: #333</code>;，更复杂一点的，使用  <code>bd5#0s</code> 可以生成 <code>border: 5px #000 solid</code>;。<br>下面是颜色值生成规则：</p>
+</li>
+<li><p>‘# 1’ → #111111</p>
+</li>
+<li>‘#e0’ → #e0e0e0</li>
+<li><p>‘#fc0’ → #ffcc00</p>
+<p>生成 <code>!important</code> 这条语句也当然很简单，只需要一个 “!” 就可以了。</p>
+</li>
+</ul>
+</li>
+<li><p>附加属性<br>使用 <code>@f</code> 即可生成 CSS3 中的 font-face 的代码结构：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@font-face &#123;</span><br><span class="line">    font-family:;</span><br><span class="line">    src:url();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>但是这个结构太简单，不包含一些其他的 font-face 的属性，诸如 background-image、border-radius、font、@font-face、 text-outline、 text-shadow 等属性，我们可以在生成的时候输入 “+” 生成增强的结构，例如我们可以输入 <code>@f+</code>  命令，即可输出选项增强版的 font-face 结构：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@font-face &#123;</span><br><span class="line">    font-family: &apos;FontName&apos;;</span><br><span class="line">    src: url(&apos;FileName.eot&apos;);</span><br><span class="line">    src: url(&apos;FileName.eot?#iefix&apos;) format(&apos;embedded-opentype&apos;),</span><br><span class="line">         url(&apos;FileName.woff&apos;) format(&apos;woff&apos;),</span><br><span class="line">         url(&apos;FileName.ttf&apos;) format(&apos;truetype&apos;),</span><br><span class="line">         url(&apos;FileName.svg#FontName&apos;) format(&apos;svg&apos;);</span><br><span class="line">    font-style: normal;</span><br><span class="line">    font-weight: normal;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>模糊匹配<br>如果有些缩写你拿不准，Emmet 会根据你的输入内容匹配最接近的语法，比如输入 <code>ov:h</code>、<code>ov-h</code>、<code>ovh</code> 和 <code>oh</code>，生成的代码是相同的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">overflow: hidden;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>供应商前缀<br>CSS3 等现在还没有出正式的 W3C 规范，但是很多浏览器已经实现了对应的功能，仅作为测试只用，所以在属性前面加上自己独特的供应商前缀，不同的浏览器只会识别带有自己规定前缀的样式。然而为了实现兼容性，我们不得不编写大量的冗余代码，而且要加上对应的前缀。使用 Emmet 可以快速生成带有前缀的 CSS3 属性。<br>在任意字符前面加上一条横杠（-），即可生成该属性的带前缀代码，例如输入 <code>-foo-</code>css，会生成：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-webkit-foo-css: ;</span><br><span class="line">-moz-foo-css: ;</span><br><span class="line">-ms-foo-css: ;</span><br><span class="line">-o-foo-css: ;</span><br><span class="line">foo-css: ;</span><br></pre></td></tr></table></figure>
+<p>虽然 foo-css 并不是什么属性，但是照样可以生成。此外，你还可以详细的控制具体生成哪几个浏览器前缀或者先后顺序，使用 <code>-wm-trf</code> 即可生成：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-webkit-transform: ;</span><br><span class="line">-moz-transform: ;</span><br><span class="line">transform: ;</span><br></pre></td></tr></table></figure>
+<p>可想而知，w 就是 webkit 前缀的缩写，m 是 moz 前缀缩写，s 是 ms 前缀缩写，o  就是 opera 浏览器前缀的缩写。如果使用 <code>-osmw-abc</code> 即可生成：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-o-abc: ;</span><br><span class="line">-ms-abc: ;</span><br><span class="line">-moz-abc: ;</span><br><span class="line">-webkit-abc: ;</span><br><span class="line">abc: ;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>渐变背景<br>CSS3 中新增加了一条属性 <code>linear-gradient</code> 使用这个属性可以直接制作出渐变的效果。但是这个属性的参数比较复杂，而且需要添加实验性前缀，无疑需要生成大量代码。而 在 Emmet 中使用 <code>lg()</code>指令即可快速生成，例如：使用 <code>lg(left,#fff,50%,#000)</code>可以直接生成：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">background-image: -webkit-gradient(linear, 0 0, 100% 0, color-stop(0.5, #fff),  to(#000));</span><br><span class="line">background-image: -webkit-linear-gradient(left, #fff 50%, #000);</span><br><span class="line">background-image: -moz-linear-gradient(left, #fff 50%, #000);</span><br><span class="line">background-image: -o-linear-gradient(left, #fff 50%, #000);</span><br><span class="line">background-image: linear-gradient(left, #fff 50%, #000);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>附加功能<br>生成Lorem ipsum文本<br>Lorem ipsum 指一篇常用于排版设计领域的拉丁文文章，主要目的是测试文章或文字在不同字型、版型下看起来的效果。通过 Emmet，你只需输入 lorem 或 lipsum 即可生成这些文字。还可以指定文字的个数，比如 <code>lorem10</code>，将生成：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, esse,  provident, nihil laudantium vitae quam natus a earum assumenda ex vel  consectetur fugiat eveniet minima veritatis blanditiis molestiae harum est!</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="定制"><a href="#定制" class="headerlink" title="定制"></a>定制</h2><p>你还可以定制Emmet插件：</p>
+<ul>
+<li>添加新缩写或更新现有缩写，可修改 snippets.json 文件</li>
+<li>更改Emmet过滤器和操作的行为，可修改 preferences.json 文件</li>
+<li>定义如何生成HTML或XML代码，可修改 syntaxProfiles.json 文件<br>如何自定义 Emmet 语法可参考：<a href="http://qianduanblog.com/post/sublime-text-3-custom-emmet-output-bootstrap-widget.html" target="_blank" rel="external">http://qianduanblog.com/post/sublime-text-3-custom-emmet-output-bootstrap-widget.html</a>;github 上 一丝的 <a href="https://github.com/yisibl/emmet-plus" target="_blank" rel="external">Emment-plus</a> 也推荐</li>
+</ul>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><ul>
+<li>Ctrl+,: 展开缩写</li>
+<li>Ctrl+M: 匹配对</li>
+<li>Ctrl+H: 使用缩写包括</li>
+<li>Shift+Ctrl+M: 合并行</li>
+<li>Ctrl+Shift+?: 上一个编辑点</li>
+<li>Ctrl+Shift+?: 下一个编辑点</li>
+<li>Ctrl+Shift+?: 定位匹配对</li>
+</ul>
+<p>Emmet 的官方 API 列表在<a href="http://docs.emmet.io/cheat-sheet/" target="_blank" rel="external">这里</a>，有一个图片版本可以<a href="http://bubkoo.qiniudn.com/emmet-api.jpg" target="_blank" rel="external">点此下载</a></p>
+<p>CSS 部分转自 <a href="http://bubkoo.com/2014/01/04/emmet-a-toolkit-for-improving-html-css-workflow/" target="_blank" rel="external">HTML/CSS 速写神器：Emmet</a>,因为写着写着发现 bubkoo 差不多给我要写的写完了。所以就摘抄下（不要打我），</p>
+<p>其余参考：<a href="http://docs.emmet.io/cheat-sheet/" target="_blank" rel="external">Emmet官方文档</a>。</p>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/blog/"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'PaddingMe';
+    
+    var disqus_url = 'http://yoursite.com/blog/2014/11/12/emmet-syntax-notes/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//PaddingMe.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235687', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

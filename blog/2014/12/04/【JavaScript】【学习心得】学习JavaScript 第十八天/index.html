@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-home">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>【JavaScript】【学习心得】学习JavaScript 第十八天 | Hexo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="Mu-Help-Plan," />
+  
+
+  <meta name="description" content="文章取自我的 Github  repos: Learning-JavaScript， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-JavaScript/issues/22
+面向对象的程序设计ECMA-262 把对象定义为
+
+无序属性的集合，其属性可以包含基本值、对象或者函数。
+
+即对象是一组没有特定顺序的值。对象的每个属性或方法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【JavaScript】【学习心得】学习JavaScript 第十八天">
+<meta property="og:url" content="http://yoursite.com/blog/2014/12/04/【JavaScript】【学习心得】学习JavaScript 第十八天/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="文章取自我的 Github  repos: Learning-JavaScript， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-JavaScript/issues/22
+面向对象的程序设计ECMA-262 把对象定义为
+
+无序属性的集合，其属性可以包含基本值、对象或者函数。
+
+即对象是一组没有特定顺序的值。对象的每个属性或方法">
+<meta property="og:updated_time" content="2016-04-10T16:12:43.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【JavaScript】【学习心得】学习JavaScript 第十八天">
+<meta name="twitter:description" content="文章取自我的 Github  repos: Learning-JavaScript， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-JavaScript/issues/22
+面向对象的程序设计ECMA-262 把对象定义为
+
+无序属性的集合，其属性可以包含基本值、对象或者函数。
+
+即对象是一组没有特定顺序的值。对象的每个属性或方法">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=32204ee7" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-50048801-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">目录</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/blog/"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#面向对象的程序设计"><span class="toc-text">面向对象的程序设计</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#理解对象"><span class="toc-text">理解对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#属性类型"><span class="toc-text">属性类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#定义多个属性"><span class="toc-text">定义多个属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#读取属性的特性"><span class="toc-text">读取属性的特性</span></a></li></ol></li></ol></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-【JavaScript】【学习心得】学习JavaScript 第十八天" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">【JavaScript】【学习心得】学习JavaScript 第十八天</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2014.12.04</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>John Doe</span>
+        </span>
+      
+
+      
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://padding.me/blog/2014/12/04/【JavaScript】【学习心得】学习JavaScript 第十八天/#disqus_thread"></a>
+        </span>
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p> 文章取自我的 Github  repos: <a href="https://github.com/paddingme/Learning-JavaScript" target="_blank" rel="external">Learning-JavaScript</a>， 作者：<a href="http://padding.me/about.html" target="_blank" rel="external">@paddingme</a><br>原文链接：<a href="https://github.com/paddingme/Learning-JavaScript/issues/22" target="_blank" rel="external">https://github.com/paddingme/Learning-JavaScript/issues/22</a></p>
+<h1 id="面向对象的程序设计"><a href="#面向对象的程序设计" class="headerlink" title="面向对象的程序设计"></a>面向对象的程序设计</h1><p>ECMA-262 把对象定义为</p>
+<blockquote>
+<p>无序属性的集合，其属性可以包含基本值、对象或者函数。</p>
+</blockquote>
+<p>即对象是一组没有特定顺序的值。对象的每个属性或方法都有一个名字，而每个名字都映射到一个值。正因为这样，我们可以把 ECMAScript 的对象想象成散列表：无非就是一组明值对。其中值可以是数据或函数。</p>
+<h2 id="理解对象"><a href="#理解对象" class="headerlink" title="理解对象"></a>理解对象</h2><h3 id="属性类型"><a href="#属性类型" class="headerlink" title="属性类型"></a>属性类型</h3><p>ECMAScript 第 5 版 在定义只有内部采用的特性（attribute）时, 描述了属性（property）的各种特征。ECMAScript 定义这些特性是为了实现 JavaScript 引擎用的，因此在 JavaScript 中不能直接访问它们。为表示特性是内部直，改规范他们放在了两对儿括号中，例如 [[Enuermerable]]。</p>
+<p>ECMAScript 中只有两种属性：数据属性和访问器属性。</p>
+<ol>
+<li><p>数据属性包含一个数据值的位置。在这个位置可以读取和写入值。数据属性有描述其行为的特性4个：</p>
+<ul>
+<li>[[Configurable]]: 表示能否通过 delete 删除属性从而重新定义属性，能否修改属性的特性，或者能否把属性修改为访问器属性。</li>
+<li>[[Enumberable]]: 表示能否通过 for-in 循环返回属性。</li>
+<li>[[Writable]]: 表示能否修改属性的值。</li>
+<li>[[value]]:包含这个属性的火速据知。读取属性值的时候，从这个位置读；写入属性值的时候，把新值保存在这个位置。</li>
+</ul>
+<p>要修改属性默认的特性，必须用 ECMAScript 5 的 <code>Object.defineProperty()</code> 方法。这个方法接受三个参数: 属性所在的对象，属性名，和一个描述符对象。其中，描述符（descriptor）对象的属性必须是：configurable、enumerable、writable 和 value。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">var</span> person = &#123;&#125;;</span><br><span class="line"> <span class="built_in">Object</span>.defineProperty(person,<span class="string">"name"</span>,&#123;</span><br><span class="line">  writable: <span class="literal">false</span>,</span><br><span class="line">  value: <span class="string">"Nicholas"</span>,</span><br><span class="line">  configurable: <span class="literal">false</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> alert(person.name);<span class="comment">//"Nicholas"</span></span><br><span class="line"> person.name = <span class="string">"PaddingMe"</span>;</span><br><span class="line"> alert(person.name);<span class="comment">//"Nicholas"</span></span><br><span class="line"> <span class="keyword">delete</span> person.name;</span><br><span class="line"> alert(person.name);<span class="comment">//"Nicholas"</span></span><br></pre></td></tr></table></figure>
+<p>一旦把属性定义为不可配置特性就不能再把它变为可配置。</p>
+<p>在调用 <code>Object.defineProperty()</code> 方法时，如果不指定， configurable, enumerable 和 writable 特性的默认值为 false。</p>
+</li>
+<li><p>访问器属性<br>访问器属性不包含数据值，他们包含一对 getter 和 setter 函数（不过不是必须的），在读取访问器属性时，会调用 getter 函数，这个函数负责返回有效的值。在写入访问器属性时，会调用 setter 函数并传入新值，此函数负责决定如何处理数据。访问器也有4个特性：</p>
+<ul>
+<li>[[Configurable]]: 表示能否通过 delete 删除属性从而重新定义属性，能否修改属性的特性，或者能否把属性修改为访问器属性。</li>
+<li>[[Enumberable]]: 表示能否通过 for-in 循环返回属性。</li>
+<li>[[get]]: 在读取属性时调用的函数。默认值为 undefined。</li>
+<li>[[set]]: 在写入属性时调用的函数。默认值为 undefined。</li>
+</ul>
+<p>访问器不能直接定义，必须使用 <code>object.defineProperty()</code> 来定义。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">var</span> book = &#123;</span><br><span class="line">    _year: <span class="number">2004</span>,</span><br><span class="line">    edition: <span class="number">1</span></span><br><span class="line"> &#125;;</span><br><span class="line"></span><br><span class="line"> <span class="built_in">Object</span>.defineProperty(book, <span class="string">"year"</span>, &#123;</span><br><span class="line">    get: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>._year;</span><br><span class="line">    &#125;,</span><br><span class="line">    set: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (newValue &gt; <span class="number">2004</span>) &#123;</span><br><span class="line">            <span class="keyword">this</span>._year = newValue;</span><br><span class="line">            <span class="keyword">this</span>.edition += newValue <span class="number">-2004</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">book.year = <span class="number">2005</span>;</span><br><span class="line">alert(book.edition); <span class="comment">//2</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>__year 前面的下划线用于表示只能通过对象方法访问的属性。book.edition 变为 2 这是使用访问器属性的常见方式。即设置一个属性的值会导致其他属性发生变化。</p>
+<h3 id="定义多个属性"><a href="#定义多个属性" class="headerlink" title="定义多个属性"></a>定义多个属性</h3><p><code>Object.definePorperties()</code> 接受两个对象参数：第一个要添加或修改其属性的对象，第二个对象的属性 与第一个对象中要添加或修改的属性一一对应。</p>
+<h3 id="读取属性的特性"><a href="#读取属性的特性" class="headerlink" title="读取属性的特性"></a>读取属性的特性</h3><p><code>Object.getOwnPropertyDescriptor()</code> 方法获取给定属性的描述符。<br>此方法接受2个参数：属性所在的对象和要读取其描述符的属性名称。<br>返回值是一个对象。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> book = &#123;&#125;;</span><br><span class="line"><span class="built_in">Object</span>.defineProperties(book,&#123;</span><br><span class="line">    _year: &#123;value: <span class="number">2004</span>&#125;,</span><br><span class="line">    edition: &#123;value: <span class="number">1</span>&#125;,</span><br><span class="line">    year: &#123;</span><br><span class="line">        get: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">this</span>._year;</span><br><span class="line">            &#125;,</span><br><span class="line">        set: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (newValue &gt; <span class="number">2004</span>) &#123;</span><br><span class="line">                <span class="keyword">this</span>._year = newValue;</span><br><span class="line">                <span class="keyword">this</span>.edition += newValue <span class="number">-2004</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> descriptor = <span class="built_in">Object</span>.getOwnPropertyDescriptor(book,<span class="string">"_year"</span>);</span><br><span class="line">alert(descriptor.value); <span class="comment">//2004</span></span><br><span class="line">alert(descriptor.configurable);<span class="comment">//false</span></span><br><span class="line">alert(<span class="keyword">typeof</span> descriptor.get); <span class="comment">// "undefined"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> descriptor = <span class="built_in">Object</span>.getOwnPropertyDescriptor(book,<span class="string">"year"</span>);</span><br><span class="line">alert(descriptor.value); <span class="comment">//undefined</span></span><br><span class="line">alert(descriptor.enumerable);<span class="comment">//false</span></span><br><span class="line">alert(<span class="keyword">typeof</span> descriptor.get); <span class="comment">//function</span></span><br></pre></td></tr></table></figure>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/blog/"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'PaddingMe';
+    
+    var disqus_url = 'http://yoursite.com/blog/2014/12/04/【JavaScript】【学习心得】学习JavaScript 第十八天/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//PaddingMe.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235687', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

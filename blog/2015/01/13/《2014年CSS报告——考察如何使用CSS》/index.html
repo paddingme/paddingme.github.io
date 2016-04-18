@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-home">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>《2014年CSS报告——考察如何使用CSS》 | Hexo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="CSS," />
+  
+
+  <meta name="description" content="文章取自我的 Github  repos: DailyReading， 作者：@paddingme原文链接：https://github.com/paddingme/DailyReading/issues/1
+2014年CSS报告——考察如何使用CSS
+不要使用 * 和 _ 来 hack 而应该使用 IE 条件样式：  
+
+我看见许多年长的前辈们还是在使用 *和_这样的浏览器Hack来解决IE某">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《2014年CSS报告——考察如何使用CSS》">
+<meta property="og:url" content="http://yoursite.com/blog/2015/01/13/《2014年CSS报告——考察如何使用CSS》/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="文章取自我的 Github  repos: DailyReading， 作者：@paddingme原文链接：https://github.com/paddingme/DailyReading/issues/1
+2014年CSS报告——考察如何使用CSS
+不要使用 * 和 _ 来 hack 而应该使用 IE 条件样式：  
+
+我看见许多年长的前辈们还是在使用 *和_这样的浏览器Hack来解决IE某">
+<meta property="og:updated_time" content="2016-04-10T16:12:34.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="《2014年CSS报告——考察如何使用CSS》">
+<meta name="twitter:description" content="文章取自我的 Github  repos: DailyReading， 作者：@paddingme原文链接：https://github.com/paddingme/DailyReading/issues/1
+2014年CSS报告——考察如何使用CSS
+不要使用 * 和 _ 来 hack 而应该使用 IE 条件样式：  
+
+我看见许多年长的前辈们还是在使用 *和_这样的浏览器Hack来解决IE某">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=32204ee7" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-50048801-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">目录</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/blog/"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2014年CSS报告——考察如何使用CSS"><span class="toc-text">2014年CSS报告——考察如何使用CSS</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-《2014年CSS报告——考察如何使用CSS》" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">《2014年CSS报告——考察如何使用CSS》</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2015.01.13</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>John Doe</span>
+        </span>
+      
+
+      
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://padding.me/blog/2015/01/13/《2014年CSS报告——考察如何使用CSS》/#disqus_thread"></a>
+        </span>
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p> 文章取自我的 Github  repos: <a href="https://github.com/paddingme/DailyReading" target="_blank" rel="external">DailyReading</a>， 作者：<a href="http://padding.me/about.html" target="_blank" rel="external">@paddingme</a><br>原文链接：<a href="https://github.com/paddingme/DailyReading/issues/1" target="_blank" rel="external">https://github.com/paddingme/DailyReading/issues/1</a></p>
+<h2 id="2014年CSS报告——考察如何使用CSS"><a href="#2014年CSS报告——考察如何使用CSS" class="headerlink" title="2014年CSS报告——考察如何使用CSS"></a><a href="http://www.w3cplus.com/css/the-2014-css-report.html" target="_blank" rel="external">2014年CSS报告——考察如何使用CSS</a></h2><ol>
+<li><p>不要使用 * 和 _ 来 hack 而应该使用 IE 条件样式：  </p>
+<blockquote>
+<p>我看见许多年长的前辈们还是在使用 *和_这样的浏览器Hack来解决IE某些版本的兼容问题。早在2008年Paul Lrish就提出替代方案，即使用IE条件样式来替代这些Hack。而在当你赶时间的时候，很容易忽略这些方法，以至于*和_这样的Hack持续在使用。<br>条件注释只能用于IE5以上。如果安装了多个 IE，条件注释将会以最高版本的IE为标准。条件注释的基本结构和 HTM L的注释(&lt;!– –&gt;)是一样的。因此 IE 以外的浏览器将会把它们看作是普通的，注释而完全忽略它们。</p>
+</blockquote>
+<p>IE 将会根据 if 条件来判断是否如解析普通的页面内容一样解析条件注释里的内容。</p>
+<ul>
+<li>gt : greater than，选择条件版本以上版本，不包含条件版本</li>
+<li>lt : less than，选择条件版本以下版本，不包含条件版本</li>
+<li>gte : greater than or equal，选择条件版本以上版本，包含条件版本</li>
+<li>lte : less than or equal，选择条件版本以下版本，包含条件版本</li>
+<li>! : 选择条件版本以外所有版本，无论高低</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--[if IE 5]&gt;仅IE5.5可见&lt;![endif]--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--[if gt IE 5.5]&gt;仅IE 5.5以上可见&lt;![endif]--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--[if lt IE 5.5]&gt;仅IE 5.5以下可见&lt;![endif]--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--[if gte IE 5.5]&gt;IE 5.5及以上可见&lt;![endif]--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--[if ite IE 5.5]&gt;IE 5.5及以下可见&lt;![endif]--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--[if !IE 5.5]&gt;非IE 5.5的IE可见&lt;![endif]--&gt;</span></span><br></pre></td></tr></table></figure>
+<p>以上这些条件注释里的内容，在非IE浏览器只是作为一般的注释语句，不会显示出来的，<br>如果想要条件注释里的内容，在非IE浏览器中也能显示出来，而且在IE浏览器中根据条件注释的判断条件来显示出来，看下面的代码：<br>下面的代码是在非IE浏览器下运行的条件注释</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--[if !IE]&gt;&lt;!--&gt;</span>您使用不是 Internet Explorer<span class="comment">&lt;!--&lt;![endif]--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--[if IE 6]&gt;&lt;!--&gt;</span>您正在使用Internet Explorer version 6或者 一个非IE 浏览器<span class="comment">&lt;!--&lt;![endif]--&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>摘自<a href="http://www.ipmtea.net/css_ie_firefox/201006/21_26.html" target="_blank" rel="external">IE中的条件判断注释，判断浏览器版本类型</a></p>
+</blockquote>
+</li>
+<li><p>z-index 最低的值应该小于999999更为合理。</p>
+</li>
+<li><p>颜色最常用的是 bootstrap 的 <code>papayawhip</code> 还有些常用的颜色名：<br>antiquewhite, azure, olive, bisque, aliceblue, lightsteelblue, blueviolet, firebrick, lightskyblue, lightseagreen, darkorange, seashell, ghostwhite, papayawhip, cornsilk, navajowhite。作者最喜欢的是 papayawhip，让人赏心悦目。</p>
+</li>
+</ol>
+<p>参考：</p>
+<ul>
+<li><a href="http://www.w3cplus.com/css/the-2014-css-report.html" target="_blank" rel="external">http://www.w3cplus.com/css/the-2014-css-report.html</a></li>
+<li><a href="http://www.ipmtea.net/css_ie_firefox/201006/21_26.html" target="_blank" rel="external">http://www.ipmtea.net/css_ie_firefox/201006/21_26.html</a></li>
+</ul>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/blog/"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'PaddingMe';
+    
+    var disqus_url = 'http://yoursite.com/blog/2015/01/13/《2014年CSS报告——考察如何使用CSS》/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//PaddingMe.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235687', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

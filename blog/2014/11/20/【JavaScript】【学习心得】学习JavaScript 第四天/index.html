@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-home">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>【JavaScript】【学习心得】学习JavaScript 第四天 | Hexo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="Mu-Help-Plan," />
+  
+
+  <meta name="description" content="文章取自我的 Github  repos: Learning-JavaScript， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-JavaScript/issues/7
+经过了三天的持续学习，咱们的第一个 js 网页你有没有做出来呢？这个简单的 JavaScript 图片库 它是否完美？今天我们来学习一些最佳实践，来完善我们的这">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【JavaScript】【学习心得】学习JavaScript 第四天">
+<meta property="og:url" content="http://yoursite.com/blog/2014/11/20/【JavaScript】【学习心得】学习JavaScript 第四天/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="文章取自我的 Github  repos: Learning-JavaScript， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-JavaScript/issues/7
+经过了三天的持续学习，咱们的第一个 js 网页你有没有做出来呢？这个简单的 JavaScript 图片库 它是否完美？今天我们来学习一些最佳实践，来完善我们的这">
+<meta property="og:updated_time" content="2016-04-10T16:12:43.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【JavaScript】【学习心得】学习JavaScript 第四天">
+<meta name="twitter:description" content="文章取自我的 Github  repos: Learning-JavaScript， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-JavaScript/issues/7
+经过了三天的持续学习，咱们的第一个 js 网页你有没有做出来呢？这个简单的 JavaScript 图片库 它是否完美？今天我们来学习一些最佳实践，来完善我们的这">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=32204ee7" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-50048801-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">目录</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/blog/"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#质疑一切"><span class="toc-text">质疑一切</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#平稳退化（graceful-degradation）"><span class="toc-text">平稳退化（graceful degradation）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#window-open-url-name-features"><span class="toc-text">window.open(url,name,features)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript-伪协议"><span class="toc-text">JavaScript 伪协议</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#内嵌的事件处理函数"><span class="toc-text">内嵌的事件处理函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#渐进增强"><span class="toc-text">渐进增强</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分离-JavaScript"><span class="toc-text">分离  JavaScript</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#性能考虑"><span class="toc-text">性能考虑</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#尽量少访问-DOM-和尽量减少标记"><span class="toc-text">尽量少访问 DOM 和尽量减少标记</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#合并和放置脚本"><span class="toc-text">合并和放置脚本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#压缩脚本"><span class="toc-text">压缩脚本</span></a></li></ol></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-【JavaScript】【学习心得】学习JavaScript 第四天" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">【JavaScript】【学习心得】学习JavaScript 第四天</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2014.11.20</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>John Doe</span>
+        </span>
+      
+
+      
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://padding.me/blog/2014/11/20/【JavaScript】【学习心得】学习JavaScript 第四天/#disqus_thread"></a>
+        </span>
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p> 文章取自我的 Github  repos: <a href="https://github.com/paddingme/Learning-JavaScript" target="_blank" rel="external">Learning-JavaScript</a>， 作者：<a href="http://padding.me/about.html" target="_blank" rel="external">@paddingme</a><br>原文链接：<a href="https://github.com/paddingme/Learning-JavaScript/issues/7" target="_blank" rel="external">https://github.com/paddingme/Learning-JavaScript/issues/7</a></p>
+<p>经过了三天的持续学习，咱们的第一个 js 网页你有没有做出来呢？这个简单的 <a href="http://codepen.io/paddingme/pen/qCuDo" target="_blank" rel="external">JavaScript 图片库</a> 它是否完美？今天我们来学习一些最佳实践，来完善我们的这个 JavaScript 图片库。</p>
+<h2 id="质疑一切"><a href="#质疑一切" class="headerlink" title="质疑一切"></a>质疑一切</h2><p>若要使用 JavaScript 就要确认：这么做会对用户的浏览体验产生怎样的影响？还有个更重要的问题：如果用户的浏览器不支持 JavaScript 该怎么办？这些都是我们需要考虑的。</p>
+<h2 id="平稳退化（graceful-degradation）"><a href="#平稳退化（graceful-degradation）" class="headerlink" title="平稳退化（graceful degradation）"></a>平稳退化（graceful degradation）</h2><p>禁止使用弹窗，这是一个体验非常糟糕的应用，在读屏软件上不一定能弹出（可访问性），可以用其他手段实现同样的效果，例如说朦态窗。</p>
+<h2 id="window-open-url-name-features"><a href="#window-open-url-name-features" class="headerlink" title="window.open(url,name,features)"></a><code>window.open(url,name,features)</code></h2><ul>
+<li>url 一个可选的字符串，声明了要在新窗口中显示的文档的 url 。如果省略了这个参数，或者它的值是空字符串，那么新窗口就不会显示任何文档。</li>
+<li>name 一个可选的字符串，该字符串是一个由逗号分隔的特征列表，其中包括数字、字母和下划线，该字符声明了新窗口的名称。这个名称可以用作标记 <a> 和 <form> 的属性 target 的值。如果该参数指定了一个已经存在的窗口，那么 open() 方法就不再创建一个新窗口，而只是返回对指定窗口的引用。在这种情况下，features 将被忽略。</form></a></li>
+<li>features 一个可选的字符串，声明了新窗口要显示的标准浏览器的特征。如果省略该参数，新窗口将具有所有标准特征。在窗口特征这个表格中，我们对该字符串的格式进行了详细的说明。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">popUp</span>(<span class="params">winURL</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">window</span>.open(winURL,<span class="string">"popup"</span>,<span class="string">"width=320,height=480"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="JavaScript-伪协议"><a href="#JavaScript-伪协议" class="headerlink" title="JavaScript 伪协议"></a>JavaScript 伪协议</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"JavaScript:popUp('http://padding.me')"</span>&gt;</span>Example<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这条语句在支持 “JavaScript:” 伪协议的浏览器中正常运行，较老的浏览器则会去尝试打开那个链接但失败，支持这种伪协议但禁用了 JavaScript 功能的浏览器则会什么也不做。<br>“JavaScript:” 伪协议调用 JavaScript 代码的做法非常不好。</p>
+<h2 id="内嵌的事件处理函数"><a href="#内嵌的事件处理函数" class="headerlink" title="内嵌的事件处理函数"></a>内嵌的事件处理函数</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">onclick</span>=<span class="string">"popUp('http://padding.me');return false;"</span>&gt;</span>Example<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这样的做法同样操作，不能进行平稳退化。若用户禁用 JavaScript 功能，这样的链接毫无作用。</p>
+<p>做到平稳退化，应该将”#”换为真实的 url。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://paddingme"</span> <span class="attr">onclick</span>=<span class="string">"popUp('http://padding.me');return false;"</span>&gt;</span>Example<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://paddingme"</span> <span class="attr">onclick</span>=<span class="string">"popUp(this.getAttribute('href'));return false;"</span>&gt;</span>Example<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://paddingme"</span> <span class="attr">onclick</span>=<span class="string">"popUp(this.href);return false;"</span>&gt;</span>Example<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="渐进增强"><a href="#渐进增强" class="headerlink" title="渐进增强"></a>渐进增强</h2><p>CSS的出现，有了 HTML 结构与样式的分离。这也是一种渐进增强，如果禁用了 CSS，网页还是能展现基本的文档内容。</p>
+<h2 id="分离-JavaScript"><a href="#分离-JavaScript" class="headerlink" title="分离  JavaScript"></a>分离  JavaScript</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://paddingme"</span> <span class="attr">class</span>=<span class="string">"popUp"</span>&gt;</span>Example<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onload = prepareLinks;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">prepareLinks</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!<span class="built_in">document</span>.getElementsByTagName) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">var</span> links = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"a"</span>);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i &lt; links.length;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(links[i].getAttribute(<span class="string">"class"</span>) == <span class="string">"popUp"</span>)&#123;</span><br><span class="line">            links[i].onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">                popUp(<span class="keyword">this</span>.getAttribute(<span class="string">"href"</span>));</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="性能考虑"><a href="#性能考虑" class="headerlink" title="性能考虑"></a>性能考虑</h2><h3 id="尽量少访问-DOM-和尽量减少标记"><a href="#尽量少访问-DOM-和尽量减少标记" class="headerlink" title="尽量少访问 DOM 和尽量减少标记"></a>尽量少访问 DOM 和尽量减少标记</h3><p>不管是什么时候，只要是查询 DOM 中的某些元素，浏览器都会搜索整个 DOM 树，从中查找可能匹配的元素。</p>
+<p>而过多不必要的元素标记只会增加 DOM 树的规模，进而增加遍历 DOM 树以查找特定元素的时间。</p>
+<h3 id="合并和放置脚本"><a href="#合并和放置脚本" class="headerlink" title="合并和放置脚本"></a>合并和放置脚本</h3><p>将多个脚本合并为一个脚本，以减少浏览器向服务器端发送求，将脚本放在 <code>&lt;/body&gt;</code>之前，为什么呢？这样 DOM 操作可以在浏览器将网页全部加载渲染完毕之后开始进行，以减少浏览器对网页的重绘，提升网页加载速度和性能。</p>
+<h3 id="压缩脚本"><a href="#压缩脚本" class="headerlink" title="压缩脚本"></a>压缩脚本</h3><p>将脚本压缩减小脚本体积，减缓带宽压力，更快的将脚本下载下来。</p>
+<p>OK，今天学了这些最佳实践，明天我们根据这些最佳实践来重构我们的 JavaScript 图片库。</p>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/blog/"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'PaddingMe';
+    
+    var disqus_url = 'http://yoursite.com/blog/2014/11/20/【JavaScript】【学习心得】学习JavaScript 第四天/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//PaddingMe.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235687', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

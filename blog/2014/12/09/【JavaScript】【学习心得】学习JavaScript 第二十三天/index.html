@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-home">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>【JavaScript】【学习心得】学习JavaScript 第二十三天 | Hexo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="Mu-Help-Plan," />
+  
+
+  <meta name="description" content="文章取自我的 Github  repos: Learning-JavaScript， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-JavaScript/issues/25
+昨天主要学习JavaScript的语法,先列出觉得重要的地方：
+
+===(严格相等运算符)首先计算其操作数的值，再进行比较，比较过程中无任何类型转换，JS的对">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【JavaScript】【学习心得】学习JavaScript 第二十三天">
+<meta property="og:url" content="http://yoursite.com/blog/2014/12/09/【JavaScript】【学习心得】学习JavaScript 第二十三天/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="文章取自我的 Github  repos: Learning-JavaScript， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-JavaScript/issues/25
+昨天主要学习JavaScript的语法,先列出觉得重要的地方：
+
+===(严格相等运算符)首先计算其操作数的值，再进行比较，比较过程中无任何类型转换，JS的对">
+<meta property="og:updated_time" content="2016-04-10T16:12:43.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【JavaScript】【学习心得】学习JavaScript 第二十三天">
+<meta name="twitter:description" content="文章取自我的 Github  repos: Learning-JavaScript， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-JavaScript/issues/25
+昨天主要学习JavaScript的语法,先列出觉得重要的地方：
+
+===(严格相等运算符)首先计算其操作数的值，再进行比较，比较过程中无任何类型转换，JS的对">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=32204ee7" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-50048801-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">目录</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/blog/"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#第三章-对象"><span class="toc-text">第三章  对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-对象字变量"><span class="toc-text">3.1  对象字变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-检索"><span class="toc-text">3.2   检索</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-更新"><span class="toc-text">3.3   更新</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-引用"><span class="toc-text">3.4   引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-原型（prototype）"><span class="toc-text">3.5    原型（prototype）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-6-反射"><span class="toc-text">3.6    反射</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-7-枚举"><span class="toc-text">3.7    枚举</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-8-删除"><span class="toc-text">3.8    删除</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-9-减少全局变量污染"><span class="toc-text">3.9     减少全局变量污染</span></a></li></ol></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-【JavaScript】【学习心得】学习JavaScript 第二十三天" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">【JavaScript】【学习心得】学习JavaScript 第二十三天</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2014.12.09</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>John Doe</span>
+        </span>
+      
+
+      
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://padding.me/blog/2014/12/09/【JavaScript】【学习心得】学习JavaScript 第二十三天/#disqus_thread"></a>
+        </span>
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p> 文章取自我的 Github  repos: <a href="https://github.com/paddingme/Learning-JavaScript" target="_blank" rel="external">Learning-JavaScript</a>， 作者：<a href="http://padding.me/about.html" target="_blank" rel="external">@paddingme</a><br>原文链接：<a href="https://github.com/paddingme/Learning-JavaScript/issues/25" target="_blank" rel="external">https://github.com/paddingme/Learning-JavaScript/issues/25</a></p>
+<p>昨天主要学习JavaScript的语法,先列出觉得重要的地方：</p>
+<ul>
+<li>===(严格相等运算符)首先计算其操作数的值，再进行比较，比较过程中无任何类型转换，JS的对象比较是引用比较非值比较，对象只和对象本身相等，和任何其他对象不等；</li>
+<li>==（相等运算符）null和undefined相等，其他不同的操作数比较时，有number转为number,有boolean也转为number,有string的转string再进行比较，看是否相等。对象互相不等，NaN互相不相等；</li>
+<li>JS依赖于全局变量进行连接，所有编译单元的所有级别对象都被抛入全局对象的公共命名空间中。当var语句被用在函数的内部时，他定义了这个函数的私有变量；</li>
+<li>false,null,undefined,空字符串”,数字0,数字NaN都为假，其余皆为真；</li>
+<li>函数调用引发函数的执行，函数调用运算符是跟随在函数名后面的一对圆括号。</li>
+<li>type of 运算符产生的值有‘number’ ‘string’ ‘boolean’ ‘undefined’ ‘function’和’object’（注意都是小写）;而如果运算数是一个数组或null,结果是‘object’是不对的。</li>
+</ul>
+<p>第六条中typeof(null)或typeof(array)(array为一数组)为什么结果是’object’不对呢，查了查书，是因为:</p>
+<p>1.JavaScript本身对于数组和对象的区别很混乱，在区别数组和对象上没有一个很好的机制。typeof运算符报告数组的类型为‘object’没什么意义，可通过自定义is_array来判断是否为数组。<br>2.typeof(null)很糟糕返回的不是null，我们知道JavaScript中有六种数据类型，分别为String,Number,Boolean,Null,Undefined,Object,(另外有些人把Function也作为一种数据类型，这里存在争议，有兴趣的同学可以参考<a src="http://blog.csdn.net/aimingoo/article/details/6634977">《再谈JavaScript的数据类型问题》</a>)进一步理解。更好的检测null的方式应为my_value===null. 那么typeof如何区分对象和null呢，因为null值为假，所有对象值为真，所以可以有：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(my_value&amp;&amp;<span class="keyword">typeof</span> my_value===<span class="string">'object'</span>)&#123;<span class="comment">//my_value是一个对象或数组。&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>好的，下面进入第三章对象的学习。</p>
+<hr>
+<h2 id="第三章-对象"><a href="#第三章-对象" class="headerlink" title="第三章  对象"></a>第三章  对象</h2><p>JavaScript中简单类型包括数字、字符串、布尔值、null值和undefined，其他所有的值都为对象（数组是对象，函数是对象，正则表达式是对象，对象当然也是对象）。String,Number,Boolean“貌似”对象，因为他们它们有自己的方法，但他们是不可变的。JavaScript中对象是可变的键控组合（keyed collections）（这句话如何理解？）。对象是属性的容器，其中每个属性都拥有名字和数值，属性的名字可是包括空字符串在内的任意字符串，而属性值可是除undefined值之外的任意值。JavaScript中的对象是无类别（class-free）的。即其对新属性的名字和值无约束。对象适合收集和管理数据。对象可以包含其他对象，所以他们可以容易地表示成树形或图形结构。JavaScript包括一个原型链特性，允许对象继承另一个对象的属性，正确的地使用它能减少对象初始化的时间和内存消耗。（后面讨论）</p>
+<h3 id="3-1-对象字变量"><a href="#3-1-对象字变量" class="headerlink" title="3.1  对象字变量"></a>3.1  对象字变量</h3><p>对象字面量提供了一种非常方便地创建新对象值的表示法。一个对象字面量就是包围在一对花括号中的零或多个“名/值”.对象字面量可出现在任何允许表达式出现的地方。<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var empty_object=&#123;&#125;;</span><br><span class="line">  				var stooge=&#123;</span><br><span class="line">  				"first-name"="Chouchou",//(注意这里是逗号)</span><br><span class="line">  				"last-name="Shouchouchou"//(注意这里没符号！)</span><br><span class="line">                                  &#125;</span><br></pre></td></tr></table></figure></p>
+<p>属性名可以是包括空字符串在内的任何字符串。在对象字面量中，如果属性名是一个合法的JavaScript标识符且不是保留字，并不强制要求用引号括住属性名。所以用引号括住“fisrt-name”是必须的（因为含‘-’这个属性名不是合法的JS标识符，见上一章标识符定义“标示符有一个字母开头，其后可加一个或多个字母、数字或下划线，不允许使用保留字。”），而是否括住first_name才是可选的了。逗号用来分隔多个“名/值”对(原来JSON数据的渊源在这里)。</p>
+<p>属性的值可以从包括另一个对象字面量在内的任意表达式中获得。对象是可嵌套的。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> flight=&#123;</span><br><span class="line">  airline=<span class="string">"mh"</span>,</span><br><span class="line">  number=<span class="number">370</span>,</span><br><span class="line">  departure：&#123;</span><br><span class="line">    IATA:<span class="string">"KL"</span>，</span><br><span class="line">    time:<span class="string">"2014-03-08 00:25"</span>,</span><br><span class="line">    city:<span class="string">"Kuala Lumpu"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  arrival:&#123;</span><br><span class="line">    IATA:<span class="string">"CN"</span>，</span><br><span class="line">    time:<span class="string">"future"</span>,</span><br><span class="line">    city:<span class="string">"Beijing"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-2-检索"><a href="#3-2-检索" class="headerlink" title="3.2   检索"></a>3.2   检索</h3><p>要检索对象中包含的值，可以采用在[]后缀中括住一个字符串表达式的方式。若字符串是一个常数且他是一个合法的JavaScript标识符而非保留字,那么也可以用.表示法代替，优先使用.表示法，因为更紧凑可读性更好。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">stooge[<span class="string">"first-name"</span>] <span class="comment">//Chouchou</span></span><br><span class="line">flight.departure.city <span class="comment">//"Kuala Lumpu"</span></span><br></pre></td></tr></table></figure></p>
+<p>若检索一个并不存在的成员元素的值，则返回undefined。</p>
+<p>||运算符可以用来填充默认值<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> status=flight.status||<span class="string">"unkown"</span>;</span><br></pre></td></tr></table></figure></p>
+<p>尝试检索一个undefined值将会导致TypeError异常。可通过&amp;&amp;避免错误。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">flight.equipment<span class="comment">//undefined</span></span><br><span class="line">flight.equipment.model<span class="comment">//throw "TypeError"</span></span><br><span class="line">flight.equipment&amp;&amp;flight.equipment.model<span class="comment">//undefined</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="3-3-更新"><a href="#3-3-更新" class="headerlink" title="3.3   更新"></a>3.3   更新</h3><p>对象中的值可以通过复制语句来更新，若属性名已经存在于对象中，那么该属性的值被替换，如果对象之前并未拥有这个属性名，则该属性会被扩充到该对象中。</p>
+<h3 id="3-4-引用"><a href="#3-4-引用" class="headerlink" title="3.4   引用"></a>3.4   引用</h3><p>对象通过引用来传递。它们永远不会被拷贝。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x=chouchou;</span><br><span class="line">x.nickname=<span class="string">'huang'</span>;</span><br><span class="line"><span class="keyword">var</span> nick=chouchou.nickname;</span><br><span class="line"><span class="comment">//因为x和chouchou是指向同一个对象的引用，所以nick也为'huang'</span></span><br><span class="line"><span class="keyword">var</span> a=&#123;&#125;,b=&#123;&#125;,c=&#123;&#125;;</span><br><span class="line"><span class="comment">//a,b,c每个都引用不同的空对象。</span></span><br><span class="line">a=b=c=&#123;&#125;;</span><br><span class="line"><span class="comment">//a,b,c都引用同一个空对象。</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="3-5-原型（prototype）"><a href="#3-5-原型（prototype）" class="headerlink" title="3.5    原型（prototype）"></a>3.5    原型（prototype）</h3><p>每一个对象都连接到一个原型对象，并且它可以从中继承，所有通过对象字面量创建的对象都连接到Object.prototype这个JavaScript的标准对象。<br>当创建一个新对象时，可选择某个对象作为它的原型。这个给Object增加一个beget方法，beget方法创建一个使用原对象作为其原型的新对象。(不是很明白，留坑)<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="keyword">typeof</span> <span class="built_in">Object</span>.beget !== <span class="string">'function'</span>) &#123;</span><br><span class="line">	<span class="built_in">Object</span>.beget =<span class="function"><span class="keyword">function</span> (<span class="params">o</span>) </span>&#123;</span><br><span class="line">			<span class="keyword">var</span> F=<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line">			F.prototype=o;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">new</span> F(); </span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> another_chouchou=<span class="built_in">Object</span>.beget(chouchou);</span><br></pre></td></tr></table></figure></p>
+<p>原型连接在更新是不起作用的，当我们对某个对象做出改变时，不会触及到该对象的原型。原型连接只有在检索值时才被用到，如果我们尝试去获取对象的某个属性值，且该对象没有此属性名，则JavaScript试着从原型对象中获取属性值。如果那个原型对象也没有该属性，则从它的原型中寻找，依次类推，直到终点Object.prototype。如果想要的属性完全不在原型链中则返回undefined。这个过程称为<strong>委托</strong></p>
+<p>原型关系是一种动态的关系。若我们添加一个新的属性到原型中，则该属性会立即对所有基于该原型创建的对象可见。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chouchou.profession=<span class="string">"front-end develoer"</span>;</span><br><span class="line">another_chouchou.profession;<span class="comment">//"frond-end developer"</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="3-6-反射"><a href="#3-6-反射" class="headerlink" title="3.6    反射"></a>3.6    反射</h3><p>检查对象并确定有什么属性很容易，只要试着去检索该属性并验证所取得的值。可用typeof，但是原型链中的任何属性也会产生一个值，例如<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> flight.toString <span class="comment">//'function'</span></span><br><span class="line"><span class="keyword">typeof</span> flight.constructor <span class="comment">//'function'</span></span><br></pre></td></tr></table></figure></p>
+<p>有两个方法去除这些不必要的属性。<br>1.让你的程序检查并剔除函数值。一般来说，做反射的目标是数据。因此你应该意识到一些值可能会是函数。<br>2.hasOwnProperty方法，如果对象拥有独立属性返回true，hasOwnProperty不会检查原型链。</p>
+<h3 id="3-7-枚举"><a href="#3-7-枚举" class="headerlink" title="3.7    枚举"></a>3.7    枚举</h3><p>for in 语句可用来遍历一个对象中所有的属性名。该枚举过程将会列出所有的属性，包括函数和你可能不关心原型链中的属性。所以我们需要过滤，常用的过滤器是hasOwnProperty以及typeof来排除函数。属性名出现顺序不确定，要以确定的顺序应创建一个数组，在其中以正确的顺序包含属性名。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> i;</span><br><span class="line"><span class="keyword">var</span> properties=[<span class="string">'fistr-name'</span>,<span class="string">'middle-name'</span>,<span class="string">'last-name'</span><span class="string">'profession'</span>];</span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; properties.length;i +=<span class="number">1</span> )&#123;</span><br><span class="line">  <span class="built_in">document</span>.writeln(properties[i]+<span class="string">':'</span>+another.chouchou[propertites[i]]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-8-删除"><a href="#3-8-删除" class="headerlink" title="3.8    删除"></a>3.8    删除</h3><p>delete运算符可以用来删除对象的属性。它不会触及原型链中的任何对象。删除对象的属性可能让来自原型链中的属性浮现出来。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">another.chouchou.nickname <span class="comment">//'me'</span></span><br><span class="line"><span class="keyword">delete</span> another.chouchou.nickname;</span><br><span class="line">another.chouchou.nickname <span class="comment">// 'huang'</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="3-9-减少全局变量污染"><a href="#3-9-减少全局变量污染" class="headerlink" title="3.9     减少全局变量污染"></a>3.9     减少全局变量污染</h3><p>JavaScript可以很随意的定义哪些可保存所有应用资源的全局变量。但全局变量减弱了程序的灵活性，应予以避免。最小化使用全局变量的方法是在你的应用中只创建一个全局变量。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> MYAPP=&#123;&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>该变量此时编程了你的应用的容器。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">MYAPP.chouchou=&#123;<span class="string">"first-name"</span>:<span class="string">"Chouchou"</span>,<span class="string">"last-name"</span>:<span class="string">"Shouchouchou"</span>&#125;;</span><br><span class="line">MYAPP.flight=&#123;airline=<span class="string">"mh"</span>,number=<span class="number">370</span>,</span><br><span class="line">    departure：&#123;</span><br><span class="line">      IATA:<span class="string">"KL"</span>，</span><br><span class="line">      time:<span class="string">"2014-03-08 00:25"</span>,</span><br><span class="line">      city:<span class="string">"Kuala Lumpu"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    arrival:&#123;</span><br><span class="line">      IATA:<span class="string">"CN"</span>，</span><br><span class="line">      time:<span class="string">"future"</span>,</span><br><span class="line">      city:<span class="string">"Beijing"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>只有把多个全局变量都整理在一个名称空间下，你讲显著降低与其他应用程序，组件或类库之间产生糟糕的相互影响的可能性。下一章将介绍闭包来有效减少全局污染。</p>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/blog/"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'PaddingMe';
+    
+    var disqus_url = 'http://yoursite.com/blog/2014/12/09/【JavaScript】【学习心得】学习JavaScript 第二十三天/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//PaddingMe.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235687', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

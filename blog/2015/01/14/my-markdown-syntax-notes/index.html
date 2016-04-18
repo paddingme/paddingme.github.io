@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-home">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>Markdown 语法笔记 | Hexo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="tools,markdown," />
+  
+
+  <meta name="description" content="不久前狗大V —— 性感玉米 在 微博 中说：
+
+必须要歌颂一下 Markdown 了，自称是语法很容易 Shock 到普通 User，其实要学的，一对手就数得过来。对能熟练背诵江户四十八手的玩家来说不是问题。简易培训之后（比斯大林格勒保卫战中的肉盾培训时间略长）炸裂到完全可以实现在双手不离开键盘的情况下进行简单的格式处理（绝对够用），伟大！相见恨晚！
+
+哈哈哈，狗大 V 都已经在学 Markdo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Markdown 语法笔记">
+<meta property="og:url" content="http://yoursite.com/blog/2015/01/14/my-markdown-syntax-notes/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="不久前狗大V —— 性感玉米 在 微博 中说：
+
+必须要歌颂一下 Markdown 了，自称是语法很容易 Shock 到普通 User，其实要学的，一对手就数得过来。对能熟练背诵江户四十八手的玩家来说不是问题。简易培训之后（比斯大林格勒保卫战中的肉盾培训时间略长）炸裂到完全可以实现在双手不离开键盘的情况下进行简单的格式处理（绝对够用），伟大！相见恨晚！
+
+哈哈哈，狗大 V 都已经在学 Markdo">
+<meta property="og:image" content="http://paddingme.qiniudn.com/markdown.gif">
+<meta property="og:updated_time" content="2015-07-08T06:52:18.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Markdown 语法笔记">
+<meta name="twitter:description" content="不久前狗大V —— 性感玉米 在 微博 中说：
+
+必须要歌颂一下 Markdown 了，自称是语法很容易 Shock 到普通 User，其实要学的，一对手就数得过来。对能熟练背诵江户四十八手的玩家来说不是问题。简易培训之后（比斯大林格勒保卫战中的肉盾培训时间略长）炸裂到完全可以实现在双手不离开键盘的情况下进行简单的格式处理（绝对够用），伟大！相见恨晚！
+
+哈哈哈，狗大 V 都已经在学 Markdo">
+<meta name="twitter:image" content="http://paddingme.qiniudn.com/markdown.gif">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=32204ee7" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-50048801-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">目录</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/blog/"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#syntax"><span class="toc-text">Markdown 语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#html"><span class="toc-text">兼容 HTML</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#p"><span class="toc-text">段落和换行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#blockquotes"><span class="toc-text">区块引用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#这是一个标题。"><span class="toc-text">这是一个标题。</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#list"><span class="toc-text">列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pre"><span class="toc-text">代码区块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hr"><span class="toc-text">段落和换行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#link"><span class="toc-text">链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#em"><span class="toc-text">强调</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#code"><span class="toc-text">代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#img"><span class="toc-text">图片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#autolink"><span class="toc-text">自动链接</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#gfm"><span class="toc-text">GitHub 风格的 Markdown 语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#autolink-gfm"><span class="toc-text">链接自动识别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fenced"><span class="toc-text">围栏式代码块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#task-lists"><span class="toc-text">任务清单</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#at"><span class="toc-text">@</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#emoji"><span class="toc-text">Emoji</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#table"><span class="toc-text">table</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#del"><span class="toc-text">强调</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#layout"><span class="toc-text">一些和排版有关的资源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#acknowledgement"><span class="toc-text">参考文章</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-my-markdown-syntax-notes" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">Markdown 语法笔记</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2015.01.14</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>John Doe</span>
+        </span>
+      
+
+      
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://padding.me/blog/2015/01/14/my-markdown-syntax-notes/#disqus_thread"></a>
+        </span>
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>不久前狗大V —— <a href="http://weibo.com/corndog" target="_blank" rel="external">性感玉米</a> 在 <a href="http://weibo.com/1676582524/BDTSIktAJ" target="_blank" rel="external">微博</a> 中说：</p>
+<blockquote>
+<p>必须要歌颂一下 Markdown 了，自称是语法很容易 Shock 到普通 User，其实要学的，一对手就数得过来。对能熟练背诵江户四十八手的玩家来说不是问题。简易培训之后（比斯大林格勒保卫战中的肉盾培训时间略长）炸裂到完全可以实现在双手不离开键盘的情况下进行简单的格式处理（绝对够用），伟大！相见恨晚！</p>
+</blockquote>
+<p>哈哈哈，狗大 V 都已经在学 <a href="http://zh.wikipedia.org/zh-cn/Markdown" target="_blank" rel="external">Markdown</a> 了，简直炸裂！ 不记得是去年还是前年学习了 Markdown，相见恨晚，已经到了写文章、文档无 Markdown 不欢、寝食不安、无法下指敲键盘的地步了。一个网站如果不支持 Markdown 在我心中更会大打折扣。学习 Markdown 已经很长时间了，Markdown 语法简单易记，但是有时候遇到嵌套或者别的总是会有点晕。这里记载下 Markdown 语法，以供日后查阅。</p>
+<p>本文主要分为以下几部分：</p>
+<ul>
+<li><a href="#syntax">Markdown 基本语法</a><ul>
+<li><a href="#html">兼容 HTML</a></li>
+<li><a href="#p">段落和换行</a></li>
+<li><a href="#blockquote">区块引用 Blockquotes</a></li>
+<li><a href="#list">列表</a></li>
+<li><a href="#pre">代码区块</a></li>
+<li><a href="#hr">分隔线</a></li>
+<li><a href="#link">链接</a></li>
+<li><a href="#em">强调</a></li>
+<li><a href="#code">代码</a></li>
+<li><a href="#img">图片</a></li>
+<li><a href="#autolink">自动链接</a></li>
+</ul>
+</li>
+<li><a href="#gfm">GitHub 风格的 Markdown 语法</a><ul>
+<li><a href="#autolink-gfm">链接自动识别</a></li>
+<li><a href="#fenced">围栏式代码块</a></li>
+<li><a href="#task-lists">任务清单</a></li>
+<li><a href="#task-lists">任务清单</a></li>
+<li><a href="#at">@</a></li>
+<li><a href="#emoji">Emoji</a></li>
+<li><a href="#table">table</a></li>
+<li><a href="#del">强调</a></li>
+</ul>
+</li>
+<li><a href="#layout">一些和排版有关的资源</a></li>
+<li><a href="#acknowledgement">参考文章</a></li>
+</ul>
+<h2 id="syntax">Markdown 语法</h2>
+
+<p>想要从头到尾一步步学习 Markdown 语法，请点击 <a href="http://wowubuntu.com/markdown/" target="_blank" rel="external">http://wowubuntu.com/markdown/</a> 阅读, 这里只记录下对我来说比较容易弄混的语法。</p>
+<h3 id="html">兼容 HTML</h3>
+
+<p>一些 HTML 区块元素――比如 <code>&lt;div&gt;</code>、<code>&lt;table&gt;</code>、<code>&lt;pre&gt;</code>、<code>&lt;p&gt;</code> 等标签，必须在前后加上空行与其它内容区隔开，还要求它们的开始标签与结尾标签不能用制表符或空格来缩进。在 HTML 区块标签间的 Markdown 格式语法将不会被处理。比如，你在 HTML 区块内使用 Markdown 样式的 * 强调 * 会没有效果。</p>
+<pre><code>这是一个普通段落。
+
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Foo&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+
+这是另一个普通段落。
+</code></pre><p>效果：</p>
+<p>这是一个普通段落。</p>
+<pre><code>&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Foo&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre><p>这是另一个普通段落。</p>
+<h3 id="p">段落和换行</h3>
+
+<p>一个 Markdown 段落是由一个或多个连续的文本行组成，它的前后要有一个以上的空行（空行的定义是显示上看起来像是空的，便会被视为空行。比方说，若某一行只包含空格和制表符，则该行也会被视为空行）。普通段落不该用空格或制表符来缩进。</p>
+<p>如果你确实想要依赖 Markdown 来插入 <code>&lt;br /&gt;</code> 标签的话，在插入处先按入两个以上的空格然后回车。</p>
+<h3 id="blockquotes">区块引用</h3>
+
+<pre><code>&gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+&gt; consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+&gt; Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitrisus.
+&gt;
+&gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
+&gt; id sem consectetuer libero luctus adipiscing.
+</code></pre><p>效果：</p>
+<blockquote>
+<p>This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,<br>consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.<br>Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.</p>
+<p>Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse<br>id sem consectetuer libero luctus adipiscing.</p>
+</blockquote>
+<p>或者只在整个段落的第一行最前面加上 <code>&gt;</code> ：</p>
+<pre><code>&gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+  consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+  Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+
+&gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
+  id sem consectetuer libero luctus adipiscing.
+</code></pre><p>效果：</p>
+<blockquote>
+<p>This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,<br>  consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.<br>  Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.</p>
+<p>Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse<br>  id sem consectetuer libero luctus adipiscing.</p>
+</blockquote>
+<p>区块引用可以嵌套（例如：引用内的引用），只要根据层次加上不同数量的 &gt; ：</p>
+<pre><code>&gt; This is the first level of quoting.
+&gt;
+&gt; &gt; This is nested blockquote.
+&gt;
+&gt; Back to the first level.
+</code></pre><p>效果：</p>
+<blockquote>
+<p>This is the first level of quoting.</p>
+<blockquote>
+<p>This is nested blockquote.</p>
+</blockquote>
+<p>Back to the first level.</p>
+</blockquote>
+<p>引用的区块内也可以使用其他的 Markdown 语法，包括标题、列表、代码区块等：</p>
+<pre><code>&gt; ## 这是一个标题。
+&gt;
+&gt; 1.   这是第一行列表项。
+&gt; 2.   这是第二行列表项。
+&gt;
+&gt; 给出一些例子代码：
+&gt;
+&gt;     return shell_exec(&quot;echo $input | $markdown_script&quot;);
+</code></pre><p>效果：</p>
+<blockquote>
+<h2 id="这是一个标题。"><a href="#这是一个标题。" class="headerlink" title="这是一个标题。"></a>这是一个标题。</h2><ol>
+<li>这是第一行列表项。</li>
+<li>这是第二行列表项。</li>
+</ol>
+<p>给出一些例子代码：</p>
+<pre><code>return shell_exec(&quot;echo $input | $markdown_script&quot;);
+</code></pre></blockquote>
+<h3 id="list">列表</h3>
+
+<p>列表项目标记通常是放在最左边，但是其实也可以缩进，最多 3 个空格，项目标记后面则一定要接着至少一个空格或制表符。</p>
+<p>如果列表项目间用空行分开，在输出 HTML 时 Markdown 就会将项目内容用 <code>&lt;p&gt;</code> 标签包起来，举例来说：</p>
+<pre><code>* Bird
+* Magic
+</code></pre><p>会被转换为：</p>
+<pre><code>&lt;ul&gt;
+&lt;li&gt;Bird&lt;/li&gt;
+&lt;li&gt;Magic&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre><p>但是这个：</p>
+<pre><code>* Bird
+
+* Magic
+</code></pre><p>会被转换为：</p>
+<pre><code>&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Bird&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Magic&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre><p>列表项目可以包含多个段落，每个项目下的段落都必须缩进 4 个空格或是 1 个制表符：</p>
+<pre><code>1.  This is a list item with two paragraphs. Lorem ipsum dolor
+    sit amet, consectetuer adipiscing elit. Aliquam hendrerit
+    mi posuere lectus.
+
+    Vestibulum enim wisi, viverra nec, fringilla in, laoreet
+    vitae, risus. Donec sit amet nisl. Aliquam semper ipsum
+    sit amet velit.
+
+2.  Suspendisse id sem consectetuer libero luctus adipiscing.
+</code></pre><p>效果：</p>
+<ol>
+<li><p>This is a list item with two paragraphs. Lorem ipsum dolor<br>sit amet, consectetuer adipiscing elit. Aliquam hendrerit<br>mi posuere lectus.</p>
+<p>Vestibulum enim wisi, viverra nec, fringilla in, laoreet<br>vitae, risus. Donec sit amet nisl. Aliquam semper ipsum<br>sit amet velit.</p>
+</li>
+<li><p>Suspendisse id sem consectetuer libero luctus adipiscing.</p>
+</li>
+</ol>
+<p>如果要在列表项目内放进引用，那 <code>&gt;</code> 就需要缩进：</p>
+<pre><code>*   A list item with a blockquote:
+
+    &gt; This is a blockquote
+    &gt; inside a list item.
+</code></pre><p>效果：</p>
+<ul>
+<li><p>A list item with a blockquote:</p>
+<blockquote>
+<p>This is a blockquote<br>inside a list item.</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>如果要放代码区块的话，该区块就需要缩进<em>两次</em>，也就是 8 个空格或是 2 个制表符</strong>：</p>
+<pre><code>*   一列表项包含一个列表区块：
+
+            &lt;代码写在这&gt;
+</code></pre><p>效果：</p>
+<ul>
+<li><p>一列表项包含一个列表区块：</p>
+<pre><code>&lt;代码写在这&gt;
+</code></pre></li>
+</ul>
+<p>当然，项目列表很可能会不小心产生，像是下面这样的写法：</p>
+<pre><code>1986. What a great season.
+</code></pre><p>效果：</p>
+<ol>
+<li>What a great season.</li>
+</ol>
+<p>换句话说，也就是在行首出现<em>数字-句点-空白</em>，要避免这样的状况，你可以在句点前面加上反斜杠。</p>
+<pre><code>1986\. What a great season.
+</code></pre><p>效果：</p>
+<p>1986. What a great season.</p>
+<h3 id="pre">代码区块</h3>
+
+<p>要在 Markdown 中建立代码区块很简单，只要简单地缩进 4 个空格或是 1 个制表符就可以，一个代码区块会一直持续到没有缩进的那一行（或是文件结尾）。例如，下面的输入：</p>
+<pre><code>这是一个普通段落：
+
+    这是一个代码区块。
+</code></pre><p>效果：</p>
+<p>这是一个普通段落：</p>
+<pre><code>这是一个代码区块。
+</code></pre><h3 id="hr">段落和换行</h3>
+
+<p>你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。</p>
+<h3 id="link">链接</h3>
+
+<p>Markdown 支持两种形式的链接语法： <em>行内式</em> 和 <em>参考式</em> 两种形式。</p>
+<p>不管是哪一种，链接文字都是用 [方括号] 来标记。</p>
+<p>要建立一个 <em>行内式</em> 的链接，只要在方块括号后面紧接着圆括号并插入网址链接即可，如果你还想要加上链接的 title 文字，只要在网址后面，用双引号把 title 文字包起来即可，例如：</p>
+<pre><code>This is [an example](http://example.com/ &quot;Title&quot;) inline link.
+
+[This link](http://example.net/) has no title attribute.
+</code></pre><p>会产生：</p>
+<pre><code>&lt;p&gt;This is &lt;a href=&quot;http://example.com/&quot; title=&quot;Title&quot;&gt;
+    an example&lt;/a&gt; inline link.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://example.net/&quot;&gt;This link&lt;/a&gt; has no
+    title attribute.&lt;/p&gt;
+</code></pre><p>如果你是要链接到同样主机的资源，你可以使用相对路径：</p>
+<pre><code>See my [About](/about/) page for details.
+</code></pre><p><em>参考式</em> 的链接是在链接文字的括号后面再接上另一个方括号，而在第二个方括号里面要填入用以辨识链接的标记：</p>
+<pre><code>This is [an example][id] reference-style link.
+</code></pre><p>你也可以选择性地在两个方括号中间加上一个空格：</p>
+<pre><code>This is [an example] [id] reference-style link.
+</code></pre><p>接着，在文件的任意处，你可以把这个标记的链接内容定义出来：</p>
+<pre><code>[id]: http://example.com/  &quot;Optional Title Here&quot;
+</code></pre><p>链接内容定义的形式为：</p>
+<ul>
+<li>方括号（前面可以选择性地加上至多三个空格来缩进），里面输入链接文字</li>
+<li>接着一个冒号</li>
+<li>接着一个以上的空格或制表符</li>
+<li>接着链接的网址</li>
+<li>选择性地接着 title 内容，可以用单引号、双引号或是括弧包着</li>
+</ul>
+<p>下面这三种链接的定义都是相同：</p>
+<pre><code>[foo]: http://example.com/  &quot;Optional Title Here&quot;
+[foo]: http://example.com/  &apos;Optional Title Here&apos;
+[foo]: http://example.com/  (Optional Title Here)
+</code></pre><p><strong>请注意：</strong>有一个已知的问题是 Markdown.pl 1.0.1 会忽略单引号包起来的链接 title。</p>
+<p>链接网址也可以用尖括号包起来：</p>
+<pre><code>[id]: &lt;http://example.com/&gt;  &quot;Optional Title Here&quot;
+</code></pre><p>你也可以把 title 属性放到下一行，也可以加些缩进，若网址太长的话，这样会比较好看：</p>
+<pre><code>[id]: http://example.com/longish/path/to/resource/here
+        &quot;Optional Title Here&quot;
+</code></pre><p>网址定义只有在产生链接的时候用到，并不会直接出现在文件之中。</p>
+<p>链接辨别标签可以有字母、数字、空白和标点符号，但是并 <em>不</em> 区分大小写，因此下面两个链接是一样的：</p>
+<pre><code>[link text][a]
+[link text][A]
+</code></pre><p><em>隐式链接标记</em> 功能让你可以省略指定链接标记，这种情形下，链接标记会视为等同于链接文字，要用隐式链接标记只要在链接文字后面加上一个空的方括号，如果你要让 “Google” 链接到 google.com，你可以简化成：</p>
+<pre><code>[Google][]
+</code></pre><p>然后定义链接内容：</p>
+<pre><code>[Google]: http://google.com/
+</code></pre><p>由于链接文字可能包含空白，所以这种简化型的标记内也许包含多个单词：</p>
+<pre><code>Visit [Daring Fireball][] for more information.
+然后接着定义链接：
+
+[Daring Fireball]: http://daringfireball.net/
+</code></pre><p>链接的定义可以放在文件中的任何一个地方，我比较偏好直接放在链接出现段落的后面，你也可以把它放在文件最后面，就像是注解一样。</p>
+<p>下面是一个参考式链接的范例：</p>
+<pre><code>I get 10 times more traffic from [Google] [1] than from
+    [Yahoo] [2] or [MSN] [3].
+
+    [1]: http://google.com/        &quot;Google&quot;
+    [2]: http://search.yahoo.com/  &quot;Yahoo Search&quot;
+    [3]: http://search.msn.com/    &quot;MSN Search&quot;
+</code></pre><p>如果改成用链接名称的方式写：</p>
+<pre><code>I get 10 times more traffic from [Google][] than from
+    [Yahoo][] or [MSN][].
+
+    [google]: http://google.com/        &quot;Google&quot;
+    [yahoo]:  http://search.yahoo.com/  &quot;Yahoo Search&quot;
+    [msn]:    http://search.msn.com/    &quot;MSN Search&quot;
+</code></pre><p>上面两种写法都会产生下面的 HTML。</p>
+<pre><code>&lt;p&gt;I get 10 times more traffic from &lt;a href=&quot;http://google.com/&quot;
+    title=&quot;Google&quot;&gt;Google&lt;/a&gt; than from
+    &lt;a href=&quot;http://search.yahoo.com/&quot; title=&quot;Yahoo Search&quot;&gt;Yahoo&lt;/a&gt;
+    or &lt;a href=&quot;http://search.msn.com/&quot; title=&quot;MSN Search&quot;&gt;MSN&lt;/a&gt;.&lt;/p&gt;
+</code></pre><p>下面是用行内式写的同样一段内容的 Markdown 文件，提供作为比较之用：</p>
+<pre><code>I get 10 times more traffic from [Google](http://google.com/ &quot;Google&quot;)
+    than from [Yahoo](http://search.yahoo.com/ &quot;Yahoo Search&quot;) or
+    [MSN](http://search.msn.com/ &quot;MSN Search&quot;).
+</code></pre><p>参考式的链接其实重点不在于它比较好写，而是它比较好读，比较一下上面的范例，使用参考式的文章本身只有 81 个字符，但是用行内形式的却会增加到 176 个字元，如果是用纯 HTML 格式来写，会有 234 个字元，在 HTML 格式中，标签比文本还要多。</p>
+<p>使用 Markdown 的参考式链接，可以让文件更像是浏览器最后产生的结果，让你可以把一些标记相关的元数据移到段落文字之外，你就可以增加链接而不让文章的阅读感觉被打断。</p>
+<h3 id="em">强调</h3>
+
+<p>Markdown 使用星号（<code>*</code>）和底线（<code>_</code>）作为标记强调字词的符号，被 <code>*</code> 或 <code>_</code> 包围的字词会被转成用 <code>&lt;em&gt;</code> 标签包围，用两个 <code>*</code> 或 <code>_</code> 包起来的话，则会被转成 <code>&lt;strong&gt;</code></p>
+<p>但是<strong>如果你的 <code>*</code> 和 <code>_</code> 两边都有空白的话，它们就只会被当成普通的符号</strong>。</p>
+<p>如果要在文字前后直接插入普通的星号或底线，你可以用反斜线：</p>
+<h3 id="code">代码</h3>
+
+<p>如果要在代码区段内插入反引号，你可以用多个反引号来开启和结束代码区段：</p>
+<pre><code>``There is a literal backtick (`) here.``、
+</code></pre><p>效果：</p>
+<p><code>There is a literal backtick (`) here.</code>、</p>
+<h3 id="img">图片</h3>
+
+<p>Markdown 标记图片允许两种样式： <em>行内式</em> 和 <em>参考式</em>。</p>
+<p>行内式的图片语法看起来像是：</p>
+<pre><code>![Alt text](/path/to/img.jpg)
+
+![Alt text](/path/to/img.jpg &quot;Optional title&quot;)
+</code></pre><p>详细叙述如下：</p>
+<ul>
+<li>一个惊叹号 <code>!</code></li>
+<li>接着一个方括号，里面放上图片的替代文字</li>
+<li>接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上<br>选择性的 ‘title’ 文字。</li>
+</ul>
+<p>参考式的图片语法则长得像这样：</p>
+<pre><code>![Alt text][id]
+</code></pre><p>「id」是图片参考的名称，图片参考的定义方式则和连结参考一样：</p>
+<pre><code>[id]: url/to/image  &quot;Optional title attribute&quot;
+</code></pre><h3 id="autolink">自动链接</h3>
+
+<p>Markdown 支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用尖括号包起来， Markdown 就会自动把它转成链接。一般网址的链接文字就和链接地址一样</p>
+<pre><code>&lt;http://example.com/&gt;
+</code></pre><p>Markdown 会转为：</p>
+<pre><code>&lt;a href=&quot;http://example.com/&quot;&gt;http://example.com/&lt;/a&gt;
+</code></pre><p>电子邮件地址：</p>
+<pre><code>&lt;address@example.com&gt;
+</code></pre><p>Markdown 会转成：</p>
+<pre><code>&lt;a href=&quot;&amp;#x6D;&amp;#x61;i&amp;#x6C;&amp;#x74;&amp;#x6F;:&amp;#x61;&amp;#x64;&amp;#x64;&amp;#x72;&amp;#x65;
+&amp;#115;&amp;#115;&amp;#64;&amp;#101;&amp;#120;&amp;#x61;&amp;#109;&amp;#x70;&amp;#x6C;e&amp;#x2E;&amp;#99;&amp;#111;
+&amp;#109;&quot;&gt;&amp;#x61;&amp;#x64;&amp;#x64;&amp;#x72;&amp;#x65;&amp;#115;&amp;#115;&amp;#64;&amp;#101;&amp;#120;&amp;#x61;
+&amp;#109;&amp;#x70;&amp;#x6C;e&amp;#x2E;&amp;#99;&amp;#111;&amp;#109;&lt;/a&gt;
+</code></pre><p>在浏览器里面，这段字串（其实是   <code>&lt;a href=&quot;mailto:address@example.com&quot;&gt; address@example.com &lt;/a&gt;</code>）会变成一个可以点击的「address@example.com」链接。</p>
+<h2 id="gfm">GitHub 风格的 Markdown 语法</h2>
+
+
+
+<h3 id="autolink-gfm">链接自动识别</h3>
+
+<p>传统 Markdown 自动识别链接需要在链接上用一对尖括号闭合，而 GFM 只需要输入链接即自动识别。Email 地址亦是。</p>
+<h3 id="fenced">围栏式代码块</h3>
+
+<p>传统 Markdown 使用 4 个空格缩进将文本转换为代码块，GFM 支持在代码块前后加三个反引号 ```，而且还可以在代码块前加上语言类型标识，Github 会自动识别语言，给语法着色、代码加亮。</p>
+<p>例如：</p>
+<pre><code><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alet(<span class="string">"Hello world!"</span>);</span><br></pre></td></tr></table></figure>
+</code></pre><h3 id="task-lists">任务清单</h3>
+
+<p>列表可被转换为任务清单，只需要为列表项的开头加上 <code>[ ]</code> 或 <code>[x]</code> 即可（分别表示未完成和已完成）。</p>
+<pre><code>- [x] @mentions, #refs, [links](), **formatting**, and &lt;del&gt;tags&lt;/del&gt; supported
+- [x] list syntax required (any unordered or ordered list supported)
+- [x] this is a complete item
+- [ ] this is an incomplete item
+
+
+- [x] 支持 @提到某人、#引用、[链接]()、**格式化** 和 &lt;del&gt;标签&lt;/del&gt; 等语法
+- [x] 需要使用列表语法来激活（无序或有序列表均可）
+- [x] 这是一个已完成项目
+- [ ] 这是一个未完成项目
+</code></pre><p><img src="http://paddingme.qiniudn.com/markdown.gif" alt=""></p>
+<p>这个特性会在 Issue 和 Pull Request 的描述和评论中启用。任务清单同样可用于 Gist 的评论和 Markdown 格式的 Gist。在这些场合，任务清单将渲染出复选框，供勾选或清除。</p>
+<h3 id="at">@</h3>
+
+<p>按下 @ 符号将弹出一个列表，列出这个项目相关的人或团队,即 @ 提到人名或团队名时的自动补全。这个列表会随着你的输入不断匹配筛选，因此一旦你在列表中发现了你要找的人名或团队名，你就可以用方向键来选中它，然后按回车或 tab 键来补全。对于团队来说，只需要输入 @组织名/团队名，那么团队内的所有成员都将收到提醒。</p>
+<p>列表的匹配范围仅限制在当前仓库的贡献者以及当前讨论的参与者，因此它并不是一个全局性的搜索。它和文件查找器使用相同的模糊筛选算法，并且同时适用于用户名和全名。</p>
+<h3 id="emoji">Emoji</h3><br>按下 : 将会弹出一个表情符号的建议列表。这个列表会随着你的输入不断匹配筛选，因此一旦你在列表中发现了你要找的表情符号，你就可以按回车或 tab 键来补全当前高亮的那一项。<br><br>更多的 emoji 表情 可以猛击 <a href="http://www.emoji-cheat-sheet.com/" target="_blank" rel="external">EMOJI CHEAT SHEET</a>。<br><br><h3 id="table">table</h3>
+
+<p>你可以使用若干列文字并于第一行下面用转折号-分开它们，然后用管道符|隔开每一列：</p>
+<pre><code>First Header  | Second Header
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  | Content Cell
+</code></pre><p>为了看上去美观，你也可以在两端加上额外的管道符：</p>
+<pre><code>| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+</code></pre><p>注意顶部的虚线不需要准确匹配表头文本的长度：</p>
+<pre><code>| Name | Description          |
+| ------------- | ----------- |
+| Help      | Display the help window.|
+| Close     | Closes a window     |
+</code></pre><p>你也可以在其中包括内联 Markdown 元素，比如链接，加粗，斜体或删除</p>
+<pre><code>| Name | Description          |
+| ------------- | ----------- |
+| Help      | ~~Display the~~ help window.|
+| Close     | _Closes_ a window     |
+</code></pre><p>最后，通过在表头行加入冒号:，你可以决定文本是左对齐，右对齐，还是居中：</p>
+<pre><code>| Left-Aligned  | Center Aligned  | Right Aligned |
+| :------------ |:---------------:| -----:|
+| col 3 is      | some wordy text | $1600 |
+| col 2 is      | centered        |   $12 |
+| zebra stripes | are neat        |    $1 |
+</code></pre><p>一个在最左边的冒号表示一个左对齐的列；一个在最右边的冒号表示一个右对齐的列；两边都有的冒号表示一个居中的列。</p>
+<h3 id="del">强调</h3>
+
+<p>用在字母中间放一条线来强调文字 可使用</p>
+<pre><code>~~this~~
+</code></pre><p>效果为</p>
+<p><del>this</del></p>
+<h2 id="layout">一些和排版有关的资源</h2>
+
+<ul>
+<li><a href="https://ruby-china.org/topics/14005" target="_blank" rel="external">Web 中文字体应用指南</a></li>
+<li><a href="http://zhuanlan.zhihu.com/FrontendMagazine/19891152" target="_blank" rel="external">中文排版的最佳实践</a></li>
+<li><p><a href="https://github.com/zmmbreeze/Entry.css/" target="_blank" rel="external">Entry.css</a></p>
+<blockquote>
+<p>Customizable and readable less library for Chinese text. 一个可配置的、更适合阅读的中文文章样式库</p>
+</blockquote>
+</li>
+<li><p><a href="https://github.com/sofish/typo.css" target="_blank" rel="external">typo.css </a></p>
+<blockquote>
+<p>中文网页重设与排版：一致化浏览器排版效果，构建最适合中文阅读的网页排版</p>
+</blockquote>
+</li>
+<li><p><a href="https://github.com/lepture/yue.css" target="_blank" rel="external">yue.css</a></p>
+<blockquote>
+<p>A typography stylesheet for readable content</p>
+</blockquote>
+</li>
+<li><p><a href="https://github.com/sparanoid/chinese-copywriting-guidelines" target="_blank" rel="external">chinese-copywriting-guidelines</a></p>
+<blockquote>
+<p>Chinese Copywriting Guidelines：中文文案排版指北</p>
+</blockquote>
+</li>
+<li><p><a href="https://github.com/ethantw/Han" target="_blank" rel="external">Han.css</a></p>
+<blockquote>
+<p>「漢字標準格式」印刷品般的漢字排版框架 Han.css: the CSS typography framework optimised for Hanzi.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="acknowledgement">参考文章</h2>
+
+<ul>
+<li><a href="http://wowubuntu.com/markdown/" target="_blank" rel="external">http://wowubuntu.com/markdown/</a></li>
+<li><a href="https://github.com/cssmagic/blog/issues/13" target="_blank" rel="external">https://github.com/cssmagic/blog/issues/13</a></li>
+<li><a href="https://help.github.com/articles/github-flavored-markdown/" target="_blank" rel="external">https://help.github.com/articles/github-flavored-markdown/</a></li>
+<li><a href="https://guides.github.com/features/mastering-markdown/" target="_blank" rel="external">https://guides.github.com/features/mastering-markdown/</a></li>
+<li><a href="https://guides.github.com/features/mastering-markdown/" target="_blank" rel="external">https://guides.github.com/features/mastering-markdown/</a></li>
+</ul>
+<!--
+1. 大 V 都在 学 Markdown 你还在干嘛？
+2. markdown 之 传统语法
+ - http://wowubuntu.com/markdown/
+3. github markdown 语法
+4. 各平台为啥 markdown 不一样呢（github，sf.gg，html-js，以及 W3CTech（不支持表格嵌套））
+5. 一些和文字，排版有关系的东西。
+-->
+
+    
+  </div>
+</article>
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/blog/"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'PaddingMe';
+    
+    var disqus_url = 'http://yoursite.com/blog/2015/01/14/my-markdown-syntax-notes/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//PaddingMe.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235687', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>
