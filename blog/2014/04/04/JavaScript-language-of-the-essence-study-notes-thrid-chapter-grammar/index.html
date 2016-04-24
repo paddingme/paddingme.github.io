@@ -7,27 +7,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>PaddingMe&#39;s Blog</title>
+  <title>JavaScript语言精粹之第三章对象 | PaddingMe&#39;s Blog</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-    <meta name="keywords" content="PaddingMe,front-end,前端,前端工程师,web开发工程师,HTML,CSS,JavaScript,nodejs" />
+    <meta name="keywords" content="JavaScript," />
   
 
-  <meta name="description" content="title: JavaScript语言精粹之第三章 对象layout: posttags:
-- JavaScript ##上一章回顾以及一些废话##首先谢谢芋头大大以及其他各位大大的鼓励。很多时候，在自己查找技术文章时，只是为了寻找一个答案，而答案之后的来由却从没有做过多考究，以至于我越来越觉得自己不会思考。这也是在这里开专栏的原因之一，认真去看一本书，写读书笔记，多问自己几个为什么。昨天的排版">
+  <meta name="description" content="##上一章回顾以及一些废话##首先谢谢芋头大大以及其他各位大大的鼓励。很多时候，在自己查找技术文章时，只是为了寻找一个答案，而答案之后的来由却从没有做过多考究，以至于我越来越觉得自己不会思考。这也是在这里开专栏的原因之一，认真去看一本书，写读书笔记，多问自己几个为什么。昨天的排版很烂，今天看了下markdown的语法和html5的一些语义化标签。所以弄到现在。好了，废话少说，温故知新先回顾下上一章">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PaddingMe's Blog">
+<meta property="og:title" content="JavaScript语言精粹之第三章对象">
 <meta property="og:url" content="http://padding.me/blog/2014/04/04/JavaScript-language-of-the-essence-study-notes-thrid-chapter-grammar/index.html">
 <meta property="og:site_name" content="PaddingMe's Blog">
-<meta property="og:description" content="title: JavaScript语言精粹之第三章 对象layout: posttags:
-- JavaScript ##上一章回顾以及一些废话##首先谢谢芋头大大以及其他各位大大的鼓励。很多时候，在自己查找技术文章时，只是为了寻找一个答案，而答案之后的来由却从没有做过多考究，以至于我越来越觉得自己不会思考。这也是在这里开专栏的原因之一，认真去看一本书，写读书笔记，多问自己几个为什么。昨天的排版">
-<meta property="og:updated_time" content="2015-07-08T06:52:18.000Z">
+<meta property="og:description" content="##上一章回顾以及一些废话##首先谢谢芋头大大以及其他各位大大的鼓励。很多时候，在自己查找技术文章时，只是为了寻找一个答案，而答案之后的来由却从没有做过多考究，以至于我越来越觉得自己不会思考。这也是在这里开专栏的原因之一，认真去看一本书，写读书笔记，多问自己几个为什么。昨天的排版很烂，今天看了下markdown的语法和html5的一些语义化标签。所以弄到现在。好了，废话少说，温故知新先回顾下上一章">
+<meta property="og:updated_time" content="2016-04-24T13:35:12.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PaddingMe's Blog">
-<meta name="twitter:description" content="title: JavaScript语言精粹之第三章 对象layout: posttags:
-- JavaScript ##上一章回顾以及一些废话##首先谢谢芋头大大以及其他各位大大的鼓励。很多时候，在自己查找技术文章时，只是为了寻找一个答案，而答案之后的来由却从没有做过多考究，以至于我越来越觉得自己不会思考。这也是在这里开专栏的原因之一，认真去看一本书，写读书笔记，多问自己几个为什么。昨天的排版">
+<meta name="twitter:title" content="JavaScript语言精粹之第三章对象">
+<meta name="twitter:description" content="##上一章回顾以及一些废话##首先谢谢芋头大大以及其他各位大大的鼓励。很多时候，在自己查找技术文章时，只是为了寻找一个答案，而答案之后的来由却从没有做过多考究，以至于我越来越觉得自己不会思考。这也是在这里开专栏的原因之一，认真去看一本书，写读书笔记，多问自己几个为什么。昨天的排版很烂，今天看了下markdown的语法和html5的一些语义化标签。所以弄到现在。好了，废话少说，温故知新先回顾下上一章">
 
   
 
@@ -144,7 +141,7 @@ ga('send', 'pageview');
 
   <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript"><span class="toc-text">- JavaScript </span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第三章-对象"><span class="toc-text">第三章  对象</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#第三章-对象"><span class="toc-text">第三章  对象</span></a></li></ol>
   </div>
 
 
@@ -152,7 +149,7 @@ ga('send', 'pageview');
 <div class="content content-post CENTER">
    <article id="post-JavaScript-language-of-the-essence-study-notes-thrid-chapter-grammar" class="article article-type-post" itemprop="blogPost">
   <header class="article-header">
-    <h1 class="post-title">(no title)</h1>
+    <h1 class="post-title">JavaScript语言精粹之第三章对象</h1>
 
     <div class="article-meta">
       <span>
@@ -182,9 +179,7 @@ ga('send', 'pageview');
 
   <div class="article-content">
     
-      <hr>
-<p>title: JavaScript语言精粹之第三章 对象<br>layout: post<br>tags:</p>
-<h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="- JavaScript "></a>- JavaScript </h2><p>##上一章回顾以及一些废话##<br>首先谢谢芋头大大以及其他各位大大的鼓励。很多时候，在自己查找技术文章时，只是为了寻找一个答案，而答案之后的来由却从没有做过多考究，以至于我越来越觉得自己不会思考。这也是在这里开专栏的原因之一，认真去看一本书，写读书笔记，多问自己几个为什么。昨天的排版很烂，今天看了下markdown的语法和html5的一些语义化标签。所以弄到现在。好了，废话少说，温故知新先回顾下上一章语法的知识点。</p>
+      <p>##上一章回顾以及一些废话##<br>首先谢谢芋头大大以及其他各位大大的鼓励。很多时候，在自己查找技术文章时，只是为了寻找一个答案，而答案之后的来由却从没有做过多考究，以至于我越来越觉得自己不会思考。这也是在这里开专栏的原因之一，认真去看一本书，写读书笔记，多问自己几个为什么。昨天的排版很烂，今天看了下markdown的语法和html5的一些语义化标签。所以弄到现在。好了，废话少说，温故知新先回顾下上一章语法的知识点。</p>
 <p>上一章主要说了JavaScript的语法,先列出觉得重要的地方：</p>
 <ul>
 <li>===(严格相等运算符)首先计算其操作数的值，再进行比较，比较过程中无任何类型转换，JS的对象比较是引用比较非值比较，对象只和对象本身相等，和任何其他对象不等；</li>
@@ -259,7 +254,7 @@ a=b=c={};
     Object.beget =function (o) {
             var F=function () {};
             F.prototype=o;
-            return new F(); 
+            return new F();
     }
 }
 var another_chouchou=Object.beget(chouchou);
@@ -316,7 +311,7 @@ MYAPP.flight={airline="mh",number=370,
 <hr>
 
 <p>今天学习了对象中的一些重要性质，如原型、反射、减少全局污染，留下这些坑明晚展开讨论。</p>
-<p>感谢阅读，如果文中有不对的地方欢迎指出，另文中一些我不懂的或者留下的坑也欢迎大家赐教=。= </p>
+<p>感谢阅读，如果文中有不对的地方欢迎指出，另文中一些我不懂的或者留下的坑也欢迎大家赐教=。=</p>
 
     
   </div>
