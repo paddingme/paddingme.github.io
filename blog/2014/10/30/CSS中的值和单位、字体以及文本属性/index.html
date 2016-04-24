@@ -7,7 +7,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>CSS中的值和单位、字体以及文本属性 | Hexo</title>
+  <title>CSS中的值和单位、字体以及文本属性 | PaddingMe&#39;s Blog</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -20,8 +20,8 @@
 1. 值和单位CSS里的值和单位，主要分为绝">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS中的值和单位、字体以及文本属性">
-<meta property="og:url" content="http://yoursite.com/blog/2014/10/30/CSS中的值和单位、字体以及文本属性/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:url" content="http://padding.me/blog/2014/10/30/CSS中的值和单位、字体以及文本属性/index.html">
+<meta property="og:site_name" content="PaddingMe's Blog">
 <meta property="og:description" content="文章取自我的 Github  repos: Learning-HTML-CSS， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-HTML-CSS/issues/10
 这几天在学习CSS权威指南,学习了CSS中的值和单位、字体以及文本属性，这里做一个相关总结，主要总结我认为重要的知识点。
 1. 值和单位CSS里的值和单位，主要分为绝">
@@ -41,8 +41,6 @@
   <link href="/css/styles.css?v=32204ee7" rel="stylesheet">
 
 
-  
-    <link rel="stylesheet" href="/css/personal-style.css">
   
 
   
@@ -113,16 +111,6 @@ ga('send', 'pageview');
         <li class="item-toolbox">
           <a
             class="CIRCLE"
-            href="/link/"
-            target="_self"
-            >
-            友链
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
             href="/about/"
             target="_self"
             >
@@ -178,7 +166,7 @@ ga('send', 'pageview');
       
         <span class="article-author">
           <i class="icon-user"></i>
-          <span>John Doe</span>
+          <span>PaddingMe</span>
         </span>
       
 
@@ -197,7 +185,7 @@ ga('send', 'pageview');
 
   <div class="article-content">
     
-      <p> 文章取自我的 Github  repos: <a href="https://github.com/paddingme/Learning-HTML-CSS" target="_blank" rel="external">Learning-HTML-CSS</a>， 作者：<a href="http://padding.me/about.html" target="_blank" rel="external">@paddingme</a><br>原文链接：<a href="https://github.com/paddingme/Learning-HTML-CSS/issues/10" target="_blank" rel="external">https://github.com/paddingme/Learning-HTML-CSS/issues/10</a></p>
+      <p> 文章取自我的 Github  repos: <a href="https://github.com/paddingme/Learning-HTML-CSS" target="_blank" rel="external">Learning-HTML-CSS</a>， 作者：<a href="http://padding.me/about.html">@paddingme</a><br>原文链接：<a href="https://github.com/paddingme/Learning-HTML-CSS/issues/10" target="_blank" rel="external">https://github.com/paddingme/Learning-HTML-CSS/issues/10</a></p>
 <p>这几天在学习<a href="http://www.amazon.cn/CSS%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97-%E8%BF%88%E8%80%B6/dp/B0011F5SIC/ref=sr_1_1?ie=UTF8&amp;qid=1399054787&amp;sr=8-1&amp;keywords=css+%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97" target="_blank" rel="external">CSS权威指南</a>,学习了CSS中的值和单位、字体以及文本属性，这里做一个相关总结，主要总结我认为重要的知识点。</p>
 <h2 id="1-值和单位"><a href="#1-值和单位" class="headerlink" title="1. 值和单位"></a>1. 值和单位</h2><p>CSS里的值和单位，主要分为绝对长度单位：<code>in</code>(英寸)、<code>cm</code>(厘米)<code>mm</code>(毫米)、<code>pt</code>(点，标准印刷度量单位)、<code>pc</code>(派卡，印刷术语),以及相对长度单位：<code>em</code>,<code>ex</code>,<code>px</code>。</p>
 <p>我们主要使用<code>em</code>和<code>px</code>，<code>ex</code>指所用字体中小写x的高度,我们无情得忽视它。“相对”相对“绝对”的好处我们已然了解，例如url链接，我们不用关注外部url地址如何变化，相对路径没问题，我们便可以各种超链接。这里的相对长度单位也是同样的道理。<code>em</code>相对于给定字体的font-size值。现代浏览器字体默认大小为16个像素。如果一个元素的font-size为14px,那么对于该元素，1em=14px。这个值可能会随元素的不同而不同，另在设置字体的大小的时，em的值会相对于父元素的字体大小改变。总得来说，就是<strong>em依赖于最近的字体大小</strong>(不要惯性的以为依赖于原先body设定的或者浏览器默认的值。)</p>
@@ -243,7 +231,7 @@ ga('send', 'pageview');
 <li>使用中文字体或者英文名称超过一个单词的字体时要使用”(冒号)扩起来,比如”Times News Roman”,”宋体”</li>
 <li>现代浏览器字体默认的设置为“宋体/simsun字体 16像素”</li>
 </ul>
-<p>(留坑：<a href="http://padding.me" target="_blank" rel="external">paddingme</a>博客字体默认设置为small,而<a href="http://www.zaibc.com/" target="_blank" rel="external">http://www.zaibc.com/</a>的字体设置为<br><code>body {
+<p>(留坑：<a href="http://padding.me">paddingme</a>博客字体默认设置为small,而<a href="http://www.zaibc.com/" target="_blank" rel="external">http://www.zaibc.com/</a>的字体设置为<br><code>body {
 font: 13px Tahoma, Helvetica, Arial, &quot;\5b8b\4f53&quot;, sans-serif;
 }</code>) 很奇怪在我电脑上(windows7,chrome33.0.1750.146 )显示正常，而在同学的电脑上(mac，chrome版本未知）我博客的字体竟然比zaibc的字体小)理论上，small为13px，为什么不一样大呢？难道是浏览器渲染的问题？等我入手大MAC再做详细对比研究。当然HTML的big,small标签已经被w3c抛弃)</p>
 <p>另关于默认字体可以查阅<a href="http://saibeixuer.blog.163.com/blog/static/74770377201075111628356/" target="_blank" rel="external">女施主的博文中</a>详细解析了淘宝的字体，可以围观，做深入了解。还有这位<a href="http://www.iyunlu.com/view/css-xhtml/default-web-font-style-1.html" target="_blank" rel="external">男施主的博文</a>和<a href="http://iyunlu.com/view/css-xhtml/default-web-font-style-2html.html" target="_blank" rel="external">这一篇博文</a>,玉伯的文章找不到了很遗憾。张鑫旭的<a href="http://www.zhangxinxu.com/wordpress/?p=874" target="_blank" rel="external">这篇博客</a>也相当有趣，建议观看，提供一个新的视角关于字体设置。还强烈推荐<a href="http://lepture.com/zh/2014/chinese-fonts-and-yue-css" target="_blank" rel="external">这篇博客</a>，博主对中文字体确有研究，所以他的网站<a href="http://yuehu.io" target="_blank" rel="external">阅乎</a>阅读体验非常好。<strong>字体真是一门大学问!</strong></p>
@@ -302,16 +290,6 @@ font: 13px Tahoma, Helvetica, Arial, &quot;\5b8b\4f53&quot;, sans-serif;
           <li class="item-toolbox">
             <a
               class="CIRCLE"
-              href="/link/"
-              target="_self"
-              >
-              友链
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
               href="/about/"
               target="_self"
               >
@@ -359,7 +337,7 @@ font: 13px Tahoma, Helvetica, Arial, &quot;\5b8b\4f53&quot;, sans-serif;
   <script>
     var disqus_shortname = 'PaddingMe';
     
-    var disqus_url = 'http://yoursite.com/blog/2014/10/30/CSS中的值和单位、字体以及文本属性/';
+    var disqus_url = 'http://padding.me/blog/2014/10/30/CSS中的值和单位、字体以及文本属性/';
     
     (function(){
       var dsq = document.createElement('script');

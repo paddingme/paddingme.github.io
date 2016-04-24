@@ -7,7 +7,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>前端学习第十四天 浅谈 BR 标签[2] | Hexo</title>
+  <title>前端学习第十四天 浅谈 BR 标签[2] | PaddingMe&#39;s Blog</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -20,8 +20,8 @@
 昨天了解了 &amp;lt;br&amp;gt; 的语义和正确使用场景，今天咱们来了解下  &amp;lt;br&amp;gt;在各浏览器的表现，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="前端学习第十四天 浅谈 BR 标签[2]">
-<meta property="og:url" content="http://yoursite.com/blog/2014/11/30/前端学习第十四天 浅谈 BR 标签[2]/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:url" content="http://padding.me/blog/2014/11/30/前端学习第十四天 浅谈 BR 标签[2]/index.html">
+<meta property="og:site_name" content="PaddingMe's Blog">
 <meta property="og:description" content="文章取自我的 Github  repos: Learning-JavaScript， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-JavaScript/issues/18
 前端学习 第十四天 浅谈 BR 标签[2]
 昨天了解了 &amp;lt;br&amp;gt; 的语义和正确使用场景，今天咱们来了解下  &amp;lt;br&amp;gt;在各浏览器的表现，">
@@ -49,8 +49,6 @@
   <link href="/css/styles.css?v=32204ee7" rel="stylesheet">
 
 
-  
-    <link rel="stylesheet" href="/css/personal-style.css">
   
 
   
@@ -121,16 +119,6 @@ ga('send', 'pageview');
         <li class="item-toolbox">
           <a
             class="CIRCLE"
-            href="/link/"
-            target="_self"
-            >
-            友链
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
             href="/about/"
             target="_self"
             >
@@ -186,7 +174,7 @@ ga('send', 'pageview');
       
         <span class="article-author">
           <i class="icon-user"></i>
-          <span>John Doe</span>
+          <span>PaddingMe</span>
         </span>
       
 
@@ -205,7 +193,7 @@ ga('send', 'pageview');
 
   <div class="article-content">
     
-      <p> 文章取自我的 Github  repos: <a href="https://github.com/paddingme/Learning-JavaScript" target="_blank" rel="external">Learning-JavaScript</a>， 作者：<a href="http://padding.me/about.html" target="_blank" rel="external">@paddingme</a><br>原文链接：<a href="https://github.com/paddingme/Learning-JavaScript/issues/18" target="_blank" rel="external">https://github.com/paddingme/Learning-JavaScript/issues/18</a></p>
+      <p> 文章取自我的 Github  repos: <a href="https://github.com/paddingme/Learning-JavaScript" target="_blank" rel="external">Learning-JavaScript</a>， 作者：<a href="http://padding.me/about.html">@paddingme</a><br>原文链接：<a href="https://github.com/paddingme/Learning-JavaScript/issues/18" target="_blank" rel="external">https://github.com/paddingme/Learning-JavaScript/issues/18</a></p>
 <p>前端学习 第十四天 浅谈 BR 标签[2]</p>
 <p>昨天了解了 <code>&lt;br&gt;</code> 的语义和正确使用场景，今天咱们来了解下  <code>&lt;br&gt;</code>在各浏览器的表现，能不能使用 CSS 样式来改变其表现，能改变哪些样式，以及为什么只能改变这些样式，以及如何改变等问题。</p>
 <h2 id="lt-br-gt-在各浏览器的表现"><a href="#lt-br-gt-在各浏览器的表现" class="headerlink" title="&lt;br&gt;在各浏览器的表现"></a><code>&lt;br&gt;</code>在各浏览器的表现</h2><p>测试代码：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"zh-cmn-Hans"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>BR DEMO<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span><br><span class="line">    * &#123;</span><br><span class="line">        <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">        <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>我是一段测试文字</span><br><span class="line">        <span class="tag">&lt;<span class="name">br</span>&gt;</span> 我来测试下 br 标签各浏览器表现</span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
@@ -283,16 +271,6 @@ ga('send', 'pageview');
           <li class="item-toolbox">
             <a
               class="CIRCLE"
-              href="/link/"
-              target="_self"
-              >
-              友链
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
               href="/about/"
               target="_self"
               >
@@ -340,7 +318,7 @@ ga('send', 'pageview');
   <script>
     var disqus_shortname = 'PaddingMe';
     
-    var disqus_url = 'http://yoursite.com/blog/2014/11/30/前端学习第十四天 浅谈 BR 标签[2]/';
+    var disqus_url = 'http://padding.me/blog/2014/11/30/前端学习第十四天 浅谈 BR 标签[2]/';
     
     (function(){
       var dsq = document.createElement('script');

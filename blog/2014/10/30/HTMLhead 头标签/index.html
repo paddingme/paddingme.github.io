@@ -7,7 +7,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>HTMLhead 头标签 | Hexo</title>
+  <title>HTMLhead 头标签 | PaddingMe&#39;s Blog</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -19,8 +19,8 @@
 HTML head 头部分的标签、元素有很多，涉及到浏览器对网页的渲染，SEO 等等，而各个浏览器内核以及各个国内浏览器厂商都有些自己的标签元素,这就造成了很多差异性。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HTMLhead 头标签">
-<meta property="og:url" content="http://yoursite.com/blog/2014/10/30/HTMLhead 头标签/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:url" content="http://padding.me/blog/2014/10/30/HTMLhead 头标签/index.html">
+<meta property="og:site_name" content="PaddingMe's Blog">
 <meta property="og:description" content="文章取自我的 Github  repos: Learning-HTML-CSS， 作者：@paddingme原文链接：https://github.com/paddingme/Learning-HTML-CSS/issues/4
 HTML head 头部分的标签、元素有很多，涉及到浏览器对网页的渲染，SEO 等等，而各个浏览器内核以及各个国内浏览器厂商都有些自己的标签元素,这就造成了很多差异性。">
 <meta property="og:updated_time" content="2016-04-10T16:12:39.000Z">
@@ -38,8 +38,6 @@ HTML head 头部分的标签、元素有很多，涉及到浏览器对网页的�
   <link href="/css/styles.css?v=32204ee7" rel="stylesheet">
 
 
-  
-    <link rel="stylesheet" href="/css/personal-style.css">
   
 
   
@@ -110,16 +108,6 @@ ga('send', 'pageview');
         <li class="item-toolbox">
           <a
             class="CIRCLE"
-            href="/link/"
-            target="_self"
-            >
-            友链
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
             href="/about/"
             target="_self"
             >
@@ -175,7 +163,7 @@ ga('send', 'pageview');
       
         <span class="article-author">
           <i class="icon-user"></i>
-          <span>John Doe</span>
+          <span>PaddingMe</span>
         </span>
       
 
@@ -194,7 +182,7 @@ ga('send', 'pageview');
 
   <div class="article-content">
     
-      <p> 文章取自我的 Github  repos: <a href="https://github.com/paddingme/Learning-HTML-CSS" target="_blank" rel="external">Learning-HTML-CSS</a>， 作者：<a href="http://padding.me/about.html" target="_blank" rel="external">@paddingme</a><br>原文链接：<a href="https://github.com/paddingme/Learning-HTML-CSS/issues/4" target="_blank" rel="external">https://github.com/paddingme/Learning-HTML-CSS/issues/4</a></p>
+      <p> 文章取自我的 Github  repos: <a href="https://github.com/paddingme/Learning-HTML-CSS" target="_blank" rel="external">Learning-HTML-CSS</a>， 作者：<a href="http://padding.me/about.html">@paddingme</a><br>原文链接：<a href="https://github.com/paddingme/Learning-HTML-CSS/issues/4" target="_blank" rel="external">https://github.com/paddingme/Learning-HTML-CSS/issues/4</a></p>
 <p>HTML head 头部分的标签、元素有很多，涉及到浏览器对网页的渲染，SEO 等等，而各个浏览器内核以及各个国内浏览器厂商都有些自己的标签元素,这就造成了很多差异性。移动互联网时代，head 头部结构，移动端的 meta 元素，显得更为重要。了解每个标签的意义，写出满足自己需求的 head  头标签，是本文的目的。本篇以<a href="https://github.com/yisibl/blog/issues/1" target="_blank" rel="external">一丝的文章</a>为基础，进行扩展总结介绍常用的 head 中各个标签、元素的意义以及使用场景。</p>
 <h3 id="DOCTYPE"><a href="#DOCTYPE" class="headerlink" title="DOCTYPE"></a>DOCTYPE</h3><p>DOCTYPE(Document Type)，该声明位于文档中最前面的位置，处于 <code>html</code> 标签之前，此标签告知浏览器文档使用哪种 HTML 或者 XHTML 规范。</p>
 <p>DTD(Document Type Definition) 声明以 <code>&lt;!DOCTYPE&gt;</code> 开始，不区分大小写，前面没有任何内容，如果有其他内容(空格除外)会使浏览器在 IE 下开启怪异模式(quirks mode)渲染网页。公共 DTD，名称格式为<code>注册//组织//类型 标签//语言</code>,<code>注册</code>指组织是否由国际标准化组织(ISO)注册，<code>+</code>表示是，<code>-</code>表示不是。<code>组织</code>即组织名称，如：W3C。<code>类型</code>一般是 DTD。<code>标签</code>是指定公开文本描述，即对所引用的公开文本的唯一描述性名称，后面可附带版本号。最后<code>语言</code>是 DTD 语言的 ISO 639 语言标识符，如：EN 表示英文，ZH 表示中文。XHTML 1.0 可声明三种 DTD 类型。分别表示严格版本，过渡版本，以及基于框架的 HTML 文档。</p>
@@ -222,7 +210,7 @@ ga('send', 'pageview');
 <ul>
 <li>非怪异（标准）模式</li>
 <li>怪异模式</li>
-<li>部分怪异（近乎标准）模式<br>关于IE浏览器的文档模式，浏览器模式，严格模式，怪异模式，DOCTYPE 标签，可详细阅读<a href="http://padding.me/blog/2014/07/04/mode-or-standard/" target="_blank" rel="external">模式？标准！</a>的内容。</li>
+<li>部分怪异（近乎标准）模式<br>关于IE浏览器的文档模式，浏览器模式，严格模式，怪异模式，DOCTYPE 标签，可详细阅读<a href="http://padding.me/blog/2014/07/04/mode-or-standard/">模式？标准！</a>的内容。</li>
 </ul>
 </li>
 </ul>
@@ -431,16 +419,6 @@ ga('send', 'pageview');
           <li class="item-toolbox">
             <a
               class="CIRCLE"
-              href="/link/"
-              target="_self"
-              >
-              友链
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
               href="/about/"
               target="_self"
               >
@@ -488,7 +466,7 @@ ga('send', 'pageview');
   <script>
     var disqus_shortname = 'PaddingMe';
     
-    var disqus_url = 'http://yoursite.com/blog/2014/10/30/HTMLhead 头标签/';
+    var disqus_url = 'http://padding.me/blog/2014/10/30/HTMLhead 头标签/';
     
     (function(){
       var dsq = document.createElement('script');

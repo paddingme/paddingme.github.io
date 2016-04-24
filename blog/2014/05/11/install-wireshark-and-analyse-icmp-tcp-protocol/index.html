@@ -7,7 +7,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Wireshare软件安装以及对ICMP、TCP协议的分析 | Hexo</title>
+  <title>Wireshare软件安装以及对ICMP、TCP协议的分析 | PaddingMe&#39;s Blog</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -21,8 +21,8 @@
 下载点击安装，点击next进入下一步">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Wireshare软件安装以及对ICMP、TCP协议的分析">
-<meta property="og:url" content="http://yoursite.com/blog/2014/05/11/install-wireshark-and-analyse-icmp-tcp-protocol/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:url" content="http://padding.me/blog/2014/05/11/install-wireshark-and-analyse-icmp-tcp-protocol/index.html">
+<meta property="og:site_name" content="PaddingMe's Blog">
 <meta property="og:description" content="1. Wireshark (Ethereal)软件安装以及配置步骤Wireshark是一个网络数据包分析软件。网络数据包分析软件的功能是截取网络数据包，并尽可能显示出最为详细的网络数据包数据，安装以下步骤安装：
 
 在wireshark官网上根据自己的系统下载安装文件，这里我的系统是window32位，选择下载windows Installer(32-bit)；
@@ -68,8 +68,6 @@
   <link href="/css/styles.css?v=32204ee7" rel="stylesheet">
 
 
-  
-    <link rel="stylesheet" href="/css/personal-style.css">
   
 
   
@@ -140,16 +138,6 @@ ga('send', 'pageview');
         <li class="item-toolbox">
           <a
             class="CIRCLE"
-            href="/link/"
-            target="_self"
-            >
-            友链
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
             href="/about/"
             target="_self"
             >
@@ -205,7 +193,7 @@ ga('send', 'pageview');
       
         <span class="article-author">
           <i class="icon-user"></i>
-          <span>John Doe</span>
+          <span>PaddingMe</span>
         </span>
       
 
@@ -263,9 +251,9 @@ ga('send', 'pageview');
 </ul>
 <h2 id="3-分析TCP协议"><a href="#3-分析TCP协议" class="headerlink" title="3. 分析TCP协议"></a>3. 分析TCP协议</h2><p>TCP协议重要的是理解“TCP三次握手”和“TCP四次握手”，我们使用WireShark抓包并分析TCP如何通过三次握手建立TCP连接。</p>
 <ol>
-<li><p>TCP用<code>三次握手(three-way handshake)</code>建立连接，可详细参考下图：<br><figure><img src="http://paddingme.qiniudn.com/21.gif" alt="tcp三次握手"></figure><br>在建立TCP连接的时候，TCP需要三次握手才能建立连接，这里使用我的博客网站<a href="http://padding.me" target="_blank" rel="external">paddingme</a>,ip地址为203.245.222.133作为测试，如下图所示这里在filter里填写过滤规则为：ip.addr==203.245.222.133 表示只保留IP地址为203.245.222.133有关的数据包。<br><figure><img src="http://paddingme.qiniudn.com/19.png" alt="wireshark软件安装成功"></figure><br>如上图所示：序号5,6,7,8,9的数据包一直在发送请求，我们忽略它，从第10条数据包开始跟，本机IP：192.168.1.106向目标地址IP：103.245.222.133发送请求，此时SYN=1，Seq=0；<br>第14条数据包表示，目标地址收到请求，此时ACK=1，SYN=1,Seq=0;第15条数据表示，本地IP收到这条确认消息，并发送对这条确认消息的确认消息给目标地址,此时ACK=1，Seq=1。此时TCP成功建立，从第16条数据开始发送HTTP请求。</p>
+<li><p>TCP用<code>三次握手(three-way handshake)</code>建立连接，可详细参考下图：<br><figure><img src="http://paddingme.qiniudn.com/21.gif" alt="tcp三次握手"></figure><br>在建立TCP连接的时候，TCP需要三次握手才能建立连接，这里使用我的博客网站<a href="http://padding.me">paddingme</a>,ip地址为203.245.222.133作为测试，如下图所示这里在filter里填写过滤规则为：ip.addr==203.245.222.133 表示只保留IP地址为203.245.222.133有关的数据包。<br><figure><img src="http://paddingme.qiniudn.com/19.png" alt="wireshark软件安装成功"></figure><br>如上图所示：序号5,6,7,8,9的数据包一直在发送请求，我们忽略它，从第10条数据包开始跟，本机IP：192.168.1.106向目标地址IP：103.245.222.133发送请求，此时SYN=1，Seq=0；<br>第14条数据包表示，目标地址收到请求，此时ACK=1，SYN=1,Seq=0;第15条数据表示，本地IP收到这条确认消息，并发送对这条确认消息的确认消息给目标地址,此时ACK=1，Seq=1。此时TCP成功建立，从第16条数据开始发送HTTP请求。</p>
 </li>
-<li><p>TCP关闭连接时候需要<code>四次握手</code>，整个过程如下图所示:<br><figure><img src="http://paddingme.qiniudn.com/22.gif" alt="tcp四次握手"></figure><br>当浏览器离开<a href="http://padding.me" target="_blank" rel="external">padding.me</a>时，目标IP：103.245.222.133会发送关闭连接，如下图所示：<br><figure><img src="http://paddingme.qiniudn.com/20.png" alt="wireshark软件安装成功"></figure><br>第424条数据包显示:目标IP：103.245.222.133向本地IP：192.168.1.106发送FIN=1，ACK=1，此时Seq=607;第425条数据包表明，本地IP接收到424条数据，对这条数据发送确认，此时，ACK=608，Seq=1077；第455条和456条数据包表示本地IP发送关闭连接给目标IP，此时ACK=1，FIN=1，Seq=1077；第458条数据表示目标地址：103.245.222.133收到数据包的确认，此时ACK=1078,Seq=608；至此完成四次挥手关闭TCP连接，看上图下面红色部分表示已经无法连接。</p>
+<li><p>TCP关闭连接时候需要<code>四次握手</code>，整个过程如下图所示:<br><figure><img src="http://paddingme.qiniudn.com/22.gif" alt="tcp四次握手"></figure><br>当浏览器离开<a href="http://padding.me">padding.me</a>时，目标IP：103.245.222.133会发送关闭连接，如下图所示：<br><figure><img src="http://paddingme.qiniudn.com/20.png" alt="wireshark软件安装成功"></figure><br>第424条数据包显示:目标IP：103.245.222.133向本地IP：192.168.1.106发送FIN=1，ACK=1，此时Seq=607;第425条数据包表明，本地IP接收到424条数据，对这条数据发送确认，此时，ACK=608，Seq=1077；第455条和456条数据包表示本地IP发送关闭连接给目标IP，此时ACK=1，FIN=1，Seq=1077；第458条数据表示目标地址：103.245.222.133收到数据包的确认，此时ACK=1078,Seq=608；至此完成四次挥手关闭TCP连接，看上图下面红色部分表示已经无法连接。</p>
 </li>
 </ol>
 <p>参考文章：</p>
@@ -324,16 +312,6 @@ ga('send', 'pageview');
           <li class="item-toolbox">
             <a
               class="CIRCLE"
-              href="/link/"
-              target="_self"
-              >
-              友链
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
               href="/about/"
               target="_self"
               >
@@ -381,7 +359,7 @@ ga('send', 'pageview');
   <script>
     var disqus_shortname = 'PaddingMe';
     
-    var disqus_url = 'http://yoursite.com/blog/2014/05/11/install-wireshark-and-analyse-icmp-tcp-protocol/';
+    var disqus_url = 'http://padding.me/blog/2014/05/11/install-wireshark-and-analyse-icmp-tcp-protocol/';
     
     (function(){
       var dsq = document.createElement('script');
