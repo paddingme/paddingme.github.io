@@ -20,6 +20,7 @@ title: About - PaddingMe
 **和有趣的人，一起做有趣的事，这是我憧憬的美好人生。**
 
 # About blog
+
 想建个人博客由来已久，不管是技术总结还是自言自语，都算是一种记录情结。padding，英文[填充之意][paddingen]。在 [CSS 盒子模型][boxmodel]中，padding 表示[内边距][padding]。所以 [padding.me][padding.me] 取意自我充实，用信念、希望、努力、乐观填充所有的空洞与乏味，也取『修身，齐家，平天下』修身之意，希望自己可以沉心经营，潜心修行。
 
 
